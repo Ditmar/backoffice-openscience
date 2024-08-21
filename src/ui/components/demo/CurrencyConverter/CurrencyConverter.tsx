@@ -1,5 +1,5 @@
-import styles from './styles.module.scss'
 import { useState } from 'react';
+import styles from './styles.module.scss';
 function CurrencyConverter () {
     const [amount, setAmount] = useState(0);
     const [currency, setCurrency] = useState(11.9);

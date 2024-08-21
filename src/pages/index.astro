@@ -1,8 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CurrencyConverter from '../ui/components/CurrencyConverter/CurrencyConverter';
+import CurrencyConverter from '../ui/components/demo/CurrencyConverter/CurrencyConverter';
+import WatchRealtime from '../ui/components/demo/Whatch/Whatch';
+import MainColorGrid from '../ui/components/demo/BackgroundColor/MainColorGrid';
 ---
 
 <Layout title="Welcome to Astro.">
 	<CurrencyConverter client:load />
+	<WatchRealtime client:load/>
+	<MainColorGrid client:load/>
 </Layout>
