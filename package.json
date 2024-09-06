@@ -7,17 +7,26 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.2",
-    "@astrojs/react": "^3.6.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "astro": "^4.14.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sass": "^1.77.8",
-    "typescript": "^5.5.4"
+    "@astrojs/check": "0.9.2",
+    "@astrojs/react": "3.6.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "astro": "4.14.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sass": "1.77.8",
+    "typescript": "5.5.4"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "jsdom": "^25.0.0",
+    "vitest": "2.0.5",
+    "@testing-library/dom": "10.1.0",
+    "@testing-library/jest-dom": "6.4.5"
   }
 }
