@@ -1,0 +1,93 @@
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+
+$primary-bg-color: #393939;
+$secondary-bg-color: #4c4c4c;
+$tertiary-bg-color: #161616;
+$quaternary-bg-color: #c6c6c6;
+$quinary-bg-color: #8d8d8d;
+
+$text-color-primary: #ffffff;
+$text-color-secondary: #8d8d8d;
+
+$font-family: "Barlow", "Nunito Sans", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+$small-padding: 10px 16px;
+$medium-padding: 11px 20px;
+$large-padding: 12px 24px;
+$small-font-size: 12px;
+$medium-font-size: 14px;
+$large-font-size: 16px;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  font-weight: 400;
+  line-height: 1;
+  font-family: $font-family;
+  background-color: var(--background-color, $primary-bg-color);
+  color: var(--color, $text-color-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &--small {
+    padding: $small-padding;
+    font-size: $small-font-size;
+  }
+
+  &--medium {
+    padding: $medium-padding;
+    font-size: $medium-font-size;
+  }
+
+  &--large {
+    padding: $large-padding;
+    font-size: $large-font-size;
+  }
+
+  &:hover {
+    background-color: var(
+      --hover-background-color,
+      color.scale($primary-bg-color, $lightness: -10%)
+    );
+  }
+
+  &:active {
+    background-color: var(
+      --active-background-color,
+      color.scale($primary-bg-color, $lightness: -20%)
+    );
+    color: var(
+      --active-color,
+      color.scale($text-color-primary, $lightness: -20%)
+    );
+  }
+
+  &:focus {
+    outline: 2px solid
+      var(
+        --focus-background-color,
+        color.scale($primary-bg-color, $lightness: -15%)
+      );
+    outline-offset: 2px;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 0.5em;
+  }
+}
