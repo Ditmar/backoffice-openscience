@@ -52,3 +52,37 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# SCSS Style Project
+
+This project uses SCSS to manage color variables with a grayscale and white palette.
+
+## Color Palette
+
+The following is the color palette used in the project, defined in `ads-variables.scss`, along with its usage in the design system:
+
+| Variable Name                     | Color    | Hex Code   | Usage                                               |
+|------------------------------------|----------|------------|-----------------------------------------------------|
+| `$--ads-colors-white`              | White    | `#ffffff`  | Default page background                             |
+| `$--ads-colors-gray-10`            | Gray 10  | `#f4f4f4`  | Primary container background; Secondary page background |
+| `$--ads-colors-gray-20`            | Gray 20  | `#e0e0e0`  | Subtle border; Tertiary background color;"Light" variant elements |
+| `$--ads-colors-gray-40`            | Gray 40  | `#a8a8a8`  | Placeholder text                                    |
+| `$--ads-colors-gray-50`            | Gray 50  | `#8d8d8d`  | Element medium contrast; Medium contrast border     |
+| `$--ads-colors-gray-60`            | Gray 60  | `#6f6f6f`  | Tertiary text; Help text                            |
+| `$--ads-colors-gray-70`            | Gray 70  | `#525252`  | Secondary icons                                     |
+| `$--ads-colors-gray-80`            | Gray 80  | `#393939`  | Secondary interactive color; Secondary button        |
+| `$--ads-colors-gray-100`           | Gray 100 | `#161616`  | lement contrast; High contrast border; Emphasis elements |
+
+These colors are available as SCSS variables and can be referenced in any SCSS file with the `$--ads-colors-` prefix.
+
+## Example Usage
+
+To use these colors in your SCSS file:
+
+```scss
+.element {
+  background-color: $--ads-colors-gray-10;
+  color: $--ads-colors-white;
+}
