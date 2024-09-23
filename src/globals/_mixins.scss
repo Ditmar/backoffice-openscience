@@ -1,0 +1,16 @@
+@mixin paragraph {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+@mixin component-paragraph {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+@mixin paragraph-long {
+    font-family: 'David Libre', serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+  
