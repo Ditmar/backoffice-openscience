@@ -1,0 +1,53 @@
+.ghost-button {
+    background: transparent;
+    border: 2px solid transparent;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0 20px;
+    height: 48px;
+    transition: background 0.2s, border 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &--primary {
+      color: #007bff;
+    }
+
+    &--disabled {
+      color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      background: rgba(0, 123, 255, 0.1);
+    }
+
+    &:active {
+      background: rgba(0, 123, 255, 0.2);
+    }
+
+    &:focus {
+        border: 2px solid #007bff;
+        outline: none;
+      }
+
+    &--small {
+      padding: 0 12px;
+      height: 36px;
+      font-size: 12px;
+    }
+
+    &--medium {
+      padding: 0 20px;
+      height: 48px;
+      font-size: 14px;
+    }
+
+    &--large {
+      padding: 0 28px;
+      height: 56px;
+      font-size: 16px;
+    }
+}
