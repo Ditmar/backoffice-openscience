@@ -14,7 +14,7 @@ function SecondaryButtonIcon({
   return (
     <div className="btn-container">
       <button
-        className={`btn-secondary ${sizeClass} ${disabledClass}`}
+        className={`btn-main ${sizeClass} ${disabledClass}`}
         onClick={onClick}
         onMouseEnter={() => {
           setIsHovered(true);
@@ -27,9 +27,7 @@ function SecondaryButtonIcon({
       >
         <span className="btn-icon">+</span>
       </button>
-      {isHovered && !disabled && (
-        <div className="tooltip">Add</div>
-      )}
+      {isHovered && !disabled && <div className="tooltip">Add</div>}
     </div>
   );
 }

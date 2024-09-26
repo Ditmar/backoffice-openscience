@@ -15,20 +15,31 @@ describe('SecondaryButtonIcon Component', () => {
     const button = screen.getByRole('button');
 
     expect(screen.queryByText('Add')).toBeNull();
+
     await userEvent.hover(button);
 
     expect(screen.getByText('Add')).toBeInTheDocument();
+
     await userEvent.unhover(button);
 
     expect(screen.queryByText('Add')).toBeNull();
   });
 
-  test('does not show tooltip when disabled', () => {
+  test('does not show tooltip when disabled', async () => {
     render(<SecondaryButtonIcon size="medium" disabled />);
     const button = screen.getByRole('button');
 
-    userEvent.hover(button);
+    await userEvent.hover(button);
 
-    expect(screen.queryByText('Add')).toBeNull();
+    expect(screen.queryByText('Añadir')).toBeNull();
+  });
+
+  test('shows focus outline when focused', async () => {
+    render(<SecondaryButtonIcon size="medium" />);
+    const button = screen.getByRole('button');
+
+    await userEvent.tab();
+    expect(button).toHaveFocus();
+    expect(button).toHaveStyle('outline: 2px solid #0056b3');
   });
 });

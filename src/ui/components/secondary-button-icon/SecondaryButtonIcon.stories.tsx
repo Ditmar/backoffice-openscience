@@ -3,7 +3,7 @@ import type { ISecondaryButtonIconProps } from './types/ISecondaryButtonIconProp
 import SecondaryButtonIcon from './SecondaryButtonIcon';
 
 const meta: Meta<typeof SecondaryButtonIcon> = {
-  title: 'ui/components/atoms/SecondaryButtonIcon',
+  title: 'ui/components/atoms/secondary-button-icon',
   component: SecondaryButtonIcon,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -16,28 +16,14 @@ export default meta;
 
 type Story = StoryObj<ISecondaryButtonIconProps>;
 
-export const SmallButton: Story = {
-  args: {
-    size: 'small',
-    disabled: false,
-  },
-};
-
-export const MediumButton: Story = {
+export const Enabled: Story = {
   args: {
     size: 'medium',
     disabled: false,
   },
 };
 
-export const LargeButton: Story = {
-  args: {
-    size: 'large',
-    disabled: false,
-  },
-};
-
-export const DisabledButton: Story = {
+export const Disabled: Story = {
   args: {
     size: 'medium',
     disabled: true,
