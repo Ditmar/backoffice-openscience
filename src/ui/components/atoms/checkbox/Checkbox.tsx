@@ -22,6 +22,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
       onChange(e);
     }
   };
+  
 
   return (
     <div className={`checkbox checkbox--${size}`}>

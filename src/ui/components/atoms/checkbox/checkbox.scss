@@ -1,5 +1,3 @@
-
-
    .checkbox {
     display: flex;
     align-items: center;
@@ -23,7 +21,7 @@
         border-color: black;
   
         &::after {
-          content: '✓'; /* Aquí añades el checkmark */
+          content: '✓';
           color: white;
           font-size: 12px;
           position: absolute;
