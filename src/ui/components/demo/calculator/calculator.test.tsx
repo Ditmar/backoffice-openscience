@@ -39,7 +39,6 @@ describe('Testing for calculator component', () => {
     const { length } = screen.getAllByRole('row');
     expect(length).toBe(4);
   });
-
   it('Should be render the display component', () => {
     render(<Calculator />);
     screen.getByRole('status');

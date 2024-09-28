@@ -1,41 +1,63 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import Tag from './Tag';
 
 const meta = {
-  title: 'ui/components/atoms/tag',
+  title: 'ui/components/atoms/Tag',
   component: Tag,
   argTypes: {
-    onClick: {
-      action: 'click',
+    label: {
+      control: 'text',
+      description: 'Texto dentro del Tag',
+    },
+    size: {
+      control: 'radio',
+      options: ['small', 'medium', 'large'],
+      description: 'Tamaño del Tag',
     },
     variant: {
-      control: 'select',
+      control: 'radio',
       options: ['primary', 'secondary', 'tertiary'],
+      description: 'Estilo visual del Tag',
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Indica si el Tag está deshabilitado',
+    },
+    onClick: { action: 'clicked' },
   },
-} as Meta<typeof Tag>;
+};
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
 export const Primary: Story = {
   args: {
-    children: 'Component',
+    label: 'Component',
+    size: 'medium',
     variant: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    children: 'Component',
+    label: 'Component',
+    size: 'medium',
     variant: 'secondary',
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    children: 'Component',
+    label: 'Component',
+    size: 'medium',
     variant: 'tertiary',
+  },
+};
+export const Disabled: Story = {
+  args: {
+    label: 'Component',
+    size: 'medium',
+    variant: 'default',
+    disabled: true,
   },
 };
