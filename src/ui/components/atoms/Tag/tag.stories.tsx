@@ -30,7 +30,6 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
 export const Primary: Story = {
   args: {
     label: 'Component',
@@ -54,12 +53,11 @@ export const Tertiary: Story = {
     variant: 'tertiary',
   },
 };
-
 export const Disabled: Story = {
   args: {
     label: 'Component',
     size: 'medium',
-    variant: 'primary',
+    variant: 'default',
     disabled: true,
   },
 };

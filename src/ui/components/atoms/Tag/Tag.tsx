@@ -10,13 +10,12 @@ function Tag(props: TagProps) {
     [styles['tag--primary']]: variant === 'primary',
     [styles['tag--secondary']]: variant === 'secondary',
     [styles['tag--tertiary']]: variant === 'tertiary',
-    [styles['tag--disabled']]: disabled, // Clase para el estado deshabilitado
+    [styles['tag--disabled']]: disabled,
     [styles['tag--small']]: size === 'small',
     [styles['tag--medium']]: size === 'medium',
     [styles['tag--large']]: size === 'large',
   });
 
-  // Manejo de teclado para accesibilidad
   const handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
     if (!disabled && (e.key === 'Enter' || e.key === ' ')) {
       onClick?.();
@@ -35,5 +34,4 @@ function Tag(props: TagProps) {
     </span>
   );
 }
-
 export default Tag;
