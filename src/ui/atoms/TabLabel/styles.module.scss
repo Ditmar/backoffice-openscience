@@ -1,0 +1,44 @@
+.tabLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.3s;
+
+    &.active {
+        border-bottom: 2px solid #e3e3e3;
+
+
+        &:hover {
+            border-bottom: 2px solid #b0b0b0;
+        }
+        &.selected {
+            color: #000;
+            border-bottom: 2px solid #1163fe;
+        }
+    }
+
+    &.disabled {
+        color: #ccc;
+        cursor: not-allowed;
+        border-bottom: 2px solid #ccc;
+
+    }
+
+    &.small {
+        font-size: 1rem;
+    }
+
+    &.medium {
+        font-size: 1.2rem;
+    }
+
+    &.large {
+        font-size: 1.4rem;
+    }
+}
