@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1e093ea (feature/SEM-023)
 import classNames from 'classnames';
@@ -21,6 +22,8 @@ export function TabLabel(props: IProps) {
   return <div className={tablabelClass}>{text}</div>;
 }
 =======
+=======
+>>>>>>> 28f4eb1 (feature/SEM-023)
 import type { IProps } from "./types/IProps"
 import styles from "./styles.module.scss"
 import classNames from "classnames";
@@ -40,6 +43,7 @@ export function TabLabel(props: IProps) {
             {text}
         </div >
     )
+<<<<<<< HEAD
 }
 >>>>>>> 9f9d328 (feature/SEM-023)
 =======
@@ -57,3 +61,6 @@ export function TabLabel(props: IProps) {
   return <div className={tabLabelClass}>{text}</div>;
 }
 >>>>>>> 1e093ea (feature/SEM-023)
+=======
+}
+>>>>>>> 28f4eb1 (feature/SEM-023)
