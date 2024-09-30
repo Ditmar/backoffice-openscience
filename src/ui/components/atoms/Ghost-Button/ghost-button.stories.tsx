@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import GhostButton from './ghost-button';
 import type { GhostButtonProps } from './types/types';
+
 const meta: Meta<typeof GhostButton> = {
   title: 'ui/components/atoms/GhostButton',
   component: GhostButton,
@@ -28,7 +29,6 @@ const meta: Meta<typeof GhostButton> = {
     },
   },
 
-  
   args: {
     variant: 'primary',
     size: 'medium',
