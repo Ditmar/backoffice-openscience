@@ -9,21 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node.js and Yarn
+        uses: actions/setup-node@v3
         with:
-          node-version: '>=20.13.0 <=20.13.0'
+          node-version: '20.13.0'
+          yarn-version: '1.22.21'
           cache: 'yarn'
-
-      - name: Install specific Yarn version
-        run: |
-          corepack enable
-          corepack prepare yarn@1.22.21 --activate
+          cache-dependency-path: '**/yarn.lock'
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
       - name: Run lint
         run: yarn lint
 
@@ -32,6 +30,7 @@ jobs:
 
       - name: Run test
         run: yarn test
+
       - name: Build Storybook
         if: github.ref == 'refs/heads/main'
         run: yarn build-storybook
@@ -44,6 +43,7 @@ jobs:
           publish_dir: ./storybook-static
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-      - name: clean storybook folder
+
+      - name: Clean storybook folder
         if: github.ref == 'refs/heads/main'
         run: rm -rf ./storybook-static
