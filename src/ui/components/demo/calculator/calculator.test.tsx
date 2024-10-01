@@ -41,29 +41,29 @@ describe('Testing for calculator component', () => {
   });
   it('Should be render the display component', () => {
     render(<Calculator />);
-    screen.getByRole('display');
+    screen.getByRole('status');
   });
   it('Should be render in the input text the fire button event', () => {
     render(<Calculator />);
-    const input = screen.getByRole('display');
+    const input = screen.getByRole('status');
     fireEvent.click(screen.getByText('1'));
     expect(input.textContent).toBe('1');
   });
   it('Should be render in the input text the fire button event 1', () => {
     render(<Calculator />);
-    const input = screen.getByRole('display');
+    const input = screen.getByRole('status');
     fireEvent.click(screen.getByText('2'));
     expect(input.textContent).toBe('2');
   });
   it('Should be render in the input text the fire button event 2', () => {
     render(<Calculator />);
-    const input = screen.getByRole('display');
+    const input = screen.getByRole('status');
     fireEvent.click(screen.getByText('*'));
     expect(input.textContent).toBe('*');
   });
   it('Should be render in the input text several numbers string', () => {
     render(<Calculator />);
-    const input = screen.getByRole('display');
+    const input = screen.getByRole('status');
     fireEvent.click(screen.getByText('1'));
     fireEvent.click(screen.getByText('2'));
     fireEvent.click(screen.getByText('7'));
@@ -71,7 +71,7 @@ describe('Testing for calculator component', () => {
   });
   it('Should be render the correct operation eval when we push the =', () => {
     render(<Calculator />);
-    const input = screen.getByRole('display');
+    const input = screen.getByRole('status');
     fireEvent.click(screen.getByText('1'));
     fireEvent.click(screen.getByText('0'));
     fireEvent.click(screen.getByText('+'));

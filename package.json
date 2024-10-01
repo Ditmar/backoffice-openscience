@@ -1,6 +1,12 @@
 {
   "name": "backoffice-openscience",
   "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

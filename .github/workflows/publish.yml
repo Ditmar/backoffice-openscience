@@ -20,7 +20,7 @@ jobs:
       - name: Install specific Yarn version
         run: |
           corepack enable
-          corepack prepare yarn@1.22.22 --activate
+          corepack prepare yarn@1.22.21 --activate
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
