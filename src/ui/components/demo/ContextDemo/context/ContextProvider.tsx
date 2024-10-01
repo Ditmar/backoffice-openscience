@@ -8,7 +8,7 @@ function ContextProvider(props: ChildComponentProps) {
   const initialState: StateType = { backGroundColor: '#fff', color: '#000', test: 'Hola amigos' };
   const [state, dispatch] = useReducer(ContextReducer, initialState);
 
-  const stateMemo = useMemo(() => ({ state, dispatch }), []);
+  const stateMemo = useMemo(() => ({ state, dispatch }), [state]);
   return <Context.Provider value={stateMemo}>{children}</Context.Provider>;
 }
 export default ContextProvider;

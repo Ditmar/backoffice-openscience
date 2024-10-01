@@ -1,7 +1,10 @@
 node_modules/
 build/
 dist/
+.yarn
+app-server/
 coverage/
 docs/
 public/
-storybook-static/
+storybool-static/
+.github/
