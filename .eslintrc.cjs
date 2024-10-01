@@ -6,4 +6,5 @@ module.exports = {
     '@typescript-eslint/no-throw-literal': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
   },
+  ignorePatterns: ['dist/**/*', 'node_modules/**/*', './src/ui/components/demo/**'],
 };
