@@ -19,7 +19,7 @@
     "lint:css:fix": "stylelint '**/*.{css,scss}' --fix"
   },
   "engines": {
-    "node": ">=18.19 <=20.13.0",
+    "node": ">=20.13.0 <=20.13.0",
     "yarn": ">=1.22.21 <=1.22.22"
   },
   "dependencies": {
