@@ -10,7 +10,7 @@ module.exports = {
           'off',
           { devDependencies: ['**/*.test.[jt]s?(x)', '**/*.spec.[jt]s?(x)'] },
         ],
-        "vitest/expect-expect": "off"
+        'vitest/expect-expect': 'off',
       },
     },
   ],

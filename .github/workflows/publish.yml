@@ -1,0 +1,51 @@
+name: Deploy docker hub
+
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '>=18.19 <=18.21'
+          cache: 'yarn'
+
+      - name: Install specific Yarn version
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: List installed packages
+        run: yarn list
+      - name: Run lint
+        run: yarn lint
+
+      - name: Run lint:css
+        run: yarn lint:css
+
+      - name: Run test
+        run: yarn test
+      - name: Build Storybook
+        if: github.ref == 'refs/heads/main'
+        run: yarn build-storybook
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: clean storybook folder
+        if: github.ref == 'refs/heads/main'
+        run: rm -rf ./storybook-static
