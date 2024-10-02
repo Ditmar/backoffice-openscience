@@ -4,6 +4,7 @@ import Context from './context/context';
 import type { StateDataType } from './types/types';
 
 function ColorGrid() {
+  const data = "dfdf";
   const context: StateDataType = useContext(Context) as StateDataType;
   const { state } = context;
   const colors = [
