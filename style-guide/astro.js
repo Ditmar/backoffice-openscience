@@ -4,10 +4,9 @@ module.exports = {
   extends: [
     require.resolve('./react'),
     require.resolve('./configurations/_base'),
-    'plugin:svelte/recommended',
     'plugin:astro/recommended',
   ],
-  ignorePatterns: ['app-server/**', '.yarn/**', 'Dockerfile'],
+  ignorePatterns: ['app-server/**', '.yarn/**', 'Dockerfile', '.github/**'],  
   overrides: [
     {
       files: ['*.astro'],

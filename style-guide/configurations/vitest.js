@@ -3,8 +3,6 @@ module.exports = {
   overrides: [
     {
       files: TEST_FILES,
-      plugins: ['vitest'],
-      extends: ['plugin:vitest/recommended'],
       rules: {
         'import/no-extraneous-dependencies': [
           'off',
