@@ -6,7 +6,7 @@ module.exports = {
     require.resolve('./configurations/_base'),
     'plugin:astro/recommended',
   ],
-  ignorePatterns: ['app-server/**', '.yarn/**', 'Dockerfile', '.github/**','src/ui/components/demo/**'],  
+  ignorePatterns: ['app-server/**', '.yarn/**', 'Dockerfile', '.github/**'],  
   overrides: [
     {
       files: ['*.astro'],

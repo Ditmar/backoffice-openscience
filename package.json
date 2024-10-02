@@ -18,15 +18,15 @@
     "test:coverage": "vitest --coverage",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prettier:fix": "npx prettier --write .",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:css:fix": "stylelint '**/*.{css,scss}' --fix"
   },
   "engines": {
-    "node": ">=20.13.0 <=20.13.0",
-    "yarn": ">=1.22.21 <=1.22.22"
+    "node": "20.13.0",
+    "yarn": "1.22.21"
   },
   "dependencies": {
     "@astrojs/check": "0.9.2",
