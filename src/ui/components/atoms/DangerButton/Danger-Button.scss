@@ -1,0 +1,89 @@
+@import '../../../../globals/ads-variables.scss';
+
+.variable-button {
+  background: $--ads-colors-red-60;
+  border: none;
+  color: $--ads-colors-white;
+  font-size: $--ads-font-size-primary;
+  height: 48px;
+  outline: $--ads-colors-red-60;
+  padding-inline: 2rem;
+  width: auto;
+
+  &--Small {
+    height: 32px;
+    padding-inline: 1rem;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Normal {
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Big {
+    font-size: $--ads-font-size-second;
+    height: 64px;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Active:active {
+    background: $--ads-background-active;
+  }
+
+  &--Disable:disabled {
+    background: $--ads-background-disable;
+  }
+
+  &:hover {
+    background-color: $--ads-colors-red-70;
+  }
+}
+
+@include respond-to('extra-large') { // Extra-large
+  .variable-button {
+    font-size: $--ads-font-size-second;
+    height: 56px;
+  }
+}
+
+@include respond-to('largo') { // Large
+  .variable-button {
+    font-size: $--ads-font-size-primary;
+    height: 48px;
+  }
+}
+
+@include respond-to('medium') { // Medium
+  .variable-button {
+    font-size: $--ads-font-size-primary;
+    height: 40px;
+    padding-inline: 1.5rem;
+  }
+}
+
+@include respond-to('small') { // Small
+  .variable-button {
+    font-size: $--ads-font-size-secondary;
+    height: 32px;
+    padding-inline: 1rem;
+  }
+}
+
+@include respond-to('small-mobile') { // Small-mobile
+  .variable-button {
+    font-size: $--ads-font-size-small;
+    height: 28px;
+    padding-inline: 0.5rem;
+  }
+}
