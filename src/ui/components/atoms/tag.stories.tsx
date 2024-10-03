@@ -16,9 +16,14 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: ['default', 'outlined', 'ghost'],
+      options: ['primary', 'secondary', 'tertiary'],
       description: 'Estilo visual del Tag',
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Indica si el Tag está deshabilitado',
+    },
+    onClick: { action: 'clicked' },
   },
 };
 
@@ -26,34 +31,35 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Primary: Story = {
   args: {
     label: 'Component',
     size: 'medium',
-    variant: 'default',
+    variant: 'primary',
   },
 };
 
-export const Outlined: Story = {
+export const Secondary: Story = {
   args: {
     label: 'Component',
     size: 'medium',
-    variant: 'outlined',
+    variant: 'secondary',
   },
 };
 
-export const Ghost: Story = {
+export const Tertiary: Story = {
   args: {
     label: 'Component',
     size: 'medium',
-    variant: 'ghost',
+    variant: 'tertiary',
   },
 };
+
 export const Disabled: Story = {
   args: {
     label: 'Component',
     size: 'medium',
-    variant: 'default',
+    variant: 'primary',
     disabled: true,
   },
 };
