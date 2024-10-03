@@ -13,6 +13,7 @@
 }
 
 .toggle {
+    align-items: center;
     background-color: $--ads-colors-gray-20;
     border: none;
     border-radius: 50px;
@@ -23,7 +24,6 @@
     padding: 0;
     position: relative;
     transition: background-color 0.3s ease;
-    align-items: center; 
     width: 50px;
     
 
