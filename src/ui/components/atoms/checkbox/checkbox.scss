@@ -1,59 +1,63 @@
+@import '../../../../globals/ads-variables.scss';
 
 .checkbox {
-    display: flex;
     align-items: center;
+    display: flex;
 
     &:focus {
-      outline: 2px solid blue;
+      outline: 2px solid $--ads-colors-blue-60;
     }
 
     &__input {
-      width: 16px;
+      appearance: none;
+      border: 1px solid $--ads-colors-gray-10;
+      border-radius: 2px;
+      cursor: pointer;
       height: 16px;
       margin-right: 8px;
-      cursor: pointer;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      appearance: none;
       position: relative;
-
+      width: 16px;
+      
       &:checked {
-        background-color: black;
-        border-color: black;
+        background-color: $--ads-colors-gray-100;
+        border-color: $--ads-colors-gray-100;
 
         &::after {
-          content: '✓'; /* Aquí añades el checkmark */
-          color: white;
+          color: $--ads-colors-white;
+          content: '✓';         
           font-size: 12px;
+          left: 50%;
           position: absolute;
           top: 50%;
-          left: 50%;
           transform: translate(-50%, -50%);
         }
       }
 
       &:focus {
-        outline: 2px solid blue;
+        outline: 2px solid $--ads-colors-blue-60;
       }
 
       &:disabled {
-        background-color: #f0f0f0;
+        background-color: $--ads-colors-gray-10;
         cursor: not-allowed;
       }
     }
 
     &__label {
+      color: $--ads-colors-gray-80;
       font-size: 14px;
-      color: #333;
+      
     }
 
     &--small &__input {
-      width: 12px;
       height: 12px;
+      width: 12px;
+      
     }
 
     &--large &__input {
-      width: 20px;
       height: 20px;
+      width: 20px;
+      
     }
   }

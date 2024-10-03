@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, it, expect } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Checkbox from './checkbox';
 import '@testing-library/jest-dom';
 
@@ -27,9 +27,12 @@ describe('Checkbox Component', () => {
     expect(checkbox).toBeDisabled();
   });
 
-  it('Should autofocus the checkbox', () => {
+  it('Should autofocus the checkbox', async () => {
     render(<Checkbox id="checkbox-4" label="Auto-focus checkbox" autoFocus />);
     const checkbox = screen.getByLabelText('Auto-focus checkbox');
-    expect(checkbox).toHaveFocus();
+
+    await waitFor(() => {
+      expect(checkbox).toHaveFocus();
+    });
   });
 });
