@@ -1,4 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
 
 .variable-button {
   background: $--ads-colors-red-60;
@@ -20,7 +21,7 @@
     }
   }
 
-  &--Normal {
+  &--Medium {
     &:focus {
       border: 2px solid $--ads-colors-white;
       outline: 2px solid $--ads-colors-red-60;
@@ -50,21 +51,21 @@
   }
 }
 
-@include respond-to('extra-large') { // Extra-large
+@include respond-to('extra-large') {
   .variable-button {
     font-size: $--ads-font-size-second;
     height: 56px;
   }
 }
 
-@include respond-to('largo') { // Large
+@include respond-to('large') { 
   .variable-button {
     font-size: $--ads-font-size-primary;
     height: 48px;
   }
 }
 
-@include respond-to('medium') { // Medium
+@include respond-to('medium') { 
   .variable-button {
     font-size: $--ads-font-size-primary;
     height: 40px;
@@ -72,17 +73,17 @@
   }
 }
 
-@include respond-to('small') { // Small
+@include respond-to('small') { 
   .variable-button {
-    font-size: $--ads-font-size-secondary;
+    font-size: $--ads-font-size-second;
     height: 32px;
-    padding-inline: 1rem;
+    padding-inline: 1rem; 
   }
 }
 
-@include respond-to('small-mobile') { // Small-mobile
+@include respond-to('small-mobile') { 
   .variable-button {
-    font-size: $--ads-font-size-small;
+    font-size: $--ads-font-size-fifth;
     height: 28px;
     padding-inline: 0.5rem;
   }

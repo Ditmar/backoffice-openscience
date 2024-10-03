@@ -8,7 +8,7 @@ const meta = {
     onClick: {
       action: 'click',
     },
-    variant: ['Small', 'Normal', 'Big', 'Active', 'Disable'],
+    variant: ['Small', 'Medium', 'Big', 'Active', 'Disable'],
   },
 } as Meta<typeof DangerButton>;
 
@@ -23,10 +23,10 @@ export const Small: Story = {
   },
 };
 
-export const Normal: Story = {
+export const Medium: Story = {
   args: {
     children: 'Danger button',
-    variant: 'Normal',
+    variant: 'Medium',
   },
 };
 
