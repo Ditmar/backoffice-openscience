@@ -1,9 +1,11 @@
+@import  ' ../../../../globals/ads-variables.scss ' ;
+
 .ghost-button {
   align-items: center;
   background: transparent;
   border: 2px solid transparent;
   box-sizing: border-box;
-  color: #007bff;
+  color: $--ads-colors-blue-50;
   cursor: pointer;
   display: inline-flex;
   height: 48px;
@@ -14,24 +16,24 @@
     border 0.2s;
 
   &--primary {
-    color: #007bff;
+    color: $--ads-colors-blue-50;
   }
 
   &--disabled {
-    color: #ccc;
+    color: $--ads-colors-red-50;
     cursor: not-allowed;
   }
 
   &:hover {
-    background: rgb(0 123 255 / 10%);
+    background: rgba($--ads-colors-blue-50, 0.1);
   }
 
   &:active {
-    background: rgb(0 123 255 / 20%);
+    background: rgba($--ads-colors-blue-50, 0.2);
   }
 
   &:focus {
-    border: 2px solid #007bff;
+    border: 2px solid $--ads-colors-blue-50;
     outline: none;
   }
 
