@@ -35,6 +35,6 @@ function SideMenuButton({ children, icon, color, variant = 'primary', onClick }:
       {children}
     </button>
   );
-};
+}
 
 export default SideMenuButton;
