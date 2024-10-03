@@ -1,0 +1,59 @@
+
+.checkbox {
+    display: flex;
+    align-items: center;
+
+    &:focus {
+      outline: 2px solid blue;
+    }
+
+    &__input {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      appearance: none;
+      position: relative;
+
+      &:checked {
+        background-color: black;
+        border-color: black;
+
+        &::after {
+          content: '✓'; /* Aquí añades el checkmark */
+          color: white;
+          font-size: 12px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:focus {
+        outline: 2px solid blue;
+      }
+
+      &:disabled {
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+      }
+    }
+
+    &__label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    &--small &__input {
+      width: 12px;
+      height: 12px;
+    }
+
+    &--large &__input {
+      width: 20px;
+      height: 20px;
+    }
+  }
