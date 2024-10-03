@@ -1,7 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import SideMenuButton from './SideMenuButton';
-import Icon1 from '../../../../assets/icons/article-management.svg?raw';
-import Icon2 from '../../../../assets/icons/author-management.svg?raw';
 
 const meta = {
   title: 'ui/components/atoms/side-menu-button',
@@ -20,7 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const Article: Story = {
   args: {
     children: 'Article Management',
-    icon: Icon1,
     color: 'primary',
   },
 };
@@ -28,7 +25,6 @@ export const Article: Story = {
 export const Author: Story = {
   args: {
     children: 'Author Management',
-    icon: Icon2,
     color: 'primary',
   },
 };
