@@ -18,9 +18,9 @@ function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
   };
 
   return (
-    <div className={`${styles.toggleContainer} ${disabled ? styles.disabled : ''}`}>
+    <div className={`${styles.container} ${disabled ? styles.disabled : ''}`}>
       {label && (
-        <label htmlFor="toggle-button" className={styles.toggleLabel}>
+        <label htmlFor="toggle-button" className={styles.label}>
           {' '}
           {label}
         </label>
@@ -33,7 +33,7 @@ function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
         aria-pressed={checked}
         aria-label={label || 'Toggle'}
       >
-        <span className={styles.toggleSlider} />
+        <span className={styles.slider} />
       </button>
     </div>
   );
