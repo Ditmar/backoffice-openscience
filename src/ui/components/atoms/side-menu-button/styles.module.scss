@@ -6,17 +6,6 @@
 .side-menu-buttons {
     display: flex;
     gap: 10px;
-
-    @include respond-to('small-mobile') {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    @include respond-to('medium') {
-        flex-direction: row;
-        gap: 8px;
-    }
-
 }
 
 .side-menu-button {
