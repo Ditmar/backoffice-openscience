@@ -14,6 +14,9 @@ function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
     if (onClick) {
       onClick();
     }
+    if (onClick) {
+      onClick();
+    }
   };
 
   const selectedIcon =
@@ -26,12 +29,14 @@ function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
     { [styles.active]: isActive },
   );
 
+  const selectedIcon = icon ?? (children === 'Article Management' ? Icon1 : Icon2);
+
   return (
     <button data-testid="side-menu-button-styles" className={buttonClass} onClick={handleClick}>
       {selectedIcon && <Icon src={selectedIcon} size="24px" className={styles.icon} />}
       {children}
     </button>
   );
-};
+}
 
 export default SideMenuButton;
