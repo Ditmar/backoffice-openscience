@@ -8,16 +8,17 @@ function Checkbox({
   checked,
   disabled = false,
   onChange,
+  autoFocus = false,
   id,
 }: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(checked ?? false);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    if (isChecked && inputRef.current) {
+    if (autoFocus && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [isChecked]);
+  }, [autoFocus]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (disabled) return;
@@ -33,10 +34,10 @@ function Checkbox({
         type="checkbox"
         className="checkbox__input"
         id={id}
+        ref={inputRef}
         checked={checked ?? isChecked}
         disabled={disabled}
         onChange={handleChange}
-        ref={inputRef}
       />
       {label && (
         <label className="checkbox__label" htmlFor={id}>
