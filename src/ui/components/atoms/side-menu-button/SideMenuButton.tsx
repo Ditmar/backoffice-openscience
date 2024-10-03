@@ -32,6 +32,6 @@ function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
       {children}
     </button>
   );
-};
+}
 
 export default SideMenuButton;
