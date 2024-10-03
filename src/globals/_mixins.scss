@@ -1,8 +1,9 @@
 @mixin paragraph {
-    font-family: 'Barlow', sans-serif;
+    font-family: Barlow, sans-serif;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
 @mixin component-paragraph {
     font-size: 0.875rem;
     line-height: 1.25rem;
