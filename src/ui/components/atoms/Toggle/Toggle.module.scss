@@ -1,13 +1,15 @@
 @import "../../../globals/ads-variables.scss";
+
 .container{
     align-items: center;
     display: flex;   
 }
 
 .label{
-    color: $--ads-colors-gray-80; 
+    color: $--ads-colors-gray-80;
+    font-size: 14px; 
     margin-left: 10px;
-    font-size: 14px;   
+       
 }
 
 .toggle {
@@ -21,8 +23,9 @@
     padding: 0;
     position: relative;
     transition: background-color 0.3s ease;
+    align-items: center; 
     width: 50px;
-    align-items: center;
+    
 
     &.checked {
         background-color: $--ads-colors-blue-60;
