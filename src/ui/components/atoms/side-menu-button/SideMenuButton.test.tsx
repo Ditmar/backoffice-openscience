@@ -1,4 +1,4 @@
-import { describe, it } from 'vitest';
+import { describe, it, vi, expect } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import SideMenuButton from './SideMenuButton';
 import Icon1 from '../../../../assets/icons/article-management.svg?raw';
@@ -37,7 +37,7 @@ describe('Testing for SideMenuButton component', () => {
         Article Management
       </SideMenuButton>,
     );
-    screen.getByTestId('side-menu-button-styles'); // Asegúrate de añadir `data-testid="side-menu-button-styles"` en tu componente
+    screen.getByTestId('side-menu-button-styles');
   });
 
   it('SideMenuButton responds to hover', () => {
@@ -47,5 +47,19 @@ describe('Testing for SideMenuButton component', () => {
       </SideMenuButton>,
     );
     fireEvent.mouseOver(screen.getByTestId('side-menu-button-styles'));
+  });
+
+  it('SideMenuButton registers click action', () => {
+    const onClick = vi.fn();
+
+    render(
+      <SideMenuButton icon={Icon1} color="primary" onClick={onClick}>
+        Article Management
+      </SideMenuButton>,
+    );
+
+    fireEvent.click(screen.getByTestId('side-menu-button-styles'));
+
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import type { IProps } from './types/IProps';
 import styles from './styles.module.scss';
+import Icon1 from '../../../../assets/icons/article-management.svg?raw';
+import Icon2 from '../../../../assets/icons/author-management.svg?raw';
 
-const SideMenuButton: React.FC<IProps> = function SideMenuButton({
-  children,
-  icon,
-  color,
-  variant,
-}) {
+function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
     setIsActive(!isActive);
+    if (onClick) {
+      onClick();
+    }
   };
+
+  const selectedIcon = icon ?? (children === 'Article Management' ? Icon1 : Icon2);
 
   return (
     <button
@@ -22,10 +24,10 @@ const SideMenuButton: React.FC<IProps> = function SideMenuButton({
       } ${isActive ? styles.active : ''}`}
       onClick={handleClick}
     >
-      {icon && <img src={icon} alt="Icon" />}
+      {selectedIcon && <img src={selectedIcon} alt="Icon" />}
       {children}
     </button>
   );
-};
+}
 
 export default SideMenuButton;

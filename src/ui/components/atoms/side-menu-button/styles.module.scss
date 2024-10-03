@@ -1,10 +1,10 @@
 @import '../../../../globals/ads-variables';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
 
 .side-menu-buttons {
     display: flex;
     gap: 10px;
 }
-
 
 .side-menu-button {
     align-items: center;
@@ -12,11 +12,17 @@
     border: none;
     cursor: pointer;
     display: flex;
+    font-family: Barlow, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
     height: 50px;
+    letter-spacing: 0.16px;
+    line-height: 30px;
     padding: 10px;
     position: relative;
+    text-align: left;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 209px;
+    width: 309px;
 
     &::before {
         background-color: $--ads-colors-red-70;
@@ -27,33 +33,33 @@
         position: absolute;
         top: 0;
         transition: opacity 0.3s ease;
-        width: 5px;
-}
+        width: 6px;
+    }
     
     &:hover {
         transform: translateX(10px);
     
-    &::before {
-        opacity: 1;
+        &::before {
+            opacity: 1;
+        }
     }
-}
     
-&.active {
-    transform: translateX(10px);
+    &.active {
+        transform: translateX(10px);
     
-    &::before {
-        opacity: 1;
+        &::before {
+            opacity: 1;
+        }
     }
-}
 
     &.primary {
         background-color: $--ads-colors-gray-20;
-        color:$--ads-colors-gray-70;
+        color: $--ads-colors-gray-70;
     }
 
     &.secondary {
         background-color: $--ads-colors-gray-100;
-        color:$--ads-colors-white;
+        color: $--ads-colors-white;
     }
 
 }
