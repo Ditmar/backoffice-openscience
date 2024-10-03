@@ -1,21 +1,39 @@
 import React from 'react';
+import classNames from 'classnames';
 import type { TagProps } from './types/types';
 import styles from './tag.module.scss';
-import classNames from 'classnames';
 
-const Tag: React.FC<TagProps> = ({ label, size = 'medium', variant = 'default', disabled = false, onClick }) => {
-  const tagClass = classNames(
-    styles.tag, 
-    styles[`tag--${size}`], 
-    styles[`tag--${variant}`], 
-    { [styles['tag--disabled']]: disabled }
-  );
+function Tag(props: TagProps) {
+  const { label, size = 'medium', variant = 'primary', disabled = false, onClick } = props;
+
+  const tagClass = classNames(styles.tag, {
+    [styles['tag--primary']]: variant === 'primary',
+    [styles['tag--secondary']]: variant === 'secondary',
+    [styles['tag--tertiary']]: variant === 'tertiary',
+    [styles['tag--disabled']]: disabled, // Clase para el estado deshabilitado
+    [styles['tag--small']]: size === 'small',
+    [styles['tag--medium']]: size === 'medium',
+    [styles['tag--large']]: size === 'large',
+  });
+
+  // Manejo de teclado para accesibilidad
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (!disabled && (e.key === 'Enter' || e.key === ' ')) {
+      onClick?.();
+    }
+  };
 
   return (
-    <span className={tagClass} onClick={!disabled ? onClick : undefined}>
+    <span
+      className={tagClass}
+      onClick={!disabled ? onClick : undefined}
+      onKeyPress={handleKeyPress}
+      role="button"
+      tabIndex={!disabled ? 0 : -1}
+    >
       {label}
     </span>
   );
-};
+}
 
 export default Tag;
