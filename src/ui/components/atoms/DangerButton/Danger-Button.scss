@@ -1,0 +1,90 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.variable-button {
+  background: $--ads-colors-red-60;
+  border: none;
+  color: $--ads-colors-white;
+  font-size: $--ads-font-size-primary;
+  height: 48px;
+  outline: $--ads-colors-red-60;
+  padding-inline: 2rem;
+  width: auto;
+
+  &--Small {
+    height: 32px;
+    padding-inline: 1rem;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Medium {
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Big {
+    font-size: $--ads-font-size-second;
+    height: 64px;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &--Active:active {
+    background: $--ads-background-active;
+  }
+
+  &--Disable:disabled {
+    background: $--ads-background-disable;
+  }
+
+  &:hover {
+    background-color: $--ads-colors-red-70;
+  }
+}
+
+@include respond-to('extra-large') {
+  .variable-button {
+    font-size: $--ads-font-size-second;
+    height: 56px;
+  }
+}
+
+@include respond-to('large') { 
+  .variable-button {
+    font-size: $--ads-font-size-primary;
+    height: 48px;
+  }
+}
+
+@include respond-to('medium') { 
+  .variable-button {
+    font-size: $--ads-font-size-primary;
+    height: 40px;
+    padding-inline: 1.5rem;
+  }
+}
+
+@include respond-to('small') { 
+  .variable-button {
+    font-size: $--ads-font-size-second;
+    height: 32px;
+    padding-inline: 1rem; 
+  }
+}
+
+@include respond-to('small-mobile') { 
+  .variable-button {
+    font-size: $--ads-font-size-fifth;
+    height: 28px;
+    padding-inline: 0.5rem;
+  }
+}
