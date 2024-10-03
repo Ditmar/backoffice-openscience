@@ -1,27 +1,23 @@
-// checkbox.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import type { CheckboxProps } from './types/iProps';
 import './checkbox.scss';
 
-const Checkbox = function Checkbox({    
+function Checkbox({
   label,
   size = 'medium',
   checked,
   disabled = false,
   onChange,
-  autoFocus = false,
-  id = `checkbox-${Math.random().toString(36).substr(2, 9)}`, // Valor por defecto
+  id,
 }: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(checked ?? false);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    if (autoFocus) {
-      const inputElement = document.getElementById(id);
-      if (inputElement) {
-        inputElement.focus();
-      }
+    if (isChecked && inputRef.current) {
+      inputRef.current.focus();
     }
-  }, [autoFocus, id]);
+  }, [isChecked]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (disabled) return;
@@ -40,7 +36,7 @@ const Checkbox = function Checkbox({
         checked={checked ?? isChecked}
         disabled={disabled}
         onChange={handleChange}
-        autoFocus={autoFocus}
+        ref={inputRef}
       />
       {label && (
         <label className="checkbox__label" htmlFor={id}>
@@ -49,6 +45,6 @@ const Checkbox = function Checkbox({
       )}
     </div>
   );
-};
+}
 
 export default Checkbox;
