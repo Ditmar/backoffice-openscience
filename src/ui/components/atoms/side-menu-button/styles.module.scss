@@ -2,6 +2,7 @@
 @import '../../../../globals/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
 
 .side-menu-buttons {
     display: flex;
@@ -41,31 +42,31 @@
     &:hover {
         transform: translateX(10px);
 
-        &::before {
-            opacity: 1;
+            &::before {
+                opacity: 1;
+            }
         }
-    }
 
-    &.active {
-        transform: translateX(10px);
+        &.active {
+            transform: translateX(10px);
 
-        &::before {
-            opacity: 1;
+            &::before {
+                opacity: 1;
+            }
         }
-    }
 
     &.primary {
         background-color: $--ads-colors-gray-20;
         color: $--ads-colors-gray-70;
 
         svg {
-            fill: $--ads-colors-gray-70;
+            fill:  $--ads-colors-gray-70;
         }
     }
 
     &.secondary {
         background-color: $--ads-colors-gray-100;
-        color: $--ads-colors-white;
+        color:  $--ads-colors-white;
 
         svg {
             fill: $--ads-colors-white;
