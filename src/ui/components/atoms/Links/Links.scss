@@ -1,0 +1,43 @@
+.links {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  
+    &--Small {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  
+    &--Normal {
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+  
+    &--Big {
+      font-size: 20px;
+      padding: 8px 12px;
+    }
+  
+    &--Active:active {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+  
+    &--Disabled {
+      color: #aaa;
+      cursor: not-allowed;
+    }
+  
+    &--Visited:visited {
+      color: #551a8b;
+    }
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  
+    &:focus {
+      outline: 2px solid #000;
+    }
+  }
+  
