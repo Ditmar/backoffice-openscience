@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap');
+@import '../../../globals/ads-variables.scss';
 
 .btn-container {
   display: inline-block;
@@ -7,9 +8,9 @@
 
 .btn-main {
   align-items: center;
-  background-color: #393939;
+  background-color: $--ads-colors-gray-80;
   border: none;
-  color: #fff;
+  color: $--ads-colors-white;
   cursor: pointer;
   display: inline-flex;
   height: 48px;
@@ -34,26 +35,24 @@
     width: 60px;
   }
 
-  &:hover:not([disabled]) {
-    background-color: #4c4c4c;
-  }
-
-  &:active:not([disabled]) {
-    background-color: #161616;
-  }
-
   &:focus {
     box-shadow:
-      inset 0 0 0 3px #393939,
-      inset 0 0 0 4px #fff;
-    outline: solid 2px #fff;
+      inset 0 0 0 3px $--ads-colors-gray-80,
+      inset 0 0 0 4px $--ads-colors-white;
   }
 
   &:disabled {
-    background-color: #c6c6c6;
-    color: #8d8d8d;
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-50;
     cursor: not-allowed;
-    opacity: 0, 3s;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $--ads-colors-gray-70;
+  }
+
+  &:active:not([disabled]) {
+    background-color: $--ads-colors-gray-100;
   }
 }
 
@@ -62,9 +61,9 @@
 }
 
 .tooltip {
-  background-color: #161616;
+  background-color: $--ads-colors-gray-100;
   border-radius: 2px;
-  color: #fff;
+  color: $--ads-colors-white;
   font-family: Barlow, sans-serif;
   font-size: 12px;
   left: 50%;
@@ -79,7 +78,7 @@
   z-index: 10;
 
   &::after {
-    border-bottom: 6px solid #161616;
+    border-bottom: 6px solid $--ads-colors-gray-100;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     content: '';
