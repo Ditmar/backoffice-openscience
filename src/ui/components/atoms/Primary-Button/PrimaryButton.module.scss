@@ -1,0 +1,49 @@
+@import '../../../../globals/ads-variables.scss';
+
+.Primary-button {
+  background: $--ads-colors-blue-70;
+  border: none;
+  color: $--ads-colors-white;
+  height: 48px;
+  outline: $--ads-colors-red-60;
+  padding-inline: 2rem;
+  width: auto;
+
+  &--Small {
+    height: 32px;
+    padding-inline: 1rem;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-blue-80;
+    }
+  }
+
+  &--Medium {
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-blue-80;
+    }
+  }
+
+  &--Big {
+    height: 64px;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-blue-80;
+    }
+  }
+
+  &--Active {
+    background: $--ads-colors-blue-90;
+  }
+
+  &--Disable {
+    background: $--ads-colors-gray-40;
+    color: $--ads-colors-gray-50;
+  }
+  &:hover {
+    background-color: $--ads-colors-blue-50;
+  }
+}
