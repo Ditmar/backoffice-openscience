@@ -1,0 +1,37 @@
+.btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-secondary {
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  height: 48px;
+  width: 140px;
+  background-color: #393939;
+  color: #ffffff;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+.btn--active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.btn--hovered {
+  background-color: #616161;
+  color: #ffffff;
+}
+.btn--focused {
+  position: relative;
+  border: 1px solid white;
+  box-shadow: 0 0 0 2px #393939;
+}
+.btn-secondary:disabled {
+  background-color: #c6c6c6;
+  color: #8d8d8d;
+  cursor: default;
+}
