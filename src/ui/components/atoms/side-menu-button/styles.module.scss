@@ -17,48 +17,43 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
     width: 209px;
 
-&::before {
-    background-color: $--ads-colors-red-60;
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity 0.3s ease;
-    width: 5px;
-}
-
-&:hover {
-    transform: translateX(10px);
-    
     &::before {
-        opacity: 1;
-    }
-}
-
-img {
-    margin-right: 8px;
-}
-
-span {
-    color: $--ads-colors-blue-50; 
-    font-family: Barlow, sans-serif;
-    font-size: 20px;
-    font-weight: 275;
-    letter-spacing: 0.16px;
-    line-height: 30px;
+        background-color: $--ads-colors-red-70;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease;
+        width: 5px;
+      }
     
-}
+      &:hover {
+        transform: translateX(10px);
+    
+        &::before {
+          opacity: 1;
+        }
+      }
+    
+      // Nueva clase para el estado activo
+      &.active {
+        transform: translateX(10px);
+    
+        &::before {
+          opacity: 1;
+        }
+      }
 
     &.primary {
-        background-color: $--ads-colors-blue-40;
-        color: $--ads-colors-blue-60;
+        background-color: $--ads-colors-gray-20;
+        color:$--ads-colors-gray-70;
     }
 
     &.secondary {
-        background-color: $--ads-colors-blue-60;
-        color:$--ads-colors-blue-40;
+        background-color: $--ads-colors-gray-100;
+        color:$--ads-colors-white;
     }
 
 }
