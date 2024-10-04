@@ -1,0 +1,107 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.danger-button {
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 48px;
+  justify-content: space-between;
+  line-height: 22px;
+  padding: 0 16px;
+  width: 151px;
+
+  &__text {
+    color: $--ads-colors-white;
+    margin-right: 8px;
+  }
+
+  &__icon {
+    color: $--ads-colors-white;
+    height: 16px;
+    width: 16px;
+  }
+
+  // Enabled
+  &--enabled {
+    background: $--ads-colors-red-60;
+
+    &__text,
+    &__icon {
+      color: $--ads-colors-white;
+    }
+  }
+
+  // Hover
+  &--hover:hover {
+    background: $--ads-colors-red-70;
+  }
+
+  // Active
+  &--active:active {
+    background: $--ads-colors-red-80;
+  }
+
+  // Focus
+  &--focus:focus {
+    background: $--ads-colors-red-60;
+    border: 1px solid $--ads-colors-white;
+    outline: 2px solid $--ads-colors-red-60;
+    padding: 0 16px;
+  }
+
+  // Disabled
+  &--disable:disabled {
+    background: $--ads-colors-gray-20;
+    cursor: not-allowed;
+
+    &__text,
+    &__icon {
+      color: $--ads-colors-gray-50;
+    }
+  }
+}
+
+// Diseño responsivo
+@include respond-to('extra-large') {
+  .danger-button {
+    font-size: 16px;
+    height: 56px;
+    width: auto;
+  }
+}
+
+@include respond-to('large') {
+  .danger-button {
+    font-size: 14px;
+    height: 48px;
+  }
+}
+
+@include respond-to('medium') {
+  .danger-button {
+    font-size: 14px;
+    height: 40px;
+    padding-inline: 1.5rem;
+  }
+}
+
+@include respond-to('small') {
+  .danger-button {
+    font-size: 12px;
+    height: 32px;
+    padding-inline: 1rem;
+  }
+}
+
+@include respond-to('small-mobile') {
+  .danger-button {
+    font-size: 12px;
+    height: 28px;
+    padding-inline: 0.5rem;
+  }
+}
