@@ -14,16 +14,17 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'David Libre';
+  font-family: "David Libre";
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/DavidLibre-Regular.woff2') format('woff2');
+  src: url('/public/fonts/DavidLibre-Regular.woff2') format('woff2');
       
 >>>>>>> 00e06c1 (updating with master rebase)
 }
 
 @font-face {
   font-display: swap;
+<<<<<<< HEAD
   font-family: 'David Libre';
 <<<<<<< HEAD
   font-weight: 700;
@@ -68,15 +69,21 @@
   font-style: bold;
   font-weight: 700;
   src: url('../assets/fonts/DavidLibre-Bold.woff2') format('woff2');
+=======
+  font-family: "David Libre";
+  font-style: normal;
+  font-weight: 500;
+  src: url('/public/fonts/DavidLibre-Medium.woff2') format('woff2');
+>>>>>>> 9defec4 (feat: import fonts typography David Libre v2)
        
 }
 
 @font-face {
   font-display: swap;
-  font-family: Barlow;
-  font-style: normal;
-  font-weight: 400;
-  src: url('../assets/fonts/Barlow-Regular.woff2') format('woff2');
+  font-family: "David Libre";
+  font-style: bold;
+  font-weight: 700;
+  src: url('/public/fonts/DavidLibre-Bold.woff2') format('woff2');
       
 }
 
