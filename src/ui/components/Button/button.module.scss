@@ -1,6 +1,6 @@
-@use "sass:color";
+@use 'sass:color';
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 
 $primary-bg-color: #393939;
 $secondary-bg-color: #4c4c4c;
@@ -11,8 +11,7 @@ $quinary-bg-color: #8d8d8d;
 $text-color-primary: #ffffff;
 $text-color-secondary: #8d8d8d;
 
-$font-family: "Barlow", "Nunito Sans", "Helvetica Neue", Helvetica, Arial,
-  sans-serif;
+$font-family: 'Barlow', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $small-padding: 10px 16px;
 $medium-padding: 11px 20px;
 $large-padding: 12px 24px;
@@ -62,18 +61,12 @@ $large-font-size: 16px;
       --active-background-color,
       color.scale($primary-bg-color, $lightness: -20%)
     );
-    color: var(
-      --active-color,
-      color.scale($text-color-primary, $lightness: -20%)
-    );
+    color: var(--active-color, color.scale($text-color-primary, $lightness: -20%));
   }
 
   &:focus {
     outline: 2px solid
-      var(
-        --focus-background-color,
-        color.scale($primary-bg-color, $lightness: -15%)
-      );
+      var(--focus-background-color, color.scale($primary-bg-color, $lightness: -15%));
     outline-offset: 2px;
   }
 
