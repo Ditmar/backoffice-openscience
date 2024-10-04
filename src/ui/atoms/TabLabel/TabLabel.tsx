@@ -50,7 +50,7 @@ export function TabLabel(props: IProps) {
 export function TabLabel(props: IProps) {
   const { text, variant, isEnable, isSelect } = props;
   const setActive = isSelect ?? false;
-  const tabLabelClass = classNames(styles.tabLabel, {
+  const tablabelClass = classNames(styles.tablabel, {
     [styles.small]: variant === 'small',
     [styles.medium]: variant === 'medium',
     [styles.large]: variant === 'large',
@@ -58,7 +58,7 @@ export function TabLabel(props: IProps) {
     [styles.active]: isEnable,
     [styles.selected]: setActive,
   });
-  return <div className={tabLabelClass}>{text}</div>;
+  return <div className={tablabelClass}>{text}</div>;
 }
 >>>>>>> 1e093ea (feature/SEM-023)
 =======

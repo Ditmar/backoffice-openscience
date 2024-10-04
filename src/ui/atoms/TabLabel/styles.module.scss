@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $--ads-colors-blue-60: #1163fe;
 $--ads-colors-gray-10: #ccc;
 $--ads-colors-gray-20: #e3e3e3;
@@ -52,20 +53,33 @@ $grey-disabled: #ccc;
     align-items: center;
     color: $black;
     cursor: pointer;
+=======
+$black_color: #000;
+$grey_light: #e3e3e3;
+$grey_dark: #b0b0b0;
+$blue_color: #1163fe;
+$grey_disabled: #ccc;
+.tablabel {
+>>>>>>> 8790131 (feature/SEM-023)
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    cursor: pointer;
     font-size: 1.2rem;
     font-weight: 500;
-    height: 100%;
-    justify-content: center;
-    padding: 0 10px;
+    color: $black_color;
     transition: all 0.3s;
 
-    &--active {
-        border-bottom: 2px solid $grey-light;
+    &.active {
+        border-bottom: 2px solid $grey_light;
+
 
         &:hover {
-            border-bottom: 2px solid $grey-dark;
+            border-bottom: 2px solid $grey_dark;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         &.selected {
             color: #000;
@@ -99,25 +113,34 @@ $grey-disabled: #ccc;
         &--selected {
             border-bottom: 2px solid $blue;
             color: $black;
+=======
+        &.selected {
+            color: $black_color;
+            border-bottom: 2px solid $blue_color;
+>>>>>>> 8790131 (feature/SEM-023)
         }
     }
 
-    &--disabled {
-        border-bottom: 2px solid $grey-disabled;
-        color: $grey-disabled;
+    &.disabled {
+        color: $grey_disabled;
         cursor: not-allowed;
+<<<<<<< HEAD
 >>>>>>> 1d1c082 (feature/SEM-023-1)
+=======
+        border-bottom: 2px solid $grey_disabled;
+
+>>>>>>> 8790131 (feature/SEM-023)
     }
 
-    &--small {
+    &.small {
         font-size: 1rem;
     }
 
-    &--medium {
+    &.medium {
         font-size: 1.2rem;
     }
 
-    &--large {
+    &.large {
         font-size: 1.4rem;
     }
 <<<<<<< HEAD
