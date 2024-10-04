@@ -1,62 +1,84 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import Links from './Links';
 
 const meta = {
   title: 'ui/components/atoms/Links',
   component: Links,
-  argTypes: {
-    onClick: {
-      action: 'clicked',
-    },
-    variant: {
-      control: 'select',
-      options: ['Small', 'Normal', 'Big', 'Active', 'Disabled', 'Visited'],
-    },
-  },
-} as Meta<typeof Links>;
+};
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Small: Story = {
+// Historias para cada variante del Link
+export const SmallLink: Story = {
   args: {
-    children: 'Small Link',
+    href: 'https://example.com',
     variant: 'Small',
+    children: 'Link action', // Texto del enlace
   },
 };
 
-export const Normal: Story = {
+export const NormalLink: Story = {
   args: {
-    children: 'Normal Link',
+    href: 'https://example.com',
     variant: 'Normal',
+    children: 'Link action', // Texto del enlace
   },
 };
 
-export const Big: Story = {
+export const BigLink: Story = {
   args: {
-    children: 'Big Link',
+    href: 'https://example.com',
     variant: 'Big',
+    children: 'Link action', // Texto del enlace
   },
 };
 
-export const Active: Story = {
+export const EnabledLink: Story = {
   args: {
-    children: 'Active Link',
+    href: 'https://example.com',
+    variant: 'Enabled',
+    children: 'Link action', // Texto del enlace
+  },
+};
+
+export const HoverLink: Story = {
+  args: {
+    href: 'https://example.com',
+    variant: 'Hover',
+    children: 'Link action', // Texto del enlace
+  },
+};
+
+export const FocusLink: Story = {
+  args: {
+    href: 'https://example.com',
+    variant: 'Focus',
+    children: 'Link action', // Texto del enlace
+  },
+};
+
+export const ActiveLink: Story = {
+  args: {
+    href: 'https://example.com',
     variant: 'Active',
+    children: 'Link action', // Texto del enlace
   },
 };
 
-export const Disabled: Story = {
+export const DisabledLink: Story = {
   args: {
-    children: 'Disabled Link',
+    href: 'https://example.com',
     variant: 'Disabled',
+    children: 'Link action', // Texto del enlace
   },
 };
 
-export const Visited: Story = {
+export const VisitedLink: Story = {
   args: {
-    children: 'Visited Link',
+    href: 'https://example.com',
     variant: 'Visited',
+    children: 'Link action', // Texto del enlace
   },
 };
