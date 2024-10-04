@@ -1,0 +1,50 @@
+@import '../../../../globals/ads-variables.scss';
+
+.link {
+  color:$--ads-colors-blue-50; /* Ejemplo de estilo */
+  text-decoration: none; /* Quitar subrayado */
+  padding: 8px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+
+  &.Enabled {
+    opacity: 1; /* Totalmente visible */
+    cursor: pointer; /* Cursor tipo puntero */
+  }
+
+  &.Disabled {
+    color:$--ads-colors-gray-40;
+    opacity: 0.5; /* Semi-transparente */
+    cursor: not-allowed; /* Cursor de no permitido */
+  }
+
+  &.Hover {
+    text-decoration: underline;
+  }
+
+  &.Focus {
+    color:$--ads-colors-blue-60;
+    text-decoration: underline;
+  }
+
+  &.Active {
+    color:$--ads-colors-gray-80;
+    text-decoration: underline;
+  }
+
+  &.Visited {
+    color: purple; /* Color para enlaces visitados */
+  }
+
+  &.Small {
+    font-size: 12px; /* Fuente pequeña */
+  }
+
+  &.Normal {
+    font-size: 16px; /* Fuente normal */
+  }
+
+  &.Big {
+    font-size: 20px; /* Fuente grande */
+  }
+}
