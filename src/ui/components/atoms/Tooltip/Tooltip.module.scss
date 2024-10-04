@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Contenedor del tooltip */
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  font-family: "Barlow", sans-serif;
+  color: #161616;
+}
+
+/* Contenedor del ícono */
+.iconContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Estilo para el ícono */
+.icon {
+  font-size: 12px;
+  margin-left: 8px;
+  
+}
+
+/* Estilo del texto principal */
+.mainText {
+  font-size: 12px;
+}
+
+/* Estilo del texto que aparece en el tooltip (inicialmente oculto) */
+.StyleText {
+  visibility: hidden;
+  background-color: #161616;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  top: 140%; /* Se posiciona abajo del ícono */
+  left: 40%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Flecha del tooltip */
+.StyleText::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Flecha se ubica arriba del tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #161616 transparent;
+}
+
+/* Mostrar el tooltip solo cuando se pasa el mouse sobre el ícono */
+.iconContainer:hover .StyleText {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Variantes de tamaño para el tooltip */
+.small {
+  font-size: 12px;
+  padding: 6px;
+  width: 120px;
+  margin-left: -59px;
+}
+
+.medium {
+  font-size: 14px;
+  padding: 8px;
+  width: 140px;
+  margin-left: -72px;
+}
+
+.large {
+  font-size: 16px;
+  padding: 10px;
+  width: 160px;
+  margin-left: -83px;
+}
