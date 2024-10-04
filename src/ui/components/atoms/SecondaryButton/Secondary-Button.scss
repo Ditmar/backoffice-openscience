@@ -4,26 +4,25 @@
   background: $--ads-colors-gray-80;
   border: none;
   color: $--ads-colors-white;
-  font-size: 14;
+  font-size: 14px;
   height: 48px;
   outline: $--ads-colors-red-60;
   padding-inline: 2rem;
   width: auto;
 
-  // Tamaños
   &--small {
-    padding: 5px 10px;
     font-size: 14px;
+    padding: 5px 10px;
   }
 
   &--medium {
-    padding: 10px 20px;
     font-size: 16px;
+    padding: 10px 20px;
   }
 
   &--large {
-    padding: 15px 30px;
     font-size: 18px;
+    padding: 15px 30px;
   }
 
   &--primary {
