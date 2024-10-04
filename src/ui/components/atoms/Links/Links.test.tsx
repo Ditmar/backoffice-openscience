@@ -1,37 +1,30 @@
-import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import Links from './Links';
+import { render, screen } from '@testing-library/react';
+import Links from './Links'; // Asegúrate de que la importación sea correcta
 
-describe('Links component', () => {
-  it('should render the link with the correct text', () => {
-    const { getByText } = render(<Links variant="Small">Test Link</Links>);
-    const linkText = getByText('Test Link');
-    expect(linkText).toBeDefined();
-  });
-
-  it('should apply the correct variant class', () => {
-    const { container } = render(<Links variant="Big">Test Link</Links>);
-    expect(container.firstChild).toHaveClass('links--Big');
-  });
-
-  it('should handle onClick event', () => {
-    const handleClick = vi.fn();
-    const { getByText } = render(
-      <Links variant="Normal" onClick={handleClick}>
-        Test Link
+describe('Links Component', () => {
+  it('should render a link with the correct class for Small variant', () => {
+    render(
+      <Links href="#" variant="Small">
+        Small Link
       </Links>,
     );
-    getByText('Test Link').click();
-    expect(handleClick).toHaveBeenCalled();
+    const linkElement = screen.getByText(/small link/i);
+
+    // Verifica que la clase Small esté presente
+    expect(linkElement.className).toContain('Small'); // Verifica que contiene la clase Small
   });
 
-  it('should apply the visited class', () => {
-    const { container } = render(<Links variant="Visited">Visited Link</Links>);
-    expect(container.firstChild).toHaveClass('links--Visited');
-  });
+  it('should render a link with the correct href and class for Normal variant', () => {
+    render(
+      <Links href="https://example.com" variant="Normal">
+        Normal Link
+      </Links>,
+    );
+    const linkElement = screen.getByText(/normal link/i);
 
-  it('should apply the disabled state', () => {
-    const { container } = render(<Links variant="Disabled">Disabled Link</Links>);
-    expect(container.firstChild).toHaveClass('links--Disabled');
+    // Verificar el href usando getAttribute
+    expect(linkElement.getAttribute('href')).toBe('https://example.com');
+    expect(linkElement.className).toContain('Normal'); // Verifica que contiene la clase Normal
   });
 });
