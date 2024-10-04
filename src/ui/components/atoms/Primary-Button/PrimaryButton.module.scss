@@ -1,6 +1,6 @@
 @import '../../../../globals/ads-variables.scss';
 
-.Primary-button {
+.primary-button {
   background: $--ads-colors-blue-70;
   border: none;
   color: $--ads-colors-white;
@@ -43,6 +43,7 @@
     background: $--ads-colors-gray-40;
     color: $--ads-colors-gray-50;
   }
+
   &:hover {
     background-color: $--ads-colors-blue-50;
   }

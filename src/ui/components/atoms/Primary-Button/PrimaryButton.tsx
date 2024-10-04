@@ -1,14 +1,14 @@
 import styles from './PrimaryButton.module.scss';
 import type { IProps } from './types/IProps';
+import Add from '../../../../assets/icons/add.svg?raw';
 
 function PrimaryButton(props: IProps) {
-  const { children, variant, onClick } = props;
+  const { children, variant, onClick, icon } = props;
+  const selectedIcon = icon ?? (children === 'Primary button' ? Add : Add);
   return (
-    /*<button className={`Primary-button Primary-button--${variant}`} onClick={onClick}>
-        <span className="Primary-button__text">{children}</span>
-    </button>*/
-      <button className={`${styles['Primary-button']} ${styles[`Primary-button--${variant}`]}`} onClick={onClick}>
-        <span className={styles['Primary-button__text']}>{children}</span>
+      <button className={`${styles['primary-button']} ${styles[`primary-button--${variant}`]}`} onClick={onClick}>
+        <span className={styles['primary-button__text']}>{children}</span>
+        {selectedIcon && <img src={selectedIcon} alt="" />}
       </button>
   );
 }
