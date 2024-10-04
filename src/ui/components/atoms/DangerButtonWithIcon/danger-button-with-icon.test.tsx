@@ -6,7 +6,7 @@ import DangerButtonWithIcon from './danger-button-with-icon';
 describe('DangerButtonWithIcon', () => {
   it('renders correctly', () => {
     render(
-      <DangerButtonWithIcon variant="Enabled" icon="+">
+      <DangerButtonWithIcon variant="enabled" icon="+">
         Danger Button
       </DangerButtonWithIcon>,
     );
@@ -16,7 +16,7 @@ describe('DangerButtonWithIcon', () => {
   it('handles click', () => {
     const handleClick = vi.fn();
     render(
-      <DangerButtonWithIcon variant="Enabled" icon="+" onClick={handleClick}>
+      <DangerButtonWithIcon variant="enabled" icon="+" onClick={handleClick}>
         Danger Button
       </DangerButtonWithIcon>,
     );
@@ -26,7 +26,7 @@ describe('DangerButtonWithIcon', () => {
 
   it('is disabled when variant is Disable', () => {
     render(
-      <DangerButtonWithIcon variant="Disable" icon="+">
+      <DangerButtonWithIcon variant="disable" icon="+">
         Danger Button
       </DangerButtonWithIcon>,
     );

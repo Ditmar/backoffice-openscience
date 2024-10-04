@@ -1,7 +1,7 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/mixins';
 
-.Danger-button {
+.danger-button {
   align-items: center;
   border: none;
   cursor: pointer;
@@ -27,7 +27,7 @@
   }
 
   // Enabled
-  &--Enabled {
+  &--enabled {
     background: $--ads-colors-red-60;
 
     &__text,
@@ -37,17 +37,17 @@
   }
 
   // Hover
-  &--Hover:hover {
+  &--hover:hover {
     background: $--ads-colors-red-70;
   }
 
   // Active
-  &--Active:active {
+  &--active:active {
     background: $--ads-colors-red-80;
   }
 
   // Focus
-  &--Focus:focus {
+  &--focus:focus {
     background: $--ads-colors-red-60;
     border: 1px solid $--ads-colors-white;
     outline: 2px solid $--ads-colors-red-60;
@@ -55,7 +55,7 @@
   }
 
   // Disabled
-  &--Disable:disabled {
+  &--disable:disabled {
     background: $--ads-colors-gray-20;
     cursor: not-allowed;
 
@@ -68,7 +68,7 @@
 
 // Diseño responsivo
 @include respond-to('extra-large') {
-  .Danger-button {
+  .danger-button {
     font-size: 16px;
     height: 56px;
     width: auto;
@@ -76,14 +76,14 @@
 }
 
 @include respond-to('large') {
-  .Danger-button {
+  .danger-button {
     font-size: 14px;
     height: 48px;
   }
 }
 
 @include respond-to('medium') {
-  .Danger-button {
+  .danger-button {
     font-size: 14px;
     height: 40px;
     padding-inline: 1.5rem;
@@ -91,7 +91,7 @@
 }
 
 @include respond-to('small') {
-  .Danger-button {
+  .danger-button {
     font-size: 12px;
     height: 32px;
     padding-inline: 1rem;
@@ -99,7 +99,7 @@
 }
 
 @include respond-to('small-mobile') {
-  .Danger-button {
+  .danger-button {
     font-size: 12px;
     height: 28px;
     padding-inline: 0.5rem;

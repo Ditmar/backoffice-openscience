@@ -6,12 +6,12 @@ function DangerButtonWithIcon(props: IProps) {
 
   return (
     <button
-      className={`Danger-button Danger-button--${variant}`}
+      className={`danger-button danger-button--${variant}`}
       onClick={onClick}
-      disabled={variant === 'Disable'}
+      disabled={variant === 'disable'}
     >
-      <span className="Danger-button__text">{children}</span>
-      {icon && <span className="Danger-button__icon">{icon}</span>}{' '}
+      <span className="danger-button__text">{children}</span>
+      {icon && <span className="danger-button__icon">{icon}</span>}{' '}
       {/* Se usa el string como ícono */}
     </button>
   );

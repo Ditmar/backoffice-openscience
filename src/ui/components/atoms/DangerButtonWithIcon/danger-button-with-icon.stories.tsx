@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Enabled: Story = {
   args: {
     children: 'Danger button',
-    variant: 'Enabled',
+    variant: 'enabled',
     icon: '+',
   },
 };
@@ -25,27 +25,27 @@ export const Enabled: Story = {
 export const Hover: Story = {
   args: {
     ...Enabled.args,
-    variant: 'Hover',
+    variant: 'hover',
   },
 };
 
 export const Active: Story = {
   args: {
     ...Enabled.args,
-    variant: 'Active',
+    variant: 'active',
   },
 };
 
 export const Focus: Story = {
   args: {
     ...Enabled.args,
-    variant: 'Focus',
+    variant: 'focus',
   },
 };
 
 export const Disabled: Story = {
   args: {
     ...Enabled.args,
-    variant: 'Disable',
+    variant: 'disable',
   },
 };
