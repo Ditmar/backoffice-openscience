@@ -1,44 +1,49 @@
-.tabLabel {
-    display: flex;
-    justify-content: center;
+$black: #000;
+$grey-light: #e3e3e3;
+$grey-dark: #b0b0b0;
+$blue: #1163fe;
+$grey-disabled: #ccc;
+
+.tab-label {
     align-items: center;
-    padding: 0 10px;
-    height: 100%;
+    color: $black;
     cursor: pointer;
+    display: flex;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #000;
+    height: 100%;
+    justify-content: center;
+    padding: 0 10px;
     transition: all 0.3s;
 
-    &.active {
-        border-bottom: 2px solid #e3e3e3;
-
+    &--active {
+        border-bottom: 2px solid $grey-light;
 
         &:hover {
-            border-bottom: 2px solid #b0b0b0;
+            border-bottom: 2px solid $grey-dark;
         }
-        &.selected {
-            color: #000;
-            border-bottom: 2px solid #1163fe;
+
+        &--selected {
+            border-bottom: 2px solid $blue;
+            color: $black;
         }
     }
 
-    &.disabled {
-        color: #ccc;
+    &--disabled {
+        border-bottom: 2px solid $grey-disabled;
+        color: $grey-disabled;
         cursor: not-allowed;
-        border-bottom: 2px solid #ccc;
-
     }
 
-    &.small {
+    &--small {
         font-size: 1rem;
     }
 
-    &.medium {
+    &--medium {
         font-size: 1.2rem;
     }
 
-    &.large {
+    &--large {
         font-size: 1.4rem;
     }
 }
