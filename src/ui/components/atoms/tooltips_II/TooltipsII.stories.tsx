@@ -25,72 +25,72 @@ type Story = StoryObj<typeof meta>;
 
 export const Top: Story = {
   args: {
-    text: 'Tooltip on top',
+    text: 'Share',
     position: 'top',
     size: 'medium',
-    children: <DangerButton>hola</DangerButton>,
+    children: <Share />,
   },
 };
 
 export const Bottom: Story = {
   args: {
-    text: 'Tooltip on bottom',
+    text: 'Share',
     position: 'bottom',
     size: 'medium',
-    children: <DangerButton>hola</DangerButton>,
+    children: <Share />,
   },
 };
 
 export const Left: Story = {
   args: {
-    text: 'tooltip on left',
+    text: 'Share',
     position: 'left',
     size: 'medium',
-    children: <DangerButton>hola</DangerButton>,
+    children: <Share />,
   },
 };
 
 export const Right: Story = {
   args: {
-    text: 'tooltip on right',
+    text: 'Share',
     position: 'right',
     size: 'medium',
-    children: <DangerButton>hola</DangerButton>,
+    children: <Share />,
   },
 };
 
 export const Small: Story = {
   args: {
-    text: 'Tooltip small',
+    text: 'Share',
     position: 'right',
     size: 'small',
-    children: <DangerButton>hola</DangerButton>,
+    children: <Share />,
   },
 };
 
 export const Medium: Story = {
   args: {
-    text: 'Tooltip medium',
+    text: 'Share',
     position: 'right',
     size: 'medium',
-    children: 'hola',
+    children: <Share />,
   },
 };
 
 export const Large: Story = {
   args: {
-    text: 'Tooltip large',
+    text: 'Share',
     position: 'right',
     size: 'large',
-    children: 'hola',
+    children: <Share />,
   },
 };
 
-export const Icon: Story = {
+export const Text: Story = {
   args: {
-    text: 'Tooltip large',
+    text: 'Brief definition of the underlined word abode',
     position: 'right',
     size: 'medium',
-    children: <Share/>,
+    children: <DangerButton>Definition Tooltip</DangerButton>,
   },
 };

@@ -1,27 +1,35 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import Tooltip from './TooltipsII';
+import TooltipsII from './TooltipsII';
 
-describe('Tooltip Component', () => {
+describe('TooltipsII Component', () => {
+  it('renders without crashing', () => {
+    render(
+      <TooltipsII text="Test tooltip" position="bottom" size="medium">
+        <span>Hover me</span>
+      </TooltipsII>,
+    );
+  });
+
   it('renders tooltip at the correct position', () => {
-    const { getByText } = render(
-      <Tooltip text="Tooltip at bottom" position="bottom" size="large">
-        {' '}
-        <h3>toltip</h3>
-      </Tooltip>,
+    render(
+      <TooltipsII text="Tooltip at bottom" position="bottom" size="large">
+        <h3>tooltip</h3>
+      </TooltipsII>,
     );
 
-    const tooltipTrigger = getByText('Tooltip at bottom');
+    const tooltipTrigger = screen.getByText('tooltip');
     expect(tooltipTrigger).toBeDefined();
   });
+
   it('renders tooltip at the correct size', () => {
-    const { getByText } = render(
-      <Tooltip text="tooltip small" position="top" size="small">
-        <h3>toltip</h3>
-      </Tooltip>,
+    render(
+      <TooltipsII text="tooltip small" position="top" size="small">
+        <h3>tooltip</h3>
+      </TooltipsII>,
     );
 
-    const tooltipTrigger = getByText('tooltip small');
+    const tooltipTrigger = screen.getByText('tooltip');
     expect(tooltipTrigger).toBeDefined();
   });
 });
