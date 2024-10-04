@@ -1,22 +1,18 @@
-import classNames from 'classnames';
 import { useState } from 'react';
-import styles from './GhostButtonWithIcon.scss';
-import type { IGhostButtonWithIconProps } from './types/IGhostButtonWithIconProps.ts';
+import './GhostButtonWithIcon.scss';
+import type { GhostProps } from './types/types';
 
-function GhostButtonWithIcon ({
+function GhostButtonWithIcon({
   size = 'medium',
   disabled = false,
   onClick,
-  
-}: IGhostButtonWithIconProps) {
+}: GhostProps) {
   const [isHovered, setIsHovered] = useState(false);
   const sizeClass = `btn--${size}`;
   const disabledClass = disabled ? 'btn--disabled' : '';
-
-
-return (
+  return (
     <div className="btn-container">
-      <button 
+      <button
         className={`btn-main ${sizeClass} ${disabledClass}`}
         onClick={onClick}
         onMouseEnter={() => {
@@ -26,7 +22,7 @@ return (
           setIsHovered(false);
         }}
         disabled={disabled}
-        aria-label='add-icon'
+        aria-label="add-icon"
       >
         <span className="btn-text">Ghosth icon</span>
         <span className="btn-icon-square">+</span>

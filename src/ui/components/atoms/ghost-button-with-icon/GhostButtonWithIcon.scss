@@ -6,19 +6,21 @@
   display: inline-block;
 }
 
-.btn-secondary {
+.btn-main {
   align-items: center;
   border: none;
   display: inline-flex;
   justify-content: center;
   height: 48px;
   width: 143px;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   background-color: #ffffff;
   color: $--ads-colors-blue-60; //color texto
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
 
   .btn-icon-square {
     display: inline-flex;
@@ -33,37 +35,38 @@
   }
 
   &--small {
-  height: 40px;
-  width: 40px;
+    height: 40px;
+    width: 40px;
   }
 
   &--medium {
-  height: 48px;
-  width: 48px;
+    height: 48px;
+    width: 48px;
   }
 
   &--large {
-  height: 60px;
-  width: 60px;
+    height: 60px;
+    width: 60px;
   }
 
   &:hover:not([disabled]) {
-  background-color: #ECF2FF;
+    background-color: #ecf2ff;
   }
 
   &:active:not([disabled]) {
-  background-color: #D0E2FF;
+    background-color: #d0e2ff;
   }
 
   &:focus {
-  box-shadow: inset 0 0 0 2px $--ads-colors-blue-60,
-              inset 0 0 0 4px #FFFFFF;
+    box-shadow:
+      inset 0 0 0 2px $--ads-colors-blue-60,
+      inset 0 0 0 4px #ffffff;
   }
 
   &:disabled {
-  background-color: #ffffff;
-  color: #8D8D8D;
-  cursor: pointer;
+    background-color: #ffffff;
+    color: #8d8d8d;
+    cursor: pointer;
   }
 }
 

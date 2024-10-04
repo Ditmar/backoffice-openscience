@@ -1,9 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type { IGhostButtonWithIconProps } from './types/IGhostButtonWithIconProps.ts';
+import type { GhostProps } from './types/types';
 import GhostButtonWithIcon from './GhostButtonWithIcon';
 
 const meta: Meta<typeof GhostButtonWithIcon> = {
-  title: 'ui/components/atoms/ghost-button-with-icon',
+  title: 'ui/components/atoms/ghost-button-with-icon/GhostButtonWithIcon',
   component: GhostButtonWithIcon,
   argTypes: {
     onClick: { action: 'clicked' },
@@ -14,10 +14,10 @@ const meta: Meta<typeof GhostButtonWithIcon> = {
 
 export default meta;
 
-type Story = StoryObj<IGhostButtonWithIconProps>;
+type Story = StoryObj<GhostProps>;
 
 export const Enabled: Story = {
-  args: {  
+  args: {
     size: 'medium',
     disabled: false,
   },
