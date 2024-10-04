@@ -1,38 +1,38 @@
-$black_color: #000;
-$grey_light: #e3e3e3;
-$grey_dark: #b0b0b0;
-$blue_color: #1163fe;
-$grey_disabled: #ccc;
+$--ads-colors-blue-60: #1163fe;
+$--ads-colors-gray-10: #ccc;
+$--ads-colors-gray-20: #e3e3e3;
+$--ads-colors-gray-40: #b0b0b0;
+$--ads-colors-gray-100: #000;
+
 .tablabel {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 10px;
-    height: 100%;
+    color: $--ads-colors-gray-100;
     cursor: pointer;
+    display: flex;
     font-size: 1.2rem;
     font-weight: 500;
-    color: $black_color;
+    height: 100%;
+    justify-content: center;
+    padding: 0 10px;
     transition: all 0.3s;
 
     &.active {
-        border-bottom: 2px solid $grey_light;
-
+        border-bottom: 2px solid $--ads-colors-gray-20;
 
         &:hover {
-            border-bottom: 2px solid $grey_dark;
+            border-bottom: 2px solid $--ads-colors-gray-40;
         }
+
         &.selected {
-            color: $black_color;
-            border-bottom: 2px solid $blue_color;
+            border-bottom: 2px solid $--ads-colors-blue-60;
+            color: $--ads-colors-gray-100;
         }
     }
 
     &.disabled {
-        color: $grey_disabled;
+        border-bottom: 2px solid $--ads-colors-gray-10;
+        color: $--ads-colors-gray-10;
         cursor: not-allowed;
-        border-bottom: 2px solid $grey_disabled;
-
     }
 
     &.small {
