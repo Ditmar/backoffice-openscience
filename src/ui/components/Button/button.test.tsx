@@ -1,12 +1,12 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Button from "./button";
-import { describe, expect, test, vi } from "vitest";
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { describe, expect, test, vi } from 'vitest';
+import Button from './button';
 
-describe("Button component", () => {
-  test("renders with label", () => {
+describe('Button component', () => {
+  test('renders with label', () => {
     render(<Button label="Click me" />);
-    expect(screen.getByText("Click me")).toBeInTheDocument();
+    expect(screen.getByText('Click me')).toBeInTheDocument();
   });
   // test('renders with background color', () => {
   //   render(<Button label="Click me" backgroundColor="rgb(255, 0, 0)" />);
@@ -22,15 +22,15 @@ describe("Button component", () => {
   //   expect(computedStyle.color).toBe('#393939');
   // });
 
-  test("renders with icon", () => {
+  test('renders with icon', () => {
     render(<Button label="Click me" icon={<span>+</span>} />);
-    expect(screen.getByText("+")).toBeInTheDocument();
+    expect(screen.getByText('+')).toBeInTheDocument();
   });
 
-  test("handles click events", () => {
+  test('handles click events', () => {
     const handleClick = vi.fn();
     render(<Button label="Click me" onClick={handleClick} />);
-    fireEvent.click(screen.getByText("Click me"));
+    fireEvent.click(screen.getByText('Click me'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });

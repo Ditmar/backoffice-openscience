@@ -1,0 +1,123 @@
+@import '../../../../globals/ads-variables.scss';
+
+
+.button {
+  background: $--ads-colors-gray-80;
+  border: none;
+  color: $--ads-colors-white;
+  font-size: 14;
+  height: 48px;
+  outline: $--ads-colors-red-60;
+  padding-inline: 2rem;
+  width: auto;
+
+  // Tamaños
+  &--small {
+    padding: 5px 10px;
+    font-size: 14px; 
+  }
+
+  &--medium {
+    padding: 10px 20px;
+    font-size: 16px; 
+  }
+
+  &--large {
+    padding: 15px 30px; 
+    font-size: 18px; 
+  }
+
+  &--primary {
+    background-color: $--ads-colors-blue-50;
+    color: $--ads-colors-white;
+
+    &:hover {
+      background-color: $--ads-colors-blue-60;
+    }
+
+    &:active {
+      background-color: $--ads-colors-blue-40;
+    }
+
+    &[disabled] {
+      background-color: $--ads-colors-gray-60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--secondary {
+    background-color: $--ads-colors-gray-10;
+    color: $--ads-colors-gray-100;
+
+    &:hover {
+      background-color: $--ads-colors-gray-20;
+    }
+
+    &:active {
+      background-color: $--ads-colors-gray-40;
+    }
+
+    &[disabled] {
+      background-color: $--ads-colors-gray-60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--inherit {
+    background-color: transparent;
+    color: inherit;
+
+    &:hover {
+      background-color: $--ads-colors-gray-10;
+    }
+
+    &:active {
+      background-color: $--ads-colors-gray-20;
+    }
+
+    &[disabled] {
+      background-color: $--ads-colors-gray-60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--default {
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-100;
+
+    &:hover {
+      background-color: $--ads-colors-gray-40;
+    }
+
+    &:active {
+      background-color: $--ads-colors-gray-50;
+    }
+
+    &[disabled] {
+      background-color: $--ads-colors-gray-60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--text {
+    background-color: transparent;
+    color: $--ads-colors-blue-50;
+
+    &:hover {
+      color: $--ads-colors-blue-60;
+    }
+
+    &:active {
+      color: $--ads-colors-blue-40;
+    }
+
+    &[disabled] {
+      color: $--ads-colors-gray-60;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.button__icon {
+  margin-right: 8px; 
+}

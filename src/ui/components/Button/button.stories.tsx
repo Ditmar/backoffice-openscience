@@ -1,44 +1,44 @@
-import type { StoryObj } from "@storybook/react";
-import Button from "./button";
+import type { StoryObj } from '@storybook/react';
+import Button from './button';
 
 const meta = {
-  title: "ui/components/Button",
+  title: 'ui/components/Button',
   component: Button,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     backgroundColor: {
-      control: "color",
-      description: "Background color of the button",
+      control: 'color',
+      description: 'Background color of the button',
     },
     color: {
-      control: "color",
-      description: "Text color of the button",
+      control: 'color',
+      description: 'Text color of the button',
     },
     hover: {
-      control: "color",
-      description: "Background color of the button on hover",
+      control: 'color',
+      description: 'Background color of the button on hover',
     },
     active: {
-      control: "color",
-      description: "Background color of the button when active",
+      control: 'color',
+      description: 'Background color of the button when active',
     },
     focus: {
-      control: "color",
-      description: "Background color of the button on focus",
+      control: 'color',
+      description: 'Background color of the button on focus',
     },
     borderRadius: {
-      control: "text",
-      description: "Border radius of the button",
+      control: 'text',
+      description: 'Border radius of the button',
     },
     icon: {
-      control: { type: "text" },
-      description: "Icon to be displayed on the button",
+      control: { type: 'text' },
+      description: 'Icon to be displayed on the button',
     },
     onClick: {
-      action: "click",
+      action: 'click',
     },
   },
 };
@@ -49,13 +49,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
-    backgroundColor: "#7f7f7f",
-    color: "#ffffff",
-    borderRadius: "5em",
-    icon: "+",
-    hover: "#6e6e6e",
-    active: "#5e5e5e",
-    focus: "#4e4e4e",
+    label: 'Button',
+    backgroundColor: '#7f7f7f',
+    color: '#ffffff',
+    borderRadius: '5em',
+    icon: '+',
+    hover: '#6e6e6e',
+    active: '#5e5e5e',
+    focus: '#4e4e4e',
   },
 };

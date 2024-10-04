@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../ui/components/Button/button';
 ---
+
 <Layout title="Welcome to Astro.">
   <h1>welcome to backoffice openscience</h1>
 </Layout>
@@ -11,63 +12,60 @@ import Button from '../ui/components/Button/button';
     <h2>Ticket SEM 009 - Buttons with Different States</h2>
 
     <div class="button-container">
- 
       <Button
-        label="Secondary button" 
-        size="medium" 
+        label="Secondary button"
+        size="medium"
         backgroundColor="#393939"
         color="#ffffff"
-        disabled={false} 
+        disabled={false}
         hover={null}
         active={null}
         focus={null}
         icon="+"
       />
-      
 
-      <Button 
-        label="Secondary button" 
-        size="medium" 
+      <Button
+        label="Secondary button"
+        size="medium"
         backgroundColor="#4C4C4C"
         color="#ffffff"
         hover="#393939"
         disabled={false}
         icon="+"
       />
-   
-      <Button 
-        label="Secondary button" 
-        size="medium" 
+
+      <Button
+        label="Secondary button"
+        size="medium"
         backgroundColor="#161616"
         color="#ffffff"
-             hover="#393939"
+        hover="#393939"
         active="#C6C6C6"
         disabled={false}
         icon="+"
       />
-      
 
-      <Button 
-        label="Secondary button" 
-        size="medium" 
+      <Button
+        label="Secondary button"
+        size="medium"
         backgroundColor="#393939"
-      color="#ffffff"
-    hover="#393939"
+        color="#ffffff"
+        hover="#393939"
         active="#C6C6C6"
         focus="#393939"
         disabled={false}
         icon="+"
       />
-     
-      <Button 
-        label="Secondary button" 
-        size="medium" 
+
+      <Button
+        label="Secondary button"
+        size="medium"
         backgroundColor="#C6C6C6"
         color="#8D8D8D"
         hover={null}
         active={null}
         focus={null}
-        disabled={true}
+        disabled
         icon="+"
       />
     </div>
@@ -76,15 +74,14 @@ import Button from '../ui/components/Button/button';
 
 <style>
   .container {
-	width: 100%;
-		display: flex;
-		justify-content: center;
-        flex-direction:column;
-		align-items: center;
-        padding:10px 16px;
-        background-color:white;
-        min-height:100vh
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: white;
+    min-height: 100vh;
   }
 
   .button-container {
