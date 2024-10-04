@@ -15,23 +15,23 @@ export const ErrorWithPlaceholder: Story = {
   args: {
     placeholder: 'Placeholder text',
     errorMessage: 'Error message here',
-    variant: 'medium', 
+    variant: 'medium',
   },
 };
-  
-  export const ErrorWithInput: Story = {
-    args: {
-      placeholder: 'User Input Text',
-      errorMessage: 'Error message here',
-      value: 'User Input Text',
-      variant: 'medium',
-    },
-  };
-  
-  export const DisabledInput: Story = {
-    args: {
-      isDisabled: true,
-      placeholder: 'Placeholder text',
-      variant: 'medium',
-    },
-  };
+
+export const ErrorWithInput: Story = {
+  args: {
+    placeholder: 'User Input Text',
+    errorMessage: 'Error message here',
+    value: 'User Input Text',
+    variant: 'medium',
+  },
+};
+
+export const DisabledInput: Story = {
+  args: {
+    isDisabled: true,
+    placeholder: 'Placeholder text',
+    variant: 'medium',
+  },
+};
