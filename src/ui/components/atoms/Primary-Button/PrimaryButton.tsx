@@ -6,10 +6,13 @@ function PrimaryButton(props: IProps) {
   const { children, variant, onClick, icon } = props;
   const selectedIcon = icon ?? (children === 'Primary button' ? Add : Add);
   return (
-      <button className={`${styles['primary-button']} ${styles[`primary-button--${variant}`]}`} onClick={onClick}>
-        <span className={styles['primary-button__text']}>{children}</span>
-        {selectedIcon && <img src={selectedIcon} alt="" />}
-      </button>
+    <button
+      className={`${styles['primary-button']} ${styles[`primary-button--${variant}`]}`}
+      onClick={onClick}
+    >
+      <span className={styles['primary-button__text']}>{children}</span>
+      {selectedIcon && <img src={selectedIcon} alt="" />}
+    </button>
   );
 }
 
