@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import TextInputErrorDisabled from './Textinputerrordisabled';
-import type { TextInputErrorDisabledProps } from './types/IProps'; 
+import type { TextInputErrorDisabledProps } from './types/IProps';
 
 const meta: Meta<typeof TextInputErrorDisabled> = {
-    title: 'Components/Atoms/TextInputErrorDisabled',
-    component: TextInputErrorDisabled,
+  title: 'Components/Atoms/TextInputErrorDisabled',
+  component: TextInputErrorDisabled,
 };
 
-  export default meta;
-  
-  type Story = StoryObj<TextInputErrorDisabledProps>;
-  
-  export const ErrorWithPlaceholder: Story = {
-    args: {
-      placeholder: 'Placeholder text',
-      errorMessage: 'Error message here',
-      variant: 'medium', 
-    },
-  };
+export default meta;
+
+type Story = StoryObj<TextInputErrorDisabledProps>;
+
+export const ErrorWithPlaceholder: Story = {
+  args: {
+    placeholder: 'Placeholder text',
+    errorMessage: 'Error message here',
+    variant: 'medium', 
+  },
+};
   
   export const ErrorWithInput: Story = {
     args: {
