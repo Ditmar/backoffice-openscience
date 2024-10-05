@@ -15,13 +15,13 @@ export function Tooltip(props: ToolTipsProps) {
   });
 
   return (
-    <div className={styles.tooltipContainer}>
-      <span className={styles.mainText}>{text}</span>
+    <div className={styles.tooltip}>
+      <span className={styles.text}>{text}</span>
 
-      <span className={styles.iconContainer}>
+      <span className={styles.container}>
         <SlInfo className={styles.icon} data-testid="tooltip-icon" />
 
-        <span className={`${toolTipsClass} ${styles.StyleText}`}>{toolTipText}</span>
+        <span className={`${toolTipsClass} ${styles.tips}`}>{toolTipText}</span>
       </span>
     </div>
   );
