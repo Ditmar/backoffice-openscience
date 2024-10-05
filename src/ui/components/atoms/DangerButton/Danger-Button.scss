@@ -6,7 +6,7 @@
   border: none;
   color: $--ads-colors-white;
   font-size: $--ads-font-size-primary;
-  height: 48px;
+  height: 48px !important;
   outline: $--ads-colors-red-60;
   padding-inline: 2rem;
   width: auto;
@@ -43,7 +43,7 @@
   }
 
   &--Disable:disabled {
-    background: $--ads-background-disable;
+    background: $--ads-colors-gray-50 ;
   }
 
   &:hover {
