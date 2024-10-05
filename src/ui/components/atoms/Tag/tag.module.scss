@@ -1,9 +1,4 @@
-$--ads-colors-gray-10: #f4f4f4;
-$--ads-colors-gray-50: #8d8d8d;
-$--ads-colors-gray-100: #161616;
-$--ads-colors-blue-60: #0f62fe;
-$--ads-colors-gray-80: #393939;
-
+@import '../../../../globals/ads-variables.scss';
 .tag {
   border-radius: 999px;
   display: inline-block;
