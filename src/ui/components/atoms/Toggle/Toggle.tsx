@@ -27,7 +27,10 @@ function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
       )}
       <button
         id="toggle-button"
-        className={`${styles.toggle} ${checked ? styles.checked : ''}`}
+        className={`
+          ${styles.toggle} 
+          ${checked ? styles.checked : ''}
+          `}
         onClick={handleToggle}
         disabled={disabled}
         aria-pressed={checked}
