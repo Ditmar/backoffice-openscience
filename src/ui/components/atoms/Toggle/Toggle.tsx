@@ -12,9 +12,8 @@ function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
 
   const handleToggle = () => {
     if (!disabled) {
-      const newChecked = !checked;
-      setChecked(newChecked);
-      if (onChange) onChange(newChecked);
+      setChecked(!checked);
+      if (onChange) onChange(!checked);
     }
   };
 
