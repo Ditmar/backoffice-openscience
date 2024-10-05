@@ -1,6 +1,7 @@
-import type { IProps } from "./types/IProps"
-import styles from "./styles.module.scss"
-import classNames from "classnames";
+import classNames from 'classnames';
+import styles from './styles.module.scss';
+import type { IProps } from './types/IProps';
+
 export function TabLabel(props: IProps) {
   const { text, variant, isEnable, isSelect } = props;
   const setActive = isSelect ?? false;
