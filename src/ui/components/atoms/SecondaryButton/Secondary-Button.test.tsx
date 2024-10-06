@@ -48,7 +48,7 @@ describe('SecondaryButton', () => {
       <SecondaryButton
         size={defaultProps.size}
         variant={defaultProps.variant}
-        state="disabled" // Cambiar aquí para probar el estado 'disabled'
+        state="disabled" 
         onClick={defaultProps.onClick}
         icon={defaultProps.icon}
         label={defaultProps.label}
