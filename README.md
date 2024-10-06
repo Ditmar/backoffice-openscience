@@ -5,7 +5,7 @@
 1. **Clone the repository**:
 
    git clone https://github.com/Ditmar/backoffice-openscience.git
-   
+
    cd backoffice-openscience
 
 2. **Install dependencies**:
@@ -23,7 +23,6 @@
 4. **Start the development server**:
 
    yarn dev
-
 
 ## Yarn and NPM versions
 
@@ -48,6 +47,7 @@ To make sure your code follows the project rules, run the linter:
 yarn lint
 
 ## Fix errors with Linter
+
 If you find errors, you can try to fix them automatically with the command:
 
 yarn lint --fix
@@ -55,12 +55,12 @@ yarn lint --fix
 If you find errors that cannot be fixed automatically, review the marked code and fix it manually.
 
 ## CSS Linting
+
 This project uses Stylelint to ensure that the CSS code adheres to predefined standards. To run the linter on your CSS files, use the following command:
 
 yarn lint:css
 
-This will analyze your CSS files and report any style issues or errors that need to be addressed.
----
+## This will analyze your CSS files and report any style issues or errors that need to be addressed.
 
 ```text
 /

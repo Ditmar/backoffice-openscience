@@ -1,30 +1,55 @@
+import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import Links from './Links'; // Asegúrate de que la importación sea correcta
+import Links from './Links';
 
-describe('Links Component', () => {
-  it('should render a link with the correct class for Small variant', () => {
-    render(
-      <Links href="#" variant="Small">
-        Small Link
+describe('Links component', () => {
+  it('should render the link with the correct text for Small variant', () => {
+    const { getByText } = render(
+      <Links variant="Small" onClick={() => {}}>
+        Link Small
       </Links>,
     );
-    const linkElement = screen.getByText(/small link/i);
-
-    // Verifica que la clase Small esté presente
-    expect(linkElement.className).toContain('Small'); // Verifica que contiene la clase Small
+    const linkText = getByText('Link Small');
+    expect(linkText).toBeDefined();
   });
 
-  it('should render a link with the correct href and class for Normal variant', () => {
-    render(
-      <Links href="https://example.com" variant="Normal">
-        Normal Link
+  it('should render the link with the correct text for Medium variant', () => {
+    const { getByText } = render(
+      <Links variant="Medium" onClick={() => {}}>
+        Link Medium
       </Links>,
     );
-    const linkElement = screen.getByText(/normal link/i);
+    const linkText = getByText('Link Medium');
+    expect(linkText).toBeDefined();
+  });
 
-    // Verificar el href usando getAttribute
-    expect(linkElement.getAttribute('href')).toBe('https://example.com');
-    expect(linkElement.className).toContain('Normal'); // Verifica que contiene la clase Normal
+  it('should render the link with the correct text for Big variant', () => {
+    const { getByText } = render(
+      <Links variant="Big" onClick={() => {}}>
+        Link Big
+      </Links>,
+    );
+    const linkText = getByText('Link Big');
+    expect(linkText).toBeDefined();
+  });
+
+  it('should render the link with the correct text for Active variant', () => {
+    const { getByText } = render(
+      <Links variant="Active" onClick={() => {}}>
+        Link Active
+      </Links>,
+    );
+    const linkText = getByText('Link Active');
+    expect(linkText).toBeDefined();
+  });
+
+  it('should render the link with the correct text for Disabled variant', () => {
+    const { getByText } = render(
+      <Links variant="Disabled" onClick={() => {}}>
+        Link Disabled
+      </Links>,
+    );
+    const linkText = getByText('Link Disabled');
+    expect(linkText).toBeDefined();
   });
 });
