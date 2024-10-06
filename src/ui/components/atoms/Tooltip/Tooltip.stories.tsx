@@ -8,18 +8,18 @@ const meta: Meta<typeof Tooltip> = {
   argTypes: {
     text: {
       control: 'text',
-      description: 'Texto que se mostrará al usuario para interactuar.',
+      description: 'Text that will be displayed to the user for interaction.',
     },
     toolTipText: {
       control: 'text',
-      description: 'Texto que aparecerá en el tooltip.',
+      description: 'Text that will appear in the tooltip.',
     },
     variant: {
       control: {
         type: 'select',
         options: ['small', 'medium', 'large'],
       },
-      description: 'Determina el tamaño del tooltip.',
+      description: 'Determines the size of the tooltip.',
     },
   },
 };
