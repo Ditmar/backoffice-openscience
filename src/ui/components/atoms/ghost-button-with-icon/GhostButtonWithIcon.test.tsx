@@ -1,15 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import { describe, test, expect } from 'vitest';
+import { render } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
 import GhostButtonWithIcon from './GhostButtonWithIcon';
 
 describe('GhostButtonWithIcon Component', () => {
-  test('renders correctly with small size', () => {
-    render(<GhostButtonWithIcon size="small" />);
-    const button = screen.getByRole('button');
-  });
-
-  test('shows focus outline when focused', async () => {
-    render(<GhostButtonWithIcon size="medium" />);
-    const button = screen.getByRole('button');
+  it('should renders the button with the correct text', () => {
+    const { getByText } = render(<GhostButtonWithIcon />);
+    const buttonText = getByText('Ghost button');
+    expect(buttonText).toBeDefined();
   });
 });

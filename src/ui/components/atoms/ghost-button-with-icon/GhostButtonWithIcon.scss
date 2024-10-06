@@ -45,8 +45,8 @@
   }
 
   &--large {
-    height: 60px;
-    width: 60px;
+    height: 160px;
+    width: 160px;
   }
 
   &:hover:not([disabled]) {
@@ -65,7 +65,7 @@
 
   &:disabled {
     background-color: #ffffff;
-    color: #8d8d8d;
+    color: $--ads-colors-gray-50;
     cursor: pointer;
   }
 }
