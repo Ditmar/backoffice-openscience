@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1e093ea (feature/SEM-023)
 import classNames from 'classnames';
 import type { IProps } from './types/IProps';
 import styles from './styles.module.scss';
+=======
+import classNames from 'classnames';
+import styles from './styles.module.scss';
+import type { IProps } from './types/IProps';
+>>>>>>> c3db84f (feature/SEM-023)
 
 <<<<<<< HEAD
 export function TabLabel(props: IProps) {
