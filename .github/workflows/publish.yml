@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - '**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,19 +33,33 @@ jobs:
       - name: Run test
         run: yarn test
 
-      - name: Build Storybook
+      - name: Build Storybook for master branch
         if: github.ref == 'refs/heads/master'
         run: yarn build-storybook
 
-      - name: Deploy to GitHub Pages
+      - name: Build Storybook for non-master branches
+        if: github.ref != 'refs/heads/master'
+        run: yarn build-storybook
+
+      - name: Deploy to GitHub Pages for master branch
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./storybook-static
+          destination_dir: '/'
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Deploy to GitHub Pages for other branches
+        if: github.ref != 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./storybook-static
+          destination_dir: 'branch-${{ github.ref_name }}'
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
       - name: Clean storybook folder
-        if: github.ref == 'refs/heads/master'
         run: rm -rf ./storybook-static
