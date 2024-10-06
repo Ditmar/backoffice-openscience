@@ -18,7 +18,7 @@ export function Icon(props: SvgIconProps) {
 
   // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
   if (size || styles) {
-    spanProps.style = { width: size, height: size, ...styles };
+    spanProps.style = { width: size, height: size, display: 'block', ...styles };
   }
 
   // eslint-disable-next-line react/jsx-props-no-spreading

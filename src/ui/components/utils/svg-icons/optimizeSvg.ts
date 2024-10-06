@@ -19,7 +19,6 @@ function optimizeSvg(svg: string, size = '24px') {
       },
     ],
   });
-
   return result.data;
 }
 
