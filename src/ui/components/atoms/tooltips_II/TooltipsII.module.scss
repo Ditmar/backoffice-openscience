@@ -1,0 +1,101 @@
+@import '../../../../globals/ads-variables.scss';
+
+.tooltip { 
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.tooltip-content {
+  align-items: center;
+  background-color: $--ads-colors-gray-100;
+  border-radius: 5px;
+  color: $--ads-colors-white;
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+  padding: 5px;
+  position: absolute;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.tooltip-content::after {
+  border-style: solid;
+  border-width: 5px;
+  content: "";
+  position: absolute;
+}
+
+.tooltip-top .tooltip-content {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-top .tooltip-content::after {
+  border-color: $--ads-colors-gray-100 transparent transparent;
+  left: 50%;
+  margin-left: -5px;
+  top: 100%;
+}
+
+.tooltip-bottom .tooltip-content {
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom .tooltip-content::after {
+  border-color: transparent transparent $--ads-colors-gray-100;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.tooltip-left .tooltip-content {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-left .tooltip-content::after {
+  border-color: transparent transparent transparent $--ads-colors-gray-100;
+  left: 100%;
+  margin-top: -5px;
+  top: 50%;
+}
+
+.tooltip-right .tooltip-content {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-right .tooltip-content::after {
+  border-color: transparent $--ads-colors-gray-100 transparent transparent;
+  margin-top: -5px;
+  right: 100%;
+  top: 50%;
+}
+
+.tooltip-small .tooltip-content {
+  font-size: $--ads-font-size-fifth;
+  height: 20px;
+}
+
+.tooltip-medium .tooltip-content {
+  font-size: $--ads-font-size-sixth;
+  height: 25px;
+}
+
+.tooltip-large .tooltip-content {
+  font-size: $--ads-font-size-primary;
+  height: 30px;
+}
+
+.tooltip:hover .tooltip-content {
+  visibility: visible;
+}
