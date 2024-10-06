@@ -1,26 +1,35 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './link.module.scss';
-import type { LinksProps } from './types/types';
+import type { IProps } from './types/types';
 
-function Links(props: LinksProps) {
-  const { href, variant, children } = props;
-
-  const linksClass = classNames(styles.link, {
-    [styles.Enabled]: variant === 'Enabled',
-    [styles.Hover]: variant === 'Hover',
-    [styles.Focus]: variant === 'Focus',
-    [styles.Active]: variant === 'Active',
-    [styles.Disabled]: variant === 'Disabled',
-    [styles.Visited]: variant === 'Visited',
-    [styles.Small]: variant === 'Small',
-    [styles.Normal]: variant === 'Normal',
-    [styles.Big]: variant === 'Big',
+function Links(props: IProps) {
+  const { children, variant, onClick } = props;
+  const linkClass = classNames(styles.links, {
+    [styles.small]: variant === 'Small',
+    [styles.medium]: variant === 'Medium',
+    [styles.big]: variant === 'Big',
+    [styles.active]: variant === 'Active',
+    [styles.disabled]: variant === 'Disabled',
   });
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (variant === 'Disabled') {
+      e.preventDefault();
+      return;
+    }
+    onClick?.();
+  };
+
   return (
-    <a href={href} className={linksClass}>
-      {children} {/* Usa children aquí para mostrar el texto */}
+    <a
+      className={linkClass}
+      href={variant === 'Disabled' ? undefined : 'url-a-navegar'}
+      onClick={handleClick}
+      tabIndex={variant === 'Disabled' ? -1 : 0}
+      aria-disabled={variant === 'Disabled'}
+    >
+      <span className={styles.links__text}>{children}</span>
     </a>
   );
 }

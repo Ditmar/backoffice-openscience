@@ -1,50 +1,43 @@
-@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/ads-variables.scss'; // Importa tus variables SCSS
 
-.link {
-  color:$--ads-colors-blue-50; /* Ejemplo de estilo */
-  text-decoration: none; /* Quitar subrayado */
-  padding: 8px; /* Espaciado interno */
-  border-radius: 4px; /* Bordes redondeados */
-  transition: all 0.3s ease; /* Transición suave */
+.links {
+  color: $--ads-colors-blue-70; // Color base
+  text-decoration: none;
 
-  &.Enabled {
-    opacity: 1; /* Totalmente visible */
-    cursor: pointer; /* Cursor tipo puntero */
+  &__text {
+    font-size: 1rem;
   }
 
-  &.Disabled {
-    color:$--ads-colors-gray-40;
-    opacity: 0.5; /* Semi-transparente */
-    cursor: not-allowed; /* Cursor de no permitido */
+  // Variantes
+  &--Small {
+    font-size: 0.8rem; // Tamaño pequeño
   }
 
-  &.Hover {
-    text-decoration: underline;
+  &--Medium {
+    font-size: 1rem; // Tamaño medio
   }
 
-  &.Focus {
-    color:$--ads-colors-blue-60;
-    text-decoration: underline;
+  &--Big {
+    font-size: 1.2rem; // Tamaño grande
   }
 
-  &.Active {
-    color:$--ads-colors-gray-80;
-    text-decoration: underline;
+  // Estados
+  &--Active {
+    text-decoration: underline; // Subrayado para el estado activo
+    color: $--ads-colors-blue-90; // Color para el estado activo
   }
 
-  &.Visited {
-    color: purple; /* Color para enlaces visitados */
+  &--Disabled {
+    color: $--ads-colors-gray-40; // Color para el estado deshabilitado
+    pointer-events: none;
+    opacity: 0.65; // Opacidad reducida
   }
 
-  &.Small {
-    font-size: 12px; /* Fuente pequeña */
+  &:hover {
+    color: $--ads-colors-blue-50; // Cambia el color al pasar el ratón
   }
 
-  &.Normal {
-    font-size: 16px; /* Fuente normal */
-  }
-
-  &.Big {
-    font-size: 20px; /* Fuente grande */
+  &:focus {
+    outline: 2px solid $--ads-colors-blue-80; // Estilo de enfoque
   }
 }

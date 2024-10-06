@@ -1,18 +1,7 @@
-// types.ts
-import type { ReactNode } from 'react';
+import React from 'react';
 
-export interface LinksProps {
-  href: string; // Enlace
-  variant:
-    | 'Small'
-    | 'Normal'
-    | 'Big'
-    | 'Enabled'
-    | 'Hover'
-    | 'Focus'
-    | 'Active'
-    | 'Disabled'
-    | 'Visited'; // Variantes de estado
-  size?: 'small' | 'medium' | 'large'; // Opcional para especificar el tamaño
-  children?: ReactNode; // Permitir que se pase contenido hijo
+export interface IProps {
+  children?: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'Small' | 'Medium' | 'Big' | 'Active' | 'Disabled';
 }
