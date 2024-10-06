@@ -60,4 +60,4 @@ export const Disabled: Story = {
     variant: 'default',
     disabled: true,
   },
-};
+};;
