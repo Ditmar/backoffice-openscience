@@ -63,3 +63,17 @@ jobs:
 
       - name: Clean storybook folder
         run: rm -rf ./storybook-static
+  cleanup:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master'
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - name: Clean up Storybook for merged branch
+        run: |
+          BRANCH_NAME=${{ github.event.pull_request.head.ref }}
+          git rm -r branch-${BRANCH_NAME}
+          git commit -m "Cleanup: remove Storybook for merged branch ${BRANCH_NAME}"
+          git push
