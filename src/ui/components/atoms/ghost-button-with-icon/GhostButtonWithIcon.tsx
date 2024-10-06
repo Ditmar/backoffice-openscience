@@ -4,7 +4,7 @@ import type { GhostProps } from './types/types';
 
 function GhostButtonWithIcon({ size = 'medium', disabled = false, onClick }: GhostProps) {
   const sizeClass = `btn--${size}`;
-  
+
   return (
     <div className="btn-container">
       <button
