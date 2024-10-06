@@ -1,22 +1,23 @@
 @import '../../../../globals/ads-variables.scss';
+
 .btn-container {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .btn-secondary {
   align-items: center;
+  background-color: $--ads-colors-gray-80;
   border: none;
+  color: $--ads-colors-white;
   cursor: pointer;
   display: inline-flex;
-  justify-content: center;
   height: 48px;
-  width: 140px;
-  background-color: $--ads-colors-gray-80;
-  color: $--ads-colors-white;
+  justify-content: center;
   transition:
     background-color 0.3s,
     color 0.3s;
+  width: 140px;
 }
 
 .btn--active {
@@ -30,9 +31,9 @@
 }
 
 .btn--focused {
-  position: relative;
   border: 1px solid $--ads-colors-white;
   box-shadow: 0 0 0 2px $--ads-colors-gray-80;
+  position: relative;
 }
 
 .btn-secondary:disabled {
