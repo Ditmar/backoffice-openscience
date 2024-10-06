@@ -1,12 +1,20 @@
+import classNames from 'classnames';
 import styles from './styles.module.scss';
 import type { IProps } from './types/IProps';
 
-function Tag({ children, variant = 'primary', onClick }: IProps) {
-  const variantClass = styles[`tag--${variant}`];
+function Tag(props: IProps) {
+  const { children, variant, onClick } = props;
+  const variantClass = classNames(styles.tag, {
+    [styles.primary]: variant === 'primary',
+    [styles.secondary]: variant === 'secondary',
+    [styles.tertiary]: variant === 'tertiary',
+  });
+  const labelClass = classNames(styles.tag__label);
+  const buttonClass = classNames(styles.tag__button);
   return (
-    <div className={`${styles.tag} ${variantClass}`}>
-      <span className={styles['tag-label']}>{children}</span>
-      <button className={`${styles['tag-button']} ${variantClass}`} onClick={onClick}>
+    <div className={variantClass}>
+      <span className={labelClass}>{children}</span>
+      <button className={buttonClass} onClick={onClick}>
         x
       </button>
     </div>
