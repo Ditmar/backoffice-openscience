@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Tag from './Tag';
+import Tag from './Tag-1';
 
 describe('Tag component', () => {
   it('Tag is rendering', () => {
