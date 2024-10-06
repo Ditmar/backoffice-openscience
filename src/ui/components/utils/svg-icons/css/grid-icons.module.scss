@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; // Permite que los elementos se envuelvan a la siguiente línea
+    gap: 20px; // Espacio entre los elementos, similar a `grid-gap` en CSS Grid
+    justify-content: space-between; // Distribuye los elementos con espacio entre ellos
+  }
+  
+  .item {
+    box-sizing: border-box; // Incluye el padding dentro del ancho
+    flex: 1 1 calc(10% - 10px); // Ocupa un tercio del contenedor menos el espacio del gap
+    min-width: 100px; // Asegura que los elementos no se hagan más pequeños de lo debido
+    padding: 10px;
+  }
