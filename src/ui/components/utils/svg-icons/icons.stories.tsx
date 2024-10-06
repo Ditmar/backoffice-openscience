@@ -97,9 +97,8 @@ const meta = {
   title: 'ui/components/icon/svg-icons',
   component: Icon,
   argTypes: {
-
     onClick: {
-       action: 'click',
+      action: 'click',
     },
   },
 } as Meta<typeof Icon>;
