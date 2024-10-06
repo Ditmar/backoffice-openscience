@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a575850 (feature/SEM-023)
 $--ads-colors-blue-60: #1163fe;
 $--ads-colors-gray-10: #ccc;
 $--ads-colors-gray-20: #e3e3e3;
 $--ads-colors-gray-40: #b0b0b0;
 $--ads-colors-gray-100: #000;
 
-<<<<<<< HEAD
 .tablabel {
     align-items: center;
     color: $--ads-colors-gray-100;
@@ -34,100 +26,6 @@ $--ads-colors-gray-100: #000;
         &.selected {
             border-bottom: 2px solid $--ads-colors-blue-60;
             color: $--ads-colors-gray-100;
-=======
-=======
->>>>>>> 28f4eb1 (feature/SEM-023)
-.tabLabel {
-    display: flex;
-    justify-content: center;
-=======
-$black: #000;
-$grey-light: #e3e3e3;
-$grey-dark: #b0b0b0;
-$blue: #1163fe;
-$grey-disabled: #ccc;
-
-.tab-label {
->>>>>>> 1d1c082 (feature/SEM-023-1)
-    align-items: center;
-    color: $black;
-    cursor: pointer;
-=======
-$black_color: #000;
-$grey_light: #e3e3e3;
-$grey_dark: #b0b0b0;
-$blue_color: #1163fe;
-$grey_disabled: #ccc;
-.tablabel {
->>>>>>> 8790131 (feature/SEM-023)
-    display: flex;
-    justify-content: center;
-=======
-.tablabel {
->>>>>>> a575850 (feature/SEM-023)
-    align-items: center;
-    color: $--ads-colors-gray-100;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.2rem;
-    font-weight: 500;
-    height: 100%;
-    justify-content: center;
-    padding: 0 10px;
-    transition: all 0.3s;
-
-    &.active {
-        border-bottom: 2px solid $--ads-colors-gray-20;
-
-        &:hover {
-            border-bottom: 2px solid $--ads-colors-gray-40;
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        &.selected {
-            color: #000;
-            border-bottom: 2px solid #1163fe;
-<<<<<<< HEAD
->>>>>>> 9f9d328 (feature/SEM-023)
-=======
->>>>>>> 28f4eb1 (feature/SEM-023)
-        }
-    }
-
-    &.disabled {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        border-bottom: 2px solid $--ads-colors-gray-10;
-        color: $--ads-colors-gray-10;
-        cursor: not-allowed;
-=======
-=======
->>>>>>> 28f4eb1 (feature/SEM-023)
-        color: #ccc;
-        cursor: not-allowed;
-        border-bottom: 2px solid #ccc;
-
-<<<<<<< HEAD
->>>>>>> 9f9d328 (feature/SEM-023)
-=======
->>>>>>> 28f4eb1 (feature/SEM-023)
-=======
-
-        &--selected {
-            border-bottom: 2px solid $blue;
-            color: $black;
-=======
-        &.selected {
-            color: $black_color;
-            border-bottom: 2px solid $blue_color;
->>>>>>> 8790131 (feature/SEM-023)
-=======
-
-        &.selected {
-            border-bottom: 2px solid $--ads-colors-blue-60;
-            color: $--ads-colors-gray-100;
->>>>>>> a575850 (feature/SEM-023)
         }
     }
 
@@ -135,15 +33,6 @@ $grey_disabled: #ccc;
         border-bottom: 2px solid $--ads-colors-gray-10;
         color: $--ads-colors-gray-10;
         cursor: not-allowed;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1d1c082 (feature/SEM-023-1)
-=======
-        border-bottom: 2px solid $grey_disabled;
-
->>>>>>> 8790131 (feature/SEM-023)
-=======
->>>>>>> a575850 (feature/SEM-023)
     }
 
     &.small {
@@ -157,16 +46,4 @@ $grey_disabled: #ccc;
     &.large {
         font-size: 1.4rem;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9f9d328 (feature/SEM-023)
-=======
-}
->>>>>>> 28f4eb1 (feature/SEM-023)
-=======
-}
->>>>>>> 1d1c082 (feature/SEM-023-1)
