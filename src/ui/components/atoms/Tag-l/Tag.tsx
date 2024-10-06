@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import type { TagProps } from './types/types';
 import styles from './tag.module.scss';
 
-function Tag(props: TagProps) {
+function TagL(props: TagProps) {
   const { label, size = 'medium', variant = 'primary', disabled = false, onClick } = props;
 
   const tagClass = classNames(styles.tag, {
@@ -34,4 +34,5 @@ function Tag(props: TagProps) {
     </span>
   );
 }
-export default Tag;
+
+export default TagL;
