@@ -1,0 +1,15 @@
+@import '../../../../globals/ads-variables.scss';
+
+.indicator {
+    background-color: $--ads-colors-gray-10;
+    color: $--ads-colors-gray-100;
+    font-size: $--ads-font-size-second;
+    font-weight: bold;
+    height: 36px;
+    margin: 5px;
+    padding: 6px;
+    padding-inline: 25px;
+    text-align: center;
+    width: auto;
+}
+    
