@@ -1,21 +1,30 @@
 import React from 'react';
+import classNames from 'classnames';
 import styles from './styles.module.scss';
 import type { GhostButtonProps } from './types/types';
 
-// Cambiado a declaración de función
 function GhostButton({
   ghostbutton,
-  variant,
+  variant = 'primary',
   size = 'medium',
   disabled = false,
   onClick,
 }: GhostButtonProps) {
-  const buttonClass = [
+  const buttonClass = classNames(
     styles['ghost-button'],
-    styles[`ghost-button--${variant}`],
-    styles[`ghost-button--${size}`],
-    disabled ? styles['ghost-button--disabled'] : '',
-  ].join(' ');
+    {
+      [styles.primary]: variant === 'primary',
+      [styles.secondary]: variant === 'secondary',
+    },
+    {
+      [styles.small]: size === 'small',
+      [styles.medium]: size === 'medium',
+      [styles.large]: size === 'large',
+    },
+    {
+      [styles['ghost-button--disabled']]: disabled,
+    },
+  );
 
   return (
     <button
