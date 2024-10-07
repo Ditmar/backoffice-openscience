@@ -1,0 +1,57 @@
+@import '../../../../globals/ads-variables.scss';
+
+.ghost-button {
+  align-items: center;
+  background: transparent;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: $--ads-colors-blue-50;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  padding: 0 20px;
+  transition:
+    background 0.2s,
+    border 0.2s;
+
+  &--primary {
+    color: $--ads-colors-blue-50;
+  }
+
+  &--disabled {
+    color: $--ads-colors-red-50;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background: rgba($--ads-colors-blue-50, 0.1);
+  }
+
+  &:active {
+    background: rgba($--ads-colors-blue-50, 0.2);
+  }
+
+  &:focus {
+    border: 2px solid $--ads-colors-blue-50;
+    outline: none;
+  }
+
+  &--small {
+    font-size: 12px;
+    height: 36px;
+    padding: 0 12px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  &--large {
+    font-size: 16px;
+    height: 56px;
+    padding: 0 28px;
+  }
+}
