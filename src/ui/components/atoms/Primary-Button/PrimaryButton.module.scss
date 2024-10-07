@@ -1,32 +1,44 @@
 @import '../../../../globals/ads-variables.scss';
 
-.primary-button {
-  background: $--ads-colors-blue-70;
+.display {
+  background: $--ads-colors-blue-80;
   border: none;
   color: $--ads-colors-white;
   height: 48px;
   outline: $--ads-colors-red-60;
-  padding-inline: 2rem;
+  padding-inline: 0.5rem;
   width: auto;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
 
-  &--Small {
+svg {
+  width: 25px;
+  padding-left: 10px;
+
+  path{
+    fill: white; 
+  }
+}  
+
+&:focus {
+  border: 2px solid $--ads-colors-white;
+  outline: 2px solid $--ads-colors-blue-80;
+}
+
+  &.primary {
     height: 32px;
-    padding-inline: 1rem;
+    padding-inline: 1rem;    
+  }
 
-    &:focus {
+  &.secondary {
+    & :focus {
       border: 2px solid $--ads-colors-white;
       outline: 2px solid $--ads-colors-blue-80;
     }
   }
 
-  &--Medium {
-    &:focus {
-      border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-blue-80;
-    }
-  }
-
-  &--Big {
+  &.tertiary {
     height: 64px;
 
     &:focus {
@@ -35,16 +47,16 @@
     }
   }
 
-  &--Active {
+  &.active {
     background: $--ads-colors-blue-90;
   }
 
-  &--Disable {
+  &.disable {
     background: $--ads-colors-gray-40;
     color: $--ads-colors-gray-50;
   }
 
   &:hover {
-    background-color: $--ads-colors-blue-50;
+    background-color: $--ads-colors-blue-70;
   }
 }

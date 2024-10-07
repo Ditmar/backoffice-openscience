@@ -1,17 +1,24 @@
 import styles from './PrimaryButton.module.scss';
 import type { IProps } from './types/IProps';
-import Add from '../../../../assets/icons/add.svg?raw';
+import {Icon} from '../../utils/svg-icons/icons';
+import classNames from 'classnames';
 
 function PrimaryButton(props: IProps) {
-  const { children, variant, onClick, icon } = props;
-  const selectedIcon = icon ?? (children === 'Primary button' ? Add : Add);
+  const { children, variant, onClick, icon , display } = props;
+  const displayClass = classNames(styles.display, {
+    [styles.primary]: variant === 'Small',
+    [styles.secondary]: variant === 'Medium',
+    [styles.tertiary]: variant === 'Big',
+    [styles.active]: variant === 'Active',
+    [styles.disable]: variant === 'Disable',
+  }); 
   return (
     <button
-      className={`${styles['primary-button']} ${styles[`primary-button--${variant}`]}`}
+      className={displayClass}
       onClick={onClick}
     >
-      <span className={styles['primary-button__text']}>{children}</span>
-      {selectedIcon && <img src={selectedIcon} alt="" />}
+      <span className={styles['add-button__text']}>{children}</span>
+      {icon && (<Icon data-testid="icon_add" src={icon} className={`${styles['icon_add']}`}/>)}
     </button>
   );
 }
