@@ -1,0 +1,46 @@
+.inputWrapper {
+    width: 288px; 
+    height: 68px; 
+    position: relative;
+    opacity: 1; 
+  }
+  
+  .inputContainer {
+    position: relative; 
+  }
+  
+  .input {
+    width: 288px; 
+    height: 48px; 
+    padding-right: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    opacity: 1; 
+    transition: border-color 0.3s;
+  
+    // Estilo para estado de error
+    &.error {
+      border-color: #da1e28; 
+    }
+  
+    &:disabled {
+      background-color: #f0f0f0; 
+    }
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); /* Centrado vertical */
+    width: 14px; 
+    height: 14px;
+    color: #da1e28;
+    opacity: 1;
+  }
+  
+  .errorMessage {
+    color: #da1e28; 
+    margin-top: 4px;
+  }
+  
