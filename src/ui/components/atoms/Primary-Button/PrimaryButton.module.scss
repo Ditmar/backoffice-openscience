@@ -1,0 +1,62 @@
+@import '../../../../globals/ads-variables.scss';
+
+.display {
+  align-items: center;
+  background: $--ads-colors-blue-80;
+  border: none;
+  color: $--ads-colors-white;
+  display: flex;
+  height: 48px;
+  outline: $--ads-colors-red-60;
+  padding-inline: 0.5rem;
+  padding-inline: 20px;
+  width: auto;
+
+svg {
+  padding-left: 10px;
+  width: 25px;
+
+  path{
+    fill: white; 
+  }
+}  
+
+&:focus {
+  border: 2px solid $--ads-colors-white;
+  outline: 2px solid $--ads-colors-blue-80;
+}
+
+  &.primary {
+    height: 32px;
+    padding-inline: 1rem;    
+  }
+
+  &.secondary {
+    & :focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-blue-80;
+    }
+  }
+
+  &.tertiary {
+    height: 64px;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-blue-80;
+    }
+  }
+
+  &.active {
+    background: $--ads-colors-blue-90;
+  }
+
+  &.disable {
+    background: $--ads-colors-gray-40;
+    color: $--ads-colors-gray-50;
+  }
+
+  &:hover {
+    background-color: $--ads-colors-blue-70;
+  }
+}
