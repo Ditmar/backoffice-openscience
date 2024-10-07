@@ -23,7 +23,6 @@ function GhostButton({
       className={buttonClass}
       onClick={!disabled ? onClick : undefined}
       disabled={disabled}
-      // Tab index por accesibilidad: si está deshabilitado, -1
       tabIndex={disabled ? -1 : 0}
     >
       {ghostbutton}
