@@ -23,5 +23,5 @@ module.exports = {
   svelteStrictMode: true,
   svelteAllowShorthand: false,
   svelteIndentScriptAndStyle: false,
-  endOfLine: 'lf',
+  endOfLine: 'auto',
 };

@@ -1,20 +1,66 @@
-# Astro Starter Kit: Basics
+# OpenScience Backoffice
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Project Installation
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+1. **Clone the repository**:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+   git clone https://github.com/Ditmar/backoffice-openscience.git
+   
+   cd backoffice-openscience
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+2. **Install dependencies**:
 
-## 🚀 Project Structure
+   This project uses Yarn to handle dependencies. Make sure you have Yarn installed, then run:
 
-Inside of your Astro project, you'll see the following folders and files:
+   yarn install
+
+3. **Set up the environment**:
+
+   Copy the example environment variables file and adjust the values ​​according to your local environment:
+
+   cp .env.example .env
+
+4. **Start the development server**:
+
+   yarn dev
+
+
+## Yarn and NPM versions
+
+Make sure to use the following minimum versions:
+
+- **Yarn:** 1.22.19 or higher
+- **NPM:** 6.14.16 or higher
+
+You can check the current versions with the following commands:
+
+yarn -v
+npm -v
+
+## Logo Generation using AI
+
+To generate a logo, you can use artificial intelligence tools such as [DALL·E](https://openai.com/dall-e) or [MidJourney](https://www.midjourney.com/). Once the logo is generated, place it in the `/public` folder with the name `logo.png`.
+
+## Using the Linter
+
+To make sure your code follows the project rules, run the linter:
+
+yarn lint
+
+## Fix errors with Linter
+If you find errors, you can try to fix them automatically with the command:
+
+yarn lint --fix
+
+If you find errors that cannot be fixed automatically, review the marked code and fix it manually.
+
+## CSS Linting
+This project uses Stylelint to ensure that the CSS code adheres to predefined standards. To run the linter on your CSS files, use the following command:
+
+yarn lint:css
+
+This will analyze your CSS files and report any style issues or errors that need to be addressed.
+---
 
 ```text
 /
