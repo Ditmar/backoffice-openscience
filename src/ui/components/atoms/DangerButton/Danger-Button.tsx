@@ -1,11 +1,19 @@
-import './Danger-Button.scss';
+import classNames from 'classnames';
+import styles from './Danger-Button.scss';
 import type { IProps } from './types/IProps';
 
 function DangerButton(props: IProps) {
-  const { children, variant, onClick } = props;
+  const { children, variant, onClick} = props;
+  const displayClass = classNames(styles.display, {
+    [styles.primary]: variant === 'Small',
+    [styles.secondary]: variant === 'Medium',
+    [styles.tertiary]: variant === 'Big',
+    [styles.active]: variant === 'Active',
+    [styles.disable]: variant === 'Disable',
+  });
   return (
-    <button className={`variable-button variable-button--${variant}`} onClick={onClick}>
-      <span className="variable-button__text">{children}</span>
+    <button className={displayClass} onClick={onClick}>
+      <span>{children}</span>
     </button>
   );
 }
