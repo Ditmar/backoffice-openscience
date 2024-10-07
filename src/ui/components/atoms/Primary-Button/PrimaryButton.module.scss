@@ -1,20 +1,20 @@
 @import '../../../../globals/ads-variables.scss';
 
 .display {
+  align-items: center;
   background: $--ads-colors-blue-80;
   border: none;
   color: $--ads-colors-white;
+  display: flex;
   height: 48px;
   outline: $--ads-colors-red-60;
   padding-inline: 0.5rem;
-  width: auto;
-  display: flex;
-  align-items: center;
   padding-inline: 20px;
+  width: auto;
 
 svg {
-  width: 25px;
   padding-left: 10px;
+  width: 25px;
 
   path{
     fill: white; 
