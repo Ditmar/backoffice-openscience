@@ -1,43 +1,76 @@
-@import '../../../../globals/ads-variables.scss'; // Importa tus variables SCSS
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/_mixins.scss';
 
 .links {
-  color: $--ads-colors-blue-70; // Color base
+  color: $--ads-colors-blue-50; 
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
   text-decoration: none;
+  transition: color 0.3s ease;
 
   &__text {
     font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
   }
 
-  // Variantes
-  &--Small {
-    font-size: 0.8rem; // Tamaño pequeño
+  &.small {
+    font-size: 0.75rem;
+
+    @media (max-width: map-get($--ads-breakpoints-scales, 'small')) {
+      font-size: 0.65rem; 
+    }
   }
 
-  &--Medium {
-    font-size: 1rem; // Tamaño medio
+  &.medium {
+    font-size: 1rem;
+
+    @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
+      font-size: 0.9rem;
+    }
   }
 
-  &--Big {
-    font-size: 1.2rem; // Tamaño grande
+  &.big {
+    font-size: 1.25rem;
+
+    @media (min-width: map-get($--ads-breakpoints-scales, 'large')) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: map-get($--ads-breakpoints-scales, 'extra-large')) {
+      font-size: 1.75rem;
+    }
   }
 
-  // Estados
-  &--Active {
-    text-decoration: underline; // Subrayado para el estado activo
-    color: $--ads-colors-blue-90; // Color para el estado activo
+  &.active {
+    color: $--ads-colors-gray-80;
+    text-decoration: underline;
   }
 
-  &--Disabled {
-    color: $--ads-colors-gray-40; // Color para el estado deshabilitado
+  &.disabled {
+    color: $--ads-colors-gray-50;
+    cursor: not-allowed;
     pointer-events: none;
-    opacity: 0.65; // Opacidad reducida
+    text-decoration: none;
   }
 
-  &:hover {
-    color: $--ads-colors-blue-50; // Cambia el color al pasar el ratón
+  &.enabled {
+    color: $--ads-colors-blue-50;
+    text-decoration: none; 
   }
 
-  &:focus {
-    outline: 2px solid $--ads-colors-blue-80; // Estilo de enfoque
+  &:hover:not(.disabled),
+  &:focus:not(.disabled) {
+    outline: none;
+    color: $--ads-colors-blue-60; 
+    text-decoration: underline; 
+  }
+
+  &.visited {
+    color: $--ads-colors-red-60;
   }
 }
+
+
+

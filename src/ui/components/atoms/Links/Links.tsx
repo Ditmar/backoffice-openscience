@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './link.module.scss';
-import type { IProps } from './types/types';
+import type { IProps } from './types/IProps';
 
 function Links(props: IProps) {
   const { children, variant, onClick } = props;
+  const [active, setActive] = useState(false); // Estado para manejar clic
+
   const linkClass = classNames(styles.links, {
-    [styles.small]: variant === 'Small',
-    [styles.medium]: variant === 'Medium',
-    [styles.big]: variant === 'Big',
-    [styles.active]: variant === 'Active',
+    [styles.active]: active,
     [styles.disabled]: variant === 'Disabled',
   });
 
@@ -18,7 +17,13 @@ function Links(props: IProps) {
       e.preventDefault();
       return;
     }
+    setActive(true); // Cambia a activo al hacer clic
     onClick?.();
+
+    // Opcional: Para volver a desactivar el estado después de un tiempo
+    setTimeout(() => {
+      setActive(false);
+    }, 200); // Ajusta el tiempo según tus necesidades
   };
 
   return (
