@@ -12,32 +12,51 @@
   color: $--ads-colors-white;
   cursor: pointer;
   display: inline-flex;
-  height: 48px;
-  justify-content: center;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
   width: 140px;
+  height: 48px;
+  top: 1107px;
+  left: 180px;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  justify-content: center;
 }
 
 .btn--active {
   background-color: $--ads-colors-black;
   color: $--ads-colors-white;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  width: 140px;
+  height: 48px;
+  top: 1345px;
+  left: 180px;
 }
 
 .btn--hovered {
   background-color: $--ads-colors-gray-90;
   color: $--ads-colors-white;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  width: 140px;
+  height: 48px;
+  top: 1227px;
+  left: 180px;
 }
 
 .btn--focused {
   border: 1px solid $--ads-colors-white;
   box-shadow: 0 0 0 2px $--ads-colors-gray-80;
-  position: relative;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  width: 140px;
+  top: 1463;
+  left: 180px;
 }
 
 .btn-secondary:disabled {
   background-color: $--ads-colors-gray-4;
   color: $--ads-colors-gray-50;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
   cursor: default;
+  width: 140px;
+  height: 48px;
+  top: 1581px;
+  left: 180px;
 }
