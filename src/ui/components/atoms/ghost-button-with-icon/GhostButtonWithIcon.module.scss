@@ -2,36 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap');
 
 .btn-container {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .btn-main {
   align-items: center;
-  border: none;
-  display: inline-flex;
-  justify-content: center;
-  height: 48px;
-  width: 143px;
-  font-family: 'Barlow', sans-serif;
   background-color: $--ads-colors-white;
+  border: none;
   color: $--ads-colors-blue-60;
-  font-size: 14px;
   cursor: pointer;
+  display: inline-flex;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
   transition:
     background-color 0.3s,
     box-shadow 0.3s;
+  width: 143px;
 
   .btn-icon-square {
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 16px;
-    height: 16px;
-    margin-left: 8px;
     border-radius: 4px;
+    display: inline-flex;
     font-size: 18px;
-    color: currentColor;
+    height: 16px;
+    justify-content: center;
+    margin-left: 8px;
+    width: 16px;
   }
 
   &--small {
@@ -49,14 +48,6 @@
     width: 160px;
   }
 
-  &:hover:not([disabled]) {
-    background-color: #ecf2ff;
-  }
-
-  &:active:not([disabled]) {
-    background-color: #d0e2ff;
-  }
-
   &:focus {
     box-shadow:
       inset 0 0 0 2px $--ads-colors-blue-60,
@@ -67,6 +58,14 @@
     background-color: $--ads-colors-white;
     color: $--ads-colors-gray-50;
     cursor: pointer;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $--ads-colors-blue-10;
+  }
+
+  &:active:not([disabled]) {
+    background-color: $--ads-colors-blue-20;
   }
 }
 

@@ -8,7 +8,9 @@ function GhostButtonWithIcon({ size = 'medium', disabled = false, onClick }: Gho
   return (
     <div className={styles['btn-container']}>
       <button
-        className={classNames(styles['btn-main'], sizeClass, { [styles['btn--disabled']]: disabled })}
+        className={classNames(styles['btn-main'], sizeClass, {
+          [styles['btn--disabled']]: disabled,
+        })}
         onClick={onClick}
         disabled={disabled}
         aria-label="add-icon"
