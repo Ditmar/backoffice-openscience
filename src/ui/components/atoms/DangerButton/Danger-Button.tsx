@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { IProps } from './types/IProps';
-import styles from './Danger-Button.module.scss';
+import styles from './Danger-Button.scss';
 
 function DangerButton(props: IProps) {
   const { children, variant, onClick } = props;
@@ -15,9 +15,9 @@ function DangerButton(props: IProps) {
     [styles.disable]: isDisabled,
   });
   return (
-    <button className={displayClass} 
-    onClick={isDisabled ? undefined : onClick}
-    disabled={isDisabled}>
+    <button className={displayClass}
+      onClick={isDisabled ? undefined : onClick}
+      disabled={isDisabled}>
       <span className="variable-button__text">{children}</span>
     </button>
   );
