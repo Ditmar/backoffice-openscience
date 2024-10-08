@@ -14,7 +14,7 @@
   height: 48px;
   width: 143px;
   font-family: 'Barlow', sans-serif;
-  background-color: #ffffff;
+  background-color: $--ads-colors-white;
   color: $--ads-colors-blue-60;
   font-size: 14px;
   cursor: pointer;
@@ -60,11 +60,11 @@
   &:focus {
     box-shadow:
       inset 0 0 0 2px $--ads-colors-blue-60,
-      inset 0 0 0 4px #ffffff;
+      inset 0 0 0 4px $--ads-colors-white;
   }
 
   &:disabled {
-    background-color: #ffffff;
+    background-color: $--ads-colors-white;
     color: $--ads-colors-gray-50;
     cursor: pointer;
   }

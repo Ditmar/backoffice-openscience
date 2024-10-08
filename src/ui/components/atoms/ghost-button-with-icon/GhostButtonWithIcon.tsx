@@ -1,20 +1,20 @@
 import classNames from 'classnames';
-import './GhostButtonWithIcon.scss';
+import styles from './GhostButtonWithIcon.module.scss';
 import type { GhostProps } from './types/types';
 
 function GhostButtonWithIcon({ size = 'medium', disabled = false, onClick }: GhostProps) {
-  const sizeClass = `btn--${size}`;
+  const sizeClass = styles[`btn--${size}`];
 
   return (
-    <div className="btn-container">
+    <div className={styles['btn-container']}>
       <button
-        className={classNames('btn-main', sizeClass, { 'btn--disabled': disabled })}
+        className={classNames(styles['btn-main'], sizeClass, { [styles['btn--disabled']]: disabled })}
         onClick={onClick}
         disabled={disabled}
         aria-label="add-icon"
       >
-        <span className="btn-text">Ghost button</span>
-        <span className="btn-icon-square">+</span>
+        <span className={styles['btn-text']}>Ghost button</span>
+        <span className={styles['btn-icon-square']}>+</span>
       </button>
     </div>
   );
