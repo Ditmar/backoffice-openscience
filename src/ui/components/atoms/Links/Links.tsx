@@ -5,7 +5,7 @@ import type { IProps } from './types/IProps';
 
 function Links(props: IProps) {
   const { children, variant, onClick } = props;
-  const [active, setActive] = useState(false); // Estado para manejar clic
+  const [active, setActive] = useState(false);
 
   const linkClass = classNames(styles.links, {
     [styles.active]: active,
@@ -17,13 +17,12 @@ function Links(props: IProps) {
       e.preventDefault();
       return;
     }
-    setActive(true); // Cambia a activo al hacer clic
+    setActive(true);
     onClick?.();
 
-    // Opcional: Para volver a desactivar el estado después de un tiempo
     setTimeout(() => {
       setActive(false);
-    }, 200); // Ajusta el tiempo según tus necesidades
+    }, 200);
   };
 
   return (
