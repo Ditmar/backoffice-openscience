@@ -3,7 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { TabLabel } from './TabLabel';
 
 const meta: Meta<typeof TabLabel> = {
-  title: 'ui/atoms/TabLabel',
+  title: 'ui/components/atoms/TabLabel',
   component: TabLabel,
 
   argTypes: {
