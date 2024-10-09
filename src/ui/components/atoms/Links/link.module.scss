@@ -62,8 +62,8 @@
 
   &:hover:not(.disabled),
   &:focus:not(.disabled) {
-    outline: none;
     color: $--ads-colors-blue-60; 
+    outline: none;
     text-decoration: underline; 
   }
 
