@@ -18,10 +18,12 @@ function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
   };
 
   return (
-    <div className={`
+    <div
+      className={`
     ${styles.container} 
     ${disabled ? styles.disabled : ''}
-    `}>
+    `}
+    >
       {label && (
         <label htmlFor="toggle-button" className={styles.label}>
           {' '}
