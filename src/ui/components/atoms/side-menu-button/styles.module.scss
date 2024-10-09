@@ -2,11 +2,24 @@
 @import '../../../../globals/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
 
+@import '../../../../globals/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
+
 
 .side-menu-buttons {
     display: flex;
     gap: 10px;
+
+    @include respond-to('small-mobile') {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    @include respond-to('medium') {
+        flex-direction: row;
+        gap: 8px;
+    }
+
 }
 
 .side-menu-button {
@@ -61,6 +74,10 @@
 
         svg {
             fill:  $--ads-colors-gray-70;
+        }
+
+        svg {
+            fill: $--ads-colors-gray-70;
         }
     }
 
