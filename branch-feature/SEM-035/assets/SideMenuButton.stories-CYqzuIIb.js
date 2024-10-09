@@ -1,0 +1,11 @@
+import{j as m}from"./jsx-runtime-DEdD30eg.js";import{r as b}from"./index-RYns6xqu.js";import{c as v}from"./index-Dejnh_W_.js";import{I as x,a as M,b as N}from"./author-management-BTJXXrr-.js";import"./index-rNTiGNI1.js";const T="_active_earqr_54",I="_primary_earqr_60",R="_secondary_earqr_67",S="_icon_earqr_74",e={"side-menu-buttons":"_side-menu-buttons_earqr_2","side-menu-button":"_side-menu-button_earqr_2",active:T,primary:I,secondary:R,icon:S};function g({children:a,icon:f,color:n,variant:s,onClick:o}){const[i,h]=b.useState(!1),q=()=>{h(!i),o&&o()},c=f??(a==="Article Management"?M:N),A=v(e["side-menu-button"],n&&e[n],s&&e[s],{[e.active]:i});return m.jsxs("button",{"data-testid":"side-menu-button-styles",className:A,onClick:q,children:[c&&m.jsx(x,{src:c,size:"24px",className:e.icon}),a]})}g.__docgenInfo={description:"",methods:[],displayName:"SideMenuButton",props:{children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:""},variant:{required:!1,tsType:{name:"string"},description:""},icon:{required:!1,tsType:{name:"string"},description:""},color:{required:!1,tsType:{name:"union",raw:"'primary' | 'secondary'",elements:[{name:"literal",value:"'primary'"},{name:"literal",value:"'secondary'"}]},description:""},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}};const B={title:"ui/components/atoms/side-menu-button",component:g,argTypes:{onClick:{action:"click"}}},r={args:{children:"Article Management",color:"primary"}},t={args:{children:"Author Management",color:"primary"}};var u,d,p;r.parameters={...r.parameters,docs:{...(u=r.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  args: {
+    children: 'Article Management',
+    color: 'primary'
+  }
+}`,...(p=(d=r.parameters)==null?void 0:d.docs)==null?void 0:p.source}}};var l,y,_;t.parameters={...t.parameters,docs:{...(l=t.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    children: 'Author Management',
+    color: 'primary'
+  }
+}`,...(_=(y=t.parameters)==null?void 0:y.docs)==null?void 0:_.source}}};const z=["Article","Author"];export{r as Article,t as Author,z as __namedExportsOrder,B as default};
