@@ -1,4 +1,4 @@
-@import "../../../globals/ads-variables.scss";
+@import "../../../../globals/ads-variables.scss";
 
 .container{
     align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .slider {
-    background-color: $--ads-colors-gray-10; // Asegúrate de que esta variable esté definida
+    background-color: $--ads-colors-gray-10; 
     border-radius: 50%;
     height: 23px;
     left: 1px;
