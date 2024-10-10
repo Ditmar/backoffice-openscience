@@ -1,0 +1,77 @@
+@import '../../../../globals/ads-variables.scss';
+
+.btn-container {
+  display: inline-block;
+  position: relative;
+}
+
+.btn-enabled {
+  align-items: center;
+  background-color: $--ads-colors-gray-80;
+  border: none;
+  color: $--ads-colors-white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  justify-content: center;
+  left: 180px;
+  top: 1107px;
+  width: 140px;
+}
+
+.btn--active {
+  background-color: $--ads-colors-black;
+  color: $--ads-colors-white;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  left: 180px;
+  top: 1345px;
+  width: 140px;
+}
+
+.btn--hovered {
+  background-color: $--ads-colors-gray-90;
+  color: $--ads-colors-white;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  left: 180px;
+  top: 1227px;
+  width: 140px;
+}
+
+.btn--focused {
+  border: 1px solid $--ads-colors-white;
+  box-shadow: 0 0 0 2px $--ads-colors-gray-80;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  left: 180px;
+  top: 1463px;
+  width: 140px;
+}
+
+.btn--disabled {
+  background-color: $--ads-colors-gray-4;
+  color: $--ads-colors-gray-50;
+  cursor: default;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  height: 48px;
+  left: 180px;
+  top: 1581px;
+  width: 140px;
+}
+
+.btn--small {
+  height: 32px;
+  width: 100px;
+}
+
+.btn--medium {
+  height: 48px;
+  width: 140px;
+}
+
+.btn--large {
+  height: 64px;
+  width: 180px;
+}
