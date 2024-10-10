@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/react';
-import Tag from './Tag-1';
+import Tag from './Tag-l';
 
 const meta = {
-  title: 'ui/components/atoms/Tag',
+  title: 'ui/components/atoms/Tag-l',
   component: Tag,
   argTypes: {
     label: {
