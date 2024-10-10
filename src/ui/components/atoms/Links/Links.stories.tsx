@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import Links from './Links';
 
 const meta: Meta<typeof Links> = {
-  title: 'Atomic Design/atoms/Links',
+  title: 'ui/components/atoms/Links',
   component: Links,
   argTypes: {
     variant: {
