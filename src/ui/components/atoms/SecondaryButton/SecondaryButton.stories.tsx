@@ -7,7 +7,7 @@ const meta: Meta<typeof SecondaryButton> = {
   component: SecondaryButton,
   argTypes: {
     onClick: { action: 'clicked' },
-    size: { control: 'radio', options: ['small', 'medium', 'large'] },
+    enabled: { control: 'boolean' },
     disabled: { control: 'boolean' },
     active: { control: 'boolean' },
     focused: { control: 'boolean' },
@@ -19,9 +19,9 @@ export default meta;
 
 type Story = StoryObj<SecondaryButtonProps>;
 
-export const EnabledButton: Story = {
+export const Enabled: Story = {
   args: {
-    size: 'medium',
+    size: 'Enabled',
     disabled: false,
     active: false,
     focused: false,
@@ -29,9 +29,9 @@ export const EnabledButton: Story = {
   },
 };
 
-export const HoverButton: Story = {
+export const Hover: Story = {
   args: {
-    size: 'medium',
+    size: 'Hover',
     disabled: false,
     active: false,
     focused: false,
@@ -39,9 +39,9 @@ export const HoverButton: Story = {
   },
 };
 
-export const ActiveButton: Story = {
+export const Active: Story = {
   args: {
-    size: 'medium',
+    size: 'Active',
     disabled: false,
     active: true,
     focused: false,
@@ -49,9 +49,9 @@ export const ActiveButton: Story = {
   },
 };
 
-export const FocusedButton: Story = {
+export const Focus: Story = {
   args: {
-    size: 'medium',
+    size: 'Focus',
     disabled: false,
     focused: true,
     active: false,
@@ -59,9 +59,9 @@ export const FocusedButton: Story = {
   },
 };
 
-export const DisabledButton: Story = {
+export const Disabled: Story = {
   args: {
-    size: 'medium',
+    size: 'Disabled',
     disabled: true,
     active: false,
     focused: false,

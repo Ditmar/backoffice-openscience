@@ -4,7 +4,7 @@ import type { SecondaryButtonProps } from './types/SecondaryButtonProps';
 import './SecondaryButton.scss';
 
 function SecondaryButton({
-  size = 'medium',
+  size = 'Enabled',
   disabled = false,
   onClick,
   active = false,
@@ -14,7 +14,7 @@ function SecondaryButton({
   const [isHovered, setIsHovered] = useState(hovered);
   const [isFocused, setIsFocused] = useState(focused);
 
-  const buttonClass = classNames('btn-secondary', `btn--${size}`, {
+  const buttonClass = classNames('btn-enabled', `btn--${size}`, {
     'btn--disabled': disabled,
     'btn--active': active,
     'btn--hovered': isHovered,

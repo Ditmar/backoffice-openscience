@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.btn-secondary {
+.btn-enabled {
   align-items: center;
   background-color: $--ads-colors-gray-80;
   border: none;
@@ -50,7 +50,7 @@
   width: 140px;
 }
 
-.btn-secondary:disabled {
+.btn--disabled {
   background-color: $--ads-colors-gray-4;
   color: $--ads-colors-gray-50;
   cursor: default;
@@ -59,4 +59,19 @@
   left: 180px;
   top: 1581px;
   width: 140px;
+}
+
+.btn--small {
+  height: 32px;
+  width: 100px;
+}
+
+.btn--medium {
+  height: 48px;
+  width: 140px;
+}
+
+.btn--large {
+  height: 64px;
+  width: 180px;
 }
