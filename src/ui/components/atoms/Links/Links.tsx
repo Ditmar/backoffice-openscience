@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import styles from './link.module.scss';
 import type { IProps } from './types/IProps';
