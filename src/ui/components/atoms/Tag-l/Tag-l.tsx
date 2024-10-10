@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import type { TagProps } from './types/types';
-import styles from './tag.module.scss';
+import styles from './tag-l.module.scss';
 
 function TagL(props: TagProps) {
   const { label, size = 'medium', variant = 'primary', disabled = false, onClick } = props;
