@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './link.module.scss';
 import type { IProps } from './types/IProps';
@@ -18,18 +17,17 @@ function Links(props: IProps) {
       e.preventDefault();
       return;
     }
-    setActive(true);
-    onClick?.();
-
+    setActive(!active);
     setTimeout(() => {
       setActive(false);
-    }, 200);
+    }, 1000);
+    onClick?.();
   };
 
   return (
     <a
       className={linkClass}
-      href={variant === 'Disabled' ? undefined : 'url-a-navegar'}
+      href={variant === 'Disabled' ? undefined : 'https://www.openai.com/'}
       onClick={handleClick}
       tabIndex={variant === 'Disabled' ? -1 : 0}
       aria-disabled={variant === 'Disabled'}

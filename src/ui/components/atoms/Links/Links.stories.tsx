@@ -38,10 +38,3 @@ export const Disabled: Story = {
     onClick: undefined,
   },
 };
-
-export const Visited: Story = {
-  args: {
-    children: 'Link action',
-    variant: 'Enabled',
-  },
-};

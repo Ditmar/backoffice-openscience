@@ -44,7 +44,7 @@
   }
 
   &.active {
-    color: $--ads-colors-gray-80;
+    color: $--ads-colors-gray-80 !important;
     text-decoration: underline;
   }
 
@@ -67,8 +67,8 @@
     text-decoration: underline; 
   }
 
-  &.visited {
-    color: $--ads-colors-red-60;
+  &:visited {
+    color: $--ads-colors-visited;
   }
 }
 
