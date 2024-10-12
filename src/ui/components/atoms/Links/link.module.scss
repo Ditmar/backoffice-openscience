@@ -60,15 +60,15 @@
     text-decoration: none; 
   }
 
+  &:visited {
+    color: $--ads-colors-visited;
+  }
+
   &:hover:not(.disabled),
   &:focus:not(.disabled) {
     color: $--ads-colors-blue-60; 
     outline: none;
     text-decoration: underline; 
-  }
-
-  &:visited {
-    color: $--ads-colors-visited;
   }
 }
 
