@@ -18,27 +18,27 @@
     outline: 2px solid $--ads-colors-red-60;
   }
 
-    &.primary {
-      height: 32px;
-      padding-inline: 1rem;
-    }
+  &.primary {
+    height: 32px;
+    padding-inline: 1rem;
+  }
 
-    &.secondary {
-      &:focus {
-        border: 2px solid $--ads-colors-white;
-        outline: 2px solid $--ads-colors-red-60;
-      }
+  &.secondary {
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
     }
+  }
 
-    &.tertiary {
-      height: 64px;
+  &.tertiary {
+    height: 64px;
 
-      &:focus {
-        border: 2px solid $--ads-colors-white;
-        outline: 2px solid $--ads-colors-red-60;
-      }
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
     }
-    
+  }
+
   &.active {
     background: $--ads-background-active;
   }
@@ -48,9 +48,8 @@
   }
 
   &.disable {
-    background: $--ads-colors-gray-110; 
-    color: $--ads-colors-gray-50; 
+    background: $--ads-colors-gray-110;
+    color: $--ads-colors-gray-50;
     cursor: not-allowed;
   }
-
 }
