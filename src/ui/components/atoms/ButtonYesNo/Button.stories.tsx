@@ -42,7 +42,7 @@ export const Tertiary: Story = {
 
 export const Quaternary: Story = {
   args: {
-    children: 'Yes',
+    children: 'No',
     variant: 'quaternary',
   },
 };
