@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '../../../../globals/ads-variables.scss'; // Asegurando que el archivo esté en la ruta correcta
+
+/* Contenedor del tooltip */
+.tooltip {
+  color: $--ads-colors-gray-100;
+  display: inline-block;
+  font-family: Barlow, sans-serif;
+  position: relative;
+}
+
+/* Contenedor del ícono */
+.container {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+/* Estilo para el ícono */
+.icon {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Estilo del texto principal */
+.text {
+  font-size: 12px;
+}
+
+/* Estilo del texto que aparece en el tooltip (inicialmente oculto) */
+.tips {
+  background-color: $--ads-colors-gray-100;
+  border-radius: 2px;
+  color: $--ads-colors-white;
+  left: 40%;
+  margin-left: -60px;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  top: 140%; /* Se posiciona abajo del ícono */
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+  z-index: 1;
+}
+
+/* Flecha del tooltip */
+.tips::after {
+  border-color: transparent transparent #161616;
+  border-style: solid;
+  border-width: 5px;
+  bottom: 100%; /* Flecha se ubica arriba del tooltip */
+  content: "";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+}
+
+/* Mostrar el tooltip solo cuando se pasa el mouse sobre el ícono */
+.container:hover .tips {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Variantes de tamaño para el tooltip */
+.small {
+  font-size: 12px;
+  margin-left: -59px;
+  padding: 6px;
+  width: 120px;
+}
+
+.medium {
+  font-size: 14px;
+  margin-left: -72px;
+  padding: 8px;
+  width: 140px;
+}
+
+.large {
+  font-size: 16px;
+  margin-left: -83px;
+  padding: 10px;
+  width: 160px;
+}
