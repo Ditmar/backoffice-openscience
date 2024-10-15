@@ -1,1 +1,0 @@
-import{j as t}from"./jsx-runtime-DEdD30eg.js";const n="_indicator_rszj7_1",s={indicator:n};function a({currentPage:i,totalPages:o}){return t.jsxs("div",{className:s.indicator,children:["Page ",i," of ",o]})}a.__docgenInfo={description:"",methods:[],displayName:"PageIndicator"};export{a as P};
