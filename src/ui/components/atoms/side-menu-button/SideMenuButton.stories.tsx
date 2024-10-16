@@ -19,6 +19,7 @@ export const Article: Story = {
   args: {
     children: 'Article Management',
     color: 'primary',
+    variant: 'secondary',
   },
 };
 
@@ -26,5 +27,6 @@ export const Author: Story = {
   args: {
     children: 'Author Management',
     color: 'primary',
+    variant: 'secondary',
   },
 };

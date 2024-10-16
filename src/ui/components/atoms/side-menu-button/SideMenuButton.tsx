@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 import articleManagementSvg from '../../../../assets/icons/article-management.svg?raw';
 import authorManagementSvg from '../../../../assets/icons/author-management.svg?raw';
 
-function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
+function SideMenuButton({ children, icon, color, variant = 'primary', onClick }: IProps) {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -24,9 +24,12 @@ function SideMenuButton({ children, icon, color, variant, onClick }: IProps) {
 
   const buttonClass = classNames(
     styles['side-menu-button'],
+    {
+      [styles['side-menu-button--primary']]: variant === 'primary',
+      [styles['side-menu-button--secondary']]: variant === 'secondary',
+      [styles.active]: isActive,
+    },
     color && styles[color],
-    variant && styles[variant],
-    { [styles.active]: isActive },
   );
 
   const selectedIcon = icon ?? (children === 'Article Management' ? Icon1 : Icon2);
