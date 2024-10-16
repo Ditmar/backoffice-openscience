@@ -41,7 +41,7 @@ function UserForm({ onSubmit }: IProps) {
         <input
           type="email"
           id="email"
-          name="email" // Agregado para consistencia
+          name="email"
           value={formData.email}
           placeholder="Enter your email"
           onChange={handleChange}
@@ -54,7 +54,7 @@ function UserForm({ onSubmit }: IProps) {
         <input
           type="password"
           id="password"
-          name="password" // Agregado para consistencia
+          name="password"
           value={formData.password}
           placeholder="Enter your password"
           minLength={6}
