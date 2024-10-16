@@ -1,5 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import '../../../../globals/_fonts.scss';
 
 .tablabel {
     align-items: center;
@@ -33,19 +33,19 @@
     }
 
     &.small {
-        font-family: Rubik, sans-serif;
+        font-family: Rubik, Arial, Helvetica, sans-serif;
         font-size: 1rem;
         font-weight: 400;
     }
 
     &.medium {
-        font-family: Rubik, sans-serif;
+        font-family: Rubik, Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: 400;
     }
 
     &.large {
-        font-family: Rubik, sans-serif;
+        font-family: Rubik, Arial, Helvetica, sans-serif;
         font-size: 1.4rem;
         font-weight: 400;
     }
