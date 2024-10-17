@@ -1,5 +1,5 @@
 import styles from './Page-Label.module.scss';
-import type { PageIndicatorProps } from './types/Iprops';
+import type { PageIndicatorProps } from './types/IProps';
 
 function PageIndicator({ currentPage, totalPages }: PageIndicatorProps) {
   return (
