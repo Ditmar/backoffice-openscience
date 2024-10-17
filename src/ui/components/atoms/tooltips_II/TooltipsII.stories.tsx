@@ -1,17 +1,17 @@
+import React from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import Tooltip from './TooltipsII';
-import DangerButton from '../DangerButton/Danger-Button';
-import Share from '../../../../assets/icons/Share';
+import share from '../../../../assets/icons/share.svg?raw';
+import { Icon } from '../../utils/svg-icons/icons';
 
 const meta = {
   title: 'ui/components/atoms/Tooltip',
   component: Tooltip,
   argTypes: {
-    position: {
+    variant: {
       control: { type: 'select' },
       options: ['top', 'bottom', 'left', 'right'],
     },
-
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -23,74 +23,78 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+function ShareIcon() {
+  return <Icon src={share} size="24px" />;
+}
+
 export const Top: Story = {
   args: {
     text: 'Share',
-    position: 'top',
+    variant: 'top',
     size: 'medium',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Bottom: Story = {
   args: {
     text: 'Share',
-    position: 'bottom',
+    variant: 'bottom',
     size: 'medium',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Left: Story = {
   args: {
     text: 'Share',
-    position: 'left',
+    variant: 'left',
     size: 'medium',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Right: Story = {
   args: {
     text: 'Share',
-    position: 'right',
+    variant: 'right',
     size: 'medium',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Small: Story = {
   args: {
     text: 'Share',
-    position: 'right',
+    variant: 'bottom',
     size: 'small',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Medium: Story = {
   args: {
     text: 'Share',
-    position: 'right',
+    variant: 'bottom',
     size: 'medium',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Large: Story = {
   args: {
     text: 'Share',
-    position: 'right',
+    variant: 'bottom',
     size: 'large',
-    children: <Share />,
+    children: <ShareIcon />,
   },
 };
 
 export const Text: Story = {
   args: {
     text: 'Brief definition of the underlined word abode',
-    position: 'right',
-    size: 'medium',
-    children: <DangerButton>Definition Tooltip</DangerButton>,
+    variant: 'bottom',
+    size: 'small',
+    children: <span className="definition-tooltip">Definition Tooltip</span>,
   },
 };

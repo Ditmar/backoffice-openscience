@@ -1,8 +1,8 @@
 import React from 'react';
 
 export interface IProps {
-  text: string;
-  children: React.ReactNode;
-  position: 'top' | 'bottom' | 'left' | 'right';
-  size: 'small' | 'medium' | 'large';
+  children: React.ReactElement<{ className?: string }>;
+  variant?: 'top' | 'bottom' | 'left' | 'right';
+  text?: string;
+  size?: 'small' | 'medium' | 'large';
 }
