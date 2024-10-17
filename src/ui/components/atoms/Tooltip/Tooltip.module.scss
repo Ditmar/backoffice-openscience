@@ -1,0 +1,75 @@
+@import '../../../../globals/ads-variables.scss';
+
+.tooltip {
+  color: $--ads-colors-gray-100;
+  display: inline-block;
+  font-family: Barlow, sans-serif;
+  position: relative;
+}
+
+.container {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.icon {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.tips {
+  background-color: $--ads-colors-gray-100;
+  border-radius: 2px;
+  color: $--ads-colors-white;
+  left: 40%;
+  margin-left: -60px;
+  opacity: 0;
+  position: absolute;
+  text-align: left;
+  top: 140%;
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.tips::after {
+  border-color: transparent transparent $--ads-colors-gray-100;
+  border-style: solid;
+  border-width: 5px;
+  bottom: 100%;
+  content: "";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+}
+
+.container:hover .tips {
+  opacity: 1;
+  visibility: visible;
+}
+
+.small {
+  font-size: 12px;
+  margin-left: -59px;
+  padding: 6px;
+  width: 120px;
+}
+
+.medium {
+  font-size: 14px;
+  margin-left: -72px;
+  padding: 8px;
+  width: 140px;
+}
+
+.large {
+  font-size: 16px;
+  margin-left: -83px;
+  padding: 10px;
+  width: 160px;
+}
