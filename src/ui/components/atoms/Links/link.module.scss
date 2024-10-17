@@ -1,0 +1,75 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/_mixins.scss';
+
+.links {
+  color: $--ads-colors-blue-50; 
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &__text {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  &.small {
+    font-size: 0.75rem;
+
+    @media (max-width: map-get($--ads-breakpoints-scales, 'small')) {
+      font-size: 0.65rem; 
+    }
+  }
+
+  &.medium {
+    font-size: 1rem;
+
+    @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &.big {
+    font-size: 1.25rem;
+
+    @media (min-width: map-get($--ads-breakpoints-scales, 'large')) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: map-get($--ads-breakpoints-scales, 'extra-large')) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &.active {
+    color: $--ads-colors-gray-80 !important;
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    color: $--ads-colors-gray-50;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: none;
+  }
+
+  &.enabled {
+    color: $--ads-colors-blue-50;
+    text-decoration: none; 
+  }
+
+  &:visited {
+    color: $--ads-colors-visited;
+  }
+
+  &:hover:not(.disabled),
+  &:focus:not(.disabled) {
+    color: $--ads-colors-blue-60; 
+    outline: none;
+    text-decoration: underline; 
+  }
+}
+
+
