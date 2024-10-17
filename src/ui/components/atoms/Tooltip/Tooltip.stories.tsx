@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip } from './Tooltip';
 
-// Configuración del Storybook
 const meta: Meta<typeof Tooltip> = {
   title: 'ui/components/atoms/Tooltip',
   component: Tooltip,
@@ -26,7 +25,6 @@ const meta: Meta<typeof Tooltip> = {
 
 export default meta;
 
-// Historias
 const Template: StoryObj<typeof Tooltip> = {
   render: (args) => (
     <Tooltip text={args.text} toolTipText={args.toolTipText} variant={args.variant} />

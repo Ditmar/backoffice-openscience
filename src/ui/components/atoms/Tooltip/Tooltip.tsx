@@ -1,13 +1,11 @@
-import React from 'react';
 import classNames from 'classnames';
 import { SlInfo } from 'react-icons/sl';
 import styles from './Tooltip.module.scss';
 import type { ToolTipsProps } from './types/IProps';
 
 export function Tooltip(props: ToolTipsProps) {
-  const { text, variant = 'medium', toolTipText } = props; // Establecer 'medium' como valor predeterminado
+  const { text, variant = 'medium', toolTipText } = props;
 
-  // Aplicar clases dinámicas según la variante
   const toolTipsClass = classNames(styles.tooltip, {
     [styles.small]: variant === 'small',
     [styles.medium]: variant === 'medium',
