@@ -1,0 +1,38 @@
+@import '../../../../globals/ads-variables.scss';
+
+.button-label {
+    &--container {
+        border-radius: 313px;
+        color: $--ads-colors-white;
+        height: 30px;
+        left: 931px;
+        top: 827px;
+        transition: filter 0.3s ease;
+        width: 87px;
+    }
+
+    &--primary {
+        background-color: $--ads-colors-red-60;
+    }
+    
+    &--secondary {
+        background-color: $--ads-colors-green-40; 
+    }
+    
+    &--tertiary {
+        background-color: $--ads-colors-green-50; 
+    }
+    
+    &--quaternary {
+        background-color: $--ads-colors-red-50; 
+    }
+    
+    &--quinary {
+        background-color: $--ads-colors-yellow-60; 
+    }
+
+}
+
+.button-label--container:hover {
+    filter: brightness(1.1);
+}
