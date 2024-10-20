@@ -1,9 +1,112 @@
 @font-face {
     font-display: swap;
+<<<<<<< HEAD
+=======
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: bold;
+    src: url('/fonts/Lato-Bold.woff2') format('woff2');
+
+    @font-face {
+        font-display: swap;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        src: url('/fonts/Lato-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: Lato-bold;
+        font-style: normal;
+        font-weight: bold;
+        src: url('/fonts/Lato-Bold.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        src: url('/fonts/Roboto-Regular.ttf') format('ttf');
+    }
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: bold;
+    src: url('/fonts/Roboto-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: normal;
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: bold;
+    font-weight: normal;
+    font-weight: bold;
+    src: url('/fonts/Montserrat-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/Lato-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/Montserrat-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Rubik-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+>>>>>>> 5a14cd7a0bbb291845284173b499332398f4c7a4
     font-family: Rubik;
     font-style: normal;
     font-weight: bold;
     src: url('/fonts/Rubik-Bold.woff2') format('woff2');
 }
 
+<<<<<<< HEAD
 
+=======
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: normal;
+    src: url('/fonts/Rubik-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: italic;
+    font-weight: bold;
+    src: url('/fonts/Rubik-BoldItalic.woff2') format('woff2');
+}
+>>>>>>> 5a14cd7a0bbb291845284173b499332398f4c7a4
