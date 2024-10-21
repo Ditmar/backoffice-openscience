@@ -67,6 +67,11 @@ Default.args = {
   size: '24px',
 };
 ```
+### Y no olvides importar Icon en tu archivo .tsx
+
+```tsx
+import { Icon } from '../../utils/svg-icons/icons';
+```
 >Recuerda que son ejemplos y que debes implementarlo de acuerdo a tu proyecto 	:name_badge:
 
 ## Pruebas de los íconos 
