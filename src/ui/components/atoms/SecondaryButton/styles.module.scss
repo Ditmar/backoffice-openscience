@@ -2,12 +2,11 @@
 
 .display {
   align-items: center;
-  background: $--ads-colors-blue-80;
+  background: $--ads-colors-gray-80;
   border: none;
   color: $--ads-colors-white;
   display: flex;
   height: 48px;
-  outline: $--ads-colors-red-60;
   padding-inline: 0.5rem;
   padding-inline: 20px;
   width: auto;
@@ -23,7 +22,7 @@
 
   &:focus {
     border: 2px solid $--ads-colors-white;
-    outline: 2px solid $--ads-colors-blue-80;
+    outline: 2px solid $--ads-colors-gray-80;
   }
 
   &.primary {
@@ -34,7 +33,7 @@
   &.secondary {
     & :focus {
       border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-blue-80;
+      outline: 2px solid $--ads-colors-gray-80;
     }
   }
 
@@ -43,20 +42,20 @@
 
     &:focus {
       border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-blue-80;
+      outline: 2px solid $--ads-colors-gray-80;
     }
   }
 
   &.active {
-    background: $--ads-colors-blue-90;
+    background: $--ads-colors-black;
   }
 
-  &.disable {
+  &.disabled {
     background: $--ads-colors-gray-40;
     color: $--ads-colors-gray-50;
   }
 
   &:hover {
-    background-color: $--ads-colors-blue-70;
+    background-color: $--ads-colors-gray-90;
   }
 }

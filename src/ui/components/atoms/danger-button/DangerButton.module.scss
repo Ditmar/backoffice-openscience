@@ -3,20 +3,22 @@
 
 .button-danger {
   align-items: center;
-  border: none; 
+  border: none;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   padding: 10px 20px;
-  transition: background-color 0.3s ease, border 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border 0.3s ease;
 
   &:hover {
     opacity: 0.8;
   }
 
   .button-variant-danger {
-    color: $--ads-colors-white; 
-    font-size: 24px;  
+    color: $--ads-colors-white;
+    font-size: 24px;
   }
 
   @include respond-to('small-mobile') {
