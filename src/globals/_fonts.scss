@@ -1,31 +1,55 @@
-// Importación de la fuente David Libre y Barlow Regular desde archivos locales
 
 @font-face {
-  font-display: swap;
-  font-family: "David Libre";
-  font-style: normal;
-  font-weight: 400;
-  src: url('../../public/fonts/DavidLibre-Regular.woff2') format('woff2');
-      
+  font-family: 'David Libre';
+  font-weight: 400; 
+  src: url('/fonts/DavidLibre-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "David Libre";
-  font-style: normal;
-  font-weight: 500;
-  src: url('../../public/fonts/DavidLibre-Medium.woff2') format('woff2');
-       
+  font-family: 'David Libre';
+  font-weight: 500; 
+  src: url('/fonts/DavidLibre-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "David Libre";
-  font-style: bold;
+  font-family: 'David Libre';
   font-weight: 700;
-  src: url('../../public/fonts/DavidLibre-Bold.woff2') format('woff2');
-  
+  src: url('/fonts/DavidLibre-Bold.woff2') format('woff2');
 }
+
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 400; 
+  src: url('/fonts/Barlow-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 700; 
+  src: url('/fonts/Barlow-Bold.woff2') format('woff2');
+}
+
+.text-paragraph {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.text-short-paragraph {
+  font-family: 'David Libre', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-long-paragraph {
+  font-family: 'David Libre', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 
 
   
