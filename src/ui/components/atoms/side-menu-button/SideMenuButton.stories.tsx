@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import SideMenuButton from './SideMenuButton';
 
 const meta = {
-  title: 'ui/components/atoms/side-menu-button',
+  title: 'ui/components/atoms/Side-Menu-Button',
   component: SideMenuButton,
   argTypes: {
     onClick: {
