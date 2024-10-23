@@ -1,7 +1,7 @@
 @import '../../../../globals/ads-variables.scss';
 
 .tooltip {
-  color: $--ads-colors-gray-100;
+  color: $--ads-colors-gray-10;
   display: inline-block;
   font-family: Barlow, sans-serif;
   position: relative;
@@ -23,7 +23,7 @@
 }
 
 .tips {
-  background-color: $--ads-colors-gray-100;
+  background-color: $--ads-colors-gray-10;
   border-radius: 2px;
   color: $--ads-colors-white;
   left: 40%;
@@ -38,7 +38,7 @@
 }
 
 .tips::after {
-  border-color: transparent transparent $--ads-colors-gray-100;
+  border-color: transparent transparent $--ads-colors-gray-10;
   border-style: solid;
   border-width: 5px;
   bottom: 100%;
