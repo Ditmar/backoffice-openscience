@@ -67,6 +67,13 @@ Default.args = {
   size: '24px',
 };
 ```
+>No Olvides Importar esta linea de codigo en tu archivo .tsx o .stories.tsx :rocket:
+
+```tsx
+import { Icon } from '../../utils/svg-icons/icons';
+```
+
+
 >Recuerda que son ejemplos y que debes implementarlo de acuerdo a tu proyecto 	:name_badge:
 
 ## Pruebas de los íconos 
