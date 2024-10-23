@@ -9,7 +9,7 @@
 }
 
 .tooltip-content {
-  background-color: $--ads-colors-gray-100;
+  background-color:$--ads-colors-black;
   border-radius: 0;
   color: $--ads-colors-white;
   font-size: $--ads-font-size-sixth;
@@ -73,7 +73,7 @@
 }
 
 .tooltip-top .tooltip-content::after {
-  border-color: $--ads-colors-gray-100 transparent transparent;
+  border-color: $--ads-colors-black transparent transparent;
   left: 50%;
   margin-left: -5px;
   top: 100%;
@@ -86,7 +86,7 @@
 }
 
 .tooltip-bottom .tooltip-content::after {
-  border-color: transparent transparent $--ads-colors-gray-100;
+  border-color: transparent transparent $--ads-colors-black;
   bottom: 100%;
   left: 50%;
   margin-left: -5px;
@@ -99,7 +99,7 @@
 }
 
 .tooltip-left .tooltip-content::after {
-  border-color: transparent transparent transparent $--ads-colors-gray-100;
+  border-color: transparent transparent transparent $--ads-colors-black;
   left: 100%;
   margin-top: -5px;
   top: 50%;
@@ -112,7 +112,7 @@
 }
 
 .tooltip-right .tooltip-content::after {
-  border-color: transparent $--ads-colors-gray-100 transparent transparent;
+  border-color: transparent $--ads-colors-black transparent transparent;
   margin-top: -5px;
   right: 100%;
   top: 50%;

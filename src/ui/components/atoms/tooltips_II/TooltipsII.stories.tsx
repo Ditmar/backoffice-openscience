@@ -5,7 +5,7 @@ import share from '../../../../assets/icons/share.svg?raw';
 import { Icon } from '../../utils/svg-icons/icons';
 
 const meta = {
-  title: 'ui/components/atoms/Tooltip',
+  title: 'ui/components/atoms/tooltip_II',
   component: Tooltip,
   argTypes: {
     variant: {
