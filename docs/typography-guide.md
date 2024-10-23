@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> b91d6f3 (feat: add new docs)
 # Guía de Uso de Tipografía
 
 Este proyecto utiliza las siguientes fuentes tipográficas:
@@ -13,6 +16,10 @@ A continuación se indican las clases definidas en el archivo `_fonts.scss` para
 ###  Para Párrafos Generales (Barlow):
 ###  Para Párrafos Cortos (David Libre):
 ###  Para Párrafos Largos (David Libre):
+<<<<<<< HEAD
+=======
+
+>>>>>>> b91d6f3 (feat: add new docs)
 ```html
 <p class="text-paragraph">Este es un ejemplo de párrafo con la fuente Barlow.</p>
 
