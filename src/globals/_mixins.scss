@@ -5,9 +5,19 @@
     @media (min-width: map-get($--ads-breakpoints-scales, $breakpoint)) {
       @content;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 
  @else {
+=======
+  } @else {
+>>>>>>> 59ac2fc (feature SEM-022 add Links)
+=======
+  }
+  
+  @else {
+>>>>>>> b81449c (feat: SEM-022 add Links component with variants)
     @warn "It has not been found: #{$breakpoint}.";
   }
 }
