@@ -1,0 +1,64 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.user-form {
+  align-items: start;
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 800px;
+
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  background-color: $--ads-colors-gray-10;
+  border: 1px solid $--ads-colors-white;
+  border-radius: 4px;
+  font-size: $--ads-font-size-primary;
+  padding: 0.75rem;
+}
+
+.form-group input::placeholder {
+  color: $--ads-colors-gray-40;
+  font-family: Roboto, sans-serif;
+}
+
+.form-group span.input-label {
+  color: $--ads-colors-black;
+  font-family: Roboto, sans-serif;
+  font-size: $--ads-font-size-primary;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.submit-btn {
+  background-color: $--ads-colors-green-40;
+  border: none;
+  border-radius: 4px;
+  color: $--ads-colors-white;
+  cursor: pointer;
+  font-size: $--ads-font-size-primary;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  width: 50%;
+
+  @media (width <= 768px) {
+    grid-column: 1;
+    width: 100%;
+  }
+}
+
+.submit-btn:hover {
+  background-color: $--ads-colors-green-50;
+}
