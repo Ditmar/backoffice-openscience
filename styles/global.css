@@ -4,12 +4,27 @@ body {
   font-family: Besley, serif;
 }
 
+/* clase de texto pequeño */
 .font-small {
   font-size: 12px;
   line-height: 16px;
+  font-weight: 400;
+  color: black;
 }
 
+/* clase de texto mediano */
 .font-medium {
   font-size: 14px;
   line-height: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+
+/* clase para texto auxiliar */
+.font-helper {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: grey;
 }
