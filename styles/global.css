@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley:wght@400;700&display=swap');
-
-:root {
-  --color-black: #000;
-  --color-grey: #a0a0a0;
-}
+@import 'src/globals/ad-variables.css';
 
 /* Fuente global styles */
 body {
@@ -12,7 +8,7 @@ body {
 
 /* clase de texto pequeño */
 .font-small {
-  color: var(--color-black);
+  color: var(--ads-colors-gray-100);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -20,7 +16,7 @@ body {
 
 /* clase de texto mediano */
 .font-medium {
-  color: var(--color-black);
+  color: var(--ads-colors-gray-100);
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -29,7 +25,7 @@ body {
 
 /* clase para texto auxiliar */
 .font-helper {
-  color: var(--color-grey);
+  color: var(--ads-colors-gray-60);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
