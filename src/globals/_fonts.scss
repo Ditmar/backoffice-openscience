@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'David Libre';
   font-weight: 400; 
@@ -50,3 +49,10 @@
 }
 
 
+@font-face {
+    font-display: swap;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Rubik-Regular.ttf') format('ttf');
+}
