@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley:wght@400;700&display=swap');
 
+:root {
+  --color-black: #000;
+  --color-grey: #a0a0a0;
+}
+
 /* Fuente global styles */
 body {
   font-family: Besley, serif;
@@ -7,7 +12,7 @@ body {
 
 /* clase de texto pequeño */
 .font-small {
-  color: #000;
+  color: var(--color-black);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -15,7 +20,7 @@ body {
 
 /* clase de texto mediano */
 .font-medium {
-  color: #000;
+  color: var(--color-black);
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -24,7 +29,7 @@ body {
 
 /* clase para texto auxiliar */
 .font-helper {
-  color: #a0a0a0;
+  color: var(--color-grey);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
