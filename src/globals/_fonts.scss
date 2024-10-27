@@ -1,0 +1,31 @@
+// Importación de la fuente David Libre y Barlow Regular desde archivos locales
+
+@font-face {
+  font-family: 'David Libre';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/DavidLibre-Regular.woff2') format('woff2');
+      
+}
+
+@font-face {
+  font-family: 'David Libre';
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/DavidLibre-Bold.woff2') format('woff2');
+       
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Regular.woff2') format('woff2');
+      
+}
+
+   
+  
