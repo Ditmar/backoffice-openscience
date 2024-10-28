@@ -1,4 +1,4 @@
-import{D as y}from"./display-vko4vQJ3.js";import"./jsx-runtime-DEdD30eg.js";import"./index-RYns6xqu.js";import"./index-Dejnh_W_.js";const S={title:"ui/components/demo/calculator/atoms/display",component:y,argTypes:{onClick:{action:"click"}}},r={args:{display:"123",variant:"primary"}},a={args:{display:"123",variant:"secondary"}},s={args:{display:"123",variant:"tertiary"}};var e,o,t;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+import{D as y}from"./display-DualTZNa.js";import"./jsx-runtime-DEdD30eg.js";import"./index-RYns6xqu.js";import"./index-Dejnh_W_.js";const S={title:"ui/components/demo/calculator/atoms/display",component:y,argTypes:{onClick:{action:"click"}}},r={args:{display:"123",variant:"primary"}},a={args:{display:"123",variant:"secondary"}},s={args:{display:"123",variant:"tertiary"}};var e,o,t;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
   args: {
     display: '123',
     variant: 'primary'
