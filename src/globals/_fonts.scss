@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2bed9f9 (feat: updating pr and adding files)
+
 @font-face {
   font-family: 'David Libre';
   font-weight: 400; 
@@ -13,28 +9,13 @@
   font-family: 'David Libre';
   font-weight: 500; 
   src: url('/fonts/DavidLibre-Medium.woff2') format('woff2');
-=======
-// Importación de la fuente David Libre y Barlow Regular desde archivos locales
-
-@font-face {
-  font-display: swap;
-  font-family: "David Libre";
-  font-style: normal;
-  font-weight: 400;
-  src: url('../../public/fonts/DavidLibre-Regular.woff2') format('woff2');
-      
->>>>>>> 00e06c1 (updating with master rebase)
 }
 
 @font-face {
-  font-display: swap;
-<<<<<<< HEAD
   font-family: 'David Libre';
-<<<<<<< HEAD
   font-weight: 700;
   src: url('/fonts/DavidLibre-Bold.woff2') format('woff2');
 }
-
 
 @font-face {
   font-family: Barlow;
@@ -69,86 +50,3 @@
 }
 
 
-<<<<<<< HEAD
-=======
-  font-style: bold;
-  font-weight: 700;
-  src: url('../assets/fonts/DavidLibre-Bold.woff2') format('woff2');
-=======
-  font-family: "David Libre";
-  font-style: normal;
-  font-weight: 500;
-<<<<<<< HEAD
-  src: url('/public/fonts/DavidLibre-Medium.woff2') format('woff2');
->>>>>>> 9defec4 (feat: import fonts typography David Libre v2)
-=======
-  src: url('../../public/fonts/DavidLibre-Medium.woff2') format('woff2');
->>>>>>> ae72c35 (updatess)
-       
-=======
-
-@font-face {
-  font-family: 'David Libre';
-  font-weight: 400; 
-  src: url('/fonts/DavidLibre-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'David Libre';
-  font-weight: 500; 
-  src: url('/fonts/DavidLibre-Medium.woff2') format('woff2');
->>>>>>> b91d6f3 (feat: add new docs)
-}
-
-@font-face {
-  font-family: 'David Libre';
-  font-weight: 700;
-  src: url('/fonts/DavidLibre-Bold.woff2') format('woff2');
-}
-
-<<<<<<< HEAD
-   
->>>>>>> 00e06c1 (updating with master rebase)
-=======
-
-<<<<<<< HEAD
->>>>>>> ae72c35 (updatess)
-=======
-@font-face {
-  font-family: Barlow;
-  font-weight: 400; 
-  src: url('/fonts/Barlow-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Barlow;
-  font-weight: 700; 
-  src: url('/fonts/Barlow-Bold.woff2') format('woff2');
-}
-
-.text-paragraph {
-  font-family: Barlow, sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.text-short-paragraph {
-  font-family: 'David Libre', serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.text-long-paragraph {
-  font-family: 'David Libre', serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-
-
->>>>>>> b91d6f3 (feat: add new docs)
-=======
->>>>>>> 2fc11ab (feat:adding files and solving problems)
-  
