@@ -1,0 +1,27 @@
+@import 'src/global/fonts.scss';
+@import 'src/globals/ad-variables.scss';
+
+/* clase de texto pequeño */
+.font-small {
+  color: var(--ads-colors-gray-100);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* clase de texto mediano */
+.font-medium {
+  color: var(--ads-colors-gray-100);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+
+/* clase para texto auxiliar */
+.font-helper {
+  color: var(--ads-colors-gray-60);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
