@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Besley:wght@400;700&display=swap');
-@import 'src/globals/ad-variables.css';
-
-/* Fuente global styles */
-body {
-  font-family: Besley, serif;
-}
+@import 'src/global/fonts.scss';
+@import 'src/globals/ad-variables.scss';
 
 /* clase de texto pequeño */
 .font-small {
