@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBar Snapshot > renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="_searchBar_777775"
+  >
+    <input
+      aria-label="Search input"
+      class="_inputField_04b06d"
+      data-testid="input-field"
+      placeholder="Search..."
+      type="text"
+    />
+    <button
+      aria-label="Search Icon"
+      class="_magnifyingButton_023b10"
+    />
+  </div>
+</DocumentFragment>
+`;
