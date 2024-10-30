@@ -28,6 +28,18 @@
   src: url('/fonts/Barlow-Bold.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: Besley;
+  font-weight: 400;
+  src: url('/fonts/Besley-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Besley;
+  font-weight: 700;
+  src: url('/fonts/Besley-Bold.woff2') format('woff2');
+}
+
 .text-paragraph {
   font-family: Barlow, sans-serif;
   font-size: 14px;
@@ -48,6 +60,19 @@
   line-height: 24px;
 }
 
+.text-small-paragraph {
+  font-family: Besley, serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.text-large-paragraph {
+  font-family: Besley, serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
 
 @font-face {
     font-display: swap;
