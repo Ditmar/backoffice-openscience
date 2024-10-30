@@ -6,7 +6,7 @@ function InputField({ placeholder, onChange }: IProps) {
   return (
     <input
       type="text"
-      className={styles.inputField}
+      className={styles.input__field}
       placeholder={placeholder}
       onChange={onChange}
       aria-label="Search input"

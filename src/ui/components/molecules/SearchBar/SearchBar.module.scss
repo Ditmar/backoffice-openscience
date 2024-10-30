@@ -1,19 +1,19 @@
 @import '../../../../globals/ads-variables.scss';
 
-.searchBar {
-  display: flex;
+.search__bar {
   align-items: center;
   background-color: $--ads-colors-gray-10;
   border-radius: 4px;
+  display: flex;
   padding: 10px;
   width: 100%;
 }
 
-.inputField {
+.input__field {
   flex-grow: 1;
 }
 
-.magnifyingGlassIcon {
-  margin-left: 8px;
+.magnifying__icon {
   cursor: pointer;
+  margin-left: 8px;
 }

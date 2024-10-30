@@ -6,7 +6,7 @@ function MagnifyingGlass(props: IProps) {
   const { icon, onClick } = props;
 
   return (
-    <button className={`${styles.magnifyingButton}`} onClick={onClick} aria-label="Search Icon">
+    <button className={`${styles.magnifying__button}`} onClick={onClick} aria-label="Search Icon">
       {icon && (
         <Icon
           data-testid="magnifying-glass-icon"
