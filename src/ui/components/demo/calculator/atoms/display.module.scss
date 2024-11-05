@@ -1,6 +1,8 @@
+@import '../../../../globals/ads-variables.scss';
+
 .display {
   align-items: center;
-  background-color: $--ads-colors-white-1;
+  background-color: $--ads-colors-white;
   border: 1px solid $--ads-colors-gray-20;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
@@ -21,7 +23,7 @@
   width: 100%;
 
   &.primary {
-    background-color: $--ads-colors-white-1;
+    background-color: $--ads-colors-white;
     color: $--ads-colors-gray-1;
   }
 
