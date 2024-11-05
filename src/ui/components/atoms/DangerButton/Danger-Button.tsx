@@ -1,5 +1,6 @@
-import './Danger-Button.scss';
+import classNames from 'classnames';
 import type { IProps } from './types/IProps';
+import styles from './Danger-Button.module.scss';
 
 function DangerButton(props: IProps) {
   const { children, variant = 'Normal', onClick, disabled } = props;
