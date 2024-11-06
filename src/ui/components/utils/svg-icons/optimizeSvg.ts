@@ -2,6 +2,9 @@
 import { optimize } from 'svgo';
 
 function optimizeSvg(svg: string, size = '24px') {
+  if (svg === '') {
+    return '';
+  }
   const result = optimize(svg, {
     plugins: [
       {
