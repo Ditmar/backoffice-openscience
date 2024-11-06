@@ -1,6 +1,7 @@
 const { rules } = require('./rules/astro');
 
 module.exports = {
+  parse: '@typescript-eslint/parser',
   extends: [
     require.resolve('./react'),
     require.resolve('./configurations/_base'),
