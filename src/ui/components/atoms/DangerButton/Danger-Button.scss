@@ -5,8 +5,9 @@
   background: $--ads-colors-red-60;
   border: none;
   color: $--ads-colors-white;
-  font-size: $--ads-font-size-primary;
-  height: 48px !important;
+
+  /* font-size: $--ads-font-size-primary; */
+  height: 48px;
   outline: $--ads-colors-red-60;
   padding-inline: 2rem;
   width: auto;

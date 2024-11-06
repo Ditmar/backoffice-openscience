@@ -1,53 +1,51 @@
-@import "../../../../globals/ads-variables.scss";
+@import '../../../../globals/ads-variables.scss';
 
-.container{
-    align-items: center;
-    display: flex;   
+.container {
+  align-items: center;
+  display: flex;
 }
 
-.label{
-    color: $--ads-colors-gray-80;
-    font-size: 14px; 
-    margin-left: 10px;
-       
+.label {
+  color: $--ads-colors-gray-80;
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 .toggle {
-    align-items: center;
-    background-color: $--ads-colors-gray-20;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer; 
-    display: flex;
-    height: 25px;
-    outline: none;
-    padding: 0;
-    position: relative;
-    transition: background-color 0.3s ease;
-    width: 50px;
-    
+  align-items: center;
+  background-color: $--ads-colors-gray-20;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  outline: none;
+  padding: 0;
+  position: relative;
+  transition: background-color 0.3s ease;
+  width: 50px;
 
-    &.checked {
-        background-color: $--ads-colors-blue-60;
-    }
+  &.checked {
+    background-color: $--ads-colors-blue-60;
+  }
 
-    &:disabled {
-        background-color: $--ads-colors-white;
-        cursor: not-allowed;
-    }
+  &:disabled {
+    background-color: $--ads-colors-white;
+    cursor: not-allowed;
+  }
 }
 
 .slider {
-    background-color: $--ads-colors-gray-10; 
-    border-radius: 50%;
-    height: 23px;
-    left: 1px;
-    position: absolute;
-    top: 1px;
-    transition: left 0.3s ease;
-    width: 23px;
+  background-color: $--ads-colors-gray-10;
+  border-radius: 50%;
+  height: 23px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  transition: left 0.3s ease;
+  width: 23px;
 
-    .toggle.checked & {
-        left: 26px;
-    }
+  .toggle.checked & {
+    left: 26px;
+  }
 }
