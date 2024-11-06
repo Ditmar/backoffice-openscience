@@ -20,7 +20,6 @@
   transition: border-color 0.3s;
   width: 288px;
 
-  // Estilo para estado de error
   &.error {
     border-color: $--ads-colors-red-60;
   }
