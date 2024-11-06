@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoAlertCircle } from 'react-icons/io5';
 import type { TextInputErrorDisabledProps } from './types/IProps';
-import styles from './TextInputErrorDisabled.module.scss';
+import styles from './Textinputerrordisabled.module.scss';
 
 function TextInputErrorDisabled({
   errorMessage,
