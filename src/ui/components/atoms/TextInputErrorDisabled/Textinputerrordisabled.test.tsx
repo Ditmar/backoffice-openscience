@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event'; // Añadido para simulación de eventos
 import TextInputErrorDisabled from './Textinputerrordisabled';
 
 describe('TextInputErrorDisabled Component', () => {
@@ -33,14 +32,14 @@ describe('TextInputErrorDisabled Component', () => {
   it('allows user to type when not disabled', async () => {
     render(<TextInputErrorDisabled isDisabled={false} placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
-    await userEvent.type(inputElement, 'Test input'); // Corregido para usar userEvent
+    await MouseEvent.type(inputElement, 'Test input');
     expect(inputElement).toHaveValue('Test input');
   });
 
   it('does not allow user to type when disabled', async () => {
     render(<TextInputErrorDisabled isDisabled placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
-    await userEvent.type(inputElement, 'Test input'); // Corregido para usar userEvent
+    await userEvent.type(inputElement, 'Test input');
     expect(inputElement).toHaveValue('');
   });
 });

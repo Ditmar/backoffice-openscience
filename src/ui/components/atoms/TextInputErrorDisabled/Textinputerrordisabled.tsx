@@ -3,12 +3,13 @@ import { IoAlertCircle } from 'react-icons/io5';
 import type { TextInputErrorDisabledProps } from './types/IProps';
 import styles from './Textinputerrordisabled.module.scss';
 
-function TextInputErrorDisabled({
+const TextInputErrorDisabled: React.FC<TextInputErrorDisabledProps> = ({
+  variant = 'medium',
   errorMessage,
   isDisabled,
   placeholder,
   value,
-}: TextInputErrorDisabledProps) {
+}) => {
   return (
     <div className={styles.inputWrapper}>
       <span className={styles.inputContainer}>
@@ -25,6 +26,6 @@ function TextInputErrorDisabled({
       {errorMessage && !isDisabled && <p className={styles.errorMessage}>{errorMessage}</p>}
     </div>
   );
-}
+};
 
 export default TextInputErrorDisabled;
