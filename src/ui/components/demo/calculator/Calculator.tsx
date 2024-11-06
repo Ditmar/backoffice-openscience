@@ -17,7 +17,6 @@ function Calculator() {
     ['0', '/', '='],
   ];
   const handlerEvent = (e: Event) => {
-    
     const value = e.target.textContent;
     if (value.includes('=')) {
       try {
