@@ -9219,10 +9219,10 @@ typescript-auto-import-cache@^0.3.3:
   dependencies:
     semver "^7.3.8"
 
-typescript@^5.2.0-dev.20230807:
-  version "5.2.0-dev.20230807"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230807.tgz#652fa8a3fcc46958035d9b911c815299deb9f58e"
-  integrity sha512-sF8sZl3r/mpAdKAxASaWaoU+mNPF3g8OrZ601HraU2l4WEwAf6nO7sq0Bzl+Y3FV7sWjy+gb6kdM1CtLjVne/g==
+typescript@^5.1.5:
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.5.tgz#a3ae755082488b6046fe64345d293ef26af08671"
+  integrity sha512-FOH+WN/DQjUvN6WgW+c4Ml3yi0PH+a/8q+kNIfRehv1wLhWONedw85iu+vQ39Wp49IzTJEsZ2lyLXpBF7mkF1g==
 
 ufo@^1.5.4:
   version "1.5.4"
