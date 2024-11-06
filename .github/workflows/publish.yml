@@ -40,6 +40,9 @@ jobs:
       - name: Build Storybook for non-master branches
         if: github.ref != 'refs/heads/master'
         run: yarn build-storybook
+        
+      - name: Build app
+        run: yarn build
 
       - name: Deploy to GitHub Pages for master branch
         if: github.ref == 'refs/heads/master'

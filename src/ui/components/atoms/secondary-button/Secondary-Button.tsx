@@ -10,7 +10,7 @@ function SecundaryButton(props: IProps) {
     [styles.secondary]: variant === 'Medium',
     [styles.tertiary]: variant === 'Big',
     [styles.active]: variant === 'Active',
-    [styles.disable]: variant === 'Disable',
+    [styles.disable]: variant === 'Disabled',
   });
   return (
     <button className={displayClass} onClick={onClick}>

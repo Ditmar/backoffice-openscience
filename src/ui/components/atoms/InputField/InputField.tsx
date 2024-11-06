@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './InputField.module.scss';
 import type { IProps } from './types/IProps';
 
