@@ -12,7 +12,7 @@
   padding: 0;
 
   span {
-    display: inline-block; 
+    display: inline-block;
     height: 24px;
     width: 24px;
 
@@ -20,22 +20,20 @@
       fill: currentcolor;
       height: 100%;
       width: 100%;
-
-  }
-}
-
-&:hover {
-  color: $--ads-colors-blue-60;
+    }
   }
 
+  &:hover {
+    color: $--ads-colors-blue-60;
+  }
 }
 
 .icon-border {
-  border: 1px solid $--ads-colors-gray-20; 
-  border-radius: 50%; 
+  border: 1px solid $--ads-colors-gray-20;
+  border-radius: 50%;
   padding: 4px;
 
   &:hover {
-    border-color: $--ads-colors-gray-40; 
+    border-color: $--ads-colors-gray-40;
   }
 }
