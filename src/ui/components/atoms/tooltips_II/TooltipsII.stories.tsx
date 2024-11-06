@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StoryObj, Meta } from '@storybook/react';
 import Tooltip from './TooltipsII';
 import share from '../../../../assets/icons/share.svg?raw';
