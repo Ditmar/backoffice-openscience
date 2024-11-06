@@ -2,42 +2,42 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import Textinputerrordisabled from './Textinputerrordisabled';
+import TextInputErrorDisabled from './TextInputErrorDisabled';
 
 describe('TextInputErrorDisabled Component', () => {
   it('renders the input with the correct placeholder', () => {
-    render(<Textinputerrordisabled placeholder="Enter text" />);
+    render(<TextInputErrorDisabled placeholder="Enter text" />);
     const inputElement = screen.getByPlaceholderText('Enter text');
     expect(inputElement).toBeInTheDocument();
   });
 
   it('displays the error message when provided', () => {
-    render(<Textinputerrordisabled errorMessage="This field is required." />);
+    render(<TextInputErrorDisabled errorMessage="This field is required." />);
     const errorMessage = screen.getByText(/This field is required./i);
     expect(errorMessage).toBeInTheDocument();
   });
 
   it('disables the input when isDisabled is true', () => {
-    render(<Textinputerrordisabled isDisabled />);
+    render(<TextInputErrorDisabled isDisabled />);
     const inputElement = screen.getByRole('textbox');
     expect(inputElement).toBeDisabled();
   });
 
   it('does not display an error message when errorMessage is not provided', () => {
-    render(<Textinputerrordisabled />);
+    render(<TextInputErrorDisabled />);
     const errorMessage = screen.queryByText(/This field is required./i);
     expect(errorMessage).not.toBeInTheDocument();
   });
 
   it('allows user to type when not disabled', async () => {
-    render(<Textinputerrordisabled isDisabled={false} placeholder="Type here" />);
+    render(<TextInputErrorDisabled isDisabled={false} placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
     await userEvent.type(inputElement, 'Test input'); // Cambia MouseEvent por userEvent
     expect(inputElement).toHaveValue('Test input');
   });
 
   it('does not allow user to type when disabled', async () => {
-    render(<Textinputerrordisabled isDisabled placeholder="Type here" />);
+    render(<TextInputErrorDisabled isDisabled placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
     await userEvent.type(inputElement, 'Test input'); // Cambia MouseEvent por userEvent
     expect(inputElement).toHaveValue('');

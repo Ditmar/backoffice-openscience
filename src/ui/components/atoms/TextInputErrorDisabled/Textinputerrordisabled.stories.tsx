@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import TextInputErrorDisabled from './Textinputerrordisabled';
+import TextInputErrorDisabled from './TextInputErrorDisabled';
 import type { TextInputErrorDisabledProps } from './types/IProps';
 
 const meta: Meta<typeof TextInputErrorDisabled> = {
-  title: 'Components/Atoms/Textinputerrordisabled',
+  title: 'Components/Atoms/TextInputErrorDisabled.tsx',
   component: TextInputErrorDisabled,
 };
 
