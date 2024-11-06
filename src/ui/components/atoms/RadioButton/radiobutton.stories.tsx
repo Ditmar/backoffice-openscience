@@ -12,7 +12,6 @@ const meta = {
     size: {
       control: {
         type: 'select',
-        options: ['small', 'medium', 'large'],
       },
     },
   },
@@ -25,7 +24,7 @@ type Story = StoryObj<RadioButtonProps>;
 export const Enabled: Story = {
   args: {
     label: 'Radio button item',
-    size: 'medium',
+
     disabled: false,
   },
 };
@@ -33,7 +32,7 @@ export const Enabled: Story = {
 export const FocusEnabled: Story = {
   args: {
     label: 'Radio button item',
-    size: 'medium',
+
     autoFocus: true,
   },
 };
@@ -41,7 +40,7 @@ export const FocusEnabled: Story = {
 export const Selected: Story = {
   args: {
     label: 'Radio button item',
-    size: 'medium',
+
     checked: true,
   },
 };
@@ -49,7 +48,7 @@ export const Selected: Story = {
 export const Disabled: Story = {
   args: {
     label: 'Radio button item',
-    size: 'medium',
+
     disabled: true,
   },
 };
