@@ -1,0 +1,19 @@
+@import '../../../../globals/ads-variables.scss';
+
+.search__bar {
+  align-items: center;
+  background-color: $--ads-colors-gray-10;
+  border-radius: 4px;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+
+.input__field {
+  flex-grow: 1;
+}
+
+.magnifying__icon {
+  cursor: pointer;
+  margin-left: 8px;
+}

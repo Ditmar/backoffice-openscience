@@ -1,0 +1,36 @@
+@import '../../../../globals/ads-variables.scss';
+
+.input__field { 
+  align-items: center;  
+  background-color: $--ads-colors-gray-10;          
+  border: none;           
+  border-radius: 4px;
+  display: flex;             
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;                  
+
+  &:focus {          
+    background-color: $--ads-colors-gray-20;
+    outline: none;  
+  }
+}
+
+.magnifying-glass-icon {
+  height: 24px;
+  margin-right: 8px;
+  width: 24px;  
+
+  & svg {
+    fill: currentcolor;
+    height: 100%;
+    width: 100%;  
+  }
+
+  & svg circle,
+  & svg path {
+    stroke: currentcolor;
+    stroke-width: 1;
+  }
+}
+
