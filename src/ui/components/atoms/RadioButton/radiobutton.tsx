@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import type { RadioButtonProps } from './types/IProps'; // Asegúrate de que la importación sea correcta
-import styles from './radiobutton.module.scss'; // Importa los estilos como módulo
+import type { RadioButtonProps } from './types/IProps';
+import styles from './radiobutton.module.scss';
 
 function RadioButton({
   label,
-  size = 'medium',
   checked,
   disabled = false,
   onChange,
@@ -20,17 +19,16 @@ function RadioButton({
   }, [autoFocus]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (disabled) return;
-    if (onChange) {
+    if (!disabled && onChange) {
       onChange(e);
     }
   };
 
   return (
-    <div className={`${styles.radiobutton} ${styles[`radiobutton--${size}`]}`}>
+    <div className={styles.radiobutton}>
       <input
         type="radio"
-        className={styles.radiobutton__input} // Usa la clase del módulo
+        className={styles.radiobutton__input}
         id={id}
         ref={inputRef}
         checked={checked}

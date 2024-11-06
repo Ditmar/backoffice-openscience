@@ -1,4 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts';
 
 .radiobutton {
   align-items: center;
@@ -6,65 +7,69 @@
 
   &__input {
     appearance: none;
-     border: 2px solid $--ads-colors-gray-100;
-    border-radius: 50%; 
+    border: 1px solid $--ads-colors-gray-90;
+    border-radius: 50%;
     cursor: pointer;
-    height: 16px;
+    height: 20px;
     margin-right: 8px;
     position: relative;
-    width: 16px;
+    width: 20px;
+  }
 
-    &:checked {
-      background-color: $--ads-colors-white; /* Color de fondo al estar seleccionado */
-      border: 2px solid $--ads-colors-gray-100;
+  &__input:checked {
+    background-color: $--ads-colors-white;
+    border: 1px solid $--ads-colors-black;
+  }
 
-      &::after {
-        background-color: $--ads-colors-gray-100; 
-        border-radius: 50%;
-        content: '';
-        height: 8px;
-        left: 50%;
-        position: absolute;
-        top: 50%; 
-        transform: translate(-50%, -50%);
-        width: 8px; /* Tamaño del punto interno */
-      }
-    }
+  &__input:checked::after {
+    background-color: $--ads-colors-black;
+    border-radius: 50%;
+    content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+  }
 
-    &:focus {
-      border: 1px solid $--ads-colors-gray-100;
-      outline: 2px solid $--ads-colors-blue-60;
-      
-    }
+  &__input:focus {
+    border: 1px solid $--ads-colors-black;
+    outline: 2px solid $--ads-colors-blue-60;
+  }
 
-    &:disabled {
-      background-color: $--ads-colors-white;
-      border-color: $--ads-colors-gray-20;
-      cursor: not-allowed;
-    }
+  &__input:disabled {
+    background-color: $--ads-colors-white;
+    border-color: $--ads-colors-gray-4;
+    cursor: not-allowed;
+  }
+
+  &__input:disabled:checked {
+    background-color: $--ads-colors-white;
+    border: 1px solid $--ads-colors-gray-4;
+  }
+
+  &__input:disabled:checked::after {
+    background-color: $--ads-colors-gray-4;
+    border-radius: 50%;
+    content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
   }
 
   &__label {
-    color: $--ads-colors-gray-80;
-    font-size: 10px; 
-
-    .radiobutton__input:disabled + & {
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
+    color: $--ads-colors-black;
+    font-family: Barlow, sans-serif;
+    font-size: 14px;
   }
 
-  &--small {
-    &__input {
-      height: 12px;
-      width: 12px;
-    }
-  }
-
-  &--large {
-    &__input {
-      height: 20px;
-      width: 20px;
-    }
+  &__input:disabled + &__label {
+    color: $--ads-colors-gray-4;
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
