@@ -1,29 +1,31 @@
+@import '../../../../globals/ads-variables.scss';
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #ccc;
+  border: 2px dashed $--ads-colors-gray-4;
+  border-radius: 5px;
+  background-color: $--ads-colors-white;
+  cursor: pointer;
   height: 250px;
   width: 400px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #f9f9f9;
   transition: border-color 0.3s, background-color 0.3s;
 
-  &.imageSelected {
-    border-color: #1475cf;
-    background-color: #ccd5d9;
+  &.image-selected--active {
+    border-color: $--ads-colors-blue-60;
+    background-color: $--ads-colors-light-gray;
   }
 }
 
-.errorMessage {
-  color: red;
+.error-message {
+  color: $--ads-colors-red-60;
   font-size: 14px;
   margin-top: 10px;
 }
 
 img {
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
