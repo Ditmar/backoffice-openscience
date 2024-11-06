@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { InputHTMLAttributes } from 'react';
 
 export interface TextInputErrorDisabledProps extends InputHTMLAttributes<HTMLInputElement> {

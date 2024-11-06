@@ -5,7 +5,8 @@
   background: $--ads-colors-red-60;
   border: none;
   color: $--ads-colors-white;
-  font-size: $--ads-font-size-primary;
+
+  /* font-size: $--ads-font-size-primary; */
   height: 48px;
   outline: $--ads-colors-red-60;
   padding-inline: 2rem;
@@ -58,14 +59,14 @@
   }
 }
 
-@include respond-to('large') { 
+@include respond-to('large') {
   .variable-button {
     font-size: $--ads-font-size-primary;
     height: 48px;
   }
 }
 
-@include respond-to('medium') { 
+@include respond-to('medium') {
   .variable-button {
     font-size: $--ads-font-size-primary;
     height: 40px;
@@ -73,15 +74,15 @@
   }
 }
 
-@include respond-to('small') { 
+@include respond-to('small') {
   .variable-button {
     font-size: $--ads-font-size-second;
     height: 32px;
-    padding-inline: 1rem; 
+    padding-inline: 1rem;
   }
 }
 
-@include respond-to('small-mobile') { 
+@include respond-to('small-mobile') {
   .variable-button {
     font-size: $--ads-font-size-fifth;
     height: 28px;
