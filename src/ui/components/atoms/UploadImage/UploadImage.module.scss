@@ -6,16 +6,16 @@ form {
   align-items: center;
   justify-content: center;
   border: 2px dashed $--ads-colors-gray-4;
-  border-radius: 5px;
   background-color: $--ads-colors-white;
+  border-radius: 5px;
   cursor: pointer;
   height: 250px;
   width: 400px;
   transition: border-color 0.3s, background-color 0.3s;
 
   &.image-selected--active {
-    border-color: $--ads-colors-blue-60;
     background-color: $--ads-colors-light-gray;
+    border-color: $--ads-colors-blue-60;
   }
 }
 
