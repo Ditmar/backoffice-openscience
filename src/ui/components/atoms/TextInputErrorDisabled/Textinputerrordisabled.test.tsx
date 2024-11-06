@@ -1,9 +1,8 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import TextInputErrorDisabled from './Textinputerrordisabled';
+import TextInputErrorDisabled from './TextInputErrorDisabled';
 
 describe('TextInputErrorDisabled Component', () => {
   it('renders the input with the correct placeholder', () => {
