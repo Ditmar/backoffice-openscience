@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Display from './atoms/display';
 import styles from './styles.module.scss';
 
-interface Event {
-  target: {
+interface Event extends React.MouseEvent<HTMLButtonElement> {
+  target: HTMLButtonElement & {
     textContent: string;
   };
 }
@@ -17,6 +17,7 @@ function Calculator() {
     ['0', '/', '='],
   ];
   const handlerEvent = (e: Event) => {
+    
     const value = e.target.textContent;
     if (value.includes('=')) {
       try {

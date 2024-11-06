@@ -3,14 +3,14 @@ import styles from './Secondary-Button.module.scss';
 import type { IProps } from './types/IProps';
 import { Icon } from '../../utils/svg-icons/icons';
 
-function SecundaryButton(props: IProps) {
+function SecondaryButton(props: IProps) {
   const { children, variant, onClick, icon } = props;
   const displayClass = classNames(styles.display, {
     [styles.primary]: variant === 'Small',
     [styles.secondary]: variant === 'Medium',
     [styles.tertiary]: variant === 'Big',
     [styles.active]: variant === 'Active',
-    [styles.disable]: variant === 'Disable',
+    [styles.disable]: variant === 'Disabled',
   });
   return (
     <button className={displayClass} onClick={onClick}>
@@ -20,4 +20,4 @@ function SecundaryButton(props: IProps) {
   );
 }
 
-export default SecundaryButton;
+export default SecondaryButton;
