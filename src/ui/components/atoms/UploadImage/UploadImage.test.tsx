@@ -1,9 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import UploadImage from './UploadImage';
 
 describe('UploadImage component', () => {
-  
   it('renders without crashing', () => {
     render(<UploadImage />);
   });
@@ -20,10 +19,11 @@ describe('UploadImage component', () => {
 
   it('displays an error message when the file is too large', () => {
     render(<UploadImage />);
-    const uploadArea = screen.getByRole('button');
-    const largeFile = new File([new ArrayBuffer(6 * 1024 * 1024)], 'large-image.jpg', { type: 'image/jpg' });
+    const largeFile = new File([new ArrayBuffer(6 * 1024 * 1024)], 'large-image.jpg', {
+      type: 'image/jpg',
+    });
     const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
-    
+
     if (input) {
       fireEvent.change(input, { target: { files: [largeFile] } });
     }
@@ -33,15 +33,13 @@ describe('UploadImage component', () => {
 
   it('displays an error message when the file is not an image', () => {
     render(<UploadImage />);
-    const uploadArea = screen.getByRole('button');
     const nonImageFile = new File([new ArrayBuffer(100)], 'text-file.txt', { type: 'text/plain' });
     const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
-    
+
     if (input) {
       fireEvent.change(input, { target: { files: [nonImageFile] } });
     }
 
     screen.getByText('Invalid file type. Please select an image.');
   });
-  
 });
