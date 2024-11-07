@@ -1,31 +1,61 @@
-@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/ads-variables.scss'; 
 
-form {
+.uploadarea {  
+  align-items: center;
+  background-color: $--ads-colors-white;
+  border: 2px dashed $--ads-colors-gray-40;
+  border-radius: 8px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed $--ads-colors-gray-4;
-  background-color: $--ads-colors-white;
-  border-radius: 5px;
-  cursor: pointer;
   height: 250px;
-  width: 400px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
   transition: border-color 0.3s, background-color 0.3s;
+  width: 400px;
 
-  &.image-selected--active {
-    background-color: $--ads-colors-light-gray;
-    border-color: $--ads-colors-blue-60;
+  &:hover {
+    background-color: $--ads-colors-gray-10;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $--ads-colors-blue-50; 
+    outline: none;  
+  }
+
+  &--image-selected {  
+    background-color: $--ads-colors-gray-15;
+    border-color: $--ads-colors-blue-40;
+  }
+
+  svg {
+    fill: $--ads-colors-gray-40;
+    height: 50px;
+    margin-bottom: 15px;
+    width: 50px;
+  }
+
+  .text {
+    color: $--ads-colors-gray-70;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .error-message {  
+    color: $--ads-colors-red-80;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
   }
 }
 
-.error-message {
-  color: $--ads-colors-red-60;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
 img {
+  border-radius: 5px;
   height: 200px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
   width: 200px;
 }

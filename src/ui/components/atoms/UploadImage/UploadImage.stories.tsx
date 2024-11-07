@@ -17,6 +17,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
-    maxFileSize: 5 * 1024 * 1024, // 5 MB
+    maxFileSize: 5 * 1024 * 1024,
   },
 };
