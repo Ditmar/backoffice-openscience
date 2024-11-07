@@ -32,6 +32,8 @@
     "@astrojs/check": "0.9.2",
     "@astrojs/react": "3.6.2",
     "@babel/preset-env": "^7.26.0",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-interactions": "^8.4.2",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "astro": "4.14.2",
