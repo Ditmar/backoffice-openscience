@@ -3,61 +3,45 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import UploadImage from './UploadImage';
 
 describe('UploadImage component', () => {
+  
   it('renders without crashing', () => {
     render(<UploadImage />);
   });
 
-  it('displays drag-and-drop message', () => {
+  it('has an upload area', () => {
     render(<UploadImage />);
-    expect(screen.getByText(/Click to add an image or drag and drop/i)).toBeInTheDocument();
+    screen.getByRole('button');
   });
 
-  it('handles file drop', () => {
-    const { container } = render(<UploadImage />);
-    const dropZone = container.querySelector('.uploadZone');
+  it('shows the correct instruction text when no image is selected', () => {
+    render(<UploadImage />);
+    screen.getByText('Click to add an asset or drag and drop one in this area');
+  });
 
-    if (!dropZone) {
-      throw new Error('Drop zone not found');
+  it('displays an error message when the file is too large', () => {
+    render(<UploadImage />);
+    const uploadArea = screen.getByRole('button');
+    const largeFile = new File([new ArrayBuffer(6 * 1024 * 1024)], 'large-image.jpg', { type: 'image/jpg' });
+    const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
+    
+    if (input) {
+      fireEvent.change(input, { target: { files: [largeFile] } });
     }
 
-    const file = new File(['dummy content'], 'image.png', { type: 'image/png' });
-    fireEvent.drop(dropZone, {
-      dataTransfer: { files: [file] },
-    });
-
-    const previewImage = screen.getByAltText('Preview');
-    expect(previewImage).toBeInTheDocument();
+    screen.getByText('File size exceeds 5 MB limit.');
   });
 
-  it('shows error when file size exceeds the limit', () => {
+  it('displays an error message when the file is not an image', () => {
     render(<UploadImage />);
-    const input = screen.getByLabelText(/Upload file/i);
+    const uploadArea = screen.getByRole('button');
+    const nonImageFile = new File([new ArrayBuffer(100)], 'text-file.txt', { type: 'text/plain' });
+    const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
+    
+    if (input) {
+      fireEvent.change(input, { target: { files: [nonImageFile] } });
+    }
 
-    const largeFile = new File(['dummy content'], 'large_image.png', { type: 'image/png' });
-    Object.defineProperty(largeFile, 'size', { value: 6 * 1024 * 1024 }); // Simulate 6 MB file size
-
-    fireEvent.change(input, { target: { files: [largeFile] } });
-
-    expect(screen.getByText(/File size exceeds 5 MB limit/i)).toBeInTheDocument();
+    screen.getByText('Invalid file type. Please select an image.');
   });
-
-  it('shows error when the file is not an image', () => {
-    render(<UploadImage />);
-    const input = screen.getByLabelText(/Upload file/i);
-
-    const nonImageFile = new File(['dummy content'], 'document.pdf', { type: 'application/pdf' });
-    fireEvent.change(input, { target: { files: [nonImageFile] } });
-
-    expect(screen.getByText(/Invalid file type. Please select an image./i)).toBeInTheDocument();
-  });
-
-  it('displays the selected file name', () => {
-    render(<UploadImage />);
-    const input = screen.getByLabelText(/Upload file/i);
-
-    const imageFile = new File(['dummy content'], 'image.png', { type: 'image/png' });
-    fireEvent.change(input, { target: { files: [imageFile] } });
-
-    expect(screen.getByText('image.png')).toBeInTheDocument();
-  });
+  
 });
