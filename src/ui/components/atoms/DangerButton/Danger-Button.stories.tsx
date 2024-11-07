@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import DangerButton from './Danger-Button';
 
-const meta = {
+const meta: Meta<typeof DangerButton> = {
   title: 'ui/components/atoms/Danger-Button',
   component: DangerButton,
   argTypes: {
@@ -10,7 +10,7 @@ const meta = {
     },
     variant: ['Small', 'Medium', 'Big', 'Active', 'Disable'],
   },
-} as Meta<typeof DangerButton>;
+};
 
 export default meta;
 

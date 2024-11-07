@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import SideMenuButton from './SideMenuButton';
 
-const meta = {
+const meta: Meta<typeof SideMenuButton> = {
   title: 'ui/components/atoms/Side-Menu-Button',
   component: SideMenuButton,
   argTypes: {
@@ -9,7 +9,7 @@ const meta = {
       action: 'click',
     },
   },
-} as Meta<typeof SideMenuButton>;
+};
 
 export default meta;
 

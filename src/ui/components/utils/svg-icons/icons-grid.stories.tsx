@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import { gridIcons } from './grid-icons';
 
-const meta = {
+const meta: Meta<typeof gridIcons> = {
   title: 'ui/components/icon/grid-icons',
   component: gridIcons,
   argTypes: {

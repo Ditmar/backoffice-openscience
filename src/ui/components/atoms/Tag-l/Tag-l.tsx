@@ -26,7 +26,7 @@ function TagL(props: TagProps) {
     <span
       className={tagClass}
       onClick={!disabled ? onClick : undefined}
-      onKeyPress={handleKeyPress}
+      onKeyDown={handleKeyPress}
       role="button"
       tabIndex={!disabled ? 0 : -1}
     >

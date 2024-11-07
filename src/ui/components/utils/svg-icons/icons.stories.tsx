@@ -93,7 +93,7 @@ import video from '../../../../assets/icons/video.svg?raw';
 import volumemanagement from '../../../../assets/icons/volume-management.svg?raw';
 import web from '../../../../assets/icons/web.svg?raw';
 
-const meta = {
+const meta: Meta<typeof Icon> = {
   title: 'ui/components/icon/svg-icons',
   component: Icon,
   argTypes: {
