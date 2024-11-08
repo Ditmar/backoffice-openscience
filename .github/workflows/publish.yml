@@ -32,6 +32,9 @@ jobs:
 
       - name: Run test
         run: yarn test
+        
+      - name: Create build
+        run: yarn build
 
       - name: Build Storybook for master branch
         if: github.ref == 'refs/heads/master'

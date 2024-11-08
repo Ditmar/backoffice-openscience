@@ -52,7 +52,7 @@ export const Active: Story = {
 export const Disable: Story = {
   args: {
     children: 'Primary button',
-    variant: 'Disable',
+    variant: 'Disabled',
     icon: add,
   },
 };
