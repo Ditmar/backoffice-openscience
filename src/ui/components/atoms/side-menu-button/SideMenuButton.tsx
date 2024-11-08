@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import { Icon } from '../../utils/svg-icons/icons';
 import type { IProps } from './types/IProps';

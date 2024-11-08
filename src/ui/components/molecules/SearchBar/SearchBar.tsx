@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './SearchBar.module.scss';
 import type { IProps } from './types/IProps';
 import InputField from '../../atoms/InputField/InputField';
