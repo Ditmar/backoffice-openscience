@@ -1,12 +1,32 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import type { SvgIconProps } from './types/SvgIconProps';
+import { useState, useEffect } from 'react';
+import type { SvgIconProps, IconLoaderProps } from './types/SvgIconProps';
 import optimizeSvg from './optimizeSvg';
 
+function getIconByName(name: string): Promise<unknown> {
+  return import(`../../../../assets/icons/${name}.svg?raw`);
+}
 export function Icon(props: SvgIconProps) {
   const { src, size, className, styles, 'data-testid': dataTestId } = props;
-  const optimizedSvg = optimizeSvg(src, size);
+  const [iconLoader, setIconLoader] = useState<string>('');
 
+  useEffect(() => {
+    if (src.startsWith('<svg')) {
+      setIconLoader(src);
+    } else {
+      getIconByName(src)
+        .then((icon: unknown) => {
+          const iconUsable = icon as IconLoaderProps;
+          setIconLoader(iconUsable.default);
+        })
+        .catch((error) => {
+          throw new Error(`Icon ${src} not found: ${error}`);
+        });
+    }
+  }, []);
+
+  const optimizedSvg = optimizeSvg(iconLoader, size);
   const spanProps: Record<string, unknown> = {
     dangerouslySetInnerHTML: { __html: optimizedSvg },
     ...(dataTestId && { 'data-testid': dataTestId }),

@@ -1,8 +1,11 @@
 ---
+import SideMenu from 'components/SideMenu.astro';
+
 interface Props {
   title: string;
 }
-
+const url = new URL(Astro.request.url);
+const path = url.pathname;
 const { title } = Astro.props;
 ---
 
@@ -18,15 +21,30 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="container">
-      <slot />
+      <div class="side-menu">
+        <SideMenu title="Main Side Menu" path={path} />
+      </div>
+      <div class="content">
+        <slot />
+      </div>
     </div>
   </body>
 </html>
+
 <style is:global>
   .container {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex: 1;
+  }
+  .content {
+    margin-left: 10px;
+  }
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent);
+    height: 100vh;
+    width: 285px;
   }
   :root {
     --accent: 136, 58, 234;
@@ -41,8 +59,14 @@ const { title } = Astro.props;
   }
   html {
     font-family: system-ui, sans-serif;
-    background: #13151a;
+    background: #fff;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   code {
     font-family:
       Menlo,

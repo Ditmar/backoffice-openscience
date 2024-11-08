@@ -19,6 +19,7 @@ module.exports = {
     ], // Disable no-unresolved rule for .astro files
     'react/jsx-filename-extension': [1, { extensions: ['.astro'] }], // Accept jsx in astro files
     'react/react-in-jsx-scope': 'off',
+    'import/default': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-indent': 'off',
     'react/no-unknown-property': 'off',

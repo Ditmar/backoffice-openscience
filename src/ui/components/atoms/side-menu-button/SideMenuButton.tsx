@@ -3,35 +3,29 @@ import classNames from 'classnames';
 import { Icon } from '../../utils/svg-icons/icons';
 import type { IProps } from './types/IProps';
 import styles from './styles.module.scss';
-import articleManagementSvg from '../../../../assets/icons/article-management.svg?raw';
-import authorManagementSvg from '../../../../assets/icons/author-management.svg?raw';
 
-function SideMenuButton({ children, icon, color, variant = 'primary', onClick }: IProps) {
+function SideMenuButton({ children, icon, color, variant = 'primary', path, basePath }: IProps) {
   const [isActive, setIsActive] = useState(false);
-
   const handleClick = () => {
     setIsActive(!isActive);
-    if (onClick) {
-      onClick();
+    if (path) {
+      window.location.href = path;
     }
   };
-
-  const selectedIcon =
-    icon ?? (children === 'Article Management' ? articleManagementSvg : authorManagementSvg);
 
   const buttonClass = classNames(
     styles['side-menu-button'],
     {
       [styles['side-menu-button--primary']]: variant === 'primary',
       [styles['side-menu-button--secondary']]: variant === 'secondary',
-      [styles.active]: isActive,
+      [styles.active]: basePath === path,
     },
     color && styles[color],
   );
 
   return (
     <button data-testid="side-menu-button-styles" className={buttonClass} onClick={handleClick}>
-      {selectedIcon && <Icon src={selectedIcon} size="24px" className={styles.icon} />}
+      <Icon src={icon} size="24px" className={styles.icon} />
       {children}
     </button>
   );

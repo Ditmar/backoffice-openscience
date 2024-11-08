@@ -1,0 +1,91 @@
+---
+import SideMenuButton from '../ui/components/atoms/side-menu-button/SideMenuButton';
+
+interface Props {
+  title: string;
+  path: string;
+}
+const { path } = Astro.props;
+---
+
+<nav>
+  <ul>
+    <li>
+      <SideMenuButton
+        icon="content-management"
+        color="primary"
+        variant="secondary"
+        path="/"
+        basePath={path}
+        client:load
+      >
+        Content Management
+      </SideMenuButton>
+    </li>
+    <li>
+      <SideMenuButton
+        icon="article-management"
+        color="primary"
+        variant="secondary"
+        path="/article-management"
+        basePath={path}
+        client:load
+      >
+        Article Management
+      </SideMenuButton>
+    </li>
+    <li>
+      <SideMenuButton
+        icon="author-management"
+        color="primary"
+        variant="secondary"
+        path="/author-management"
+        basePath={path}
+        client:load
+      >
+        Author Management
+      </SideMenuButton>
+    </li>
+    <li>
+      <SideMenuButton
+        icon="bibliographines"
+        color="primary"
+        variant="secondary"
+        path="/bibliographines"
+        basePath={path}
+        client:load
+      >
+        Bibliographies
+      </SideMenuButton>
+    </li>
+    <li>
+      <SideMenuButton
+        icon="image-gallery"
+        color="primary"
+        variant="secondary"
+        path="/image-gallery"
+        basePath={path}
+        client:load
+      >
+        Image Gallery
+      </SideMenuButton>
+    </li>
+  </ul>
+</nav>
+<style>
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent);
+    height: 100vh;
+    width: 200px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 0px;
+  }
+</style>

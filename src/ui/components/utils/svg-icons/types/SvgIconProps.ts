@@ -7,3 +7,7 @@ export interface SvgIconProps {
   styles?: React.CSSProperties;
   ['data-testid']?: string;
 }
+
+export interface IconLoaderProps {
+  default: string;
+}
