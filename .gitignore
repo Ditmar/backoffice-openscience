@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Exclude storybook-static from Git tracking
+storybook-static/
