@@ -1,6 +1,6 @@
 @import '../../../../globals/ads-variables.scss';
 
-.tooltip { 
+.tooltip {
   display: inline-block;
   margin-left: 20px;
   margin-top: 20px;
@@ -9,32 +9,31 @@
 }
 
 .tooltip-content {
-  background-color:$--ads-colors-black;
+  background-color: $--ads-colors-black;
   border-radius: 0;
   color: $--ads-colors-white;
   font-size: $--ads-font-size-sixth;
   height: auto;
-  line-height: 1.4; 
+  line-height: 1.4;
   margin-bottom: 15px;
   margin-top: 15px;
-  max-width: 300px; 
+  max-width: 300px;
   padding: 8px 12px;
   position: absolute;
-  text-align: left; 
+  text-align: left;
   visibility: hidden;
-  white-space: normal; 
-  width: max-content; 
+  white-space: normal;
+  width: max-content;
   z-index: 1;
-  
 }
 
 .tooltip-text .tooltip-content {
-  height: auto; 
-  max-width: 400px; 
-  min-width: 100px; 
-  padding: 8px; 
-  white-space: normal; 
-  width: auto; 
+  height: auto;
+  max-width: 400px;
+  min-width: 100px;
+  padding: 8px;
+  white-space: normal;
+  width: auto;
 }
 
 .definition-tooltip {
@@ -46,7 +45,6 @@
   font-weight: inherit;
   padding: 0;
   text-decoration: underline;
-  
 }
 
 .tooltip-icon {
@@ -62,12 +60,12 @@
 .tooltip-content::after {
   border-style: solid;
   border-width: 5px;
-  content: "";
+  content: '';
   position: absolute;
 }
 
 .tooltip-top .tooltip-content {
-  bottom: calc(100% + -7px); 
+  bottom: calc(100% + -7px);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -81,7 +79,7 @@
 
 .tooltip-bottom .tooltip-content {
   left: 50%;
-  top: calc(100% + -10px); 
+  top: calc(100% + -10px);
   transform: translateX(-50%);
 }
 
@@ -93,7 +91,7 @@
 }
 
 .tooltip-left .tooltip-content {
-  right: calc(100% + 10px); 
+  right: calc(100% + 10px);
   top: 5%;
   transform: translateY(-50%);
 }
@@ -106,7 +104,7 @@
 }
 
 .tooltip-right .tooltip-content {
-  left: calc(100% + 10px); 
+  left: calc(100% + 10px);
   top: 5%;
   transform: translateY(-50%);
 }

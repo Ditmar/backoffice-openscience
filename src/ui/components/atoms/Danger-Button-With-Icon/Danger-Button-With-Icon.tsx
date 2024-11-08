@@ -5,6 +5,7 @@ import { Icon } from '../../utils/svg-icons/icons';
 
 function DangerButtonWithIcon(props: IProps) {
   const { children, variant, onClick, icon } = props;
+
   const displayClass = classNames(styles.display, {
     [styles.primary]: variant === 'Small',
     [styles.secondary]: variant === 'Medium',
@@ -12,10 +13,11 @@ function DangerButtonWithIcon(props: IProps) {
     [styles.active]: variant === 'Active',
     [styles.disable]: variant === 'Disable',
   });
+
   return (
     <button className={displayClass} onClick={onClick}>
       <span className={styles['add-button__text']}>{children}</span>
-      {icon && <Icon data-testid="icon_add" src={icon} className={`${styles.icon_add}`} />}
+      {icon && <Icon data-testid="icon_add" src={icon} className={styles.icon_add} />}
     </button>
   );
 }
