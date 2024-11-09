@@ -8,7 +8,7 @@
   color: $--ads-colors-white;
   display: flex;
   font-size: $--ads-font-size-primary;
-  height: 48px;
+  height: 3rem;
   outline: $--ads-colors-red-60;
   padding-inline: 2rem;
   width: auto;
@@ -19,7 +19,7 @@
   }
 
   &.primary {
-    height: 32px;
+    height: 2rem;
     padding-inline: 1rem;
   }
 
@@ -31,7 +31,7 @@
   }
 
   &.tertiary {
-    height: 64px;
+    height: 4rem;
 
     &:focus {
       border: 2px solid $--ads-colors-white;
