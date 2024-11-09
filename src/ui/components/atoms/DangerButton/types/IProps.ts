@@ -6,3 +6,4 @@ export interface IProps {
   variant?: 'Small' | 'Medium' | 'Big' | 'Active' | 'Disable' | 'Normal';
   disabled?: boolean;
 }
+
