@@ -1,0 +1,21 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.button-submit {
+  background-color: $--ads-colors-green-50; 
+  border: none;
+  border-radius: 5px;
+  color: $--ads-colors-white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 50px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $--ads-colors-green-40; 
+  }
+}
+
+.button-variant-danger {
+  font-weight: 'David Libre';
+}
