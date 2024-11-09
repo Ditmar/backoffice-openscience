@@ -5,10 +5,10 @@ function DangerButton(props: IProps) {
   const { children, variant = 'Normal', onClick, disabled } = props;
 
   return (
-    <button 
-      className={`variable-button variable-button--${variant}`} 
+    <button
+      className={`variable-button variable-button--${variant}`}
       onClick={onClick}
-      disabled={disabled || variant === 'Disable'}
+      disabled={disabled ?? variant === 'Disable'}
     >
       <span className="variable-button__text">{children}</span>
     </button>

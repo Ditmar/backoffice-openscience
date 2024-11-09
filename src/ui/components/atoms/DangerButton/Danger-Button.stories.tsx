@@ -8,14 +8,14 @@ const meta = {
     variant: {
       control: 'select',
       options: ['Small', 'Medium', 'Big', 'Active', 'Disable', 'Normal'],
-      defaultValue: 'Normal'
+      defaultValue: 'Normal',
     },
     disabled: {
-      control: 'boolean'
+      control: 'boolean',
     },
     onClick: {
-      action: 'clicked'
-    }
+      action: 'clicked',
+    },
   },
 } as Meta<typeof DangerButton>;
 
