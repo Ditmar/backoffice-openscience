@@ -1,78 +1,77 @@
 .toggle-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin-bottom: 10px; 
-  }
-  
-  .toggle-header {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333; /* Color del texto */
-  }
-.toggle-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .toggle-checkbox {
-    appearance: none;
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s;
-  }
-  
-  .toggle-checkbox:checked {
-    background-color: #7bf07f;
-  }
-  
-  .toggle-checkbox:checked::before {
-    left: 20px;
-  }
-  
-  .toggle-checkbox::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border-radius: 50%;
-    transition: left 0.3s;
-  }
-  .toggle-checkbox:hover {
-  
- 
-    background-color: #05e90d; 
-    }
-    
-    .toggle-checkbox:hover:checked {
-      background-color: #05e90d; 
-    }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--toggle-margin-bottom); 
+}
 
+.toggle-header {
+  font-size: var(--toggle-header-font-size); 
+  margin-bottom: 5px;
+  color: var(--toggle-text-color); 
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-checkbox {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: var(--ads-colors-gray-30); 
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.toggle-checkbox:checked {
+  background-color: var(--ads-colors-green-40); 
+}
+
+.toggle-checkbox:checked::before {
+  left: 20px;
+}
+
+.toggle-checkbox::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--ads-colors-white); 
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+.toggle-checkbox:hover {
+  background-color: var(--ads-colors-green-50); 
+}
+
+.toggle-checkbox:hover:checked {
+  background-color: var(--ads-colors-green-50);
+}
 
 .toggle-checkbox:active {
-  border: 2px solid #3b48ff; 
+  border: 2px solid var(--ads-colors-blue-50); 
 }
-.toggle-checkbox:disabled {
-    background-color: #e0e0e0; 
-    
 
+.toggle-checkbox:disabled {
+  background-color: var(--ads-colors-gray-20);
   cursor: not-allowed;
-  }.toggle-checkbox:disabled::before {
-    background-color: #9e9e9e; 
-  }
-  
+}
+
+.toggle-checkbox:disabled::before {
+  background-color: var(--ads-colors-gray-50);
+}
+
   
   .toggle-label {
-    margin-left: 8px;
+    margin-left: 0.5rem;
   }
 
   
