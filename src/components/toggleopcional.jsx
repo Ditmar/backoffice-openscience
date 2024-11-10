@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './Toggle.css'; 
 
 const Toggle = ({ isOn, onToggle, labelOn = 'On', labelOff = 'Off', disabled, headerText }) => {
@@ -19,4 +19,4 @@ const Toggle = ({ isOn, onToggle, labelOn = 'On', labelOff = 'Off', disabled, he
   );
 };
 
-export default Toggle;
+export default Toggle;*/
