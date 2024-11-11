@@ -1,0 +1,74 @@
+@import '../../../../globals/ads-variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap');
+
+.display {
+  align-items: center;
+  background-color: $--ads-colors-white;
+  border: none;
+  color: $--ads-colors-blue-60;
+  display: inline-flex;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
+  width: auto;
+
+  svg {
+    padding-left: 10px;
+    width: 25px;
+
+    path {
+      fill: $--ads-colors-blue-60;
+    }
+  }
+
+  &:focus {
+    box-shadow:
+      inset 0 0 0 2px $--ads-colors-blue-60,
+      inset 0 0 0 4px $--ads-colors-white;
+  }
+
+  &.primary {
+    height: 40px;
+    padding-inline: 1rem;
+  }
+
+  &.secondary {
+    &:focus {
+      box-shadow:
+        inset 0 0 0 2px $--ads-colors-blue-60,
+        inset 0 0 0 4px $--ads-colors-white;
+    }
+  }
+
+  &.tertiary {
+    height: 64px;
+
+    &:focus {
+      box-shadow:
+        inset 0 0 0 2px $--ads-colors-blue-60,
+        inset 0 0 0 4px $--ads-colors-white;
+    }
+  }
+
+  &:active {
+    background-color: $--ads-colors-blue-20;
+  }
+
+  &:disabled {
+    background-color: $--ads-colors-white;
+    color: $--ads-colors-gray-50;
+
+    path {
+      fill: $--ads-colors-gray-50;
+    }
+  }
+
+  &:hover {
+    background-color: $--ads-colors-blue-10;
+  }
+
+}
