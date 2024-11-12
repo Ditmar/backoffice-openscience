@@ -10,7 +10,7 @@
 
     &__input {
       appearance: none;
-      border: 1px solid $--ads-colors-gray-100;
+      border: 1px solid $--ads-colors-black;
       border-radius: 2px; 
       cursor: pointer;
       height: 16px;
@@ -19,8 +19,8 @@
       width: 16px;
       
       &:checked {
-        background-color: $--ads-colors-gray-100;
-        border-color: $--ads-colors-gray-100;
+        background-color: $--ads-colors-black;
+        border-color: $--ads-colors-black;
 
         &::after {
           color: $--ads-colors-white;
