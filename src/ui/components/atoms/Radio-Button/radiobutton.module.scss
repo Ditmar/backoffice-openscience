@@ -1,0 +1,75 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts';
+
+.radiobutton {
+  align-items: center;
+  display: flex;
+
+  &__input {
+    appearance: none;
+    border: 1px solid $--ads-colors-gray-90;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    margin-right: 8px;
+    position: relative;
+    width: 20px;
+  }
+
+  &__input:checked {
+    background-color: $--ads-colors-white;
+    border: 1px solid $--ads-colors-black;
+  }
+
+  &__input:checked::after {
+    background-color: $--ads-colors-black;
+    border-radius: 50%;
+    content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+  }
+
+  &__input:focus {
+    border: 1px solid $--ads-colors-black;
+    outline: 2px solid $--ads-colors-blue-60;
+  }
+
+  &__input:disabled {
+    background-color: $--ads-colors-white;
+    border-color: $--ads-colors-gray-4;
+    cursor: not-allowed;
+  }
+
+  &__input:disabled:checked {
+    background-color: $--ads-colors-white;
+    border: 1px solid $--ads-colors-gray-4;
+  }
+
+  &__input:disabled:checked::after {
+    background-color: $--ads-colors-gray-4;
+    border-radius: 50%;
+    content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+  }
+
+  &__label {
+    color: $--ads-colors-black;
+    font-family: Barlow, sans-serif;
+    font-size: 14px;
+  }
+
+  &__input:disabled + &__label {
+    color: $--ads-colors-gray-4;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
