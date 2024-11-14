@@ -6,7 +6,7 @@
   border: 1px solid $--ads-colors-gray-20;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
-  color: $--ads-colors-gray-1;
+  color: $--ads-colors-gray-10;
   display: flex;
   font-family: Roboto, sans-serif;
   font-size: 2rem;
@@ -24,7 +24,7 @@
 
   &.primary {
     background-color: $--ads-colors-white;
-    color: $--ads-colors-gray-1;
+    color: $--ads-colors-gray-10;
   }
 
   &.secondary {
@@ -33,7 +33,7 @@
   }
 
   &.tertiary {
-    background-color: $--ads-colors-gray-1;
+    background-color: $--ads-colors-gray-10;
     color: $--ads-colors-white;
   }
 }

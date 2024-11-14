@@ -1,63 +1,60 @@
 @import '../../../../globals/ads-variables.scss';
 
 .checkbox {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
+
+  &:focus {
+    outline: 2px solid $--ads-colors-blue-60;
+  }
+
+  &__input {
+    appearance: none;
+    border: 1px solid $--ads-colors-black;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    width: 16px;
+
+    &:checked {
+      background-color: $--ads-colors-black;
+      border-color: $--ads-colors-black;
+
+      &::after {
+        color: $--ads-colors-white;
+        content: '✓';
+        font-size: 12px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
 
     &:focus {
       outline: 2px solid $--ads-colors-blue-60;
     }
 
-    &__input {
-      appearance: none;
-      border: 1px solid $--ads-colors-black;
-      border-radius: 2px; 
-      cursor: pointer;
-      height: 16px;
-      margin-right: 8px;
-      position: relative;
-      width: 16px;
-      
-      &:checked {
-        background-color: $--ads-colors-black;
-        border-color: $--ads-colors-black;
-
-        &::after {
-          color: $--ads-colors-white;
-          content: '✓';         
-          font-size: 12px;
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-
-      &:focus {
-        outline: 2px solid $--ads-colors-blue-60;
-      }
-
-      &:disabled {
-        background-color: $--ads-colors-gray-10;
-        cursor: not-allowed;
-      }
-    }
-
-    &__label {
-      color: $--ads-colors-gray-80;
-      font-size: 14px;
-      
-    }
-
-    &--small &__input {
-      height: 12px;
-      width: 12px;
-      
-    }
-
-    &--large &__input {
-      height: 20px;
-      width: 20px;
-      
+    &:disabled {
+      background-color: $--ads-colors-gray-10;
+      cursor: not-allowed;
     }
   }
+
+  &__label {
+    color: $--ads-colors-gray-80;
+    font-size: 14px;
+  }
+
+  &--small &__input {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--large &__input {
+    height: 20px;
+    width: 20px;
+  }
+}
