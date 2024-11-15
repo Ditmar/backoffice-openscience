@@ -4,15 +4,44 @@
 .variable-button {
   background: $--ads-colors-red-60;
   border: none;
+  border-radius: 4px;
   color: $--ads-colors-white;
+  cursor: pointer;
   font-size: $--ads-font-size-primary;
   height: 48px !important;
-  outline: $--ads-colors-red-60;
+  outline: none;
   padding-inline: 2rem;
+  transition: background-color 0.2s ease;
   width: auto;
 
+  // Estados base
+  &:hover {
+    background-color: $--ads-colors-red-70;
+  }
+
+  // Estados deshabilitados
+  &--Disable {
+    background: $--ads-colors-gray-50;
+    cursor: not-allowed;
+  }
+
+  &--Disable:hover {
+    background: $--ads-colors-gray-50;
+  }
+
+  &:disabled {
+    background: $--ads-colors-gray-50;
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background: $--ads-colors-gray-50;
+  }
+
+  // Variantes de tamaño
   &--Small {
-    height: 32px;
+    font-size: $--ads-font-size-primary;
+    height: 32px !important;
     padding-inline: 1rem;
 
     &:focus {
@@ -22,6 +51,8 @@
   }
 
   &--Medium {
+    height: 48px !important;
+    
     &:focus {
       border: 2px solid $--ads-colors-white;
       outline: 2px solid $--ads-colors-red-60;
@@ -30,7 +61,7 @@
 
   &--Big {
     font-size: $--ads-font-size-second;
-    height: 64px;
+    height: 64px !important;
 
     &:focus {
       border: 2px solid $--ads-colors-white;
@@ -38,19 +69,22 @@
     }
   }
 
-  &--Active:active {
-    background: $--ads-background-active;
+  // Estado activo
+  &--Active {
+    background: $--ads-colors-red-70;
+
+    &:hover {
+      background: $--ads-colors-red-80;
+    }
   }
 
-  &--Disable:disabled {
-    background: $--ads-colors-gray-50;
-  }
-
-  &:hover {
-    background-color: $--ads-colors-red-70;
+  &__text {
+    display: inline-block;
+    line-height: 1;
   }
 }
 
+// Media queries
 @include respond-to('extra-large') {
   .variable-button {
     font-size: $--ads-font-size-second;
