@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import DangerButton from './DangerButton';
 
 const meta = {
-  title: 'ui/components/danger-button',
+  title: 'ui/components/atoms/DangerButton',
   component: DangerButton,
   argTypes: {
     onClick: {
