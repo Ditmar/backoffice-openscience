@@ -1,28 +1,3 @@
-/* import classNames from 'classnames';
-import type { IProps } from './types/IProps';
-import styles from '../../atoms/DangerButton/Danger-Button.module.scss';
-
-function DangerButton(props: IProps) {
-  const { children, variant = 'Normal', onClick, disabled } = props;
-
-  return (
-    <button
-      className={classNames(
-        styles['variable-button'],
-        styles[`variable-button--${variant}`],
-        { [styles['variable-button--disabled']]: disabled ?? variant === 'Disable' }
-      )}
-      onClick={onClick}
-      disabled={disabled ?? variant === 'Disable'}
-    >
-      <span className={styles['variable-button__text']}>{children}</span>
-    </button>
-  );
-}
-
-export default DangerButton; */
-
-
 import classNames from 'classnames';
 import type { IProps } from './types/IProps';
 import styles from './Danger-Button.module.scss';
