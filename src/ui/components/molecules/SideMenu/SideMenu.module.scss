@@ -1,0 +1,36 @@
+@import '../../../../globals/ads-variables';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+
+.side-menu {
+    background-color: $--ads-colors-black;
+    color: $--ads-colors-white;
+    display: flex;
+    flex-direction: column;
+    font-family: Barlow, sans-serif;
+    width: 280px;
+}
+
+.menu-header {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .hide-menu-button {
+        background: none;
+        border: none;
+        color: $--ads-colors-white;
+        cursor: pointer;
+        font-family: Barlow, sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
