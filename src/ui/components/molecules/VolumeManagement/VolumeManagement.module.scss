@@ -1,0 +1,15 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
+
+.volume-management__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+  width: 600px;
+}
+
+.volume-management__field {
+  display: flex;
+  flex-direction: column;
+}

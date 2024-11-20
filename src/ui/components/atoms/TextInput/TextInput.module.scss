@@ -1,0 +1,46 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
+
+.input__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.input__label {
+  color: $--ads-colors-black;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 15px;           
+  font-weight: 600;
+  height: 30px;
+  letter-spacing: 0.16px;
+  line-height: 30px;
+  margin-bottom: 4px;
+  width: 31px;
+}
+
+.input__field {
+  align-items: center;       
+  background-color: $--ads-colors-gray-10;
+  border: none;
+  border-bottom: 1px solid $--ads-colors-black;
+  color: $--ads-colors-black;
+  display: flex;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 22px;
+  outline: none;
+  padding-left: 10px;
+  width: 524px;
+
+  &::placeholder {
+      color: $--ads-colors-gray-50;
+      font-family: Rubik, Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+   
+  }
+}
