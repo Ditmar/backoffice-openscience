@@ -20,7 +20,7 @@ describe('UploadImage component', () => {
   it('displays an error message when the file is too large', () => {
     render(<UploadImage />);
     const largeFile = new File([new ArrayBuffer(6 * 1024 * 1024)], 'large-image.jpg', {
-      type: 'image/jpg',
+      type: 'image/jpeg',
     });
     const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
 
@@ -28,10 +28,10 @@ describe('UploadImage component', () => {
       fireEvent.change(input, { target: { files: [largeFile] } });
     }
 
-    screen.getByText('File size exceeds 5 MB limit.');
+    screen.getByText('File size exceeds 5.00 MB limit.');
   });
 
-  it('displays an error message when the file is not an image', () => {
+  it('displays an error message when the file is not an accepted type', () => {
     render(<UploadImage />);
     const nonImageFile = new File([new ArrayBuffer(100)], 'text-file.txt', { type: 'text/plain' });
     const input = screen.getByLabelText('Upload image area').querySelector('input[type="file"]');
@@ -40,6 +40,6 @@ describe('UploadImage component', () => {
       fireEvent.change(input, { target: { files: [nonImageFile] } });
     }
 
-    screen.getByText('Invalid file type. Please select an image.');
+    screen.getByText('Invalid file type. Please select a PNG, JPG, or GIF image.');
   });
 });
