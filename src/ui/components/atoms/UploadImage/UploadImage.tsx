@@ -2,6 +2,9 @@ import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
 import styles from './UploadImage.module.scss';
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024;
+const ACCEPTED_FILE_TYPES = ['image/png', 'image/jpeg', 'image/gif'];
+
 function UploadImage() {
   const [image, setImage] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string>('No selected file');
@@ -9,15 +12,15 @@ function UploadImage() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const processFile = (file: File) => {
-    if (file.size > 5 * 1024 * 1024) {
-      setError('File size exceeds 5 MB limit.');
+    if (file.size > MAX_FILE_SIZE) {
+      setError(`File size exceeds ${(MAX_FILE_SIZE / (1024 * 1024)).toFixed(2)} MB limit.`);
       setImage(null);
       setFileName('No selected file');
       return;
     }
 
-    if (!file.type.startsWith('image/')) {
-      setError('Invalid file type. Please select an image.');
+    if (!ACCEPTED_FILE_TYPES.includes(file.type)) {
+      setError('Invalid file type. Please select a PNG, JPG, or GIF image.');
       setImage(null);
       setFileName('No selected file');
       return;
@@ -71,7 +74,7 @@ function UploadImage() {
         <input
           ref={fileInputRef}
           type="file"
-          accept="image/*"
+          accept="image/png, image/jpeg, image/gif"
           className="input-field"
           hidden
           onChange={handleFileChange}
