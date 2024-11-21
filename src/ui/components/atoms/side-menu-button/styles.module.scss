@@ -70,9 +70,8 @@
     }
 
     svg {
-      fill: $--ads-colors-white;
+      margin-right: 0;
     }
-  }
 
   &.primary {
     background-color: $--ads-colors-black;
