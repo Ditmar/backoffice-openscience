@@ -74,14 +74,13 @@
     justify-content: center;
     padding: 0;
 
-  &.primary {
-    background-color: $--ads-colors-black;
-    color: $--ads-colors-white;
+  &.collapsed {
+    justify-content: center;
+    padding: 0;
 
     svg {
-      fill: $--ads-colors-white;
+      margin-right: 0;
     }
-  }
 
   &.secondary {
     background-color: $--ads-colors-gray-20;
@@ -108,7 +107,6 @@
     &:hover svg {
       fill: $--ads-colors-gray-70;
     }
-  }
 
   &.collapsed {
     justify-content: center;
