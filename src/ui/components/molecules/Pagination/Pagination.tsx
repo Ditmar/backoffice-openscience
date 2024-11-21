@@ -12,15 +12,25 @@ function Pagination({ currentPage = 1, totalPages, onClick }: PaginationProps) {
 
   const handlePrevClick = () => {
     if (current > 1) {
-      setCurrent(current - 1);
-      if (onClick) onClick(current - 1);
+      const updatedPage = current - 1;
+      setCurrent(updatedPage);
+
+      // Llamamos a onClick solo si está definido
+      if (onClick) {
+        onClick(updatedPage);
+      }
     }
   };
 
   const handleNextClick = () => {
     if (current < totalPages) {
-      setCurrent(current + 1);
-      if (onClick) onClick(current + 1);
+      const updatedPage = current + 1;
+      setCurrent(updatedPage);
+
+      // Llamamos a onClick solo si está definido
+      if (onClick) {
+        onClick(updatedPage);
+      }
     }
   };
 
