@@ -69,7 +69,9 @@
       opacity: 1;
     }
 
-    transform: translateX(10px);
+    svg {
+      fill: $--ads-colors-white;
+    }
   }
 
   &.primary {
@@ -93,7 +95,6 @@
     &::before {
       display: none;
     }
-  }
 
   svg {
     fill: $--ads-colors-white;
