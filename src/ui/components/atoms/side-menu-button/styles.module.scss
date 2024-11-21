@@ -70,12 +70,12 @@
       opacity: 1;
     }
 
-  &.primary {
-    background-color: $--ads-colors-black;
-    color: $--ads-colors-white;
+  &.collapsed {
+    justify-content: center;
+    padding: 0;
 
     svg {
-      fill: $--ads-colors-white;
+      margin-right: 0;
     }
 
   &.primary {
@@ -141,5 +141,6 @@
   }
 }
 }
+
 
 
