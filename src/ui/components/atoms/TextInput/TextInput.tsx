@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './TextInput.module.scss';
 import type { IProps } from './types/IProps';
 

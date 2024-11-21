@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ArticleInput.module.scss';
 import type { IProps } from './types/IProps';
 import { Icon } from '../../utils/svg-icons/icons';
