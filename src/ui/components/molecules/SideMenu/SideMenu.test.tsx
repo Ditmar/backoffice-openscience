@@ -5,19 +5,29 @@ import type { ISideMenuProps } from './types/Iprops';
 import styles from './SideMenu.module.scss';
 import menuItemsMock from './__mock__/menuItemsMock.json';
 
-
-vi.mock('../../../../assets/icons/content-management.svg?raw', () => ({default: 'test-file-stub',}));
-vi.mock('../../../../assets/icons/article-management.svg?raw', () => ({default: 'test-file-stub',}));
-vi.mock('../../../../assets/icons/author-management.svg?raw', () => ({ default: 'test-file-stub',}));
+vi.mock('../../../../assets/icons/content-management.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
+vi.mock('../../../../assets/icons/article-management.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
+vi.mock('../../../../assets/icons/author-management.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
 vi.mock('../../../../assets/icons/bibliographines.svg?raw', () => ({ default: 'test-file-stub' }));
 vi.mock('../../../../assets/icons/image-gallery.svg?raw', () => ({ default: 'test-file-stub' }));
 vi.mock('../../../../assets/icons/index-builder.svg?raw', () => ({ default: 'test-file-stub' }));
-vi.mock('../../../../assets/icons/volume-management.svg?raw', () => ({default: 'test-file-stub',}));
-vi.mock('../../../../assets/icons/site-configuration.svg?raw', () => ({default: 'test-file-stub',}));
+vi.mock('../../../../assets/icons/volume-management.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
+vi.mock('../../../../assets/icons/site-configuration.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
 vi.mock('../../../../assets/icons/seo-settings.svg?raw', () => ({ default: 'test-file-stub' }));
-vi.mock('../../../../assets/icons/dinamicBannerManagement.svg?raw', () => ({default: 'test-file-stub',}));
+vi.mock('../../../../assets/icons/dinamicBannerManagement.svg?raw', () => ({
+  default: 'test-file-stub',
+}));
 vi.mock('../../../../assets/icons/user-management.svg?raw', () => ({ default: 'test-file-stub' }));
-
 
 const mockMenuItems: ISideMenuProps['menuItems'] = menuItemsMock.data;
 

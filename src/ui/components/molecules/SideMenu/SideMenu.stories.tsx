@@ -46,17 +46,19 @@ export const Default: Story = {
         path: '/Bibliographines',
         basePath: '/',
       },
-      { id: '5', 
-        title: 'Image Galley', 
-        icon: 'image-gallery', 
-        path: '/Image-Galley', 
-        basePath: '/' 
+      {
+        id: '5',
+        title: 'Image Galley',
+        icon: 'image-gallery',
+        path: '/Image-Galley',
+        basePath: '/',
       },
-      { id: '6', 
-        title: 'Index Builder', 
-        icon: 'index-builder', 
-        path: '/Index-Builder', 
-        basePath: '/' 
+      {
+        id: '6',
+        title: 'Index Builder',
+        icon: 'index-builder',
+        path: '/Index-Builder',
+        basePath: '/',
       },
       {
         id: '7',
@@ -72,11 +74,12 @@ export const Default: Story = {
         path: '/Site-Configuration',
         basePath: '/',
       },
-      { id: '9', 
-        title: 'SEO Settings', 
-        icon: 'seo-settings', 
-        path: '/SEO-Settings', 
-        basePath: '/' 
+      {
+        id: '9',
+        title: 'SEO Settings',
+        icon: 'seo-settings',
+        path: '/SEO-Settings',
+        basePath: '/',
       },
       {
         id: '10',
