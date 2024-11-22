@@ -89,7 +89,7 @@
     unist-util-visit-parents "^6.0.1"
     vfile "^6.0.2"
 
-"@astrojs/node@^8.3.4":
+"@astrojs/node@8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@astrojs/node/-/node-8.3.4.tgz#c8a9c6ad45af26ae11d18a41ee325f924b6412d2"
   integrity sha512-xzQs39goN7xh9np9rypGmbgZj3AmmjNxEMj9ZWz5aBERlqqFF3n8A/w/uaJeZ/bkHS60l1BXVS0tgsQt9MFqBA==
@@ -4487,7 +4487,7 @@ execa@^8.0.1:
     signal-exit "^4.1.0"
     strip-final-newline "^3.0.0"
 
-express@^4.19.2, express@^4.21.1:
+express@4.21.1, express@^4.19.2:
   version "4.21.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.21.1.tgz#9dae5dda832f16b4eec941a4e44aa89ec481b281"
   integrity sha512-YSFlK1Ee0/GC8QaO91tHcDxJiE/X4FbpAyQWkxAvG6AXCuR65YzK8ua6D9hvi/TzUfZMpc+BwuM1IPw8fmQBiQ==
