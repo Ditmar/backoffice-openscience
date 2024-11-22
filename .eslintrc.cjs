@@ -6,5 +6,5 @@ module.exports = {
     '@typescript-eslint/no-throw-literal': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
   },
-  ignorePatterns: ['babel.config.js'],
+  ignorePatterns: ['babel.config.js', 'app-shell/server.mjs'],
 };
