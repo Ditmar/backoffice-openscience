@@ -1,0 +1,38 @@
+@import '../../../../globals/ads-variables.scss';
+
+.checklist {
+  align-items: center;
+  background-color: $--ads-colors-green-40;
+  border: 0;
+  border-radius: 0.1rem;
+  color: $--ads-colors-white;
+  display: flex;
+  flex-direction: column;
+  font-size: $--ads-font-size-primary;
+  font-weight: 600;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  text-transform: capitalize;
+  width: fit-content;
+
+  &:hover {
+    background-color: $--ads-colors-white; 
+    border: 0.1rem solid $--ads-colors-black;
+    color: $--ads-colors-green-40;
+    cursor: pointer;
+  }
+
+  &__list {
+    align-items: center;
+    background-color: $--ads-colors-green-40;
+    color: $--ads-colors-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
