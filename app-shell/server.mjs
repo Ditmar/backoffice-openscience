@@ -1,18 +1,21 @@
 import express from 'express';
-import { handler } from '../dist/server/entry.mjs';
 import fs from 'fs';
 import path from 'path';
+import { handler } from '../dist/server/entry.mjs';
 
+// eslint-disable-next-line turbo/no-undeclared-env-vars
 if (process.env.ENV === 'local') {
+  // eslint-disable-next-line import/no-extraneous-dependencies, global-require
   require('dotenv').config();
 }
 const app = express();
+// eslint-disable-next-line turbo/no-undeclared-env-vars
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
 app.get('/sysinfo', (req, res) => {
-  const route  = path.resolve('/app/commit.txt');
+  const route = path.resolve('/app/commit.txt');
   const hash = fs.readFileSync(route, 'utf8');
 
   const commitHash = hash || 'unknown';
