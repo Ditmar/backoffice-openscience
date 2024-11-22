@@ -75,7 +75,6 @@ jobs:
         run: echo "https://ditmar.github.io/backoffice-openscience/${{ steps.branch_name.outputs.sanitized_branch }}"
       - name: Clean storybook folder
         run: rm -rf ./storybook-static
-            - name: Login to DockerHub
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
