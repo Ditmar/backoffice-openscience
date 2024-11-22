@@ -1,0 +1,61 @@
+@import '../../../../globals/ads-variables.scss'; 
+
+.uploadarea {  
+  align-items: center;
+  background-color: $--ads-colors-white;
+  border: 0.125rem dashed $--ads-colors-gray-40;
+  border-radius: 0.5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 16.625rem;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  transition: border-color 0.3s, background-color 0.3s;
+  width: 25rem;
+
+  &:hover {
+    background-color: $--ads-colors-gray-10;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $--ads-colors-blue-50; 
+    outline: none;  
+  }
+
+  &--image-selected {  
+    background-color: $--ads-colors-gray-15;
+    border-color: $--ads-colors-blue-40;
+  }
+
+  svg {
+    fill: $--ads-colors-gray-40;
+    height: 3.125rem;
+    margin-bottom: 0.9375rem;
+    width: 3.125rem;
+  }
+
+  .text {
+    color: $--ads-colors-gray-70;
+    font-size: 1rem;
+    margin-top: 0.625rem;
+  }
+
+  .error-message {  
+    color: $--ads-colors-red-80;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    text-align: center;
+  }
+}
+
+img {
+  border-radius: 0.3125rem;
+  height: 12.5rem;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  width: 12.5rem;
+}
