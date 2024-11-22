@@ -24,7 +24,7 @@ export function Icon(props: SvgIconProps) {
           throw new Error(`Icon ${src} not found: ${error}`);
         });
     }
-  }, []);
+  }, [src]);
 
   const optimizedSvg = optimizeSvg(iconLoader, size);
   const spanProps: Record<string, unknown> = {
