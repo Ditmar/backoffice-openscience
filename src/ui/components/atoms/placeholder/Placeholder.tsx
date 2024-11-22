@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Placeholder.module.scss';
 import type { IProps } from './types/IProps';
 

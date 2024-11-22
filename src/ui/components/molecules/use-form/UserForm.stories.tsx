@@ -5,7 +5,7 @@ const meta: Meta<typeof UserForm> = {
   title: 'ui/components/molecules/user-form',
   component: UserForm,
   argTypes: {
-    placeholderText: { control: 'text', defaultValue: 'Placeholder text' },
+    onChange: { action: 'typed' },
   },
 };
 
@@ -13,8 +13,4 @@ export default meta;
 
 type Story = StoryObj<typeof UserForm>;
 
-export const Default: Story = {
-  args: {
-    placeholderText: 'Placeholder text',
-  },
-};
+export const Default: Story = {};
