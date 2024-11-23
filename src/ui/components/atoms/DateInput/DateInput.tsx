@@ -29,6 +29,7 @@ function DateInput({ label, placeholder, onChange, icon, onIconClick }: IProps) 
           placeholder={placeholder}
           onChange={onChange}
           className={styles['date-input__field']}
+          readOnly // Especificar explícitamente que es readOnly
         />
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import TextInput from '../../atoms/TextInput/TextInput';
 import DateInput from '../../atoms/DateInput/DateInput';
-import ArticleInput from '../../atoms/ArticleInput/ArticleInput';
-import YearInput from '../../atoms/YearInput/YearInput';
+import GenericInput from '../../atoms/GenericInput/GenericInput'; // Importa el nuevo componente
 import styles from './VolumeManagement.module.scss';
 import type { IProps } from './types/IProps';
 
@@ -33,19 +32,20 @@ function VolumeManagement({
         onIconClick={onDateIconClick}
         icon={emptyCalendar}
       />
-      <ArticleInput
-        label="Article"
+      {/* Aquí se reemplazan los antiguos ArticleInput y YearInput por GenericInput */}
+      <GenericInput
+        label="article"
         placeholder={articlePlaceholder}
         onChange={onArticleChange}
-        onIconClick={onArticleIconClick}
         icon={angleDown}
+        onIconClick={onArticleIconClick}
       />
-      <YearInput
-        label="Year"
+      <GenericInput
+        label="year_volume"
         placeholder={yearPlaceholder}
         onChange={onYearChange}
-        onIconClick={onYearIconClick}
         icon={angleDown}
+        onIconClick={onYearIconClick}
       />
     </div>
   );

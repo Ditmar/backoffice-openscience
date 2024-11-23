@@ -1,13 +1,13 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/fonts.scss';
 
-.article-input__container {
+.generic-input__container {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
 }
 
-.article-input__label {
+.generic-input__label {
   color: $--ads-colors-black;
   font-family: Rubik, Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -16,19 +16,16 @@
   letter-spacing: 0.16px;
   line-height: 30px;
   margin-bottom: 4px;
-  width: 31px;
-
 }
 
-.article-input__wrapper {
+.generic-input__wrapper {
   align-items: center;
   display: flex;
-  height: 48px;
   position: relative;
   width: 536px;
 }
 
-.article-input__icon-button {
+.generic-input__icon-button {
   align-items: center;
   background: none;
   border: none;
@@ -37,7 +34,7 @@
   justify-content: center;
   padding: 0;
   position: absolute;
-  right: 10px; 
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -47,35 +44,33 @@
   }
 }
 
-.article-input__icon {
+.generic-input__icon {
   color: $--ads-colors-black;
   height: 20px;
   width: 20px;
 }
 
+.generic-input__field {
+  align-items: center;
+  background-color: $--ads-colors-gray-10;
+  border: none;
+  border-bottom: 1px solid $--ads-colors-black;
+  color: $--ads-colors-black;
+  display: flex;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 22px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 40px;
+  width: 536px;
 
-.article-input__field {
-  align-items: center;  
-    background-color: $--ads-colors-gray-10;
-    border: none;
-    border-bottom: 1px solid $--ads-colors-black;
-    color: $--ads-colors-black;
-    display: flex;
-    font-family: Rubik, Arial, Helvetica, sans-serif;
-    font-size: 14px;
+  &::placeholder {
+    color: $--ads-colors-gray-50;
+    font-size: 15px;
     font-weight: 400;
-    height: 48px;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 40px; 
-    width: 536px;
-  
-    &::placeholder {
-      color: $--ads-colors-gray-50;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 22px;
-      
-   
-    }
+    line-height: 22px;
   }
+}

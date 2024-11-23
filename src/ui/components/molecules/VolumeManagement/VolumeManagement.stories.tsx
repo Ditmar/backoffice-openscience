@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     titlePlaceholder: 'Enter title',
-    datePlaceholder: 'Select date',
+    datePlaceholder: '',
     articlePlaceholder: 'Enter article',
     yearPlaceholder: 'Enter year',
   },
