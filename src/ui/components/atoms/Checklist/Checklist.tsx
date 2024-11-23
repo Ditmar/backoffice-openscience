@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import type { IProps } from './types/IProps';
 import style from './styles.module.scss';
 
-
 function Checklist({ items, onCheck, onSeleonCategorySelect, className }: IProps) {
   const handleCheck = ({ target: { value } }: React.ChangeEvent<HTMLSelectElement>) => {
     onCheck(value);
