@@ -3,26 +3,37 @@ import classNames from 'classnames';
 import type { IProps } from './types/IProps';
 import style from './styles.module.scss';
 
-function Checklist(props: IProps) {
-  const { items, onCheck, className } = props;
+function Checklist({ items, onCheck, onSeleonCategorySelect, className }: IProps) {
+  const handleCheck = ({ target: { value } }: React.ChangeEvent<HTMLSelectElement>) => {
+    onCheck(value);
 
-  const handleCheck = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const target = e.target as HTMLSelectElement;
-    onCheck(target.value);
+    if (!Number.isNaN(Number(value))) {
+      onSeleonCategorySelect(value);
+    }
   };
 
-  const classNamesChecklist = classNames(style.checklist, className);
+  const isNumberList = items.every((item) => !Number.isNaN(Number(item)));
+
+  const classNamesChecklist = classNames(
+    style.checklist,
+    { [style.checknumber]: isNumberList },
+    className,
+  );
+
+  const classNamesList = classNames(style.checklist__list, {
+    [style.checknumber__list]: isNumberList,
+  });
 
   return (
     <select
       form="checklist"
-      className={`${classNamesChecklist}`}
+      className={classNamesChecklist}
       name="checklist"
       id="checklist"
       onChange={handleCheck}
     >
       {items.map((item) => (
-        <option className={style.checklist__list} key={item} value={item}>
+        <option key={item} className={classNamesList} value={item}>
           {item}
         </option>
       ))}
