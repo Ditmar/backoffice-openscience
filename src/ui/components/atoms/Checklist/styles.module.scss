@@ -1,4 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap');
 
 .checklist {
   align-items: center;
@@ -8,14 +9,15 @@
   color: $--ads-colors-white;
   display: flex;
   flex-direction: column;
+  font-family: Barlow, sans-serif;
   font-size: $--ads-font-size-primary;
   font-weight: 600;
   justify-content: center;
   margin-left: 1rem;
   outline: none;
   padding-bottom: 0.3rem;
-  padding-left: 0;
-  padding-top: 0.3rem;
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
   position: relative;
   text-transform: capitalize;
   width: fit-content;
@@ -41,13 +43,14 @@
   color: $--ads-colors-white;
   display: flex;
   flex-direction: column;
+  font-family: Barlow, sans-serif;
   font-size: $--ads-font-size-primary;
   font-weight: 600;
   justify-content: center;
   outline: none;
   padding-bottom: 0.3rem;
   padding-left: 0;
-  padding-top: 0.3rem;
+  padding-top: 0.2rem;
   position: relative;
   text-transform: capitalize;
   width: fit-content;
