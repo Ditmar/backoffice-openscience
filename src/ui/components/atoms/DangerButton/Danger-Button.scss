@@ -2,57 +2,37 @@
 @import '../../../../globals/mixins';
 
 .variable-button {
-  background: $--ads-colors-red-60;
+  align-items: center;
+  background: $--ads-colors-red-70;
   border: none;
-  border-radius: 4px;
   color: $--ads-colors-white;
-  cursor: pointer;
-  font-size: $--ads-font-size-primary;
-  height: 48px !important;
-  outline: none;
-  padding-inline: 2rem;
-  transition: background-color 0.2s ease;
+  display: flex;
+  height: 48px ;
+  outline: $--ads-colors-red-60;
+  padding-inline: 0.5rem;
+  padding-inline: 20px;
   width: auto;
+  
+  svg {
+    padding-left: 10px;
+    width: 25px;
 
-  // Estados base
-  &:hover {
-    background-color: $--ads-colors-red-70;
-  }
-
-  // Estados deshabilitados
-  &--Disable {
-    background: $--ads-colors-gray-50;
-    cursor: not-allowed;
-  }
-
-  &--Disable:hover {
-    background: $--ads-colors-gray-50;
-  }
-
-  &:disabled {
-    background: $--ads-colors-gray-50;
-    cursor: not-allowed;
-  }
-
-  &:disabled:hover {
-    background: $--ads-colors-gray-50;
-  }
-
-  // Variantes de tamaño
-  &--Small {
-    font-size: $--ads-font-size-primary;
-    height: 32px !important;
-    padding-inline: 1rem;
-
-    &:focus {
-      border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-red-60;
+    path {
+      fill: white;
     }
   }
 
+  &:focus {
+    border: 2px solid $--ads-colors-white;
+    outline: 2px solid $--ads-colors-red-60;
+  }
+
+  &--Small {
+    height: 32px;
+    padding-inline: 1rem;
+  }
+
   &--Medium {
-    height: 48px !important;
-    
     &:focus {
       border: 2px solid $--ads-colors-white;
       outline: 2px solid $--ads-colors-red-60;
@@ -60,8 +40,7 @@
   }
 
   &--Big {
-    font-size: $--ads-font-size-second;
-    height: 64px !important;
+    height: 64px;
 
     &:focus {
       border: 2px solid $--ads-colors-white;
@@ -69,56 +48,18 @@
     }
   }
 
-  // Estado activo
   &--Active {
-    background: $--ads-colors-red-70;
-
-    &:hover {
-      background: $--ads-colors-red-80;
-    }
+    background: $--ads-colors-red-80;
   }
 
-  &__text {
-    display: inline-block;
-    line-height: 1;
+  &--Disable {
+    background: $--ads-colors-gray-40;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+    pointer-events: none;
   }
-}
 
-// Media queries
-@include respond-to('extra-large') {
-  .variable-button {
-    font-size: $--ads-font-size-second;
-    height: 56px;
-  }
-}
-
-@include respond-to('large') {
-  .variable-button {
-    font-size: $--ads-font-size-primary;
-    height: 48px;
-  }
-}
-
-@include respond-to('medium') {
-  .variable-button {
-    font-size: $--ads-font-size-primary;
-    height: 40px;
-    padding-inline: 1.5rem;
-  }
-}
-
-@include respond-to('small') {
-  .variable-button {
-    font-size: $--ads-font-size-second;
-    height: 32px;
-    padding-inline: 1rem;
-  }
-}
-
-@include respond-to('small-mobile') {
-  .variable-button {
-    font-size: $--ads-font-size-fifth;
-    height: 28px;
-    padding-inline: 0.5rem;
+  &:hover {
+    background-color: $--ads-colors-red-60;
   }
 }
