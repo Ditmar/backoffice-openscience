@@ -3,7 +3,7 @@ import Tooltip from './TooltipsII';
 import share from '../../../../assets/icons/share.svg?raw';
 import { Icon } from '../../utils/svg-icons/icons';
 
-const meta = {
+const meta: Meta<typeof Tooltip> = {
   title: 'ui/components/atoms/tooltip_II',
   component: Tooltip,
   argTypes: {
@@ -16,7 +16,7 @@ const meta = {
       options: ['small', 'medium', 'large'],
     },
   },
-} as Meta<typeof Tooltip>;
+};
 
 export default meta;
 

@@ -34,6 +34,6 @@ export const DisabledInput: Story = {
   args: {
     isDisabled: true,
     placeholder: 'Placeholder text',
-    variant: "small",
+    variant: 'small',
   },
 };

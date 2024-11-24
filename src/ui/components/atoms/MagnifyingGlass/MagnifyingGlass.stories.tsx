@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import MagnifyingGlass from './MagnifyingGlass';
 import search from '../../../../assets/icons/search.svg?raw';
 
-const meta = {
+const meta: Meta<typeof MagnifyingGlass> = {
   title: 'ui/components/atoms/MagnifyingGlass',
   component: MagnifyingGlass,
   argTypes: {
@@ -10,7 +10,7 @@ const meta = {
       action: 'clicked',
     },
   },
-} as Meta<typeof MagnifyingGlass>;
+};
 
 export default meta;
 

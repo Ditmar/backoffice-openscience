@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import SecondaryButtonIcon from './SecondaryButtonIcon';
 import add from '../../../../assets/icons/add.svg?raw';
 
-const meta = {
+const meta: Meta<typeof SecondaryButtonIcon> = {
   title: 'ui/components/atoms/secondary-button-icon',
   component: SecondaryButtonIcon,
   argTypes: {
@@ -13,7 +13,7 @@ const meta = {
       control: 'boolean',
     },
   },
-} as Meta<typeof SecondaryButtonIcon>;
+};
 
 export default meta;
 

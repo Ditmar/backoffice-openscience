@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import PrimaryButton from './PrimaryButton';
 import add from '../../../../assets/icons/add.svg?raw';
 
-const meta = {
+const meta: Meta<typeof PrimaryButton> = {
   title: 'ui/components/atoms/Primary-Button',
   component: PrimaryButton,
   argTypes: {
@@ -11,7 +11,7 @@ const meta = {
     },
     variant: ['Small', 'Medium', 'Big', 'Active', 'Disable'],
   },
-} as Meta<typeof PrimaryButton>;
+};
 
 export default meta;
 

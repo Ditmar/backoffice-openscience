@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import Tag from './Tag';
 
-const meta = {
+const meta: Meta<typeof Tag> = {
   title: 'ui/components/atoms/tag',
   component: Tag,
   argTypes: {
@@ -13,7 +13,7 @@ const meta = {
       options: ['primary', 'secondary', 'tertiary'],
     },
   },
-} as Meta<typeof Tag>;
+};
 
 export default meta;
 

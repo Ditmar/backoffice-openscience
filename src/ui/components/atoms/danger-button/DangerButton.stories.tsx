@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import DangerButton from './DangerButton';
 
 const meta = {
@@ -10,7 +10,7 @@ const meta = {
     },
     variant: ['danger-primary', 'danger-secondary', 'danger-tertiary', 'danger-disabled'],
   },
-} as Meta<typeof DangerButton>;
+};
 
 export default meta;
 
