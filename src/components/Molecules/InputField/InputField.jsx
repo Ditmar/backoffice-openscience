@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./InputField.css"; 
+import React from 'react';
+import PropTypes from 'prop-types';
+import './InputField.css'; 
 
 const InputField = ({ label, placeholder, value, onChange }) => {
   return (
@@ -25,7 +25,7 @@ InputField.propTypes = {
 };
 
 InputField.defaultProps = {
-  value: "",
+  value: '',
 };
 
 export default InputField;

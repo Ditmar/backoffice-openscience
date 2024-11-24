@@ -1,8 +1,8 @@
-import React from "react";
-import FormContainer from "./FormContainer";
+import React from 'react';
+import FormContainer from './FormContainer';
 
 export default {
-  title: "Components/Organisms/FormContainer",
+  title: 'Components/Organisms/FormContainer',
   component: FormContainer,
 };
 
