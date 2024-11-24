@@ -8,20 +8,51 @@
     display: flex;
     flex-direction: column;
     font-family: Barlow, sans-serif;
-    transition: width 0.3s ease, padding 0.3s ease;
-    width: 280px;
+    transition: width 0.5s ease, padding 0.5s ease;
+    width: 250px;
+
+    @include respond-to('small-mobile') {
+        width: 200px;
+    }
+
+    @include respond-to('medium') {
+        width: 220px;
+    }
+
+    @include respond-to('large') {
+        width: 270px;
+    }
+
+    @include respond-to('extra-large') {
+        width: 300px;
+    }
 
     &.collapsed {
-        width: 93px;
+        width: 60px;
+
+        @include respond-to('small-mobile') {
+            width: 50px;
+        }
+
+        @include respond-to('medium') {
+            width: 55px;
+        }
+
+        @include respond-to('large') {
+            width: 65px;
+        }
+
+        @include respond-to('extra-large') {
+            width: 70px;
+        }
     }
 }
 
-    .menu-header {
+.menu-header {
     align-items: center;
     display: flex;
     height: 60px;
     justify-content: center;
-    margin-bottom: 20px;
     margin-right: 10px;
     transition: all 0.3s ease;
 
@@ -38,13 +69,13 @@
         text-transform: uppercase;
         transition: justify-content 0.3s ease, gap 0.3s ease;
 
-    .icon {
-        align-items: center;
-        display: flex;
-        height: 20px;
-        justify-content: center;
-        width: 20px;
-    }
+        .icon {
+            align-items: center;
+            display: flex;
+            height: 20px;
+            justify-content: center;
+            width: 20px;
+        }
 
         span {
             display: none;
@@ -59,9 +90,9 @@
 }
 
 .menu-list {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 
     .side-menu-button {
         align-items: center;
@@ -81,14 +112,16 @@
         transition: all 0.3s ease;
 
         svg {
-        fill: $--ads-colors-white;
-        margin-right: 10px;
-        transition: margin 0.3s ease;
+            fill: $--ads-colors-white;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            transition: margin 0.3s ease;
         }
 
         &:hover {
-        background-color: $--ads-colors-gray-20;
-        color: $--ads-colors-gray-70;
+            background-color: $--ads-colors-gray-20;
+            color: $--ads-colors-gray-70;
 
             svg {
                 fill: $--ads-colors-gray-70;

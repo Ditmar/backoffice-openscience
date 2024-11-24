@@ -10,7 +10,6 @@ function SideMenu({ menuItems, onClick }: ISideMenuProps) {
 
   const toggleMenu = () => {
     setIsCollapsed((prev) => !prev);
-    console.log('isCollapsed:', !isCollapsed);
   };
 
   return (
