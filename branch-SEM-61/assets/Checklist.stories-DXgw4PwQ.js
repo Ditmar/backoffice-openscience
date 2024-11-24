@@ -1,0 +1,12 @@
+import{j as t}from"./jsx-runtime-DEdD30eg.js";import{c as a}from"./index-Dejnh_W_.js";import"./index-RYns6xqu.js";const C="_checklist_dptrb_2",g="_checklist__list_dptrb_23",b="_checknumber_dptrb_35",y="_checknumber__list_dptrb_55",r={checklist:C,checklist__list:g,checknumber:b,checknumber__list:y};function c({items:s,onCheck:u,SelectCategory:d,className:h}){const p=({target:{value:e}})=>{u(e),Number.isNaN(Number(e))||d(e)},i=s.every(e=>!Number.isNaN(Number(e))),k=a(r.checklist,{[r.checknumber]:i},h),_=a(r.checklist__list,{[r.checknumber__list]:i});return t.jsx("select",{form:"checklist",className:k,name:"checklist",id:"checklist",onChange:p,children:s.map(e=>t.jsx("option",{className:_,value:e,children:e},e))})}c.__docgenInfo={description:"",methods:[],displayName:"Checklist",props:{items:{required:!0,tsType:{name:"Array",elements:[{name:"string"}],raw:"string[]"},description:""},onCheck:{required:!0,tsType:{name:"signature",type:"function",raw:"(item: string) => void",signature:{arguments:[{type:{name:"string"},name:"item"}],return:{name:"void"}}},description:""},number:{required:!1,tsType:{name:"Array",elements:[{name:"number"}],raw:"number[]"},description:""},SelectCategory:{required:!0,tsType:{name:"signature",type:"function",raw:"(number: string) => void",signature:{arguments:[{type:{name:"string"},name:"number"}],return:{name:"void"}}},description:""}}};const x={title:"ui/components/atoms/Checklist",component:c,argTypes:{onCheck:{action:"clicked"},SelectCategory:{action:"clicked"}}},n={render:s=>t.jsxs("div",{style:{display:"flex"},children:[t.jsx("div",{children:t.jsx(c,{items:["Columns","Rows","Cells"],onCheck:s.onCheck,number:[],SelectCategory:()=>{}})}),t.jsx("div",{children:t.jsx(c,{items:[" 10"," 20"," 30"," 40"," 50"],SelectCategory:s.SelectCategory,onCheck:()=>{},number:[10,20,30,40,50]})})]})};var o,m,l;n.parameters={...n.parameters,docs:{...(o=n.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: args => <div style={{
+    display: 'flex'
+  }}>
+      <div>
+        <Checklist items={['Columns', 'Rows', 'Cells']} onCheck={args.onCheck} number={[]} SelectCategory={() => {}} />
+      </div>
+      <div>
+        <Checklist items={[' 10', ' 20', ' 30', ' 40', ' 50']} SelectCategory={args.SelectCategory} onCheck={() => {}} number={[10, 20, 30, 40, 50]} />
+      </div>
+    </div>
+}`,...(l=(m=n.parameters)==null?void 0:m.docs)==null?void 0:l.source}}};const j=["Default"];export{n as Default,j as __namedExportsOrder,x as default};
