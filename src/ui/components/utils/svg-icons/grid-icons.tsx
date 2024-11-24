@@ -66,6 +66,7 @@ import pencil from '../../../../assets/icons/pencil.svg?raw';
 import phone from '../../../../assets/icons/phone.svg?raw';
 import piechat from '../../../../assets/icons/pie-chat.svg?raw';
 import play from '../../../../assets/icons/play.svg?raw';
+import rectangle from '../../../../assets/icons/rectangle.svg?raw';
 import removecalendar from '../../../../assets/icons/remove-calendar.svg?raw';
 import repeat from '../../../../assets/icons/repeat.svg?raw';
 import resize from '../../../../assets/icons/resize.svg?raw';
@@ -161,6 +162,7 @@ const svgIcons = [
   phone,
   piechat,
   play,
+  rectangle,
   removecalendar,
   repeat,
   resize,
