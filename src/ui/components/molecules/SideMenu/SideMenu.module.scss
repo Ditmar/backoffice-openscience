@@ -113,10 +113,10 @@
 
         svg {
             fill: $--ads-colors-white;
-            margin-right: 10px;
-            width: 24px;
             height: 24px;
+            margin-right: 10px;
             transition: margin 0.3s ease;
+            width: 24px;
         }
 
         &:hover {
