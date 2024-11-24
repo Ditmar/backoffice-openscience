@@ -1,4 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
 
 .input-wrapper {
   height: 68px;
@@ -7,16 +8,18 @@
   width: 288px;
 }
 
-.input-container {
+.inputcontainer {
   position: relative;
 }
 
 .input {
   border: 1px solid transparent;
   border-radius: 4px;
+  font-family: Barlow, sans-serif;
   height: 48px;
   opacity: 1;
   padding-right: 40px;
+  text-indent: 12px;
   transition: border-color 0.3s;
   width: 288px;
 
@@ -29,18 +32,35 @@
   }
 }
 
-.icon {
-  color: $--ads-colors-red-60;
-  height: 14px;
-  opacity: 1;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%); /* Centrado vertical */
-  width: 14px;
+.small {
+  font-size: 14px;
+  padding: 4px;
 }
 
-.error-message {
+.medium {
+  font-size: 18px;
+  padding: 8px;
+}
+
+.large {
+  font-size: 22px;
+  padding: 12px;
+}
+
+.iconstyle {
   color: $--ads-colors-red-60;
+  height: 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 16px;
+}
+
+.errormessage {
+  color: $--ads-colors-red-60;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
   margin-top: 4px;
 }

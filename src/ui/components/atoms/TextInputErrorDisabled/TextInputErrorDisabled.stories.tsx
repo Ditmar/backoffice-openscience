@@ -16,6 +16,8 @@ export const ErrorWithPlaceholder: Story = {
     placeholder: 'Placeholder text',
     errorMessage: 'Error message here',
     variant: 'medium',
+    isDisabled: false,
+    icon: '',
   },
 };
 
@@ -24,7 +26,7 @@ export const ErrorWithInput: Story = {
     placeholder: 'User Input Text',
     errorMessage: 'Error message here',
     value: 'User Input Text',
-    variant: 'medium',
+    variant: 'small',
   },
 };
 
@@ -32,6 +34,6 @@ export const DisabledInput: Story = {
   args: {
     isDisabled: true,
     placeholder: 'Placeholder text',
-    variant: 'medium',
+    variant: "small",
   },
 };

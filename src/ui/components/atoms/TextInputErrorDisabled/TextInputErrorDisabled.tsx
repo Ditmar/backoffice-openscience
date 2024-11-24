@@ -1,6 +1,8 @@
-import { IoAlertCircle } from 'react-icons/io5';
-import type { TextInputErrorDisabledProps } from './types/IProps';
+import classNames from 'classnames';
 import styles from './TextInputErrorDisabled.module.scss';
+import type { TextInputErrorDisabledProps } from './types/IProps';
+import { Icon } from '../../utils/svg-icons/icons';
+import circleDelete from '../../../../assets/icons/circle-delete.svg?raw';
 
 function TextInputErrorDisabled({
   variant = 'medium',
@@ -9,22 +11,22 @@ function TextInputErrorDisabled({
   placeholder,
   value,
 }: TextInputErrorDisabledProps) {
-  const inputClass = `${styles.input} ${errorMessage ? styles.error : ''} ${
-    isDisabled ? styles.disabled : ''
-  } ${styles[variant]}`; // Usa variant para modificar la clase del input
-
   return (
     <div className={styles.inputWrapper}>
-      <span className={styles.inputContainer}>
+      <div className={styles.inputContainer}>
         <input
-          className={inputClass}
+          className={classNames(styles.input, {
+            [styles.error]: errorMessage,
+            [styles.disabled]: isDisabled,
+            [styles[variant]]: variant,
+          })}
           disabled={isDisabled}
           placeholder={placeholder}
           value={value}
         />
-        {errorMessage && <IoAlertCircle className={styles.icon} />}
-      </span>
-      {errorMessage && !isDisabled && <p className={styles.errorMessage}>{errorMessage}</p>}
+        <Icon data-testid="icon-add" src={circleDelete} className={styles.iconstyle} />
+      </div>
+      {errorMessage && !isDisabled && <p className={styles.errormessage}>{errorMessage}</p>}
     </div>
   );
 }

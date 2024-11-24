@@ -1,9 +1,8 @@
-import type { InputHTMLAttributes } from 'react';
-
-export interface TextInputErrorDisabledProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextInputErrorDisabledProps {
   variant?: 'small' | 'medium' | 'large';
   errorMessage?: string;
   isDisabled?: boolean;
-  hasError?: boolean;
-  value?: string; // Asegúrate de que la propiedad value esté incluida si la necesitas
+  placeholder?: string;
+  value?: string;
+  icon?: string;
 }
