@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import DangerButtonWithIcon from './Danger-Button-With-Icon';
 import add from '../../../../assets/icons/add.svg?raw';
 
-const meta = {
+const meta: Meta<typeof DangerButtonWithIcon> = {
   title: 'ui/components/atoms/Danger-Button-With-Icon',
   component: DangerButtonWithIcon,
   argTypes: {

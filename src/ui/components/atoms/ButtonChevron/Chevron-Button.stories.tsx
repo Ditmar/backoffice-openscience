@@ -3,7 +3,7 @@ import ChevronButton from './Chevron-Button';
 import left from '../../../../assets/icons/angle-left.svg?raw';
 import right from '../../../../assets/icons/angle-right.svg?raw';
 
-const meta = {
+const meta: Meta<typeof ChevronButton> = {
   title: 'ui/components/atoms/Chevron-Button',
   component: ChevronButton,
   argTypes: {
