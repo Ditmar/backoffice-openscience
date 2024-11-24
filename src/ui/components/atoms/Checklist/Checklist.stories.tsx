@@ -8,7 +8,7 @@ const meta: Meta<typeof Checklist> = {
     onCheck: {
       action: 'clicked',
     },
-    onSeleonCategorySelect: {
+    SelectCategory: {
       action: 'clicked',
     },
   },
@@ -26,13 +26,13 @@ export const Default: Story = {
           items={['Columns', 'Rows', 'Cells']}
           onCheck={args.onCheck}
           number={[]}
-          onSeleonCategorySelect={() => {}}
+          SelectCategory={() => {}}
         />
       </div>
       <div>
         <Checklist
           items={[' 10', ' 20', ' 30', ' 40', ' 50']}
-          onSeleonCategorySelect={args.onSeleonCategorySelect}
+          SelectCategory={args.SelectCategory}
           onCheck={() => {}}
           number={[10, 20, 30, 40, 50]}
         />

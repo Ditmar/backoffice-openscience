@@ -12,7 +12,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={items}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     items.forEach((item) => {
@@ -27,7 +27,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={items}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
         className={customClass}
       />,
     );
@@ -40,7 +40,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={items}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     const checklist = screen.getByRole('combobox');
@@ -57,7 +57,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={numericItems}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     const checklist = screen.getByRole('combobox');
@@ -73,7 +73,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={items}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     const options = screen.getAllByRole('option');
@@ -85,11 +85,7 @@ describe('Testing Checklist component', () => {
 
   it('Checklist renders with an empty items list', () => {
     render(
-      <Checklist
-        items={[]}
-        onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
-      />,
+      <Checklist items={[]} onCheck={mockOnCheck} SelectCategory={mockOnSelectionCategorySelect} />,
     );
     const options = screen.queryAllByRole('option');
     expect(options.length).toBe(0);
@@ -101,7 +97,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={numericItems}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     const checklist = screen.getByRole('combobox');
@@ -119,7 +115,7 @@ describe('Testing Checklist component', () => {
       <Checklist
         items={items}
         onCheck={mockOnCheck}
-        onSeleonCategorySelect={mockOnSelectionCategorySelect}
+        SelectCategory={mockOnSelectionCategorySelect}
       />,
     );
     const checklist = screen.getByRole('combobox');
