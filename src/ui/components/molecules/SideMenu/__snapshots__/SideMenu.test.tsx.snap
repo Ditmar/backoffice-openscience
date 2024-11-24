@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SideMenu Snapshot > renders correctly 1`] = `
+<DocumentFragment>
+  <aside
+    class="_side-menu_54da13"
+    data-testid="side-menu"
+  >
+    <div
+      class="_menu-header_54da13"
+    >
+      <button
+        class="_hide-menu-button_54da13"
+      >
+        <span
+          class="_icon_54da13"
+          dangerouslySetInnerHTML="[object Object]"
+        />
+        HIDE MENU
+      </button>
+    </div>
+    <nav
+      class="_menu-list_54da13"
+    >
+      <button
+        class="_side-menu-button_bf946c _side-menu-button--primary_bf946c"
+        data-testid="side-menu-button-styles"
+      >
+        <span
+          class="_icon_bf946c"
+          style="width: 24px; height: 24px; display: block;"
+        />
+        Content Management
+      </button>
+      <button
+        class="_side-menu-button_bf946c _side-menu-button--primary_bf946c"
+        data-testid="side-menu-button-styles"
+      >
+        <span
+          class="_icon_bf946c"
+          style="width: 24px; height: 24px; display: block;"
+        />
+        Article Management
+      </button>
+      <!-- Más elementos de menú aquí -->
+    </nav>
+  </aside>
+</DocumentFragment>
+`;

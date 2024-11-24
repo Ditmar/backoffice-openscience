@@ -1,13 +1,11 @@
-import React from 'react';
-
 export interface ISideMenuProps {
-    menuItems: {
-      title: string;
-      icon: string;
-      path: string;
-      basePath: string;
-    }[];
-    onHideMenu?: () => void;
-  }
-  
-  
+  menuItems: {
+    id: number | string;
+    title: string;
+    icon: string;
+    path: string;
+    basePath: string;
+    name?: string;
+  }[];
+  onClick: () => void;
+}

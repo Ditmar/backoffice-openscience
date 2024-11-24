@@ -32,7 +32,7 @@ import copy from '../../../../assets/icons/copy.svg?raw';
 import cut from '../../../../assets/icons/cut.svg?raw';
 import deletecalendar from '../../../../assets/icons/delete-calendar.svg?raw';
 import deletes from '../../../../assets/icons/deletes.svg?raw';
-import dinamicbannermanagement from '../../../../assets/icons/dinamic-banner-management.svg?raw';
+import dinamicbannermanagement from '../../../../assets/icons/dinamicBannerManagement.svg?raw';
 import discount from '../../../../assets/icons/discount.svg?raw';
 import downarrow from '../../../../assets/icons/down-arrow.svg?raw';
 import down from '../../../../assets/icons/down.svg?raw';
