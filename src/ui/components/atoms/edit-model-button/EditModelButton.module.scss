@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+@import '../../../../globals/ads-variables.scss';
+
+.edit-model-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+
+  &:hover {
+    background-color: $--ads-colors-gray-90;
+  }
+
+  &--primary {
+    background-color: $--ads-colors-gray-80;
+    color: $--ads-colors-white;
+
+    .edit-model-button__icon {
+      svg path {
+        fill: $--ads-colors-white;
+      }
+    }
+
+    .edit-model-button__text {
+      color: $--ads-colors-white;
+    }
+  }
+
+  &--secondary {
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-80;
+
+    &:hover {
+      background-color: $--ads-colors-gray-40;
+    }
+
+    .edit-model-button__icon {
+      svg path {
+        fill: $--ads-colors-gray-80;
+      }
+    }
+
+    .edit-model-button__text {
+      color: $--ads-colors-gray-80;
+    }
+  }
+
+  &--small {
+    height: 35px;
+    width: 150px;
+
+    .edit-model-button__icon {
+      height: 18px;
+      margin-left: 4px;
+      margin-right: 1px;
+      width: 18px;
+    }
+
+    .edit-model-button__text {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &--medium {
+    height: 47px;
+    width: 224px;
+
+    .edit-model-button__icon {
+      height: 27px;
+      margin-left: 8px;
+      margin-right: 2px;
+      width: 27px;
+    }
+
+    .edit-model-button__text {
+      font-size: 20px;
+      line-height: 22px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &--large {
+    height: 60px;
+    width: 300px;
+
+    .edit-model-button__icon {
+      height: 38px;
+      margin-left: 8px;
+      margin-right: 2px;
+      width: 38px;
+    }
+
+    .edit-model-button__text {
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .edit-model-button__icon {
+    svg {
+      path {
+        fill: currentcolor;
+      }
+    }
+  }
+}
