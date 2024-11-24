@@ -5,21 +5,15 @@ const meta = {
   title: 'ui/components/atoms/Danger-Button',
   component: DangerButton,
   argTypes: {
-    variant: {
-      control: 'select',
-      options: ['Small', 'Medium', 'Big', 'Active', 'Disable', 'Normal'],
-      defaultValue: 'Normal',
-    },
-    disabled: {
-      control: 'boolean',
-    },
     onClick: {
-      action: 'clicked',
+      action: 'click',
     },
+    variant: ['Small', 'Medium', 'Big', 'Active', 'Disable'],
   },
 } as Meta<typeof DangerButton>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Small: Story = {
@@ -54,6 +48,5 @@ export const Disable: Story = {
   args: {
     children: 'Danger button',
     variant: 'Disable',
-    disabled: true,
   },
 };
