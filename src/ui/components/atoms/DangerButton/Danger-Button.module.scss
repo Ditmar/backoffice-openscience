@@ -1,0 +1,55 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.display {
+  align-items: center;
+  background: $--ads-colors-red-60;
+  border: none;
+  color: $--ads-colors-white;
+  display: flex;
+  font-size: $--ads-font-size-primary;
+  height: 3rem;
+  outline: $--ads-colors-red-60;
+  padding-inline: 2rem;
+  width: auto;
+
+  &:focus {
+    border: 2px solid $--ads-colors-white;
+    outline: 2px solid $--ads-colors-red-60;
+  }
+
+  &.primary {
+    height: 2rem;
+    padding-inline: 1rem;
+  }
+
+  &.secondary {
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &.tertiary {
+    height: 4rem;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-red-60;
+    }
+  }
+
+  &.active {
+    background: $--ads-background-active;
+  }
+
+  &:hover {
+    background-color: $--ads-colors-red-70;
+  }
+
+  &.disable {
+    background: $--ads-colors-gray-40;
+    color: $--ads-colors-gray-50;
+    cursor: not-allowed;
+  }
+}
