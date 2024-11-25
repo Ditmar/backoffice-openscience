@@ -69,15 +69,15 @@
     &::before {
       opacity: 1;
     }
-
+  }
   &.collapsed {
     justify-content: center;
     padding: 0;
-
+  }
   &.collapsed {
     justify-content: center;
     padding: 0;
-
+  }
     svg {
       margin-right: 0;
     }
@@ -126,8 +126,4 @@
     }
   }
 }
-
-
-
-
-
+}
