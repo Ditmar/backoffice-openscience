@@ -119,18 +119,10 @@
     svg {
       fill: $--ads-colors-white;
       margin-right: 0;
-    }
 
-    span {
-      display: none;
-    }
-
-    &::before {
-      display: none;
-    }
-
-    &:hover svg {
-      fill: $--ads-colors-gray-70;
+      &:hover {
+        fill: $--ads-colors-gray-70;
+      }
     }
   }
 }
