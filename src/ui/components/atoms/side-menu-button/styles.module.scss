@@ -42,11 +42,12 @@
   display: flex;
   font-family: Barlow, sans-serif;
   font-size: 16px;
+  font-size: 16px;
   height: 50px;
   padding: 10px 15px;
-  padding: 10px 15px !important;
   position: relative;
   text-align: left;
+  transition: all 0.3s ease;
   transition: all 0.3s ease;
 
   &::before {
@@ -74,13 +75,13 @@
     justify-content: center;
     padding: 0;
 
-    svg {
-      margin-right: 0;
-    }
-
   &.primary {
     background-color: $--ads-colors-black;
     color: $--ads-colors-white;
+
+    svg {
+      fill: $--ads-colors-white;
+    }
   }
 
   &.secondary {
@@ -108,19 +109,6 @@
     &:hover svg {
       fill: $--ads-colors-gray-70;
     }
-
-    &.primary svg {
-      fill: $--ads-colors-white;
-    }
-
-    &.secondary svg {
-      fill: $--ads-colors-gray-70;
-    }
-
-    &.collapsed svg {
-      margin-right: 0;
-    }
-  }
   }
 
   &.collapsed {
@@ -141,6 +129,7 @@
   }
 }
 }
+
 
 
 
