@@ -85,11 +85,20 @@
   &.secondary {
     background-color: $--ads-colors-gray-20;
     color: $--ads-colors-gray-70;
+
+    svg {
+      fill: $--ads-colors-gray-70;
+    }
   }
 
   &.collapsed {
     justify-content: center;
     padding: 0;
+
+    svg {
+      fill: $--ads-colors-white;
+      margin-right: 0;
+    }
 
     span {
       display: none;
@@ -97,11 +106,6 @@
 
     &::before {
       display: none;
-    }
-
-    svg {
-      fill: $--ads-colors-white;
-      margin-right: 10px;
     }
 
     &:hover svg {
