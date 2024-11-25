@@ -28,6 +28,7 @@
   margin-right: 10px;
 
   svg {
+    fill: $--ads-colors-black; 
     height: 24px;
     width: 24px;
   }
@@ -114,6 +115,7 @@
     padding: 0;
 
     svg {
+      fill: $--ads-colors-white;
       margin-right: 0;
     }
 
@@ -124,8 +126,11 @@
     &::before {
       display: none;
     }
+
+    &:hover svg {
+      fill: $--ads-colors-gray-70;
+    }
   }
-}
 }
 
 
