@@ -1,0 +1,62 @@
+@import 'src/globals/ads-variables.scss';
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.input-field__label {
+  font-family: 'Besley', serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ads-colors-gray-10);
+  text-transform: capitalize;
+}
+
+.input-field__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--ads-colors-gray-10);
+  border: 1px solid var(--ads-colors-gray-40);
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field__icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: var(--ads-colors-gray-60);
+}
+
+.input-field__input {
+  flex: 1;
+  font-family: 'Besley', serif;
+  font-size: 14px;
+  color: var(--ads-colors-gray-10);
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.input-field__input::placeholder {
+  color: var(--ads-colors-gray-60);
+  font-style: italic;
+}
+
+.input-field--error .input-field__wrapper {
+  border-color: var(--ads-colors-red-50);
+}
+
+.input-field__error {
+  font-size: 12px;
+  color: var(--ads-colors-red-50);
+  margin-top: 4px;
+  font-family: 'Besley', serif;
+}
