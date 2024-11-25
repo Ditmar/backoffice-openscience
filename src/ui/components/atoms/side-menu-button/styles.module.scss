@@ -95,29 +95,29 @@
       display: none;
     }
 
-  svg {
-    fill: $--ads-colors-white;
-    margin-right: 10px;
-  }
+    svg {
+      fill: $--ads-colors-white;
+      margin-right: 10px;
+    }
 
-  &:hover svg {
-    fill: $--ads-colors-gray-70;
-  }
+    &:hover svg {
+      fill: $--ads-colors-gray-70;
+    }
 
-  &.primary svg {
-    fill: $--ads-colors-white;
-  }
+    &.primary svg {
+      fill: $--ads-colors-white;
+    }
 
-  &.secondary svg {
-    fill: $--ads-colors-gray-70;
-  }
+    &.secondary svg {
+      fill: $--ads-colors-gray-70;
+    }
 
-  &.collapsed svg {
-    margin-right: 0;
+    &.collapsed svg {
+      margin-right: 0;
+    }
+  }
   }
 }
-}
-
 
 
 
