@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Toggle.module.scss';
+import styles from './Toggle.enable.module.scss';
 
 export interface ToggleProps {
   label?: string;
@@ -8,7 +8,7 @@ export interface ToggleProps {
 }
 
 function Toggle({ label = '', disabled = false, onChange }: ToggleProps) {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   const handleToggle = () => {
     if (!disabled) {

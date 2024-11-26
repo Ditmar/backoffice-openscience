@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Toggle from './Toggle';
+import Toggle from './Toggle.enable';
 
 const meta: Meta<typeof Toggle> = {
-  title: 'src/components/Toggle',
+  title: 'ui/components/atoms/Toggle.enable',
   component: Toggle,
   argTypes: {
     label: { control: 'text' },

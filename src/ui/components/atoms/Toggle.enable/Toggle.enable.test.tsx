@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import Toggle from './Toggle';
+import Toggle from './Toggle.enable';
 import '@testing-library/jest-dom';
 
 describe('Toggle Component', () => {
