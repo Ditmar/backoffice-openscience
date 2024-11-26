@@ -27,10 +27,12 @@
   font-weight: 400;
   height: 48px;
   line-height: 22px;
+  max-width: 500px;
+  min-width: 350px;
   outline: none;
   padding-left: 10px;
   transition: border 0.3s ease-in-out;
-  width: 524px;
+  width: 100%;
 
   &::placeholder {
     color: $--ads-colors-gray-50;
