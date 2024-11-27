@@ -36,7 +36,7 @@ import copy from '../../../../assets/icons/copy.svg?raw';
 import cut from '../../../../assets/icons/cut.svg?raw';
 import deleteCalendar from '../../../../assets/icons/delete-calendar.svg?raw';
 import deletes from '../../../../assets/icons/deletes.svg?raw';
-import dinamicBannerManagement from '../../../../assets/icons/dinamic-banner-management.svg?raw';
+import dinamicBannerManagement from '../../../../assets/icons/dinamicBannerManagement.svg?raw';
 import discount from '../../../../assets/icons/discount.svg?raw';
 import downArrow from '../../../../assets/icons/down-arrow.svg?raw';
 import down from '../../../../assets/icons/down.svg?raw';
@@ -132,7 +132,7 @@ const icons = {
   cut,
   'delete-calendar': deleteCalendar,
   deletes,
-  'dinamic-banner-management': dinamicBannerManagement,
+  dynamicBannerManagement: dinamicBannerManagement,
   discount,
   'down-arrow': downArrow,
   down,

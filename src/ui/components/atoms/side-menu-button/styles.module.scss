@@ -4,38 +4,50 @@
 
 .side-menu-buttons {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 
   @include respond-to('small-mobile') {
-    flex-direction: column;
     gap: 5px;
   }
 
   @include respond-to('medium') {
-    flex-direction: row;
     gap: 8px;
+  }
+
+  @include respond-to('large') {
+    gap: 12px;
+  }
+
+  @include respond-to('extra-large') {
+    gap: 15px;
+  }
+}
+
+.icon {
+  margin-right: 10px;
+
+  svg {
+    fill: $--ads-colors-black;
+    height: 24px;
+    width: 24px;
   }
 }
 
 .side-menu-button {
   align-items: center;
-  background-color: $--ads-colors-blue-50;
+  background-color: $--ads-colors-black;
   border: none;
+  color: $--ads-colors-white;
   cursor: pointer;
   display: flex;
   font-family: Barlow, sans-serif;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 16px;
   height: 50px;
-  letter-spacing: 0.16px;
-  line-height: 30px;
-  padding: 10px;
+  padding: 10px 15px;
   position: relative;
   text-align: left;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
-  width: 309px;
+  transition: all 0.3s ease;
 
   &::before {
     background-color: $--ads-colors-red-70;
@@ -50,22 +62,16 @@
   }
 
   &:hover {
-    transform: translateX(10px);
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-70;
+    transform: translateY(1px);
 
     &::before {
       opacity: 1;
     }
   }
 
-  &.active {
-    transform: translateX(10px);
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
-  &.primary {
+  &.secondary {
     background-color: $--ads-colors-gray-20;
     color: $--ads-colors-gray-70;
 
@@ -74,56 +80,25 @@
     }
   }
 
-  &.secondary {
-    background-color: $--ads-colors-black;
-    color: $--ads-colors-white;
+  &.collapsed {
+    justify-content: center;
+    padding: 0;
 
     svg {
       fill: $--ads-colors-white;
+      margin-right: 0;
+
+      &:hover {
+        fill: $--ads-colors-gray-70;
+      }
     }
-  }
 
-  .icon {
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 15px;
-
-    svg {
-      height: 31px;
-      width: 29px;
+    span {
+      display: none;
     }
-  }
 
-  @include respond-to('extra-large') {
-    font-size: 20px;
-    height: 50px;
-    width: 309px;
-
-    .icon svg {
-      height: 31px;
-      width: 29px;
-    }
-  }
-
-  @include respond-to('large') {
-    font-size: 18px;
-    height: 48px;
-    width: 300px;
-
-    .icon svg {
-      height: 28px;
-      width: 28px;
-    }
-  }
-
-  @include respond-to('medium') {
-    font-size: 16px;
-    height: 45px;
-    width: 280px;
-
-    .icon svg {
-      height: 25px;
-      width: 25px;
+    &::before {
+      display: none;
     }
   }
 }
