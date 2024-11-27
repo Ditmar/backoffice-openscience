@@ -1,0 +1,35 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+
+.bibliography__form {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  padding-left: 5%;
+
+  @media (width <= 768px) { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+.form__field {
+  border-bottom: 2px solid $--ads-colors-gray-50;
+  display: block;
+  flex-direction: column;
+  line-height: 10px;
+  padding: 0 20px 0 0;
+  width: 85%;
+}
+
+.form__label {
+  color: $--ads-colors-black;
+  flex-direction: row;
+  font-family: Barlow, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 50px;
+  text-shadow: 3px;
+}
