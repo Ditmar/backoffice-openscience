@@ -1,0 +1,43 @@
+@import '../../../../globals/ads-variables.scss';
+
+.top-elements {
+    background-color: $--ads-colors-gray-10;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 15px;
+    top: 0;
+    width: 1443px;
+}
+
+.container-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.container-text h2 {
+    font-family: Barlow, sans-serif;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container-text input {
+    font-size: 1rem;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.container-button {
+    display: flex;
+}
+
+.container-button button {
+    font-family: Barlow, sans-serif;
+    height: 38px !important ;
+    margin: 20px;
+    width: 108px;
+}
