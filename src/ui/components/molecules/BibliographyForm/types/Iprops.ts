@@ -1,12 +1,7 @@
-import React from 'react';
+import type { ChangeEvent } from 'react';
 
-export interface IFormField {
-  id: string;
-  name: string;
-  placeholder: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-export interface IFormProps {
-  fields: IFormField[];
+export interface IProps {
+  ids?: string;
+  label?: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }

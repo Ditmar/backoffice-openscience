@@ -1,47 +1,41 @@
-import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
-import Form from './bibliograpyform';
+import BibliographyForm from './bibliograpyform';
+import '@testing-library/jest-dom';
 
-const mockFields = [
-  { id: 'public', name: 'Public Type', placeholder: 'Enter public type', onChange: vi.fn() },
-  {
-    id: 'lastname',
-    name: 'authorlast Name',
-    placeholder: 'Enter author last name',
-    onChange: vi.fn(),
-  },
-  {
-    id: 'initials',
-    name: 'autorInitials',
-    placeholder: 'Enter author initials',
-    onChange: vi.fn(),
-  },
-  { id: 'title', name: 'publication Title', placeholder: 'Enter title', onChange: vi.fn() },
-];
+describe('BibliographyForm', () => {
+  it('renders all fields with correct placeholders', () => {
+    render(<BibliographyForm onChange={() => {}} />);
+    const fields = [
+      { label: 'Public Type', placeholder: 'Enter publication type' },
+      { label: 'Author Last Name', placeholder: 'Enter author name' },
+      { label: 'Author Inititals', placeholder: 'Enter Author initials' },
+      { label: 'Publication Title', placeholder: 'Enter title' },
+      { label: 'Volume', placeholder: 'Enter volume' },
+      { label: 'Edition Number', placeholder: 'Enter number' },
+      { label: 'Pages', placeholder: 'Enter page' },
+      { label: 'Edition Initilas', placeholder: 'Enter editor initials' },
+      { label: 'Editor Last Name', placeholder: 'Enter last name editor' },
+      { label: 'Publication Place', placeholder: 'Enter place' },
+      { label: 'Editor', placeholder: 'Enter type' },
+      { label: 'Electronic Address', placeholder: 'Enter Address' },
+    ];
 
-describe('Form component', () => {
-  it('should render the form with the provided fields', () => {
-    render(<Form fields={mockFields} />);
-
-    mockFields.forEach((field) => {
-      expect(screen.getByPlaceholderText(field.placeholder)).toBeInTheDocument();
+    fields.forEach(({ label, placeholder }) => {
+      expect(screen.getByText(label)).toBeInTheDocument();
+      expect(screen.getByPlaceholderText(placeholder)).toBeInTheDocument();
     });
   });
 
-  it('should call onChange when input values change', () => {
-    render(<Form fields={mockFields} />);
+  it('calls onChange when a field value is changed', async () => {
+    const onChangeMock = vi.fn();
+    render(<BibliographyForm onChange={onChangeMock} />);
 
-    const nameInput = screen.getByPlaceholderText('Enter public type');
-    fireEvent.change(nameInput, { target: { value: 'John Doe' } });
+    const input = screen.getByPlaceholderText('Enter publication type');
 
-    expect(mockFields[0].onChange).toHaveBeenCalled();
-  });
+    await userEvent.type(input, 'Book');
 
-  it('should render correct number of input fields', () => {
-    render(<Form fields={mockFields} />);
-
-    const inputs = screen.getAllByRole('textbox');
-    expect(inputs).toHaveLength(mockFields.length);
+    expect(onChangeMock).toHaveBeenCalledTimes(4);
   });
 });
