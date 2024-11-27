@@ -27,7 +27,7 @@ function UnifiedButton({ variant, children, onClick, icon, display }: UnifiedBut
       );
     case 'tertiary':
       return (
-        <DangerButton onClick={onClick} variant="Normal" disabled={false}>
+        <DangerButton onClick={onClick} variant="Normal">
           {children}
         </DangerButton>
       );
