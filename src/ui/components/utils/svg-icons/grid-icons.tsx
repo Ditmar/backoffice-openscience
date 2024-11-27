@@ -63,6 +63,7 @@ import openmail from '../../../../assets/icons/open-mail.svg?raw';
 import ovalchat from '../../../../assets/icons/oval-chat.svg?raw';
 import past from '../../../../assets/icons/past.svg?raw';
 import pencil from '../../../../assets/icons/pencil.svg?raw';
+import period from '../../../../assets/icons/period.svg?raw';
 import phone from '../../../../assets/icons/phone.svg?raw';
 import piechat from '../../../../assets/icons/pie-chat.svg?raw';
 import play from '../../../../assets/icons/play.svg?raw';
@@ -159,6 +160,7 @@ const svgIcons = [
   ovalchat,
   past,
   pencil,
+  period,
   phone,
   piechat,
   play,

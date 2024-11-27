@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+@import '../../../../globals/ads-variables.scss';
+
+.header-draft {
+  align-items: center;
+  display: flex;
+  font-family: Barlow, sans-serif;
+  gap: 8px;
+  height: 52px;
+  width: 372px;
+
+  .header-draft__text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &--variant-primary {
+    background-color: $--ads-colors-gray-80;
+    color: $--ads-colors-white;
+
+    .header-draft__icon {
+      svg path {
+        fill: $--ads-colors-white;
+      }
+    }
+  }
+
+  &--variant-secondary {
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-80;
+
+    .header-draft__icon {
+      svg path {
+        fill: $--ads-colors-gray-80;
+      }
+    }
+  }
+
+  &--size-small {
+    height: 40px;
+    width: 290px;
+
+    .header-draft__icon {
+      height: 16px;
+      margin-left: 20px;
+      width: 14px;
+    }
+
+    .header-draft__text {
+      font-size: 14px;
+    }
+  }
+
+  &--size-medium {
+    height: 52px;
+    width: 372px;
+
+    .header-draft__icon {
+      height: 14px;
+      margin-left: 22px;
+      width: 18px;
+    }
+
+    .header-draft__text {
+      font-size: 20px;
+    }
+  }
+
+  &--size-large {
+    height: 60px;
+    width: 440px;
+
+    .header-draft__icon {
+      height: 20px;
+      margin-left: 24px;
+      width: 24px;
+    }
+
+    .header-draft__text {
+      font-size: 25px;
+    }
+  }
+}
