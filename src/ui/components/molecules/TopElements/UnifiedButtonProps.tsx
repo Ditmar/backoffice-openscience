@@ -15,19 +15,19 @@ function UnifiedButton({ variant, children, onClick, icon, display }: UnifiedBut
   switch (variant) {
     case 'primary':
       return (
-        <PrimaryButton onClick={onClick} icon={icon} display={display} variant="Medium">
-          {children}
-        </PrimaryButton>
-      );
-    case 'secondary':
-      return (
-        <SecondaryButton onClick={onClick} display={display ?? 'defaultDisplay'} variant="medium">
+        <SecondaryButton onClick={onClick} display={display ?? 'defaultDisplay'} variant="White">
           {children}
         </SecondaryButton>
       );
+    case 'secondary':
+      return (
+        <PrimaryButton onClick={onClick} icon={icon} display={display} variant="Centered">
+          {children}
+        </PrimaryButton>
+      );
     case 'tertiary':
       return (
-        <DangerButton onClick={onClick} variant="Normal">
+        <DangerButton onClick={onClick} variant="Standard">
           {children}
         </DangerButton>
       );

@@ -7,6 +7,7 @@
   color: $--ads-colors-white;
   display: flex;
   height: 48px;
+  justify-content: center;
   padding-inline: 0.5rem;
   padding-inline: 20px;
   width: auto;
@@ -43,6 +44,23 @@
     &:focus {
       border: 2px solid $--ads-colors-white;
       outline: 2px solid $--ads-colors-gray-80;
+    }
+  }
+
+  &.quaternary {
+    background-color: $--ads-colors-white;
+    color: $--ads-colors-black;
+    font-weight: bold;
+    height: 38px;
+    text-align: center;
+
+    &:focus {
+      border: 2px solid $--ads-colors-white;
+      outline: 2px solid $--ads-colors-gray-80;
+    }
+
+    &:hover {
+      background-color: $--ads-colors-gray-20;
     }
   }
 

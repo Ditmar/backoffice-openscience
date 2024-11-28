@@ -11,6 +11,7 @@ function DangerButton(props: IProps) {
     [styles.primary]: variant === 'Small',
     [styles.secondary]: variant === 'Medium',
     [styles.tertiary]: variant === 'Big',
+    [styles.standard]: variant === 'Standard',
     [styles.active]: variant === 'Active',
     [styles.disable]: isDisabled,
   });

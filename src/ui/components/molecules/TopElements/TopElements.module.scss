@@ -1,4 +1,5 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
 
 .top-elements {
     background-color: $--ads-colors-gray-10;
@@ -7,7 +8,19 @@
     left: 0;
     padding: 15px;
     top: 0;
-    width: 1443px;
+    width: 100%;
+
+    @include respond-to(sm) {
+        width: 90%;
+    }
+
+    @include respond-to(md) {
+        width: 80%;
+    }
+
+    @include respond-to(lg) {
+        width: 70%;
+    }
 }
 
 .container-text {
@@ -37,7 +50,7 @@
 
 .container-button button {
     font-family: Barlow, sans-serif;
-    height: 38px !important ;
+    height: 38px;
     margin: 20px;
     width: 108px;
 }

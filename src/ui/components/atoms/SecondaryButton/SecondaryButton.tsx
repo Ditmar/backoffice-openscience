@@ -9,6 +9,7 @@ function SecondaryButton(props: SecondaryButtonProps) {
     [styles.primary]: variant === 'small',
     [styles.secondary]: variant === 'medium',
     [styles.tertiary]: variant === 'large',
+    [styles.quaternary]: variant === 'White',
     [styles.active]: variant === 'active',
     [styles.disabled]: variant === 'disabled',
   });
