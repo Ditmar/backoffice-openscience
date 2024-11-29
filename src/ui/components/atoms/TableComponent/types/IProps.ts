@@ -1,4 +1,5 @@
 export interface TableRow {
+  protected: boolean;
   id: number;
   title: string;
   visible: boolean;
