@@ -46,10 +46,9 @@ describe('TableComponent', () => {
 
     mockData.forEach(() => {
       const toggles = screen.getAllByLabelText('Toggle');
-      toggles.forEach(toggle => {
-     expect(toggle).toBeDefined();
-    });
-
+      toggles.forEach((toggle) => {
+        expect(toggle).toBeDefined();
+      });
     });
   });
 });
