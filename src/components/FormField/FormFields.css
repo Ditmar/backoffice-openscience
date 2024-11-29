@@ -21,8 +21,8 @@
 }
 
 .form-input {
-  border: 1px solid var(--ads-colors-gray-20);
   background-color: var(--ads-colors-gray-70);
+  border: 1px solid var(--ads-colors-gray-20);
   border-radius: 4px;
   font-size: 14px;
   padding: 8px 12px;
