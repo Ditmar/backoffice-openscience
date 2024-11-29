@@ -14,20 +14,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     data: [
-      {
-        id: 1,
-        title: 'Title 1',
-        visible: true,
-        updated: '2024-11-27',
-        protected: undefined,
-      },
-      {
-        id: 2,
-        title: 'Title 2',
-        visible: false,
-        updated: '2024-11-28',
-        protected: undefined,
-      },
+        { id: 1, title: 'Test Title 1', visible: true, protected: false, updated: '2024-11-27' },
+        { id: 2, title: 'Test Title 2', visible: false, protected: true, updated: '2024-11-28' },
     ],
   },
 };

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { IProps } from './types/IProps'; // Importación de tipo
+import type { IProps } from './types/IProps'; 
 import styles from './TableComponent.module.scss';
 import ButtonYesNo from '../ButtonYesNo/Button';
 import Toggle from '../Toggle/Toggle';
