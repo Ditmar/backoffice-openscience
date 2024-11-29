@@ -1,24 +1,15 @@
-import React from "react";
-import FormFields from "./FormFields";
+import React from 'react';
+import FormFields from './FormFields';
 
 export default {
-  title: "Components/FormFields",
+  title: 'Components/FormFields',
   component: FormFields,
   argTypes: {
-    placeholder: { control: "text", defaultValue: "Placeholder text" },
+    placeholder: { control: 'text', defaultValue: 'Placeholder text' },
   },
 };
 
-export const Default: React.FC<any> = (args) => <FormFields {...args} />;
 
-/*
-import React from "react";
-import FormFields from "./FormFields";
-
-export default {
-  title: "Components/FormFields",
-  component: FormFields,
-};
-
-export const Default = () => <FormFields />;
-*/
+export const Default = (args: { placeholder: string }) => (
+  <FormFields placeholder={args.placeholder} />
+);
