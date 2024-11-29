@@ -15,7 +15,7 @@ function TableComponent({ data }: IProps) {
   }
   function handleProtected(id: number) {
     const dataFind = data.find((row) => row.id === id);
-    alert(`Protected data: ${dataFind?.title}`);
+    console.log(`Protected data: ${dataFind?.title}`);
     setProtectedData(!protectedData);
   }
   return (
