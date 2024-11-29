@@ -9,6 +9,6 @@ export default {
   },
 };
 
-export const Default = (args: { placeholder: string }) => (
-  <FormFields placeholder={args.placeholder} />
-);
+export function Default({ placeholder }: { placeholder: string }) {
+  return <FormFields placeholder={placeholder} />;
+}
