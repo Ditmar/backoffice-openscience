@@ -45,8 +45,11 @@ describe('TableComponent', () => {
     render(<TableComponent data={mockData} />);
 
     mockData.forEach(() => {
-      const toggle = screen.getByLabelText('Toggle');
-      expect(toggle).toBeDefined();
+      const toggles = screen.getAllByLabelText('Toggle');
+      toggles.forEach(toggle => {
+     expect(toggle).toBeDefined();
+    });
+
     });
   });
 });
