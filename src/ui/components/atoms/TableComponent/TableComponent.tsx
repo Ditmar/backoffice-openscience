@@ -1,9 +1,23 @@
+import { useState } from 'react';
 import type { IProps } from './types/IProps'; // Importación de tipo
 import styles from './TableComponent.module.scss';
 import ButtonYesNo from '../ButtonYesNo/Button';
 import Toggle from '../Toggle/Toggle';
 
 function TableComponent({ data }: IProps) {
+  const [visible, setVisible] = useState(false);
+  const [protectedData, setProtectedData] = useState(false);
+  function handleVisible(id: number) {
+    const dataFind = data.find((row) => row.id === id);
+    if (!dataFind) return;
+    dataFind.visible = !dataFind.visible;
+    setVisible(!visible);
+  }
+  function handleProtected(id: number) {
+    const dataFind = data.find((row) => row.id === id);
+    alert(`Protected data: ${dataFind?.title}`);
+    setProtectedData(!protectedData);
+  }
   return (
     <div className={styles.table__component}>
       <table className={styles.table__component__table}>
@@ -22,12 +36,23 @@ function TableComponent({ data }: IProps) {
               <td>{row.id}</td>
               <td>{row.title}</td>
               <td>
-                <ButtonYesNo variant="primary" aria-label={`Change visibility for ${row.title}`}>
+                <ButtonYesNo
+                  onClick={() => {
+                    handleVisible(row.id);
+                  }}
+                  variant={row.visible ? 'secondary' : 'primary'}
+                  aria-label={`Change visibility for ${row.title}`}
+                >
                   {row.visible ? 'Yes' : 'No'}
                 </ButtonYesNo>
               </td>
               <td>
-                <Toggle aria-label={`Toggle protection for ${row.title}`} />
+                <Toggle
+                  onChange={() => {
+                    handleProtected(row.id);
+                  }}
+                  aria-label={`Toggle protection for ${row.title}`}
+                />
               </td>
               <td>{row.updated}</td>
             </tr>

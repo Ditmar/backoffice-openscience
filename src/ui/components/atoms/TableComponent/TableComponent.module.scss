@@ -40,4 +40,12 @@
     padding: 8px 10px;
     text-align: center;
   }
+
+  td{
+    &:nth-child(4){
+      display: flex;
+      justify-content: center;
+      
+    }
+  }
 }
