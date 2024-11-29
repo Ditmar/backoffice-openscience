@@ -9,7 +9,6 @@ export default {
   },
 };
 
-
 export const Default = (args: { placeholder: string }) => (
   <FormFields placeholder={args.placeholder} />
 );
