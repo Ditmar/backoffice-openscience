@@ -14,7 +14,7 @@
 
 .form-label {
   color: var(--ads-colors-black);
-  font-family: Barlow;
+  font-family: Barlow, sans-serif;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -22,8 +22,8 @@
 
 .form-input {
   border: 1px solid var(--ads-colors-gray-20);
-  border-radius: 4px;
   background-color: var(--ads-colors-gray-70);
+  border-radius: 4px;
   font-size: 14px;
   padding: 8px 12px;
   transition: border-color 0.2s ease, background-color 0.2s ease;
