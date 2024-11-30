@@ -15,6 +15,7 @@ function TableComponent({ data }: IProps) {
   }
   function handleProtected(id: number) {
     const dataFind = data.find((row) => row.id === id);
+    // eslint-disable-next-line no-console
     console.log(`Protected data: ${dataFind?.title}`);
     setProtectedData(!protectedData);
   }
