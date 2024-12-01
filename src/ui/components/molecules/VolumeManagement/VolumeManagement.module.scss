@@ -1,0 +1,19 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
+
+.volume-management__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.volume-management__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: flex-start;
+    position: relative; 
+  }
