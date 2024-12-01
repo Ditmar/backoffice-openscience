@@ -13,8 +13,8 @@ function FormFields({ placeholder }: { placeholder: string }) {
         'Email',
       ].map((label) => (
         <div className={styles['form-fields__group']} key={label}>
-          <label 
-            htmlFor={label.toLowerCase().replace(' ', '-')} 
+          <label
+            htmlFor={label.toLowerCase().replace(' ', '-')}
             className={styles['form-fields__label']}
           >
             {label}
