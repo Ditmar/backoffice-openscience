@@ -1,36 +1,42 @@
 @import '../../globals/ads-variables.scss';
 
-.ffFields {
+$form-fields-color-black: $--ads-colors-black;
+$form-fields-color-gray-10: $--ads-colors-gray-10;
+$form-fields-color-gray-20: $--ads-colors-gray-20;
+$form-fields-color-white: $--ads-colors-white;
+$form-fields-color-blue-50: $--ads-colors-blue-50;
+
+.form-fields {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
 }
 
-.ffGroup {
+.form-fields__group {
   display: flex;
   flex-direction: column;
 }
 
-.ffLabel {
-  color: var($--ads-colors-black);
+.form-fields__label {
+  color: $form-fields-color-black;
   font-family: Barlow, sans-serif;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
-.ffInput {
-  background-color: var($--ads-colors-gray-10);
-  border: 1px solid var($--ads-colors-gray-50);
+.form-fields__input {
+  background-color: $form-fields-color-gray-10;
+  border: 1px solid $form-fields-color-gray-20;
   border-radius: 4px;
   font-size: 14px;
   padding: 8px 12px;
   transition: border-color 0.2s ease, background-color 0.2s ease;
-}
 
-.ffInput:focus {
-  background-color: var($--ads-colors-white);
-  border-color: var($--ads-colors-gray-70);
-  outline: none;
+  &:focus {
+    background-color: $form-fields-color-white;
+    border-color: $form-fields-color-blue-50;
+    outline: none;
+  }
 }

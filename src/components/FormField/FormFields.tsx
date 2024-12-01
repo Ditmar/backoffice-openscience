@@ -3,7 +3,7 @@ import styles from './FormFields.module.scss';
 
 function FormFields({ placeholder }: { placeholder: string }) {
   return (
-    <div className={styles.ffFields}>
+    <div className={styles['form-fields']}>
       {[
         'Full name',
         'InstitutionalAffiliation',
@@ -12,15 +12,15 @@ function FormFields({ placeholder }: { placeholder: string }) {
         'Articles',
         'Email',
       ].map((label) => (
-        <div className={styles.ffGroup} key={label}>
-          <label htmlFor={label.toLowerCase().replace(' ', '-')} className={styles.ffLabel}>
+        <div className={styles['form-fields__group']} key={label}>
+          <label htmlFor={label.toLowerCase().replace(' ', '-')} className={styles['form-fields__label']}>
             {label}
           </label>
           <input
             type="text"
             id={label.toLowerCase().replace(' ', '-')}
             placeholder={placeholder}
-            className={styles.ffInput}
+            className={styles['form-fields__input']}
           />
         </div>
       ))}
