@@ -1,36 +1,36 @@
-@import 'src/globals/ads-variables.scss';
+@import '../../globals/ads-variables.scss';
 
-.form-fields {
+.ffFields {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
 }
 
-.form-group {
+.ffGroup {
   display: flex;
   flex-direction: column;
 }
 
-.form-label {
-  color: var(--ads-colors-black);
+.ffLabel {
+  color: var($--ads-colors-black);
   font-family: Barlow, sans-serif;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
-.form-input {
-  background-color: var(--ads-colors-gray-70);
-  border: 1px solid var(--ads-colors-gray-20);
+.ffInput {
+  background-color: var($--ads-colors-gray-10);
+  border: 1px solid var($--ads-colors-gray-50);
   border-radius: 4px;
   font-size: 14px;
   padding: 8px 12px;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.form-input:focus {
-  background-color: var(--ads-colors-white);
-  border-color: var(--ads-colors-blue-50);
+.ffInput:focus {
+  background-color: var($--ads-colors-white);
+  border-color: var($--ads-colors-gray-70);
   outline: none;
 }

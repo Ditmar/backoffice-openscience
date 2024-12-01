@@ -1,9 +1,9 @@
 import React from 'react';
-import './FormFields.css';
+import styles from './FormFields.module.scss';
 
 function FormFields({ placeholder }: { placeholder: string }) {
   return (
-    <div className="form-fields">
+    <div className={styles.ffFields}>
       {[
         'Full name',
         'InstitutionalAffiliation',
@@ -12,15 +12,18 @@ function FormFields({ placeholder }: { placeholder: string }) {
         'Articles',
         'Email',
       ].map((label) => (
-        <div className="form-group" key={label}>
-          <label htmlFor={label.toLowerCase().replace(' ', '-')} className="form-label">
+        <div className={styles.ffGroup} key={label}>
+          <label
+            htmlFor={label.toLowerCase().replace(' ', '-')}
+            className={styles.ffLabel}
+          >
             {label}
           </label>
           <input
             type="text"
             id={label.toLowerCase().replace(' ', '-')}
             placeholder={placeholder}
-            className="form-input"
+            className={styles.ffInput}
           />
         </div>
       ))}
