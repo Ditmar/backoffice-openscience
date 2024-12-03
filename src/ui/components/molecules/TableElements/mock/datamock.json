@@ -1,0 +1,26 @@
+{
+    "data": [
+      {
+        "id": 123,
+        "attributes": {
+          "content": "HTML Content for testing Formatting",
+          "author": "Rinky Batras",
+          "category": "Integration y customization",
+          "date": "2024-03-07",
+          "buttonLabel": "No",
+          "isToggleOn": true
+        }
+      },
+      {
+        "id": 124,
+        "attributes": {
+          "content": "Another HTML Content for testing",
+          "author": "John Doe",
+          "category": "Testing y development",
+          "date": "2024-04-08",
+          "buttonLabel": "Yes",
+          "isToggleOn": false
+        }
+      }
+    ]
+  }
