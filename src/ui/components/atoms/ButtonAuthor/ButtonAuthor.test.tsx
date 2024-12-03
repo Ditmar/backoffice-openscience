@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { Button } from './ButtonAuthor';
-import styles from './ButtonAuthor.module.scss'; // Importa los estilos para la referencia
+import styles from './ButtonAuthor.module.scss';
 
 describe('Button component', () => {
   it('renders with the correct text for Default variant', () => {
@@ -46,7 +46,6 @@ describe('Button component', () => {
 
     const button = container.querySelector('button');
     if (button) {
-      /* console.log(button.className); */
       expect(button.classList.contains(styles.primary)).toBe(true);
     } else {
       throw new Error('Button element not found');

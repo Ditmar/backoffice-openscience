@@ -5,7 +5,7 @@ const meta: Meta<typeof Button> = {
   title: 'ui/components/atoms/ButtonAuthor',
   component: Button,
   argTypes: {
-    onClick: { action: 'clicked' }, // Registra el evento automáticamente
+    onClick: { action: 'clicked' },
     label: { control: 'text' },
     variant: { control: 'radio', options: ['default', 'primary'] },
   },
