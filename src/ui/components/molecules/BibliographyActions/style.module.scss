@@ -1,0 +1,31 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+
+.container{
+    align-items: center;
+    display: flex;
+    font-family: Barlow, sans-serif;
+    gap: .1rem;
+    justify-content: space-between;
+
+    &:nth-child(1) select{
+        cursor: pointer;
+        font-weight: lighter;
+
+        & + p{
+            border-bottom: 1px solid $--ads-colors-blue-70;
+        }
+    }
+
+    &:nth-child(2) button{
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.setbg{
+    background-color: $--ads-colors-gray-20;
+    border-radius: 0.313rem;
+    color: $--ads-colors-black;
+    padding: 0.625rem;
+}
