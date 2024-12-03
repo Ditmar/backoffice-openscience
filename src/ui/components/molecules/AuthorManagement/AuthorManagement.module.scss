@@ -1,0 +1,43 @@
+@import '../../../../globals/ads-variables';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+.management {
+    background-color: $--ads-colors-gray-20;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    @include respond-to('medium') {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__buttons {
+    display: flex;
+    flex-direction: row !important;;
+    gap: 8px;
+
+    @include respond-to('small-mobile') {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    button {
+        background-color: $--ads-colors-white;
+        color: $--ads-colors-black;
+        font-size: 14px;
+        padding: 8px 16px;
+        transition: all 0.3s ease;
+
+    @include respond-to('small-mobile') {
+        font-size: 12px;
+        padding: 6px 12px;
+            } 
+        }
+    }
+}
+
+
