@@ -1,0 +1,27 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+
+.form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 75rem;
+  padding: 1rem;
+
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form__label {
+  color: $--ads-colors-black;
+  font-family: Barlow, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
