@@ -72,19 +72,19 @@
   }
 
   @include respond-to('small') {
-    max-width: 15.5rem;
+    max-width: 14.5rem;
   }
 
   @include respond-to('small-mobile') {
-    max-width: 15.5rem;
+    max-width: 14.5rem;
   }
 
   @include respond-to('small-mobile-large') {
-    max-width: 32rem;
+    max-width: 29.25rem;
   }
 
   @include respond-to('medium') {
-    max-width: 23rem;
+    max-width: 22rem;
   }
 
   @include respond-to('large') {
@@ -92,10 +92,10 @@
   }
 
   @include respond-to('large-tablet') {
-    max-width: 31.25rem;
+    max-width: 29rem;
   }
 
   @include respond-to('extra-large') {
-    max-width: 31.25rem;
+    max-width: 29rem;
   }
 }
