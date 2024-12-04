@@ -9,7 +9,7 @@ const meta: Meta<typeof GalleryForm> = {
       control: { type: 'radio' },
       options: ['small', 'medium', 'large'],
       description: 'Size of the TextInput components',
-      defaultValue: 'medium', // Valor predeterminado para size
+      defaultValue: 'medium',
     },
     onInputChange: {
       action: 'onInputChange',
@@ -22,21 +22,18 @@ export default meta;
 
 type Story = StoryObj<typeof GalleryForm>;
 
-// Historia predeterminada
 export const Default: Story = {
   args: {
     size: 'medium',
   },
 };
 
-// Historia con inputs pequeños
 export const Small: Story = {
   args: {
     size: 'small',
   },
 };
 
-// Historia con inputs grandes
 export const Large: Story = {
   args: {
     size: 'large',
