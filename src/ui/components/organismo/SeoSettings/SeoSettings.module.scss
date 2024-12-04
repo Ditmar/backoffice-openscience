@@ -1,0 +1,26 @@
+@import '../../../../globals/fonts.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center
+
+}
+.upload-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.label{
+    display: flex;
+    font-family: Barlow, sans-serif;    ;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+}
