@@ -2,7 +2,6 @@
 @import '../../../../globals/ads-variables.scss';
 
 .bibliography__form {
-  background-color: aquamarine;
   align-items: center;
   display: grid;
   gap: 1rem;
@@ -18,7 +17,6 @@
 }
 
 .form__field {
-  background-color: bisque;
   border-bottom: 2px solid $--ads-colors-gray-50;
   display: block;
   flex-direction: column;
@@ -39,14 +37,12 @@
 }
 
 .form__holders{
-  background-color: rgb(191, 255, 0);
   margin: auto;
   display: flex;
   gap: 40px;
 }
 
 .form__author{
-  background-color: magenta;
   margin: 15px;
 }
   

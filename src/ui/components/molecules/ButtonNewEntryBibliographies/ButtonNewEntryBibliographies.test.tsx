@@ -8,8 +8,8 @@ describe('ButtonNewEntryBibliographies', () => {
   it('renders all fields with correct placeholders', () => {
     render(<ButtonNewEntryBibliographies onChange={() => {}} />);
     const fields = [
-      { label: 'Public Type', placeholder: 'Enter publication type' },
-      { label: 'Author Last Name', placeholder: 'Enter author name' },
+      { label: 'publication Year', placeholder: 'Enter publication Year' },
+      { label: 'article', placeholder: 'Enter article' },
     ];
 
     fields.forEach(({ label, placeholder }) => {
@@ -22,10 +22,10 @@ describe('ButtonNewEntryBibliographies', () => {
     const onChangeMock = vi.fn();
     render(<ButtonNewEntryBibliographies onChange={onChangeMock} />);
 
-    const input = screen.getByPlaceholderText('Enter publication year');
+    const input = screen.getByPlaceholderText('Enter publication Year');
 
     await userEvent.type(input, 'article');
 
-    expect(onChangeMock).toHaveBeenCalledTimes(4);
+    expect(onChangeMock).toHaveBeenCalledTimes(7);
   });
 });

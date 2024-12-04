@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { ISideMenuProps } from './types/Iprops';
 import SideMenuButton from '../../atoms/side-menu-button/SideMenuButton';
 import styles from './SideMenu.module.scss';

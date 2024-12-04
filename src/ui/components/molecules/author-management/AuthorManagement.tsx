@@ -1,4 +1,3 @@
-import React from 'react';
 import classNames from 'classnames';
 import styles from './AuthorManagement.module.scss';
 import EditModelButton from '../../atoms/edit-model-button/EditModelButton';
