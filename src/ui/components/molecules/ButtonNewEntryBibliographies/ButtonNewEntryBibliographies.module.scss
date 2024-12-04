@@ -6,13 +6,13 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 50% 50%;
+  margin: auto;
   max-width: 100%;
-  padding-left: 5%;
-  margin: auto; 
-  padding: 5px; 
+  padding: 5px;
+    
 
-  @media (width <= 768px) { 
-    grid-template-columns: 1fr; 
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -36,13 +36,12 @@
   text-shadow: 3px;
 }
 
-.form__holders{
-  margin: auto;
+.form__holders {
   display: flex;
   gap: 40px;
+  margin: auto;
 }
 
-.form__author{
+.form__author {
   margin: 15px;
 }
-  

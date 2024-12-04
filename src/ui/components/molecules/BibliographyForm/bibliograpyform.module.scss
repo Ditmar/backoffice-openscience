@@ -9,8 +9,8 @@
   max-width: 1200px;
   padding-left: 5%;
 
-  @media (width <= 768px) { 
-    grid-template-columns: 1fr; 
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
   }
 }
 

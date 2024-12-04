@@ -3,143 +3,147 @@
 @import '../../../../globals/_fonts';
 
 .side-menu {
-    background-color: $--ads-colors-black;
-    color: $--ads-colors-white;
-    display: flex;
-    flex-direction: column;
-    font-family: Barlow, sans-serif;
-    transition: width 0.5s ease, padding 0.5s ease;
-    width: 250px;
+  background-color: $--ads-colors-black;
+  color: $--ads-colors-white;
+  display: flex;
+  flex-direction: column;
+  font-family: Barlow, sans-serif;
+  transition:
+    width 0.5s ease,
+    padding 0.5s ease;
+  width: 250px;
+
+  @include respond-to('small-mobile') {
+    width: 200px;
+  }
+
+  @include respond-to('medium') {
+    width: 220px;
+  }
+
+  @include respond-to('large') {
+    width: 270px;
+  }
+
+  @include respond-to('extra-large') {
+    width: 300px;
+  }
+
+  &.collapsed {
+    width: 60px;
 
     @include respond-to('small-mobile') {
-        width: 200px;
+      width: 50px;
     }
 
     @include respond-to('medium') {
-        width: 220px;
+      width: 55px;
     }
 
     @include respond-to('large') {
-        width: 270px;
+      width: 65px;
     }
 
     @include respond-to('extra-large') {
-        width: 300px;
+      width: 70px;
     }
-
-    &.collapsed {
-        width: 60px;
-
-        @include respond-to('small-mobile') {
-            width: 50px;
-        }
-
-        @include respond-to('medium') {
-            width: 55px;
-        }
-
-        @include respond-to('large') {
-            width: 65px;
-        }
-
-        @include respond-to('extra-large') {
-            width: 70px;
-        }
-    }
+  }
 }
 
-    .menu-header {
+.menu-header {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+
+  .hide-menu-button {
     align-items: center;
+    background: none;
+    border: none;
+    color: $--ads-colors-white;
+    cursor: pointer;
     display: flex;
-    height: 60px;
-    justify-content: center;
-    margin-right: 10px;
-    transition: all 0.3s ease;
+    font-family: Barlow, sans-serif;
+    font-size: 20px;
+    gap: 10px;
+    text-transform: uppercase;
+    transition:
+      justify-content 0.3s ease,
+      gap 0.3s ease;
 
-    .hide-menu-button {
-        align-items: center;
-        background: none;
-        border: none;
-        color: $--ads-colors-white;
-        cursor: pointer;
-        display: flex;
-        font-family: Barlow, sans-serif;
-        font-size: 20px;
-        gap: 10px;
-        text-transform: uppercase;
-        transition: justify-content 0.3s ease, gap 0.3s ease;
-
-        .icon {
-            align-items: center;
-            display: flex;
-            height: 20px;
-            justify-content: center;
-            width: 20px;
-        }
-
-        span {
-            display: none;
-            transition: opacity 0.3s ease;
-        }
-
-        &:not(.collapsed) span {
-            display: inline;
-            opacity: 1;
-        }
+    .icon {
+      align-items: center;
+      display: flex;
+      height: 20px;
+      justify-content: center;
+      width: 20px;
     }
+
+    span {
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &:not(.collapsed) span {
+      display: inline;
+      opacity: 1;
+    }
+  }
 }
 
 .menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .side-menu-button {
+    align-items: center;
+    background-color: $--ads-colors-black;
+    border: none;
+    color: $--ads-colors-white;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    padding: 0;
+    font-family: Barlow, sans-serif;
+    font-size: 16px;
+    height: 50px;
+    justify-content: flex-start;
+    letter-spacing: 0.16px;
+    line-height: 30px;
+    padding: 10px 15px;
+    text-align: left;
+    transition: all 0.3s ease;
 
-    .side-menu-button {
-        align-items: center;
-        background-color: $--ads-colors-black;
-        border: none;
-        color: $--ads-colors-white;
-        cursor: pointer;
-        display: flex;
-        font-family: Barlow, sans-serif;
-        font-size: 16px;
-        height: 50px;
-        justify-content: flex-start;
-        letter-spacing: 0.16px;
-        line-height: 30px;
-        padding: 10px 15px;
-        text-align: left;
-        transition: all 0.3s ease;
-
-        svg {
-            fill: $--ads-colors-white;
-            height: 24px;
-            margin-right: 10px;
-            transition: margin 0.3s ease;
-            width: 24px;
-        }
-
-        &:hover {
-            background-color: $--ads-colors-gray-20;
-            color: $--ads-colors-gray-70;
-
-            svg {
-                fill: $--ads-colors-gray-70;
-            }
-        }
-
-        &.collapsed {
-            justify-content: center;
-            padding: 0;
-            text-align: center;
-
-            svg {
-                margin-right: 0;
-            }
-
-            span {
-                display: none;
-            }
-        }
+    svg {
+      fill: $--ads-colors-white;
+      height: 24px;
+      margin-right: 10px;
+      transition: margin 0.3s ease;
+      width: 24px;
     }
+
+    &:hover {
+      background-color: $--ads-colors-gray-20;
+      color: $--ads-colors-gray-70;
+
+      svg {
+        fill: $--ads-colors-gray-70;
+      }
+    }
+
+    &.collapsed {
+      justify-content: center;
+      padding: 0;
+      text-align: center;
+
+      svg {
+        margin-right: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
 }

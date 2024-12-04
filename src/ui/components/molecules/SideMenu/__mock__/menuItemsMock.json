@@ -1,82 +1,81 @@
 {
-    "data": [
-      {
-        "id": 1,
-        "title": "Content Management",
-        "icon": "content-management",
-        "path": "/article",
-        "basePath": "/"
-      },
-      {
-        "id": 2,
-        "title": "Article Management",
-        "icon": "article-management",
-        "path": "/author",
-        "basePath": "/"
-      },
-      {
-        "id": 3,
-        "title": "Author Management",
-        "icon": "author-management",
-        "path": "/bibliographies",
-        "basePath": "/"
-      },
-      {
-        "id": 4,
-        "title": "Bibliographines",
-        "icon": "bibliographines",
-        "path": "/gallery",
-        "basePath": "/"
-      },
-      {
-        "id": 5,
-        "title": "Image Gallery",
-        "icon": "image-gallery",
-        "path": "/index",
-        "basePath": "/"
-      },
-      {
-        "id": 6,
-        "title": "Index Builder",
-        "icon": "index-builder",
-        "path": "/volume",
-        "basePath": "/"
-      },
-      {
-        "id": 7,
-        "title": "Volume Management",
-        "icon": "volume-management",
-        "path": "/volume",
-        "basePath": "/"
-      },
-      {
-        "id": 8,
-        "title": "Site Configuration",
-        "icon": "site-configuration",
-        "path": "/volume",
-        "basePath": "/"
-      },
-      {
-        "id": 9,
-        "title": "SEO Settings",
-        "icon": "seo-settings",
-        "path": "/volume",
-        "basePath": "/"
-      },
-      {
-        "id": 10,
-        "title": "Dynamic Banner Management",
-        "icon": "dinamicBannerManagement",
-        "path": "/volume",
-        "basePath": "/"
-      },
-      {
-        "id": 11,
-        "title": "User Management",
-        "icon": "user-management",
-        "path": "/volume",
-        "basePath": "/"
-      }
-    ]
-  }
-  
+  "data": [
+    {
+      "id": 1,
+      "title": "Content Management",
+      "icon": "content-management",
+      "path": "/article",
+      "basePath": "/"
+    },
+    {
+      "id": 2,
+      "title": "Article Management",
+      "icon": "article-management",
+      "path": "/author",
+      "basePath": "/"
+    },
+    {
+      "id": 3,
+      "title": "Author Management",
+      "icon": "author-management",
+      "path": "/bibliographies",
+      "basePath": "/"
+    },
+    {
+      "id": 4,
+      "title": "Bibliographines",
+      "icon": "bibliographines",
+      "path": "/gallery",
+      "basePath": "/"
+    },
+    {
+      "id": 5,
+      "title": "Image Gallery",
+      "icon": "image-gallery",
+      "path": "/index",
+      "basePath": "/"
+    },
+    {
+      "id": 6,
+      "title": "Index Builder",
+      "icon": "index-builder",
+      "path": "/volume",
+      "basePath": "/"
+    },
+    {
+      "id": 7,
+      "title": "Volume Management",
+      "icon": "volume-management",
+      "path": "/volume",
+      "basePath": "/"
+    },
+    {
+      "id": 8,
+      "title": "Site Configuration",
+      "icon": "site-configuration",
+      "path": "/volume",
+      "basePath": "/"
+    },
+    {
+      "id": 9,
+      "title": "SEO Settings",
+      "icon": "seo-settings",
+      "path": "/volume",
+      "basePath": "/"
+    },
+    {
+      "id": 10,
+      "title": "Dynamic Banner Management",
+      "icon": "dinamicBannerManagement",
+      "path": "/volume",
+      "basePath": "/"
+    },
+    {
+      "id": 11,
+      "title": "User Management",
+      "icon": "user-management",
+      "path": "/volume",
+      "basePath": "/"
+    }
+  ]
+}

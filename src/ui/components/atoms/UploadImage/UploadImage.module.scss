@@ -1,6 +1,6 @@
-@import '../../../../globals/ads-variables.scss'; 
+@import '../../../../globals/ads-variables.scss';
 
-.uploadarea {  
+.uploadarea {
   align-items: center;
   background-color: $--ads-colors-white;
   border: 0.125rem dashed $--ads-colors-gray-40;
@@ -12,7 +12,9 @@
   justify-content: center;
   position: relative;
   text-align: center;
-  transition: border-color 0.3s, background-color 0.3s;
+  transition:
+    border-color 0.3s,
+    background-color 0.3s;
   width: 25rem;
 
   &:hover {
@@ -21,11 +23,11 @@
 
   &:focus,
   &:focus-visible {
-    border-color: $--ads-colors-blue-50; 
-    outline: none;  
+    border-color: $--ads-colors-blue-50;
+    outline: none;
   }
 
-  &--image-selected {  
+  &--image-selected {
     background-color: $--ads-colors-gray-15;
     border-color: $--ads-colors-blue-40;
   }
@@ -43,7 +45,7 @@
     margin-top: 0.625rem;
   }
 
-  .error-message {  
+  .error-message {
     color: $--ads-colors-red-80;
     font-size: 0.875rem;
     margin-top: 0.625rem;
