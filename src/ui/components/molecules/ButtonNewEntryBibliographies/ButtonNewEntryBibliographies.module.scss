@@ -1,0 +1,52 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+
+.bibliography__form {
+  background-color: aquamarine;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 50% 50%;
+  max-width: 100%;
+  padding-left: 5%;
+  margin: auto; 
+  padding: 5px; 
+
+  @media (width <= 768px) { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+.form__field {
+  background-color: bisque;
+  border-bottom: 2px solid $--ads-colors-gray-50;
+  display: block;
+  flex-direction: column;
+  line-height: 10px;
+  padding: 0 20px 0 0;
+  width: 85%;
+}
+
+.form__label {
+  color: $--ads-colors-black;
+  flex-direction: row;
+  font-family: Barlow, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  line-height: 50px;
+  text-shadow: 3px;
+}
+
+.form__holders{
+  background-color: rgb(191, 255, 0);
+  margin: auto;
+  display: flex;
+  gap: 40px;
+}
+
+.form__author{
+  background-color: magenta;
+  margin: 15px;
+}
+  
