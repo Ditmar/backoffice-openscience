@@ -6,25 +6,25 @@
   display: flex;
   flex-direction: column;
   font-family: Barlow, sans-serif;
-  padding: 16px;
+  padding: 1rem;
   width: 100%;
 
   &.small {
-    gap: 4px;
-    max-width: 466px;
-    padding: 12px;
+    gap: 0.25rem;
+    max-width: 29.125rem;
+    padding: 0.75rem;
   }
 
   &.medium {
-    gap: 6px;
-    max-width: 626px;
-    padding: 16px;
+    gap: 0.375rem;
+    max-width: 39.125rem;
+    padding: 1rem;
   }
 
   &.large {
-    gap: 8px;
-    max-width: 832px;
-    padding: 20px;
+    gap: 0.5rem;
+    max-width: 52rem;
+    padding: 1.25rem;
   }
 }
 
@@ -32,31 +32,31 @@
   box-sizing: border-box;
   display: flex;
   font-size: inherit;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   width: 100%;
 
   &.small {
-    height: 40px;
+    height: 2.5rem;
   }
 
   &.medium {
-    height: 52px;
+    height: 3.25rem;
   }
 
   &.large {
-    height: 60px;
+    height: 3.75rem;
   }
 }
 
 .info-actions-container {
   align-items: center;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   width: 100%;
 
   @media screen and (width <= 768px) {
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
   }
 }
 
@@ -64,25 +64,25 @@
   background-color: $--ads-colors-gray-10;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  height: 161px;
+  gap: 0.125rem;
+  height: 10.0625rem;
   overflow: hidden;
 
   @media screen and (width >= 768px) {
-    max-width: 440px;
+    max-width: 27.5rem;
     width: 100%;
   }
 
   @media screen and (width <= 768px) {
-    max-width: 480px;
+    max-width: 30rem;
     width: 100%;
   }
 
   p {
     color: $--ads-colors-gray-70;
-    font-size: 14px;
-    line-height: 22px;
-    margin: 2px 30px 2px 15px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin: 0.125rem 1.875rem 0.125rem 0.9375rem;
     overflow-wrap: break-word;
   }
 }
@@ -90,23 +90,23 @@
 .info-row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
 }
 
 .actions-container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125rem;
   width: 37%;
 
   @media screen and (width <= 768px) {
     flex-flow: row wrap;
-    gap: 4px;
+    gap: 0.25rem;
     justify-content: space-between;
     width: 100%;
   }
 }
 
 .actions-container .button {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
