@@ -1,0 +1,11 @@
+import{j as r}from"./jsx-runtime-DEdD30eg.js";import{c as g}from"./index-Dejnh_W_.js";import{I as x}from"./icons-ufjl08CC.js";import u from"./add-BNW0LZHy.js";import"./index-RYns6xqu.js";import"./iframe-DuDCstHk.js";import"../sb-preview/runtime.js";import"./index-rNTiGNI1.js";const e={"btn-container":"_btn-container_tx3w9_1","btn-main":"_btn-main_tx3w9_6","btn-main--small":"_btn-main--small_tx3w9_18","btn-main--medium":"_btn-main--medium_tx3w9_22","btn-main--large":"_btn-main--large_tx3w9_26","btn-icon":"_btn-icon_tx3w9_45"};function p({size:t="medium",disabled:b=!1,onClick:_,icon:s}){const f=g(e["btn-main"],{[e["btn-main--small"]]:t==="small",[e["btn-main--medium"]]:t==="medium",[e["btn-main--large"]]:t==="large"});return r.jsx("button",{className:f,onClick:_,disabled:b,children:s&&r.jsx(x,{"data-testid":"icon_add",src:s,className:e["btn-icon"]})})}p.__docgenInfo={description:"",methods:[],displayName:"SecondaryButtonIcon",props:{size:{required:!1,tsType:{name:"union",raw:"'small' | 'medium' | 'large'",elements:[{name:"literal",value:"'small'"},{name:"literal",value:"'medium'"},{name:"literal",value:"'large'"}]},description:"",defaultValue:{value:"'medium'",computed:!1}},disabled:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},icon:{required:!1,tsType:{name:"string"},description:""}}};const N={title:"ui/components/atoms/secondary-button-icon",component:p,argTypes:{onClick:{action:"click"},disabled:{control:"boolean"}}},a={args:{icon:u,disabled:!1}},n={args:{icon:u,disabled:!0}};var o,i,m;a.parameters={...a.parameters,docs:{...(o=a.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    icon: add,
+    disabled: false
+  }
+}`,...(m=(i=a.parameters)==null?void 0:i.docs)==null?void 0:m.source}}};var l,d,c;n.parameters={...n.parameters,docs:{...(l=n.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    icon: add,
+    disabled: true
+  }
+}`,...(c=(d=n.parameters)==null?void 0:d.docs)==null?void 0:c.source}}};const S=["Enabled","Disabled"];export{n as Disabled,a as Enabled,S as __namedExportsOrder,N as default};
