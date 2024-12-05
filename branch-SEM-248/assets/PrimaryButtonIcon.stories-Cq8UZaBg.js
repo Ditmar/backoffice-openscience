@@ -1,0 +1,11 @@
+import{j as r}from"./jsx-runtime-DEdD30eg.js";import{c as g}from"./index-Dejnh_W_.js";import{I as y}from"./icons-DwdEOAHv.js";import u from"./add-BNW0LZHy.js";import"./index-RYns6xqu.js";import"./iframe-Ci9hp_Qa.js";import"../sb-preview/runtime.js";import"./index-rNTiGNI1.js";const e={"btn-container":"_btn-container_1ms60_1","btn-main":"_btn-main_1ms60_6","btn-main--small":"_btn-main--small_1ms60_18","btn-main--medium":"_btn-main--medium_1ms60_22","btn-main--large":"_btn-main--large_1ms60_26","btn-icon":"_btn-icon_1ms60_45"};function p({size:s="medium",disabled:b=!1,onClick:_,icon:t}){const f=g(e["btn-main"],{[e["btn-main--small"]]:s==="small",[e["btn-main--medium"]]:s==="medium",[e["btn-main--large"]]:s==="large"});return r.jsx("button",{className:f,onClick:_,disabled:b,children:t&&r.jsx(y,{"data-testid":"icon_add",src:t,className:e["btn-icon"]})})}p.__docgenInfo={description:"",methods:[],displayName:"PrimaryButtonIcon",props:{size:{required:!1,tsType:{name:"union",raw:"'small' | 'medium' | 'large'",elements:[{name:"literal",value:"'small'"},{name:"literal",value:"'medium'"},{name:"literal",value:"'large'"}]},description:"",defaultValue:{value:"'medium'",computed:!1}},disabled:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},icon:{required:!1,tsType:{name:"string"},description:""}}};const k={title:"ui/components/atoms/Primary-Button-Icon",component:p,argTypes:{onClick:{action:"click"},disabled:{control:"boolean"}}},a={args:{icon:u,disabled:!1}},n={args:{icon:u,disabled:!0}};var i,m,o;a.parameters={...a.parameters,docs:{...(i=a.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  args: {
+    icon: add,
+    disabled: false
+  }
+}`,...(o=(m=a.parameters)==null?void 0:m.docs)==null?void 0:o.source}}};var l,d,c;n.parameters={...n.parameters,docs:{...(l=n.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    icon: add,
+    disabled: true
+  }
+}`,...(c=(d=n.parameters)==null?void 0:d.docs)==null?void 0:c.source}}};const B=["Enabled","Disabled"];export{n as Disabled,a as Enabled,B as __namedExportsOrder,k as default};
