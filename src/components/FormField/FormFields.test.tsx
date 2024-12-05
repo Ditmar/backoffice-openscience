@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import FormFields from './FormFields';
-import type { FormFieldsProps } from './FormFields'; // Cambiado a type-only import
+import type { FormFieldsProps } from './FormFields';
 
 const defaultProps: FormFieldsProps = {
   placeholder: 'Enter text here',
@@ -9,9 +9,9 @@ const defaultProps: FormFieldsProps = {
 
 describe('FormFields Component', () => {
   it('renders all form fields correctly', () => {
-    render(<FormFields {...defaultProps} />);
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
-    const labels = [
+    const labels: string[] = [
       'Full name',
       'InstitutionalAffiliation',
       'ORCID',
@@ -21,19 +21,20 @@ describe('FormFields Component', () => {
     ];
 
     labels.forEach((label) => {
-      expect(screen.getByLabelText(label)).toBeInTheDocument();
+      const element: HTMLElement = screen.getByLabelText(label);
+      expect(element).toBeInTheDocument();
     });
   });
 
   it('renders input elements with the correct placeholder', () => {
-    render(<FormFields {...defaultProps} />);
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
-    const inputs = screen.getAllByPlaceholderText(defaultProps.placeholder);
+    const inputs: HTMLElement[] = screen.getAllByPlaceholderText(defaultProps.placeholder);
     expect(inputs).toHaveLength(6);
   });
 
   it('allows text input in fields', () => {
-    render(<FormFields {...defaultProps} />);
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
     const input = screen.getByLabelText('Full name') as HTMLInputElement;
     fireEvent.change(input, { target: { value: 'John Doe' } });
