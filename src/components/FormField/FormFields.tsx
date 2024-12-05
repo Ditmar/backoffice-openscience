@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './FormFields.module.scss';
 
-function FormFields({ placeholder }: { placeholder: string }) {
+export interface FormFieldsProps {
+  placeholder: string;
+}
+
+function FormFields({ placeholder }: FormFieldsProps) {
   return (
     <div className={styles['form-fields']}>
       {[
