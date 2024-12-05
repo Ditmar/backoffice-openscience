@@ -16,7 +16,7 @@ export function AuthorManagement({
     <div className={styles.management}>
       <CreateAnEntry title={title} apiId={apiId} />
       <div className={styles.management__buttons}>
-      <Button
+        <Button
           label={buttonLabel}
           onClick={onSave}
           variant="default"
@@ -30,7 +30,6 @@ export function AuthorManagement({
           className="primary"
           disabled={disabled}
         />
-        
       </div>
     </div>
   );
