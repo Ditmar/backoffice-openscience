@@ -9,7 +9,7 @@
   gap: 16px;
   padding: 16px;
 
-    @include respond-to('medium') {
+  @include respond-to('medium') {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -21,18 +21,24 @@
     gap: 8px;
 
     @include respond-to('small-mobile') {
-        flex-direction: row;
-        gap: 8px;
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    @include respond-to('medium') {
+      flex-direction: row;
+      gap: 30px;
+      margin-right: 40px;
     }
 
     button {
-        background-color: $--ads-colors-white;
-        color: $--ads-colors-black;
-        font-size: 14px;
-        padding: 8px 16px;
-        transition: all 0.3s ease;
+      background-color: $--ads-colors-white;
+      color: $--ads-colors-black;
+      font-size: 14px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
 
-    @include respond-to('small-mobile') {
+      @include respond-to('small-mobile') {
         font-size: 12px;
         padding: 6px 12px;
       }
@@ -40,10 +46,3 @@
   }
 }
 
-.management__buttons {
-  @include respond-to('medium') {
-    flex-direction: row;
-    gap: 30px;
-    margin-right:40px;
-  }
-}
