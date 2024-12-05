@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import classNames from 'classnames';
 import { Icon } from '../../utils/svg-icons/icons';
 import type { IProps } from './types/IProps';
@@ -11,15 +10,8 @@ function SideMenuButtonSiteSeo({
   variant = 'primary',
   path,
   basePath,
+  onClick,
 }: IProps) {
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(!isActive);
-    if (path) {
-      window.location.href = path;
-    }
-  };
-
   const buttonClass = classNames(
     styles['side-menu-button-site-seo'],
     {
@@ -31,7 +23,7 @@ function SideMenuButtonSiteSeo({
   );
 
   return (
-    <button data-testid="side-menu-button-styles" className={buttonClass} onClick={handleClick}>
+    <button data-testid="side-menu-button-styles" className={buttonClass} onClick={onClick}>
       <Icon src={icon} size="24px" className={styles.icon} />
       {children}
     </button>
