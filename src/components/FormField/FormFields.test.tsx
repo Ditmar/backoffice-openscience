@@ -36,7 +36,7 @@ test('renders input elements with the correct placeholder', () => {
 test('allows text input in fields', () => {
   render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  const input = screen.getByLabelText('Full name') as HTMLInputElement;
+  const input = screen.getByLabelText('Full name');
   fireEvent.change(input, { target: { value: 'John Doe' } });
-  expect(input.value).toBe('John Doe');
+  expect(input).toBe('John Doe');
 });
