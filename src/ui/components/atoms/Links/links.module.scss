@@ -1,27 +1,31 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
 
 .link {
     color: $--ads-colors-blue-50;
-    font-family: barlow, sans-serif;
+    font-family: barlow , sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
-  
+    
     &--small {
-      font-size: 12px;
+      font-size: 0.75rem;
     }
   
     &--medium {
-      font-size: 16px;
+      font-size: 1rem;
     }
   
     &--large {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     
     &:hover {
         color: $--ads-colors-blue-60; 
         text-decoration: underline; 
-        text-underline-offset: 4px;
+        text-underline-offset: 0.25rem;
       }
 
     &:enabled {
@@ -30,15 +34,15 @@
 
     &:active {
         color: $--ads-colors-gray-70; 
-        text-decoration-thickness: 2px; 
-        text-underline-offset: 4px; 
+        text-decoration-thickness: 0.125rem; 
+        text-underline-offset: 0.25rem; 
     }
 
     &--focus {
         color: $--ads-colors-blue-70; 
         text-decoration: underline; 
-        text-decoration-thickness: 3px;
-        text-underline-offset: 4px;
+        text-decoration-thickness: 0.188rem;
+        text-underline-offset: 0.25rem;
     }
     
     &:visited {
