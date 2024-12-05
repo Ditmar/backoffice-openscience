@@ -21,22 +21,28 @@ test('renders all form fields correctly', () => {
   ];
 
   labels.forEach((label) => {
-    const element: HTMLElement = screen.getByLabelText(label);
-    expect(element).toBeInTheDocument();
+    const element: HTMLElement | null = screen.queryByLabelText(label);
+    expect(element).not.toBeNull();
+    if (element) {
+      expect(element).toBeInTheDocument();
+    }
   });
 });
 
 test('renders input elements with the correct placeholder', () => {
   render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  const inputs: HTMLElement[] = screen.getAllByPlaceholderText(defaultProps.placeholder);
-  expect(inputs).toHaveLength(6);
+  const inputs = screen.getAllByPlaceholderText(defaultProps.placeholder) as HTMLElement[];
+  expect(inputs).toBeDefined();
+  expect(inputs.length).toBe(6);
 });
 
 test('allows text input in fields', () => {
   render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  const input = screen.getByLabelText('Full name');
+  const input = screen.getByLabelText('Full name') as HTMLInputElement;
+  expect(input).not.toBeNull();
+
   fireEvent.change(input, { target: { value: 'John Doe' } });
-  expect(input).toBe('John Doe');
+  expect(input.value).toBe('John Doe');
 });
