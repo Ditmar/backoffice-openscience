@@ -3,26 +3,26 @@
 @import '../../../../globals/_fonts';
 
 .management {
-    background-color: $--ads-colors-gray-20;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
+  background-color: $--ads-colors-gray-20;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
 
     @include respond-to('medium') {
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    &__buttons {
+  &__buttons {
     display: flex;
-    flex-direction: row !important;;
+    flex-direction: row;
     gap: 8px;
 
     @include respond-to('small-mobile') {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: row;
+        gap: 8px;
     }
 
     button {
@@ -35,9 +35,15 @@
     @include respond-to('small-mobile') {
         font-size: 12px;
         padding: 6px 12px;
-            } 
-        }
+      }
     }
+  }
 }
 
-
+.management__buttons {
+  @include respond-to('medium') {
+    flex-direction: row;
+    gap: 30px;
+    margin-right:40px;
+  }
+}
