@@ -1,5 +1,6 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/fonts.scss';
+@import '../../../../globals/breakpoints';
 
 .table-v2 {
   box-sizing: border-box;
@@ -54,7 +55,7 @@
   gap: 0.125rem;
   width: 100%;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
     flex-direction: column;
     gap: 0.75rem;
   }
@@ -68,12 +69,12 @@
   height: 10.0625rem;
   overflow: hidden;
 
-  @media screen and (width >= 768px) {
+  @media screen and (min-width: map-get($--ads-breakpoints-scales, 'medium')) {
     max-width: 27.5rem;
     width: 100%;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
     max-width: 30rem;
     width: 100%;
   }
@@ -99,7 +100,7 @@
   gap: 0.125rem;
   width: 37%;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
     flex-flow: row wrap;
     gap: 0.25rem;
     justify-content: space-between;
