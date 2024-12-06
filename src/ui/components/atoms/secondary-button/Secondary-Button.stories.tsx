@@ -51,7 +51,7 @@ export const Active: Story = {
 
 export const Disable: Story = {
   args: {
-    children: 'Primary button',
+    children: 'Secundary button',
     variant: 'Disabled',
     icon: add,
   },
