@@ -41,6 +41,7 @@ import emptycalendar from '../../../../assets/icons/empty-calendar.svg?raw';
 import emptyfile from '../../../../assets/icons/empty-file.svg?raw';
 import eye from '../../../../assets/icons/eye.svg?raw';
 import file from '../../../../assets/icons/file.svg?raw';
+import filter from '../../../../assets/icons/filter.svg?raw';
 import folder from '../../../../assets/icons/folder.svg?raw';
 import heart from '../../../../assets/icons/heart.svg?raw';
 import home from '../../../../assets/icons/home.svg?raw';
@@ -138,6 +139,7 @@ const svgIcons = [
   emptyfile,
   eye,
   file,
+  filter,
   folder,
   heart,
   home,
