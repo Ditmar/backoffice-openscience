@@ -1,5 +1,6 @@
 @import '../../../../globals/fonts';
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
 
 .bibliography__form {
   align-items: center;
@@ -12,13 +13,13 @@
   max-width: 100%;
   padding: 0.5rem;
 
-  @media (width >= 768px) and (width <= 1024px) {
+  @include respond-to('medium') {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     max-width: 90%;
   }
 
-  @media (width >= 1025px) {
+  @include respond-to('large') {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -30,7 +31,7 @@
   padding: 0 20px 0 0;
   width: 100%;
 
-  @media (width <= 768px) {
+  @include respond-to('small') {
     width: 90%;
   }
 }
@@ -52,7 +53,7 @@
   gap: 40px;
   margin: auto;
 
-  @media (width >= 768px) {
+  @include respond-to('medium') {
     flex-direction: row;
   }
 }
