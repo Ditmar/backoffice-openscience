@@ -16,7 +16,9 @@
     @media (min-width: map-get($--ads-breakpoints-scales, $breakpoint)) {
       @content;
     }
-  } @else {
+  }
+
+ @else {
     @warn "Breakpoint not found: #{$breakpoint}.";
   }
 }
@@ -26,7 +28,9 @@
     @media (max-width: map-get($--ads-breakpoints-scales, $breakpoint)) {
       @content;
     }
-  } @else {
+  }
+
+ @else {
     @warn "Breakpoint not found: #{$breakpoint}.";
   }
 }
@@ -49,12 +53,12 @@
   display: flex;
   font-size: inherit;
   margin-bottom: 0.5rem;
+  padding: 0;
   width: 100%;
-  padding: 0rem;
 
-  @include table-size('small', null, null, 0rem);
-  @include table-size('medium', null, null, 0rem);
-  @include table-size('large', null, null, 0rem);
+  @include table-size('small', null, null, 0);
+  @include table-size('medium', null, null, 0);
+  @include table-size('large', null, null, 0);
 }
 
 .info-actions-container {
