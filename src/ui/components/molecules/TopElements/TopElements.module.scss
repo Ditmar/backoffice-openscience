@@ -1,0 +1,67 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/_breakpoints.scss';
+@import '../../../../globals/mixins';
+
+.top-elements {
+    background-color: $--ads-colors-gray-10;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 0.9375rem;
+    top: 0;
+    width: 100%;
+
+    @include respond-to('small') {
+        width: 90%;
+    }
+
+    @include respond-to('medium') {
+        width: 80%;
+    }
+
+    @include respond-to('large') {
+        width: 70%;
+    }
+}
+
+.container-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.container-text h2 {
+    font-family: Barlow, sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container-text input {
+    font-size: 1rem;
+    padding-left: 0.9375rem;
+    width: 100%;
+}
+
+.container-button {
+    display: flex;
+    flex-flow: row wrap;
+
+    @include respond-to('small-mobile') {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include respond-to('small-mobile-large') {
+        flex-direction: row; 
+    }
+}
+
+.container-button button {
+    font-family: Barlow, sans-serif;
+    height: 2.375rem;
+    margin: 1.25rem;
+    width: 6.75rem;
+}

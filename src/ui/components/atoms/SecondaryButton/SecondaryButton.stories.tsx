@@ -41,6 +41,13 @@ export const Large: Story = {
   },
 };
 
+export const White: Story = {
+  args: {
+    children: 'Secondary button',
+    variant: 'White',
+  },
+};
+
 export const Active: Story = {
   args: {
     children: 'Secondary button',

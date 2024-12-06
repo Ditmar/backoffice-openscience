@@ -9,7 +9,7 @@ const meta = {
     onClick: {
       action: 'click',
     },
-    variant: ['Small', 'Medium', 'Big', 'Active', 'Disable'],
+    variant: ['Small', 'Medium', 'Big', 'Active', 'Disable', 'Centered'],
   },
 } as Meta<typeof PrimaryButton>;
 
@@ -54,5 +54,12 @@ export const Disable: Story = {
     children: 'Primary button',
     variant: 'Disable',
     icon: add,
+  },
+};
+
+export const Centered: Story = {
+  args: {
+    children: 'Primary button',
+    variant: 'Centered',
   },
 };
