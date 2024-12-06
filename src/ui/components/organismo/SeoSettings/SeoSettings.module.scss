@@ -1,26 +1,25 @@
 @import '../../../../globals/fonts.scss';
+@import '../../../../globals/ads-variables.scss';
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center
+    flex-direction: column;
+    gap: 1.5rem; 
+    padding: 1rem;
+    width: 100%;
+}
 
-}
-.upload-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.upload-container {
+    height: auto;
+    padding-left: 1.4rem;
     width: 100%;
-    height: 100%;
 }
-.label{
-    display: flex;
-    font-family: Barlow, sans-serif;    ;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    width: 100%;
-    height: 100%;
+
+.label {
+    color: $--ads-colors-black;
+    font-family: Barlow, sans-serif;
+    font-size: 0.938rem;
+    font-weight: 600;
+    margin-left: 1.4rem;
 }
+

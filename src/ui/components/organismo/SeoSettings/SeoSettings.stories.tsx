@@ -1,19 +1,17 @@
-import type{ Meta, StoryObj } from '@storybook/react';
-import SeoSettings from './SeoSettings'; 
+import type { Meta, StoryObj } from '@storybook/react';
+import SeoSettings from './SeoSettings';
 
 const meta: Meta = {
-    title: 'ui/components/organismo/SeoSettings',
-    component: SeoSettings,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-}
+  title: 'ui/components/organismo/SeoSettings',
+  component: SeoSettings,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof SeoSettings>;
 
 export const Primary: Story = {
-    args: {
-        variant: 'primary',
-    },
+  args: {},
 };
