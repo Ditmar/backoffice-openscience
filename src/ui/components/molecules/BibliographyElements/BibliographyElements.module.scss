@@ -1,0 +1,40 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+
+
+.biography {
+    font-family: Barlow, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.found {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.content {
+    margin-bottom: 0.8rem;
+}
+
+.config {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+
+    >button {
+        border: none;
+        cursor: pointer;
+        font-size: 1.4rem;
+        padding: 0.4rem 0.8rem;
+        width: fit-content;
+    }
+}
