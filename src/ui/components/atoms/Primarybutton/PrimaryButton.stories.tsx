@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import PrimaryButton from './Primary-Button';
+import PrimaryButton from './PrimaryButton';
 
 const meta = {
   title: 'ui/components/atoms/PrimaryButton',

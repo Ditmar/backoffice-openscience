@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { IProps } from './types/IProps';
-import styles from './Primary-Button.module.scss';
+import styles from './PrimaryButton.module.scss';
 
 function PrimaryButton(props: IProps) {
   const { children, variant, onClick } = props;
