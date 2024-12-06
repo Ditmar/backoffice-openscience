@@ -1,0 +1,31 @@
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, it, vi } from 'vitest';
+import ButtonNewEntryBibliographies from './ButtonNewEntryBibliographies';
+import '@testing-library/jest-dom';
+
+describe('ButtonNewEntryBibliographies', () => {
+  it('renders all fields with correct placeholders', () => {
+    render(<ButtonNewEntryBibliographies onChange={() => {}} />);
+    const fields = [
+      { label: 'Publication Year', placeholder: 'Enter publication Year' },
+      { label: 'Article', placeholder: 'Enter article' },
+    ];
+
+    fields.forEach(({ label, placeholder }) => {
+      expect(screen.getByText(label)).toBeInTheDocument();
+      expect(screen.getByPlaceholderText(placeholder)).toBeInTheDocument();
+    });
+  });
+
+  it('calls onChange when a field value is changed', async () => {
+    const onChangeMock = vi.fn();
+    render(<ButtonNewEntryBibliographies onChange={onChangeMock} />);
+
+    const input = screen.getByPlaceholderText('Enter publication Year');
+
+    await userEvent.type(input, 'article');
+
+    expect(onChangeMock).toHaveBeenCalledTimes(7);
+  });
+});
