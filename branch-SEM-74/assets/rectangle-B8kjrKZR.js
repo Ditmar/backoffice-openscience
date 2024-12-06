@@ -1,4 +1,0 @@
-const t=`<svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="21" height="3" fill="#D9D9D9"/>
-</svg>
-`;export{t as default};

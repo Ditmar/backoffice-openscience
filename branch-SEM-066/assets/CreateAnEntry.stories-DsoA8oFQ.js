@@ -1,3 +1,0 @@
-import{j as a}from"./jsx-runtime-DEdD30eg.js";import"./index-RYns6xqu.js";import{C as n}from"./CreateAnEntry-Chqf-xub.js";import"./index-Dejnh_W_.js";const c={title:"ui/components/atoms/CreateAnEntry",component:n};function t(){return a.jsx(n,{})}t.__docgenInfo={description:"",methods:[],displayName:"Default"};var e,r,o;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`function Default() {
-  return <CreateAnEntry />;
-}`,...(o=(r=t.parameters)==null?void 0:r.docs)==null?void 0:o.source}}};const u=["Default"];export{t as Default,u as __namedExportsOrder,c as default};
