@@ -6,8 +6,13 @@ const meta: Meta<typeof VolumeManagement> = {
   title: 'ui/components/organisms/VolumeManagement',
   component: VolumeManagement,
   argTypes: {
-    onEdit: { table: { disable: true } },
-    onConfigure: { table: { disable: true } },
+    size: { table: { disable: true } },
+    placeholderSize: { table: { disable: true } },
+
+    variant: { control: 'select', options: ['primary', 'secondary'] },
+
+    onEdit: { action: 'edited' },
+    onConfigure: { action: 'configured' },
   },
 };
 
