@@ -13,12 +13,32 @@
     gap: 4px;
     max-width: 466px;
     padding: 12px;
+
+    @media screen and (width <= 768px) {
+      .info-section {
+        max-width: 290px;
+      }
+
+      .actions-container{
+        max-width: 290px;
+      }
+    }
   }
 
   &.medium {
     gap: 6px;
-    max-width: 626px;
+    max-width: 630px;
     padding: 16px;
+
+    @media screen and (width <= 768px) {
+      .info-section {
+        max-width: 372px;
+      }
+
+      .actions-container{
+        max-width: 224px;
+      }
+    }
   }
 
   &.large {
@@ -57,6 +77,7 @@
   @media screen and (width <= 768px) {
     flex-direction: column;
     gap: 12px;
+    
   }
 }
 
@@ -97,7 +118,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  width: 37%;
 
   @media screen and (width <= 768px) {
     flex-flow: row wrap;
