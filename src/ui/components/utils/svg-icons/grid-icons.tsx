@@ -32,7 +32,7 @@ import copy from '../../../../assets/icons/copy.svg?raw';
 import cut from '../../../../assets/icons/cut.svg?raw';
 import deletecalendar from '../../../../assets/icons/delete-calendar.svg?raw';
 import deletes from '../../../../assets/icons/deletes.svg?raw';
-import dinamicbannermanagement from '../../../../assets/icons/dinamic-banner-management.svg?raw';
+import dinamicbannermanagement from '../../../../assets/icons/dinamicBannerManagement.svg?raw';
 import discount from '../../../../assets/icons/discount.svg?raw';
 import downarrow from '../../../../assets/icons/down-arrow.svg?raw';
 import down from '../../../../assets/icons/down.svg?raw';
@@ -41,6 +41,7 @@ import emptycalendar from '../../../../assets/icons/empty-calendar.svg?raw';
 import emptyfile from '../../../../assets/icons/empty-file.svg?raw';
 import eye from '../../../../assets/icons/eye.svg?raw';
 import file from '../../../../assets/icons/file.svg?raw';
+import filter from '../../../../assets/icons/filter.svg?raw';
 import folder from '../../../../assets/icons/folder.svg?raw';
 import heart from '../../../../assets/icons/heart.svg?raw';
 import home from '../../../../assets/icons/home.svg?raw';
@@ -63,6 +64,7 @@ import openmail from '../../../../assets/icons/open-mail.svg?raw';
 import ovalchat from '../../../../assets/icons/oval-chat.svg?raw';
 import past from '../../../../assets/icons/past.svg?raw';
 import pencil from '../../../../assets/icons/pencil.svg?raw';
+import period from '../../../../assets/icons/period.svg?raw';
 import phone from '../../../../assets/icons/phone.svg?raw';
 import piechat from '../../../../assets/icons/pie-chat.svg?raw';
 import play from '../../../../assets/icons/play.svg?raw';
@@ -137,6 +139,7 @@ const svgIcons = [
   emptyfile,
   eye,
   file,
+  filter,
   folder,
   heart,
   home,
@@ -159,6 +162,7 @@ const svgIcons = [
   ovalchat,
   past,
   pencil,
+  period,
   phone,
   piechat,
   play,

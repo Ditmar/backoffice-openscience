@@ -1,0 +1,104 @@
+@import '../../../../globals/ads-variables';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+.side-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include respond-to('small-mobile') {
+    gap: 5px;
+  }
+
+  @include respond-to('medium') {
+    gap: 8px;
+  }
+
+  @include respond-to('large') {
+    gap: 12px;
+  }
+
+  @include respond-to('extra-large') {
+    gap: 15px;
+  }
+}
+
+.icon {
+  margin-right: 10px;
+
+  svg {
+    fill: $--ads-colors-black;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.side-menu-button-site-seo {
+  align-items: center;
+  background-color: $--ads-colors-black;
+  border: none;
+  color: $--ads-colors-white;
+  cursor: pointer;
+  display: flex;
+  font-family: Barlow, sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding: 10px 15px;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s ease;
+
+  &::before {
+    background-color: $--ads-colors-red-70;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s ease;
+    width: 6px;
+  }
+
+  &:hover {
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-70;
+    transform: translateY(1px);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.secondary {
+    background-color: $--ads-colors-gray-20;
+    color: $--ads-colors-gray-70;
+
+    svg {
+      fill: $--ads-colors-gray-70;
+    }
+  }
+
+  &.collapsed {
+    justify-content: center;
+    padding: 0;
+
+    svg {
+      fill: $--ads-colors-white;
+      margin-right: 0;
+
+      &:hover {
+        fill: $--ads-colors-gray-70;
+      }
+    }
+
+    span {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}

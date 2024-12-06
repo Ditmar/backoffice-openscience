@@ -37,6 +37,13 @@ export const Big: Story = {
   },
 };
 
+export const Standard: Story = {
+  args: {
+    children: 'Danger button',
+    variant: 'Standard',
+  },
+};
+
 export const Active: Story = {
   args: {
     children: 'Danger button',

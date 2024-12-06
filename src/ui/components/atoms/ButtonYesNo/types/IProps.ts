@@ -4,4 +4,5 @@ export interface IProps {
   children: React.ReactNode;
   variant?: string;
   color?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'quinary';
+  onClick?: () => void;
 }

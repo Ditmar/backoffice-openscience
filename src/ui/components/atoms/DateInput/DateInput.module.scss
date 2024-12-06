@@ -1,0 +1,127 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
+
+.date-input__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; 
+}
+
+.date-input__label {
+  color: $--ads-colors-black;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 0.9375rem; 
+  font-weight: 600;
+  height: 1.875rem; 
+  letter-spacing: 0.01rem; 
+  line-height: 1.875rem; 
+  margin-bottom: 0.25rem; 
+  width: 1.9375rem; 
+}
+
+.date-iput__wrapper {
+  align-items: center;
+  display: flex;
+  height: 3rem; 
+  position: relative;
+  width: 33.5rem; 
+}
+
+.date-input__icon-button {
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  left: 0.3125rem; 
+  padding: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.date-input__icon {
+  color: $--ads-colors-black;
+  height: 0.9375rem; 
+  left: 0.75rem; 
+  position: absolute;
+  top: 0.75rem; 
+  transform: translateY(0);
+  width: 1.25rem; 
+}
+
+.date-input__field {
+  align-items: center; 
+  background-color: $--ads-colors-gray-10;
+  border: none;
+  border-bottom: 0.0625rem solid $--ads-colors-black; 
+  color: $--ads-colors-black;
+  display: flex;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem; 
+  font-weight: 400;
+  height: 3rem; 
+  outline: none;
+  padding-left: 3rem; 
+  padding-right: 2.5rem; 
+  width: 28.125rem; 
+
+  &::placeholder {
+    color: $--ads-colors-gray-50;
+    font-size: 0.9375rem; 
+  }
+}
+
+.date-input__calendar {
+    background: $--ads-colors-gray-10;
+    border: 0.0625rem solid $--ads-colors-gray-4; 
+    left: 1.25rem; 
+    padding: 0.625rem; 
+    position: absolute;
+    top: 3.75rem; 
+    z-index: 10;
+}
+
+.date-input__selectors {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem; 
+}
+
+.date-input__select {
+    background: $--ads-colors-gray-10;
+    border: 0.0625rem solid $--ads-colors-gray-4; 
+    border-radius: 0.25rem; 
+    font-size: 0.875rem; 
+    margin-right: 0.3125rem; 
+    padding: 0.3125rem; 
+}
+
+.date-input__days {
+    display: grid;
+    gap: 0.3125rem; 
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.date-input__calendar-day {
+    background: $--ads-colors-blue-10;
+    border: none;
+    border-radius: 0.25rem; 
+    cursor: pointer;
+    font-size: 0.875rem; 
+    padding: 0.5rem; 
+    text-align: center;
+
+    &:hover {
+      background: $--ads-colors-gray-20;
+    }
+}
+
+.date-input__calendar-day:focus {
+    background: $--ads-colors-gray-4;
+    outline: none;
+}

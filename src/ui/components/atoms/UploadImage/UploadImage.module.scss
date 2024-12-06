@@ -1,24 +1,38 @@
+<<<<<<< HEAD
 @import '../../../../globals/ads-variables.scss';
+=======
+@import '../../../../globals/ads-variables.scss'; 
+@import '../../../../globals/fonts.scss';
+>>>>>>> f264f7b (c)
 
 .uploadarea {
   align-items: center;
   background-color: $--ads-colors-white;
-  border: 0.125rem dashed $--ads-colors-gray-40;
+  border: 0.063rem solid $--ads-colors-gray-50;
   border-radius: 0.5px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 16.625rem;
+  height: 21.563rem;
   justify-content: center;
   position: relative;
   text-align: center;
+<<<<<<< HEAD
   transition:
     border-color 0.3s,
     background-color 0.3s;
   width: 25rem;
+=======
+  transition: border-color 0.3s, background-color 0.3s;
+  width: 37.375rem;
+
+  
+>>>>>>> f264f7b (c)
 
   &:hover {
     background-color: $--ads-colors-gray-10;
+    height: 21.563rem;
+    width: 37.375rem;
   }
 
   &:focus,
@@ -34,6 +48,7 @@
 
   svg {
     fill: $--ads-colors-gray-40;
+<<<<<<< HEAD
     height: 3.125rem;
     margin-bottom: 0.9375rem;
     width: 3.125rem;
@@ -50,6 +65,10 @@
     font-size: 0.875rem;
     margin-top: 0.625rem;
     text-align: center;
+=======
+    height: 5.813rem;
+    width: 5.813rem;
+>>>>>>> f264f7b (c)
   }
 }
 
@@ -60,4 +79,10 @@ img {
   max-width: 100%;
   object-fit: cover;
   width: 12.5rem;
+}
+
+.uploadinstruction {
+  font-family: Barlow, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
 }

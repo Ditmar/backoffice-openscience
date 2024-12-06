@@ -59,6 +59,17 @@
     pointer-events: none;
   }
 
+  &.centered {
+    align-items: center;
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    
+    svg {
+      display: none;
+    }
+  }
+
   &:hover {
     background-color: $--ads-colors-blue-70;
   }

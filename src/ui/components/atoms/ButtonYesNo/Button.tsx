@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type { IProps } from './types/IProps';
 import styles from './styles.module.scss';
 
-function Button({ children, variant }: IProps) {
+function Button({ children, variant, onClick }: IProps) {
   const buttonClass = classNames(styles['button-label--container'], {
     [styles['button-label--primary']]: variant === 'primary',
     [styles['button-label--secondary']]: variant === 'secondary',
@@ -12,7 +12,7 @@ function Button({ children, variant }: IProps) {
   });
 
   return (
-    <button className={buttonClass} data-testid="button-styles">
+    <button onClick={onClick} className={buttonClass} data-testid="button-styles">
       <span>{children}</span>
     </button>
   );
