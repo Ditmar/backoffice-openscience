@@ -1,8 +1,9 @@
 @import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/breakpoints';
 
 .display {
   align-items: center;
-  background: $--ads-colors-white; 
+  background: $--ads-colors-white;
   border: 1px solid $--ads-colors-blue-60;
   border-radius: 4px;
   color: $--ads-colors-blue-60;
@@ -22,17 +23,39 @@
   width: 144px;
 
   &:focus {
-    border: 2px solid $--ads-colors-blue-60; 
-    outline: 2px solid $--ads-colors-white; 
+    border: 2px solid $--ads-colors-blue-60;
+    outline: 2px solid $--ads-colors-white;
   }
 
   &.false {
-    left: 8px; 
-    top: 8px; 
+    left: 8px;
+    top: 8px;
   }
 
   &.true {
-    left: 8px; 
-    top: 8px; 
+    left: 8px;
+    top: 8px;
+  }
+
+  // Responsividad usando breakpoints
+  @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) { // Tablets
+    font-size: 14px;
+    height: 40px;
+    width: 120px;
+    padding: 0 0.8rem;
+  }
+
+  @media (max-width: map-get($--ads-breakpoints-scales, 'small')) { // Móviles pequeños
+    font-size: 13px;
+    height: 36px;
+    width: 100px;
+    padding: 0 0.5rem;
+  }
+
+  @media (max-width: map-get($--ads-breakpoints-scales, 'small-mobile-large')) { // Móviles medianos
+    font-size: 12px;
+    height: 32px;
+    width: 90px;
+    padding: 0 0.4rem;
   }
 }
