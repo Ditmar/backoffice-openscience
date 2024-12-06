@@ -5,7 +5,6 @@ export interface IProps {
   variant?: string;
   icon: string;
   color?: 'primary' | 'secondary';
-  className?: string;
   path: string;
   basePath: string;
   onClick?: () => void;
