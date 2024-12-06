@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import PrimaryButton from './Primary-Button';
 
 const meta = {
-  title: 'ui/components/atoms/Primary-Button',
+  title: 'ui/components/atoms/PrimaryButton',
   component: PrimaryButton,
   argTypes: {
     onClick: {
