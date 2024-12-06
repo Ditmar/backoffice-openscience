@@ -1,48 +1,50 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import FormFields from './FormFields';
 import type { FormFieldsProps } from './FormFields';
 
-const defaultProps: FormFieldsProps = {
-  placeholder: 'Enter text here',
-};
+describe('FormFields', () => {
+  const defaultProps: FormFieldsProps = {
+    placeholder: 'Enter text here',
+  };
 
-test('renders all form fields correctly', () => {
-  render(<FormFields placeholder={defaultProps.placeholder} />);
+  it('renders all form fields correctly', () => {
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  const labels: string[] = [
-    'Full name',
-    'InstitutionalAffiliation',
-    'ORCID',
-    'CopyrightRegistration',
-    'Articles',
-    'Email',
-  ];
+    const labels: string[] = [
+      'Full name',
+      'InstitutionalAffiliation',
+      'ORCID',
+      'CopyrightRegistration',
+      'Articles',
+      'Email',
+    ];
 
-  labels.forEach((label) => {
-    const element: HTMLElement | null = screen.queryByLabelText(label);
-    expect(element).not.toBeNull();
-    if (element) {
+    labels.forEach((label) => {
+      const element = screen.queryByLabelText(label);
       expect(element).toBeInTheDocument();
-    }
+    });
   });
-});
 
-test('renders input elements with the correct placeholder', () => {
-  render(<FormFields placeholder={defaultProps.placeholder} />);
+  it('renders input elements with the correct placeholder', () => {
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  const inputs = screen.getAllByPlaceholderText(defaultProps.placeholder) as HTMLElement[];
-  expect(inputs).toBeDefined();
-  expect(inputs.length).toBe(6);
-});
+    const inputs = screen.getAllByPlaceholderText(
+      defaultProps.placeholder
+    ) as HTMLInputElement[];
 
-test('allows text input in fields', () => {
-  render(<FormFields placeholder={defaultProps.placeholder} />);
+    expect(inputs).toBeDefined();
+    expect(inputs.length).toBe(6);
+  });
 
-  const input = screen.getByLabelText('Full name') as HTMLInputElement;
-  expect(input).not.toBeNull();
+  it('allows text input in fields', () => {
+    render(<FormFields placeholder={defaultProps.placeholder} />);
 
-  fireEvent.change(input, { target: { value: 'John Doe' } });
-  expect(input.value).toBe('John Doe');
+    const input = screen.getByLabelText('Full name') as HTMLInputElement;
+
+    fireEvent.change(input, { target: { value: 'John Doe' } });
+
+    expect(input.value).toBe('John Doe');
+  });
 });
