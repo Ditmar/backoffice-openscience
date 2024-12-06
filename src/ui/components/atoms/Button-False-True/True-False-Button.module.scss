@@ -1,0 +1,61 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/breakpoints';
+
+.display {
+  align-items: center;
+  background: $--ads-colors-white;
+  border: 1px solid $--ads-colors-blue-60;
+  border-radius: 4px;
+  color: $--ads-colors-blue-60;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Barlow, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.16px;
+  line-height: 30px;
+  padding: 0 1rem;
+  position: absolute;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 144px;
+
+  &:focus {
+    border: 2px solid $--ads-colors-blue-60;
+    outline: 2px solid $--ads-colors-white;
+  }
+
+  &.false {
+    left: 8px;
+    top: 8px;
+  }
+
+  &.true {
+    left: 8px;
+    top: 8px;
+  }
+
+  
+  @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) { 
+    font-size: 14px;
+    height: 40px;
+    padding: 0 0.8rem;
+    width: 120px;
+  }
+
+  @media (max-width: map-get($--ads-breakpoints-scales, 'small')) { 
+    font-size: 13px;
+    height: 36px;
+    padding: 0 0.5rem;
+    width: 100px;
+  }
+
+  @media (max-width: map-get($--ads-breakpoints-scales, 'small-mobile-large')) { 
+    font-size: 12px;
+    height: 32px;
+    padding: 0 0.4rem;
+    width: 90px;
+  }
+}
