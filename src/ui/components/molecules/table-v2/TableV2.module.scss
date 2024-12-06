@@ -1,6 +1,35 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/fonts.scss';
 @import '../../../../globals/breakpoints';
+@import '../../../../globals/mixins';
+
+@mixin table-size($size, $gap, $max-width, $padding) {
+  &.#{$size} {
+    gap: $gap;
+    max-width: $max-width;
+    padding: $padding;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($--ads-breakpoints-scales, $breakpoint) {
+    @media (min-width: map-get($--ads-breakpoints-scales, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint not found: #{$breakpoint}.";
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($--ads-breakpoints-scales, $breakpoint) {
+    @media (max-width: map-get($--ads-breakpoints-scales, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint not found: #{$breakpoint}.";
+  }
+}
 
 .table-v2 {
   box-sizing: border-box;
@@ -10,23 +39,9 @@
   padding: 1rem;
   width: 100%;
 
-  &.small {
-    gap: 0.25rem;
-    max-width: 29.125rem;
-    padding: 0.75rem;
-  }
-
-  &.medium {
-    gap: 0.375rem;
-    max-width: 39.125rem;
-    padding: 1rem;
-  }
-
-  &.large {
-    gap: 0.5rem;
-    max-width: 52rem;
-    padding: 1.25rem;
-  }
+  @include table-size('small', 0.25rem, 29.125rem, 0.75rem);
+  @include table-size('medium', 0.375rem, 39.125rem, 1rem);
+  @include table-size('large', 0.5rem, 52rem, 1.25rem);
 }
 
 .header-container {
@@ -35,18 +50,11 @@
   font-size: inherit;
   margin-bottom: 0.5rem;
   width: 100%;
+  padding: 0rem;
 
-  &.small {
-    height: 2.5rem;
-  }
-
-  &.medium {
-    height: 3.25rem;
-  }
-
-  &.large {
-    height: 3.75rem;
-  }
+  @include table-size('small', null, null, 0rem);
+  @include table-size('medium', null, null, 0rem);
+  @include table-size('large', null, null, 0rem);
 }
 
 .info-actions-container {
@@ -55,7 +63,7 @@
   gap: 0.125rem;
   width: 100%;
 
-  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
+  @include respond-to-max('medium') {
     flex-direction: column;
     gap: 0.75rem;
   }
@@ -69,12 +77,12 @@
   height: 10.0625rem;
   overflow: hidden;
 
-  @media screen and (min-width: map-get($--ads-breakpoints-scales, 'medium')) {
+  @include respond-to('medium') {
     max-width: 27.5rem;
     width: 100%;
   }
 
-  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
+  @include respond-to-max('medium') {
     max-width: 30rem;
     width: 100%;
   }
@@ -100,7 +108,7 @@
   gap: 0.125rem;
   width: 37%;
 
-  @media screen and (max-width: map-get($--ads-breakpoints-scales, 'medium')) {
+  @include respond-to-max('medium') {
     flex-flow: row wrap;
     gap: 0.25rem;
     justify-content: space-between;
