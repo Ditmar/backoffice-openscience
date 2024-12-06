@@ -11,6 +11,7 @@ function PrimaryButton(props: IProps) {
     [styles.tertiary]: variant === 'Big',
     [styles.active]: variant === 'Active',
     [styles.disable]: variant === 'Disable',
+    [styles.centered]: variant === 'Centered',
   });
   return (
     <button className={displayClass} onClick={onClick}>

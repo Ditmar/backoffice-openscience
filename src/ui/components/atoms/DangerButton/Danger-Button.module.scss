@@ -39,6 +39,14 @@
     }
   }
 
+  &.standard {
+    background-color: $--ads-colors-red-60;
+    font-size: inherit;
+    height: 2.375rem;
+    justify-content: center;
+    padding-inline: 1.25rem;
+  }
+
   &.active {
     background: $--ads-background-active;
   }

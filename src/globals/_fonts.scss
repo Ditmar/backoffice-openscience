@@ -29,6 +29,14 @@
 }
 
 @font-face {
+  font-display: swap;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Barlow-Bold.woff2') format('woff2');
+}
+
+@font-face {
   font-family: Besley;
   font-weight: 400;
   src: url('/fonts/Besley-Regular.woff2') format('woff2');

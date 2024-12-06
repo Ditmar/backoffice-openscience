@@ -5,8 +5,12 @@ import type { SvgIconProps, IconLoaderProps } from './types/SvgIconProps';
 import optimizeSvg from './optimizeSvg';
 
 function getIconByName(name: string): Promise<unknown> {
-  return import(`../../../../assets/icons/${name}.svg?raw`);
+  return import(`../../../../assets/icons/${name}.svg?raw`).catch((error) => {
+    console.error(`Icon ${name} not found: ${error}`);
+    return { default: '<svg></svg>' };
+  });
 }
+
 export function Icon(props: SvgIconProps) {
   const { src, size, className, styles, 'data-testid': dataTestId } = props;
   const [iconLoader, setIconLoader] = useState<string>('');
@@ -21,7 +25,7 @@ export function Icon(props: SvgIconProps) {
           setIconLoader(iconUsable.default);
         })
         .catch((error) => {
-          throw new Error(`Icon ${src} not found: ${error}`);
+          console.error(`Icon ${src} not found: ${error}`);
         });
     }
   }, [src]);

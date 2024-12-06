@@ -23,7 +23,7 @@
 
   &:focus {
     border: 2px solid $--ads-colors-white;
-    outline: 2px solid $--ads-colors-blue-80;
+    outline: 2px solid $--ads-colors-gray-80;
   }
 
   &.primary {
@@ -34,7 +34,7 @@
   &.secondary {
     & :focus {
       border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-blue-80;
+      outline: 2px solid $--ads-colors-gray-80;
     }
   }
 
@@ -43,7 +43,7 @@
 
     &:focus {
       border: 2px solid $--ads-colors-white;
-      outline: 2px solid $--ads-colors-blue-80;
+      outline: 2px solid $--ads-colors-gray-80;
     }
   }
 
@@ -54,6 +54,9 @@
   &.disable {
     background: $--ads-colors-gray-80;
     color: $--ads-colors-white;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+    pointer-events: none;
   }
 
   &:hover {
