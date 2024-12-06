@@ -34,15 +34,15 @@ describe('FormFields', () => {
     render(<FormFields placeholder={defaultProps.placeholder} />);
 
     const inputs = screen.getAllByPlaceholderText(defaultProps.placeholder);
+    expect(inputs).toBeDefined();
     expect(inputs.length).toBe(6);
   });
 
   it('allows text input in fields', () => {
     render(<FormFields placeholder={defaultProps.placeholder} />);
 
-    const input = screen.getByLabelText('Full name') as HTMLInputElement;
+    const input = screen.getByLabelText('Full name');
     fireEvent.change(input, { target: { value: 'John Doe' } });
-
-    expect(input.value).toBe('John Doe');
+    expect((input as HTMLInputElement).value).toBe('John Doe');
   });
 });
