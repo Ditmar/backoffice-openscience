@@ -106,7 +106,7 @@ function UploadImage() {
           </svg>
         )}
         {!image && (
-          <span id="upload-instruction">
+          <span id="upload-instruction" className={styles.uploadInstruction}>
             Click to add an asset or drag and drop one in this area
           </span>
         )}

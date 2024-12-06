@@ -1,22 +1,27 @@
 @import '../../../../globals/ads-variables.scss'; 
+@import '../../../../globals/fonts.scss';
 
 .uploadarea {  
   align-items: center;
   background-color: $--ads-colors-white;
-  border: 0.125rem dashed $--ads-colors-gray-40;
+  border: 0.063rem solid $--ads-colors-gray-50;
   border-radius: 0.5px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 16.625rem;
+  height: 21.563rem;
   justify-content: center;
   position: relative;
   text-align: center;
   transition: border-color 0.3s, background-color 0.3s;
-  width: 25rem;
+  width: 37.375rem;
+
+  
 
   &:hover {
     background-color: $--ads-colors-gray-10;
+    height: 21.563rem;
+    width: 37.375rem;
   }
 
   &:focus,
@@ -32,22 +37,8 @@
 
   svg {
     fill: $--ads-colors-gray-40;
-    height: 3.125rem;
-    margin-bottom: 0.9375rem;
-    width: 3.125rem;
-  }
-
-  .text {
-    color: $--ads-colors-gray-70;
-    font-size: 1rem;
-    margin-top: 0.625rem;
-  }
-
-  .error-message {  
-    color: $--ads-colors-red-80;
-    font-size: 0.875rem;
-    margin-top: 0.625rem;
-    text-align: center;
+    height: 5.813rem;
+    width: 5.813rem;
   }
 }
 
@@ -58,4 +49,10 @@ img {
   max-width: 100%;
   object-fit: cover;
   width: 12.5rem;
+}
+
+.uploadinstruction {
+  font-family: Barlow, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
 }
