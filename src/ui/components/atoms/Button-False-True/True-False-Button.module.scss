@@ -27,15 +27,6 @@
     outline: 2px solid $--ads-colors-white;
   }
 
-  &.false {
-    left: 8px;
-    top: 8px;
-  }
-
-  &.true {
-    left: 8px;
-    top: 8px;
-  }
 
   
   @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) { 
