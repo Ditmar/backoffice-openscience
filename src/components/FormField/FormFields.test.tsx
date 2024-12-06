@@ -23,18 +23,17 @@ describe('FormFields', () => {
 
     labels.forEach((label) => {
       const element = screen.queryByLabelText(label);
-      expect(element).toBeInTheDocument();
+      expect(element).not.toBeNull();
+      if (element) {
+        expect(element).toBeInTheDocument();
+      }
     });
   });
 
   it('renders input elements with the correct placeholder', () => {
     render(<FormFields placeholder={defaultProps.placeholder} />);
 
-    const inputs = screen.getAllByPlaceholderText(
-      defaultProps.placeholder
-    ) as HTMLInputElement[];
-
-    expect(inputs).toBeDefined();
+    const inputs = screen.getAllByPlaceholderText(defaultProps.placeholder);
     expect(inputs.length).toBe(6);
   });
 
@@ -42,7 +41,6 @@ describe('FormFields', () => {
     render(<FormFields placeholder={defaultProps.placeholder} />);
 
     const input = screen.getByLabelText('Full name') as HTMLInputElement;
-
     fireEvent.change(input, { target: { value: 'John Doe' } });
 
     expect(input.value).toBe('John Doe');
