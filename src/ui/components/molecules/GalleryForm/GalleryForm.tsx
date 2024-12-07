@@ -9,7 +9,6 @@ function GalleryForm({ onInputChange = () => {}, size = 'medium', ...props }: IP
   };
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <form className={styles.form} {...props}>
       <div className={styles.form__field}>
         <div className={styles.form__label}>Title</div>
