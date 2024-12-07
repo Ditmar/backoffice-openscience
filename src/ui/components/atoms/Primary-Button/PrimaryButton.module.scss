@@ -54,6 +54,20 @@
   &.disable {
     background: $--ads-colors-gray-40;
     color: $--ads-colors-gray-50;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+    pointer-events: none;
+  }
+
+  &.centered {
+    align-items: center;
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    
+    svg {
+      display: none;
+    }
   }
 
   &:hover {

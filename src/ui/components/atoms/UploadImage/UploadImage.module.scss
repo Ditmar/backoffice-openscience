@@ -1,0 +1,58 @@
+@import '../../../../globals/ads-variables.scss'; 
+@import '../../../../globals/fonts.scss';
+
+.uploadarea {  
+  align-items: center;
+  background-color: $--ads-colors-white;
+  border: 0.063rem solid $--ads-colors-gray-50;
+  border-radius: 0.5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 21.563rem;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  transition: border-color 0.3s, background-color 0.3s;
+  width: 37.375rem;
+
+  
+
+  &:hover {
+    background-color: $--ads-colors-gray-10;
+    height: 21.563rem;
+    width: 37.375rem;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $--ads-colors-blue-50; 
+    outline: none;  
+  }
+
+  &--image-selected {  
+    background-color: $--ads-colors-gray-15;
+    border-color: $--ads-colors-blue-40;
+  }
+
+  svg {
+    fill: $--ads-colors-gray-40;
+    height: 5.813rem;
+    width: 5.813rem;
+  }
+}
+
+img {
+  border-radius: 0.3125rem;
+  height: 12.5rem;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  width: 12.5rem;
+}
+
+.uploadinstruction {
+  font-family: Barlow, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}

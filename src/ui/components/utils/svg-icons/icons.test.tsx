@@ -36,7 +36,7 @@ import copy from '../../../../assets/icons/copy.svg?raw';
 import cut from '../../../../assets/icons/cut.svg?raw';
 import deleteCalendar from '../../../../assets/icons/delete-calendar.svg?raw';
 import deletes from '../../../../assets/icons/deletes.svg?raw';
-import dinamicBannerManagement from '../../../../assets/icons/dinamic-banner-management.svg?raw';
+import dinamicBannerManagement from '../../../../assets/icons/dinamicBannerManagement.svg?raw';
 import discount from '../../../../assets/icons/discount.svg?raw';
 import downArrow from '../../../../assets/icons/down-arrow.svg?raw';
 import down from '../../../../assets/icons/down.svg?raw';
@@ -67,9 +67,11 @@ import openMail from '../../../../assets/icons/open-mail.svg?raw';
 import ovalChat from '../../../../assets/icons/oval-chat.svg?raw';
 import past from '../../../../assets/icons/past.svg?raw';
 import pencil from '../../../../assets/icons/pencil.svg?raw';
+import period from '../../../../assets/icons/period.svg?raw';
 import phone from '../../../../assets/icons/phone.svg?raw';
 import pieChat from '../../../../assets/icons/pie-chat.svg?raw';
 import play from '../../../../assets/icons/play.svg?raw';
+import rectangle from '../../../../assets/icons/rectangle.svg?raw';
 import removeCalendar from '../../../../assets/icons/remove-calendar.svg?raw';
 import repeat from '../../../../assets/icons/repeat.svg?raw';
 import resize from '../../../../assets/icons/resize.svg?raw';
@@ -130,7 +132,7 @@ const icons = {
   cut,
   'delete-calendar': deleteCalendar,
   deletes,
-  'dinamic-banner-management': dinamicBannerManagement,
+  dynamicBannerManagement: dinamicBannerManagement,
   discount,
   'down-arrow': downArrow,
   down,
@@ -161,9 +163,11 @@ const icons = {
   'oval-chat': ovalChat,
   past,
   pencil,
+  period,
   phone,
   'pie-chat': pieChat,
   play,
+  rectangle,
   'remove-calendar': removeCalendar,
   repeat,
   resize,
