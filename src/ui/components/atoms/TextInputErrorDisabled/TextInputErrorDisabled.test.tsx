@@ -32,14 +32,22 @@ describe('TextInputErrorDisabled Component', () => {
   it('allows user to type when not disabled', async () => {
     render(<TextInputErrorDisabled isDisabled={false} placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
+<<<<<<< HEAD
     await userEvent.type(inputElement, 'Test input');
+=======
+    await userEvent.type(inputElement, 'Test input'); // Cambia MouseEvent por userEvent
+>>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
     expect(inputElement).toHaveValue('Test input');
   });
 
   it('does not allow user to type when disabled', async () => {
     render(<TextInputErrorDisabled isDisabled placeholder="Type here" />);
     const inputElement = screen.getByPlaceholderText('Type here');
+<<<<<<< HEAD
     await userEvent.type(inputElement, 'Test input');
+=======
+    await userEvent.type(inputElement, 'Test input'); // Cambia MouseEvent por userEvent
+>>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
     expect(inputElement).toHaveValue('');
   });
 });
