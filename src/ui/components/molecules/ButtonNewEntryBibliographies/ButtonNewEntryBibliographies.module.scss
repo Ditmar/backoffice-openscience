@@ -1,0 +1,83 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+
+.bibliography__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  margin: auto;
+  max-width: 100%;
+  padding: 0.5rem;
+
+  @include respond-to('medium') {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+  }
+
+  @include respond-to('large') {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__field {
+  flex-direction: column;
+  line-height: 10px;
+  padding: 0 20px 0 0;
+  width: 100%;
+
+  @include respond-to('small') {
+    width: 90%;
+  }
+}
+
+.form__label {
+  color: $--ads-colors-black;
+  flex-direction: row;
+  font-family: Barlow, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  line-height: 50px;
+  text-shadow: 3px;
+}
+
+.form__holders {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: auto;
+
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+}
+
+.form__author {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin: 15px;
+  width: 100%;
+}
+
+.button-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.button-medium {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.button-large {
+  font-size: 16px;
+  padding: 15px 20px;
+}
