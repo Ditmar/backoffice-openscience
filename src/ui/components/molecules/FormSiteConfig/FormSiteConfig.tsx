@@ -33,7 +33,11 @@ function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
           <Placeholder onChange={onChange} placeholder="Enter your taxonomy types" />
         </div>
 
+<<<<<<< HEAD
         <div className={`${styles.form__field} ${styles.container}`}>
+=======
+        <div className={styles.form__field}>
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
           <HeaderDraft
             variant="primary"
             size="large"
@@ -79,4 +83,8 @@ function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
   );
 }
 
+<<<<<<< HEAD
 export default FormSiteConfig;
+=======
+export default FormSiteConfig;
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156

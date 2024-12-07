@@ -3,6 +3,7 @@
 .form__site {
   display: grid;
   grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
   padding: 1.875rem;
   row-gap: 1.5rem;
   width: 90%;
@@ -25,6 +26,18 @@
   @media (width <=768px) {
     row-gap: 1rem; // Menor espacio en pantallas pequeñas
   }
+=======
+  padding: 30px;
+  row-gap: 1.5rem;
+  // width: 100%;
+}
+
+.form__group {
+  align-items: self-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
 }
 
 .form__field {
@@ -32,14 +45,21 @@
   flex-direction: column;
   width: 100%;
 
+<<<<<<< HEAD
   >input {
+=======
+  > input {
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
     width: 90%;
   }
 }
 
 .form__label {
   color: $--ads-colors-black;
+<<<<<<< HEAD
   font-family: Barlow, sans-serif;
+=======
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -48,6 +68,7 @@
   align-items: center;
   display: flex;
   grid-column: span 2;
+<<<<<<< HEAD
   margin-left: auto;
   margin-right: auto; // Centrar el botón
   margin-top: 1.25rem;
@@ -61,6 +82,10 @@
 
 .container>div {
   width: 100%;
+=======
+  margin-left: 37%;
+  margin-top: 20px;
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
 }
 
 .form__editing {
@@ -68,18 +93,35 @@
   gap: 2rem;
   margin-top: 1rem;
 
+<<<<<<< HEAD
   @media (width <= 768px) {
     flex-direction: column;
     gap: 1rem;
   }
 
+=======
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
   > :nth-child(1) {
     background-color: $--ads-colors-gray-20;
     margin: 0;
     width: 60%;
 
+<<<<<<< HEAD
     @media (width <= 768px) {
       width: 100%;
+=======
+    > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
     }
   }
 
@@ -90,11 +132,16 @@
     margin: 0;
     width: 40%;
 
+<<<<<<< HEAD
     @media (width <= 768px) {
+=======
+    > button {
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
       width: 100%;
     }
   }
 }
+<<<<<<< HEAD
 
 .form__editing> :nth-child(1) ul {
   list-style-type: none;
@@ -117,3 +164,5 @@
 .form__editing> :nth-child(2)>button {
   width: 100%;
 }
+=======
+>>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
