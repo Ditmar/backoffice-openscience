@@ -1,38 +1,22 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/fonts.scss';
 
-<<<<<<< HEAD
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .inputwrapper {
-=======
-.input-wrapper {
->>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
   height: 68px;
   opacity: 1;
   position: relative;
   width: 288px;
 }
 
-<<<<<<< HEAD
 .input {
   border: 2px solid transparent;
   font-family: Barlow, sans-serif;
   height: 45px;
-=======
-.inputcontainer {
-  position: relative;
-}
-
-.input {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-family: Barlow, sans-serif;
-  height: 48px;
->>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
   opacity: 1;
   padding-right: 40px;
   text-indent: 12px;
@@ -63,11 +47,7 @@
   padding: 12px;
 }
 
-<<<<<<< HEAD
 .icon {
-=======
-.iconstyle {
->>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
   color: $--ads-colors-red-60;
   height: 16px;
   pointer-events: none;

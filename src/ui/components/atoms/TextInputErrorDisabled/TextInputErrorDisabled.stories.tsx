@@ -3,7 +3,6 @@ import TextInputErrorDisabled from './TextInputErrorDisabled';
 import type { TextInputErrorDisabledProps } from './types/IProps';
 
 const meta: Meta<typeof TextInputErrorDisabled> = {
-<<<<<<< HEAD
   title: 'Components/Atoms/TextInputErrorDisabled',
   component: TextInputErrorDisabled,
   argTypes: {
@@ -17,10 +16,6 @@ const meta: Meta<typeof TextInputErrorDisabled> = {
     value: { control: 'text' },
     onChange: { action: 'changed' },
   },
-=======
-  title: 'Components/Atoms/TextInputErrorDisabled.tsx',
-  component: TextInputErrorDisabled,
->>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
 };
 
 export default meta;
@@ -33,10 +28,6 @@ export const ErrorWithPlaceholder: Story = {
     errorMessage: 'Error message here',
     variant: 'medium',
     isDisabled: false,
-<<<<<<< HEAD
-=======
-    icon: '',
->>>>>>> 5c8f08845e09e24ebdd51ef38f1dcb3ffe3c2c2b
   },
 };
 
