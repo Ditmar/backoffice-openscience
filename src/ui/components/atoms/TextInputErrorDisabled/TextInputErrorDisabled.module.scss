@@ -1,0 +1,66 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/fonts.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputwrapper {
+  height: 68px;
+  opacity: 1;
+  position: relative;
+  width: 288px;
+}
+
+.input {
+  border: 2px solid transparent;
+  font-family: Barlow, sans-serif;
+  height: 45px;
+  opacity: 1;
+  padding-right: 40px;
+  text-indent: 12px;
+  transition: border-color 0.3s;
+  width: 288px;
+
+  &.error {
+    border-color: $--ads-colors-red-60;
+  }
+
+  &:disabled {
+    background-color: $--ads-colors-gray-10;
+  }
+}
+
+.small {
+  font-size: 14px;
+  padding: 4px;
+}
+
+.medium {
+  font-size: 18px;
+  padding: 8px;
+}
+
+.large {
+  font-size: 22px;
+  padding: 12px;
+}
+
+.icon {
+  color: $--ads-colors-red-60;
+  height: 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 16px;
+}
+
+.errormessage {
+  color: $--ads-colors-red-60;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
+}
