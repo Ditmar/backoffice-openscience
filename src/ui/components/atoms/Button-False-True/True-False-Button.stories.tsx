@@ -1,17 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import TrueFalseButton from './True-False-Button';
 
-const meta: Meta<typeof TrueFalseButton> = {
-  title: 'UI/Components/Atoms/True-False-Button',
+const meta = {
+  title: 'ui/components/atoms/True-False-Button',
   component: TrueFalseButton,
   argTypes: {
-    variant: {
-      control: { type: 'radio' },
-      options: ['True', 'False'] as const,
+    onClick: {
+      action: 'click',
     },
-    onClick: { action: 'clicked' },
+    variant: ['False', 'True'],
   },
-};
+} as Meta<typeof TrueFalseButton>;
 
 export default meta;
 

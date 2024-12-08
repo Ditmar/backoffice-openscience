@@ -2,33 +2,24 @@
 @import '../../../../globals/breakpoints';
 
 .display {
-  align-items: center;
-  background: $--ads-colors-white;
+  background: $--ads-colors-white; 
+  border: 1px 0 0 0;
   border: 1px solid $--ads-colors-blue-60;
-  border-radius: 4px;
   color: $--ads-colors-blue-60;
-  cursor: pointer;
-  display: inline-flex;
   font-family: Barlow, sans-serif;
   font-size: 15px;
   font-weight: 600;
   height: 48px;
-  justify-content: center;
-  letter-spacing: 0.16px;
+  left:554px;
+  letter-spacing: 0.1600px;
   line-height: 30px;
-  padding: 0 1rem;
-  position: absolute;
+  text-align: left;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  top: 544px;
   width: 144px;
 
-  &:focus {
-    border: 2px solid $--ads-colors-blue-60;
-    outline: 2px solid $--ads-colors-white;
-  }
-
-
-  
   @media (max-width: map-get($--ads-breakpoints-scales, 'medium')) { 
     font-size: 14px;
     height: 40px;
@@ -48,5 +39,7 @@
     height: 32px;
     padding: 0 0.4rem;
     width: 90px;
+
+
   }
 }
