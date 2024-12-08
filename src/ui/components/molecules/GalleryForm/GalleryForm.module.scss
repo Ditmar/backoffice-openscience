@@ -1,0 +1,67 @@
+@import '../../../../globals/fonts';
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/_mixins.scss';
+
+.form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 75rem;
+  padding: 1rem;
+
+  @include respond-to('small') {
+    grid-template-columns: 1fr;
+  }
+  
+  @include respond-to('small-mobile') {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 1rem;   
+  }
+  
+  @include respond-to('large') {
+    grid-template-columns: repeat(2, 1fr);  
+  }
+
+  @include respond-to('large-tablet') {
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+  @include respond-to('extra-large') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include respond-to('small-mobile') {
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  @include respond-to('small-mobile-large') {
+    width: 96%; 
+  }
+
+  @include respond-to('medium') {
+    width: 90%;
+  }
+
+  @include respond-to('large-tablet') {
+    width: 92%;
+  }
+
+}
+
+.form__label {
+  color: $--ads-colors-black;
+  font-family: Barlow, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
