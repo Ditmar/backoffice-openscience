@@ -28,9 +28,9 @@ describe('ElementForm Component', () => {
 
   it('renders correctly with all elements', () => {
     renderComponent();
-    expect(screen.getByText('url')).toBeInTheDocument();
-    expect(screen.getByTestId('upload-image')).toBeInTheDocument();
-    expect(screen.getByTestId('author-management')).toBeInTheDocument();
+    expect(screen.getByText('url')).not.toBeNull(); // Verifica que el elemento exista
+    expect(screen.getByTestId('upload-image')).not.toBeNull();
+    expect(screen.getByTestId('author-management')).not.toBeNull();
   });
 
   it('calls onConfigure and onEdit correctly when buttons are clicked', async () => {
