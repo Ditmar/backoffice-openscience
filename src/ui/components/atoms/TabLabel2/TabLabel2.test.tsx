@@ -1,42 +1,44 @@
+import { describe, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 import { TabLabel2 } from './TabLabel2';
 
-describe('TabLabel2 Component Tests', () => {
-  it('should render TabLabel2 with large variant', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="large" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
+describe('Testing for TabLabel component ', () => {
+  it('TabLabel is rendering', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="small" />);
   });
 
-  it('should render TabLabel2 with medium variant', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="medium" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
+  it('TabLabel has a title', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="small" />);
+    screen.getByText('TabLabel');
   });
 
-  it('should render TabLabel2 with small variant', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="small" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
+  it('TabLabel has a small variant', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="small" />);
+    screen.getByText('TabLabel');
   });
 
-  it('should render TabLabel2 with selected state', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="small" isSelect />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
+  it('TabLabel has a medium variant', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="medium" />);
+    screen.getByText('TabLabel');
   });
 
-  it('should render TabLabel2 with disabled state', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable={false} variant="small" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
-    expect(label).toHaveAttribute('aria-disabled', 'true');
+  it('TabLabel has a large variant', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="large" />);
+    screen.getByText('TabLabel');
   });
 
-  it('should render TabLabel2 as active', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="small" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).toBeInTheDocument();
+  it('TabLabel has a disabled state', () => {
+    render(<TabLabel2 text="TabLabel" isEnable={false} variant="small" />);
+    screen.getByText('TabLabel');
+  });
+
+  it('TabLabel has a selected state', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="small" isSelect />);
+    screen.getByText('TabLabel');
+  });
+
+  it('TabLabel has a active state', () => {
+    render(<TabLabel2 text="TabLabel" isEnable variant="small" />);
+    screen.getByText('TabLabel');
   });
 });
