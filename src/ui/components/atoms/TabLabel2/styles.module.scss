@@ -1,0 +1,70 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/_fonts.scss';
+
+.tablabel {
+  align-items: center;
+  color: $--ads-colors-gray-90;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.05s;
+  
+  &.active {
+    border-bottom: 2px solid $--ads-colors-gray-20;
+
+    &:hover {
+      border: 3px solid $--ads-colors-blue-60;
+    }
+
+    &.selected {
+      color: $--ads-colors-gray-90;
+
+      &:hover {
+        border: 3px solid $--ads-colors-blue-60;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &.disabled {
+    border-bottom: 2px solid $--ads-colors-gray-40;
+    color: $--ads-colors-gray-40;
+    cursor: not-allowed;
+  }
+
+  &.focus-enabled {
+    border: 2px solid $--ads-colors-gray-50;
+    outline: none;
+
+    &:hover {
+      border: 2px solid $--ads-colors-gray-70;
+    }
+  }
+
+  &.focus-selected {
+    border-bottom: 2px solid $--ads-colors-gray-50;
+    outline: none;
+  }
+
+  &.small {
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &.large {
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
