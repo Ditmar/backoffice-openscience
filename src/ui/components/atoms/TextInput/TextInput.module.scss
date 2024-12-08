@@ -72,19 +72,22 @@
   }
 
   @include respond-to('small') {
-    max-width: 14.5rem;
+    width: 100%;
   }
 
   @include respond-to('small-mobile') {
-    max-width: 14.5rem;
+    max-width: 32.25rem;
+    width: 90%;
   }
 
   @include respond-to('small-mobile-large') {
-    max-width: 29.25rem;
+    max-width: 31.25rem;
+    width: 100%;
   }
 
   @include respond-to('medium') {
-    max-width: 22rem;
+    max-width: 23rem;
+    width: 100%;
   }
 
   @include respond-to('large') {
