@@ -6,8 +6,8 @@
   background-color: $--ads-colors-gray-20;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  gap: 1rem;
+  padding: 1rem;
 
   @include respond-to('medium') {
     align-items: center;
@@ -18,29 +18,29 @@
   &__buttons {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 0.5rem;
 
     @include respond-to('small-mobile') {
       flex-direction: row;
-      gap: 8px;
+      gap: 0.5rem;
     }
 
     @include respond-to('medium') {
       flex-direction: row;
-      gap: 30px;
-      margin-right: 40px;
+      gap: 1.875rem;
+      margin-right: 2.5rem;
     }
 
     button {
       background-color: $--ads-colors-white;
       color: $--ads-colors-black;
-      font-size: 14px;
-      padding: 8px 16px;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
       transition: all 0.3s ease;
 
       @include respond-to('small-mobile') {
-        font-size: 12px;
-        padding: 6px 12px;
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
       }
     }
   }

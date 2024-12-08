@@ -8,29 +8,28 @@
   cursor: pointer;
   font-family: Barlow, sans-serif;
   font-weight: bold;
-  height: 38px;
-  padding: 10px 20px;
-  width: 108px;
+  height: 2.375rem;
+  padding: 0.625rem 1.25rem;
+  width: 6.75rem;
 
   @include respond-to('small-mobile') {
-    font-size: 12px;
-    padding: 8px 16px;
-    
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
   }
 
   @include respond-to('medium') {
-    font-size: 14px;
-    padding: 9px 18px;
+    font-size: 0.875rem;
+    padding: 0.5625rem 1.125rem;
   }
 
   @include respond-to('large') {
-    font-size: 16px;
-    padding: 11px 22px;
+    font-size: 1rem;
+    padding: 0.6875rem 1.375rem;
   }
 
   @include respond-to('extra-large') {
-    font-size: 18px;
-    padding: 12px 24px;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 
@@ -64,18 +63,18 @@
   color: $--ads-colors-white;
 
   @include respond-to('small-mobile') {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   @include respond-to('medium') {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   @include respond-to('large') {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   @include respond-to('extra-large') {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }

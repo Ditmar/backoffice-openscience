@@ -10,49 +10,49 @@
 
   &__title {
     color: $--ads-colors-black;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
 
     @include respond-to('small-mobile') {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
     @include respond-to('medium') {
-      font-size: 32px;
+      font-size: 2rem;
     }
 
     @include respond-to('large') {
-      font-size: 40px;
+      font-size: 2.5rem;
     }
 
     @include respond-to('extra-large') {
-      font-size: 48px;
+      font-size: 3rem;
     }
   }
 
   &__api-id {
     color:  $--ads-colors-black;
-    font-size: 24px;
-    margin-top: -20px;
+    font-size: 1.5rem;
+    margin-top: -1.25rem;
 
     @include respond-to('small-mobile') {
-      font-size: 12px;
-      margin-top: -10px;
+      font-size: 0.75rem;
+      margin-top: -0.625rem;
     }
 
     @include respond-to('medium') {
-      font-size: 16px;
-      margin-top: -15px;
+      font-size: 1rem;
+      margin-top: -0.9375rem;
     }
 
     @include respond-to('large') {
-      font-size: 20px;
-      margin-top: -18px;
+      font-size: 1.25rem;
+      margin-top: -1.125rem;
     }
 
     @include respond-to('extra-large') {
-      font-size: 24px;
-      margin-top: -20px;
+      font-size: 1.5rem;
+      margin-top: -1.25rem;
     }
   }
 }
