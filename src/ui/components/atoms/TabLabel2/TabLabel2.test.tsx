@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { TabLabel2 } from './TabLabel2';
 
 const hasClass = (element: HTMLElement, className: string) => {
@@ -7,17 +7,11 @@ const hasClass = (element: HTMLElement, className: string) => {
 };
 
 describe('TabLabel2 Component Tests', () => {
-  it('should render TabLabel2 component with text', () => {
-    render(<TabLabel2 text="TabLabel2" isEnable variant="small" />);
-    const label = screen.getByText('TabLabel2');
-    expect(label).not.toBeNull();
-  });
-
   describe('Variants', () => {
-    it('should render small variant', () => {
-      render(<TabLabel2 text="TabLabel2" isEnable variant="small" />);
+    it('should render large variant', () => {
+      render(<TabLabel2 text="TabLabel2" isEnable variant="large" />);
       const label = screen.getByText('TabLabel2');
-      hasClass(label, 'small');
+      hasClass(label, 'large');
     });
 
     it('should render medium variant', () => {
@@ -26,22 +20,20 @@ describe('TabLabel2 Component Tests', () => {
       hasClass(label, 'medium');
     });
 
-    it('should render large variant', () => {
-      render(<TabLabel2 text="TabLabel2" isEnable variant="large" />);
+    it('should render small variant', () => {
+      render(<TabLabel2 text="TabLabel2" isEnable variant="small" />);
       const label = screen.getByText('TabLabel2');
-      hasClass(label, 'large');
-    });
-  });
-
-  describe('States', () => {
-    it('should render enabled state', () => {
-      render(<TabLabel2 text="TabLabel2" isEnable variant="medium" />);
-      const label = screen.getByText('TabLabel2');
-      hasClass(label, 'enabled');
+      hasClass(label, 'small');
     });
 
-    it('should render disabled state', () => {
-      render(<TabLabel2 text="TabLabel2" isEnable={false} variant="medium" />);
+    it('should render selected variant', () => {
+      render(<TabLabel2 text="TabLabel2" isEnable variant="selected" isSelect />);
+      const label = screen.getByText('TabLabel2');
+      hasClass(label, 'selected');
+    });
+
+    it('should render disabled variant', () => {
+      render(<TabLabel2 text="TabLabel2" isEnable={false} variant="disabled" />);
       const label = screen.getByText('TabLabel2');
       hasClass(label, 'disabled');
     });
@@ -52,14 +44,14 @@ describe('TabLabel2 Component Tests', () => {
       render(<TabLabel2 text="TabLabel2" isEnable={false} variant="medium" />);
       const label = screen.getByText('TabLabel2');
       expect(label.getAttribute('aria-disabled')).toBe('true');
-      expect(label.style.cursor).toBe('not-allowed');
+      hasClass(label, 'disabled');
     });
 
     it('should allow interactions when enabled', () => {
       render(<TabLabel2 text="TabLabel2" isEnable variant="medium" />);
       const label = screen.getByText('TabLabel2');
       expect(label.getAttribute('aria-disabled')).toBeNull();
-      expect(label.style.cursor).toBe('pointer');
+      hasClass(label, 'active');
     });
   });
 });
