@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import SeoSettings from './SeoSettings';
 
 const meta: Meta = {
-  title: 'ui/components/organismo/SeoSettings',
+  title: 'ui/components/organism/SeoSettings',
   component: SeoSettings,
   argTypes: {
     backgroundColor: { control: 'color' },
