@@ -1,0 +1,68 @@
+@import '../../../../globals/ads-variables.scss';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+.link {
+    color: $--ads-colors-blue-50;
+    font-family: barlow , sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    
+    &--small {
+      font-size: 0.75rem;
+    }
+  
+    &--medium {
+      font-size: 1rem;
+    }
+  
+    &--large {
+      font-size: 1.25rem;
+    }
+    
+    &:hover {
+        color: $--ads-colors-blue-60; 
+        text-decoration: underline; 
+        text-underline-offset: 0.25rem;
+      }
+
+    &:enabled {
+        color: $--ads-colors-blue-40;
+    }
+
+    &:active {
+        color: $--ads-colors-gray-70; 
+        text-decoration-thickness: 0.125rem; 
+        text-underline-offset: 0.25rem; 
+    }
+
+    &--focus {
+        color: $--ads-colors-blue-70; 
+        text-decoration: underline; 
+        text-decoration-thickness: 0.188rem;
+        text-underline-offset: 0.25rem;
+    }
+    
+    &:visited {
+        color: $--ads-colors-purple-60; 
+    }
+
+    &--disabled {
+        color: $--ads-colors-gray-4; 
+        cursor: not-allowed; 
+
+        &:hover{
+            color:$--ads-colors-gray-4;
+            cursor: not-allowed;
+            text-decoration: none;
+        }
+
+        &:visited {
+            color: $--ads-colors-gray-4; 
+            cursor: not-allowed;
+        }    
+    }
+  
+  }
