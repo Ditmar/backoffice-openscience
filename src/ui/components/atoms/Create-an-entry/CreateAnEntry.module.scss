@@ -1,0 +1,58 @@
+@import '../../../../globals/ads-variables';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+.create-an-entry {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: Barlow, sans-serif;
+
+  &__title {
+    color: $--ads-colors-black;
+    font-size: 3rem;
+    font-weight: bold;
+
+    @include respond-to('small-mobile') {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to('medium') {
+      font-size: 2rem;
+    }
+
+    @include respond-to('large') {
+      font-size: 2.5rem;
+    }
+
+    @include respond-to('extra-large') {
+      font-size: 3rem;
+    }
+  }
+
+  &__api-id {
+    color:  $--ads-colors-black;
+    font-size: 1.5rem;
+    margin-top: -1.25rem;
+
+    @include respond-to('small-mobile') {
+      font-size: 0.75rem;
+      margin-top: -0.625rem;
+    }
+
+    @include respond-to('medium') {
+      font-size: 1rem;
+      margin-top: -0.9375rem;
+    }
+
+    @include respond-to('large') {
+      font-size: 1.25rem;
+      margin-top: -1.125rem;
+    }
+
+    @include respond-to('extra-large') {
+      font-size: 1.5rem;
+      margin-top: -1.25rem;
+    }
+  }
+}

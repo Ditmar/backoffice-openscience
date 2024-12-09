@@ -1,0 +1,80 @@
+@import '../../../../globals/ads-variables';
+@import '../../../../globals/mixins';
+@import '../../../../globals/_fonts';
+
+.button {
+  background-color: $--ads-colors-white;
+  border: none;
+  cursor: pointer;
+  font-family: Barlow, sans-serif;
+  font-weight: bold;
+  height: 2.375rem;
+  padding: 0.625rem 1.25rem;
+  width: 6.75rem;
+
+  @include respond-to('small-mobile') {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @include respond-to('medium') {
+    font-size: 0.875rem;
+    padding: 0.5625rem 1.125rem;
+  }
+
+  @include respond-to('large') {
+    font-size: 1rem;
+    padding: 0.6875rem 1.375rem;
+  }
+
+  @include respond-to('extra-large') {
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.button.default {
+  color: $--ads-colors-black;
+
+  @include respond-to('small-mobile') {
+    color: $--ads-colors-gray-80;
+  }
+
+  @include respond-to('extra-large') {
+    color: $--ads-colors-black;
+  }
+}
+
+.button:hover {
+  background-color: $--ads-colors-gray-20;
+  color: $--ads-colors-black;
+
+  @include respond-to('small-mobile') {
+    background-color: $--ads-colors-gray-10;
+  }
+
+  @include respond-to('extra-large') {
+    background-color: $--ads-colors-gray-30;
+  }
+}
+
+.primary {
+  background-color: $--ads-colors-black;
+  color: $--ads-colors-white;
+
+  @include respond-to('small-mobile') {
+    font-size: 0.75rem;
+  }
+
+  @include respond-to('medium') {
+    font-size: 0.875rem;
+  }
+
+  @include respond-to('large') {
+    font-size: 1rem;
+  }
+
+  @include respond-to('extra-large') {
+    font-size: 1.125rem;
+  }
+}
