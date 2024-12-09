@@ -45,7 +45,6 @@ export function Icon(props: SvgIconProps) {
     spanProps.style = { width: size, height: size, display: 'block', ...styles };
   }
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
   return <span {...spanProps} />;
 }
 
