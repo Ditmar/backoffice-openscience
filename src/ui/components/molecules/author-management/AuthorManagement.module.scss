@@ -1,5 +1,6 @@
 @import '../../../../globals/ads-variables.scss';
 @import '../../../../globals/fonts.scss';
+@import '../../../../globals/mixins';
 
 .author-management {
   box-sizing: border-box;
@@ -13,18 +14,48 @@
     gap: 4px;
     max-width: 466px;
     padding: 12px;
+
+    @include respond-to('small-mobile') {
+      .info-section {
+        max-width: 290px;
+      }
+
+      .actions-container {
+        max-width: 290px;
+      }
+    }
   }
 
   &.medium {
     gap: 6px;
-    max-width: 626px;
+    max-width: 633px;
     padding: 16px;
+
+    @include respond-to('small-mobile') {
+      .info-section {
+        max-width: 373px;
+      }
+
+      .actions-container {
+        max-width: 224px;
+      }
+    }
   }
 
   &.large {
     gap: 8px;
     max-width: 832px;
     padding: 20px;
+
+    @include respond-to('small-mobile') {
+      .info-section {
+        max-width: 373px;
+      }
+
+      .actions-container {
+        max-width: 224px;
+      }
+    }
   }
 }
 
@@ -51,12 +82,26 @@
 .info-actions-container {
   align-items: flex-start;
   display: flex;
-  gap: 2px;
-  width: 100%;
+  gap: 16px;
 
-  @media screen and (width <= 768px) {
+  @include respond-to('small-mobile') {
     flex-direction: column;
     gap: 12px;
+  }
+
+  @include respond-to('medium') {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  @include respond-to('large') {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  @include respond-to('extra-large') {
+    flex-direction: row;
+    gap: 4px;
   }
 }
 
@@ -67,13 +112,9 @@
   gap: 2px;
   height: 161px;
   overflow: hidden;
+  width: 100%;
 
-  @media screen and (width >= 768px) {
-    max-width: 440px;
-    width: 100%;
-  }
-
-  @media screen and (width <= 768px) {
+  @include respond-to('small-mobile') {
     max-width: 480px;
     width: 100%;
   }
@@ -96,12 +137,12 @@
 .actions-container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  width: 37%;
+  gap: 8px;
+  justify-content: center;
 
-  @media screen and (width <= 768px) {
+  @include respond-to('small-mobile') {
     flex-flow: row wrap;
-    gap: 4px;
+    gap: 2px;
     justify-content: space-between;
     width: 100%;
   }
