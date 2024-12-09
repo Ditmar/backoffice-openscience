@@ -3,7 +3,7 @@ import EditModelButton from 'ui/components/atoms/edit-model-button/EditModelButt
 import ConfigureViewButton from 'ui/components/atoms/configure-view-button/ConfigureViewButton';
 import Placeholder from '../../atoms/placeholder/Placeholder';
 import type { IProps } from './types/IProps';
-import styles from './FormSiteConfig.module.scss';
+import styles from './FormSiteConfig.modules.scss';
 
 function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
   return (
@@ -33,11 +33,7 @@ function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
           <Placeholder onChange={onChange} placeholder="Enter your taxonomy types" />
         </div>
 
-<<<<<<< HEAD
-        <div className={`${styles.form__field} ${styles.container}`}>
-=======
         <div className={styles.form__field}>
->>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
           <HeaderDraft
             variant="primary"
             size="large"
@@ -83,8 +79,4 @@ function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
   );
 }
 
-<<<<<<< HEAD
 export default FormSiteConfig;
-=======
-export default FormSiteConfig;
->>>>>>> d37c1d3a1a9edc081445b63cff6cc72750adf156
