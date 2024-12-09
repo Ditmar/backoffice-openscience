@@ -3,7 +3,7 @@ import EditModelButton from 'ui/components/atoms/edit-model-button/EditModelButt
 import ConfigureViewButton from 'ui/components/atoms/configure-view-button/ConfigureViewButton';
 import Placeholder from '../../atoms/placeholder/Placeholder';
 import type { IProps } from './types/IProps';
-import styles from './FormSiteConfig.modules.scss';
+import styles from './FormSiteConfig.module.scss';
 
 function FormSiteConfig({ data, onChange }: IProps): JSX.Element {
   return (
