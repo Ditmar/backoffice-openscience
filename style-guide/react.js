@@ -39,5 +39,6 @@ module.exports = {
       'warn',
       { allowExportNames: ['meta', 'links', 'headers', 'loader', 'action'] },
     ],
+    'react/jsx-props-no-spreading': 'off',
   },
 };
