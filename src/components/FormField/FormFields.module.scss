@@ -1,0 +1,36 @@
+@import '../../globals/ads-variables.scss';
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form-fields__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields__label {
+  color: $--ads-colors-black;
+  font-family: Barlow, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-fields__input {
+  background-color: $--ads-colors-gray-10;
+  border: 0.06rem solid $--ads-colors-gray-20;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &:focus {
+    background-color: $--ads-colors-white;
+    border-color: $--ads-colors-blue-50;
+    outline: none;
+  }
+}
